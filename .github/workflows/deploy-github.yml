@@ -5,6 +5,10 @@ on:
     # 每当 push 到 main 分支时触发部署
     branches:
       - main
+  pull_request:
+    # 每当 PR 到 main 分支时触发部署
+    branches:
+      - main
 
 jobs:
   deploy-gh-pages:
