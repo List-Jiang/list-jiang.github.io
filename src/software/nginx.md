@@ -14,7 +14,7 @@ Nginx 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP / 
 要启动 nginx，请运行可执行文件。一旦启动 nginx，就可以通过使用 `-s` 参数调用可执行文件来对其进行控制。使用以下语法:
 
 ```bash
-nginx -s signal
+nginx -s signal 
 ```
 
 其中 `signal` 可能是以下之一:
