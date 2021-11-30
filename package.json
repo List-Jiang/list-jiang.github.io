@@ -17,7 +17,7 @@
     "comsol:get-words": "node script/comsol/get-words.js",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "author": "Mr.Hope",
+  "author": "List.Jiang",
   "license": "MIT",
   "keywords": [
     "vuepress",
