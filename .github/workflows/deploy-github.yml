@@ -1,0 +1,99 @@
+name: Deploy blog
+
+on:
+  push:
+    # 每当 push 到 main 分支时触发部署
+    branches:
+      - main
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          submodules: true
+          fetch-depth: 0
+
+      # 选择要使用的 node 版本
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      # 缓存 node_modules
+      - name: sdfsf
+        uses: actions/cache@v2.1.6
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      # 缓存没找到就 install
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      # 打个包
+      - name: Build Blog
+        run: yarn run super:build
+
+      # 把 dist 文件夹发布到 gh-pages 分支
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: dist
+
+  # 私服发布
+  # deploy-server:
+  #   runs-on: ubuntu-latest
+  #   needs: deploy-gh-pages
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2.3.4
+  #       with:
+  #         ref: gh-pages
+  #         fetch-depth: 0
+
+  #     - name: Configuration environment
+  #       run: |
+  #         mkdir -p ~/.ssh/
+  #         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+  #         chmod 600 ~/.ssh/id_rsa
+  #         ssh-keyscan mrhope.site >> ~/.ssh/known_hosts
+  #         git config --global user.name 'Mr.Hope'
+  #         git config --global user.email 'zhangbowang1998@gmail.com'
+
+  #     - name: Deploy
+  #       run: |
+  #         git push -f git@mrhope.site:/www/wwwroot/mrhope gh-pages
+  #         ssh git@mrhope.site "cd /www/wwwroot/mrhope && git reset --hard HEAD"
+
+  linter-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - uses: actions/cache@v2.1.6
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Linter test
+        run: yarn run lint
