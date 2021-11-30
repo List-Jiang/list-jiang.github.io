@@ -95,7 +95,7 @@ export default {
     <p>
       您可以反馈给
       <router-link
-        to="http://wpa.qq.com/msgrd?v=3&amp;uin=1178522294&amp;site=qq&amp;menu=yes"
+        to="http://wpa.qq.com/msgrd?v=3&amp;uin=2754005464&amp;site=qq&amp;menu=yes"
         >Mr.Hope</router-link
       >
     </p>
