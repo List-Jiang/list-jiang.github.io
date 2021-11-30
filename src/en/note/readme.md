@@ -31,7 +31,7 @@ Recently, I moved it as a teenager’s memory in my blog.
 
 ::: tip
 
-Also check [Qzone Album](https://user.qzone.qq.com/1178522294)
+Also check [Qzone Album](https://user.qzone.qq.com/2754005464)
 
 :::
 

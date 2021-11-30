@@ -30,7 +30,7 @@ sticky: 9
 
 ::: tip 其他方式
 
-也可查看 [空间相册](https://user.qzone.qq.com/1178522294)
+也可查看 [空间相册](https://user.qzone.qq.com/2754005464)
 
 :::
 

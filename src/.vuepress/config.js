@@ -3,7 +3,7 @@ const navBarConfig = require("./config/navbar");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
-  title: "Mr.Hope",
+  title: "jianglist",
   description: "Where there is light, there is hope.",
 
   head: [
@@ -28,16 +28,16 @@ module.exports = config({
   locales: {
     "/": { lang: "zh-CN" },
     "/en/": {
-      title: "My name is Mr.Hope",
-      description: "Mr.Hope personal blog",
+      title: "My name is jianglist",
+      description: "jianglist personal blog",
     },
   },
 
   themeConfig: {
     logo: "/logo.png",
-    author: "Mr.Hope",
+    author: "jianglist",
 
-    repo: "https://github.com/Mister-Hope/Mister-Hope.github.io",
+    repo: "https://github.com/JiangList/jianglist.github.com.io",
     repoDisplay: false,
     docsDir: "src",
     docsBranch: "main",
@@ -57,12 +57,12 @@ module.exports = config({
       intro: "/about/",
       sidebarDisplay: "mobile",
       links: {
-        QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",
-        Qzone: "https://1178522294.qzone.qq.com/",
-        Gmail: "mailto:zhangbowang1998@gmail.com",
-        Zhihu: "https://www.zhihu.com/people/mister-hope",
-        Steam: "https://steamcommunity.com/id/Mr-Hope/",
-        Weibo: "https://weibo.com/misterhope",
+        QQ: "http://wpa.qq.com/msgrd?v=3&uin=2754005464&site=qq&menu=yes",
+        Qzone: "https://2754005464.qzone.qq.com/",
+        // Gmail: "mailto:zhangbowang1998@gmail.com",
+        // Zhihu: "https://www.zhihu.com/people/mister-hope",
+        Steam: "https://steamcommunity.com/id/ListJiang/",
+        // Weibo: "https://weibo.com/misterhope",
       },
     },
 
@@ -87,7 +87,7 @@ module.exports = config({
     },
 
     footer: {
-      copyright: "Copyright © 2019-present Mr.Hope",
+      copyright: "Copyright © 2019-present jianglist",
       display: true,
     },
 
