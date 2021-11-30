@@ -27,7 +27,7 @@ project:
 
   - name: vuepress-plugin-md-enhance
     type: link
-    desc: Vuepress Markdown 增强插件1
+    desc: Vuepress Markdown 增强插件
     link: https://vuepress-theme-hope.github.io/md-enhance/zh/
     cover: /assets/img/vuepress-hope-logo.svg
 
