@@ -1,6 +1,6 @@
 ---
 layout: Slide
-title: Mr.Hope 介绍
+title: jianglist 介绍
 icon: people
 tags:
   - 个人介绍
