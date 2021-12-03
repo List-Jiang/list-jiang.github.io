@@ -52,20 +52,6 @@ project:
     desc: 对象结构断言库
     link: https://github.com/Mister-Hope/assert-type
 
-  # - name: in东师官网
-  #   type: project
-  #   desc: 提供各种功能的聚合入口，校历、讲座资讯
-  #   link: https://innenu.com/
-
-  # - name: mppage
-  #   type: project
-  #   desc: 轻量、高效的微信小程序框架(源码即将开放)
-  #   link: https://github.com/Mister-Hope/mppage
-
-  # - name: WNMP
-  #   type: project
-  #   desc: Windows 下一键安装集成式 WNMP 开发环境，高效安装，方便本地调试
-  #   link: https://github.com/Mister-Hope/install-WAMP-WNMP
 
   - name: 代码教程
     type: book
