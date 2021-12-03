@@ -3,7 +3,7 @@ const navBarConfig = require("./config/navbar");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
-  title: "List Jiang",
+  title: "𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰",
   description: "Where there is light, there is hope.",
 
   head: [
@@ -87,7 +87,7 @@ module.exports = config({
     },
 
     footer: {
-      copyright: "Copyright © 2019-present 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰",
+      copyright: "Copyright © 2019-present List·Jiang",
       display: true,
     },
 
