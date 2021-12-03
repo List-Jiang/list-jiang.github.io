@@ -3,7 +3,7 @@ blog: true
 home: true
 icon: home
 heroImage: /logo.png
-heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+heroText: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰
 heroFullScreen: true
 tagline: Where there is light, there is hope
 project:
@@ -12,12 +12,6 @@ project:
     desc: 一个功能强大的 Vuepress 主题✨
     link: https://vuepress-theme-hope.github.io/zh/
     cover: /assets/img/vuepress-hope-logo.svg
-
-  - name: in东师
-    type: project
-    desc: 三十万字+的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
-    link: https://github.com/Hope-Studio/inNENU-miniapp
-    cover: https://mp.innenu.com/img/inNENU.png
 
   - name: "@mr-hope/vuepress-plugin-comment"
     type: link
@@ -65,10 +59,6 @@ project:
     type: book
     link: /linux/
 
-  - name: 前端入门
-    type: book
-    link: /code/website/
-
   - name: 设计教程
     type: article
     link: /design/
@@ -77,7 +67,7 @@ project:
     type: article
     link: /note/
 
-  - name: 物理笔记
+  - name: 数据结构与算法
     type: article
     link: /physics/
 
