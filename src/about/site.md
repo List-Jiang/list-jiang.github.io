@@ -10,7 +10,7 @@ breadcrumb: false
 
 ## 仓库链接
 
-- [**JiangList 的个人博客**](https://github.com/JiangList/jianglist.github.com)
+- [**𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰 的个人博客**](https://github.com/List-Jiang/list-jiang.github.com.git)
 
 ## 免责声明
 

@@ -3,7 +3,7 @@ const navBarConfig = require("./config/navbar");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
-  title: "jianglist",
+  title: "List Jiang",
   description: "Where there is light, there is hope.",
 
   head: [
@@ -28,16 +28,16 @@ module.exports = config({
   locales: {
     "/": { lang: "zh-CN" },
     "/en/": {
-      title: "My name is jianglist",
-      description: "jianglist personal blog",
+      title: "My name is List Jiang",
+      description: "List Jiang personal blog",
     },
   },
 
   themeConfig: {
     logo: "/logo.png",
-    author: "jianglist",
+    author: "List Jiang",
 
-    repo: "https://github.com/JiangList/jianglist.github.com.io",
+    repo: "https://github.com/List-Jiang/list-jiang.github.com.git.io",
     repoDisplay: false,
     docsDir: "src",
     docsBranch: "main",
@@ -87,7 +87,7 @@ module.exports = config({
     },
 
     footer: {
-      copyright: "Copyright © 2019-present jianglist",
+      copyright: "Copyright © 2019-present 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰",
       display: true,
     },
 

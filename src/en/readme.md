@@ -3,7 +3,7 @@ home: true
 icon: home
 title: Home
 heroImage: /logo.png
-heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+heroText: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰
 tagline: Where there is light, there is hope
 action:
   - text: Personal Intro
@@ -14,10 +14,6 @@ features:
   - title: vuepress-theme-hope
     details: A vuepress theme with tons of features✨
     link: https://vuepress-theme-hope.github.io/
-
-  - title: in NENU
-    details: 300,000 words + NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤
-    link: https://github.com/Hope-Studio/inNENU-miniapp
 
   - title: "@mr-hope/vuepress-plugin-comment"
     details: Comment plugin for Vuepress
