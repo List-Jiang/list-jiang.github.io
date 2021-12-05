@@ -4,7 +4,7 @@ const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
   title: "𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰",
-  description: "Where there is light, there is hope.",
+  description: "远方无限 砥砺前行",
 
   head: [
     // 百度站点验证

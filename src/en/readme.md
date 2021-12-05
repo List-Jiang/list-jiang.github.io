@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /logo.png
 heroText: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰
-tagline: Where there is light, there is hope
+tagline: 远方无限 砥砺前行
 action:
   - text: Personal Intro
     type: primary
