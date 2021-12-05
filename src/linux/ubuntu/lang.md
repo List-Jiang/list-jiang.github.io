@@ -2,6 +2,7 @@
 icon: language
 time: 2019-11-22
 category: Linux
+author: Mr.Hope
 ---
 
 # 语言切换

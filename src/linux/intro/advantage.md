@@ -2,6 +2,7 @@
 icon: compare
 time: 2019-11-16
 category: Linux
+author: Mr.Hope
 ---
 
 # Linux 的优点

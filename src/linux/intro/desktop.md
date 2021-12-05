@@ -2,6 +2,7 @@
 icon: computer
 time: 2019-11-16
 category: Linux
+author: Mr.Hope
 ---
 
 # 桌面系统

@@ -1,3 +1,6 @@
+---
+author: Mr.Hope
+---
 # Linux 系统启动过程
 
 ::: tip

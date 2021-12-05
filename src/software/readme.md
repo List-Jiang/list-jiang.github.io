@@ -27,10 +27,6 @@ sticky: 9
 
 ### Http Server
 
-网站已经停止使用 Apache Lounge 编译的 httpd Apache。目前迁移到更加轻量，并发性能更好的 Nginx 上。
-
-- [Apache](Apache.md) <Badge text="停止使用" type="warn" />
-
 - [Nginx](nginx.md)
 
 ### 抓包与 API 调试

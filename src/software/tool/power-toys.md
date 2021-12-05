@@ -1,6 +1,7 @@
 ---
 title: PowerToys
 icon: tool
+author: Mr.Hope
 ---
 
 ## 安装

@@ -2,6 +2,7 @@
 icon: debug
 time: 2019-11-21
 category: Linux
+author: Mr.Hope
 ---
 
 # 开发软件

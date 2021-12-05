@@ -2,6 +2,7 @@
 icon: ubuntu
 time: 2019-11-21
 category: Linux
+author: Mr.Hope
 ---
 
 # ubuntu

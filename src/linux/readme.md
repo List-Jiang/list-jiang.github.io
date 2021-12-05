@@ -3,6 +3,7 @@ title: Linux
 icon: linux
 time: 2019-11-15
 category: Linux
+author: Mr.Hope
 star: true
 ---
 

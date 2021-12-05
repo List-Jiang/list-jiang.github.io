@@ -2,6 +2,7 @@
 icon: mount
 time: 2019-11-17
 category: Linux
+author: Mr.Hope
 ---
 
 # Linux 挂载

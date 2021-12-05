@@ -5,7 +5,7 @@ icon: home
 heroImage: /logo.png
 heroText: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰
 heroFullScreen: true
-tagline: Where there is light, there is hope
+tagline: 远方无限 砥砺前行
 project:
   - name: vuepress-theme-hope
     type: link

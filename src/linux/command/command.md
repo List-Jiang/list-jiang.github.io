@@ -3,6 +3,7 @@ title: 基本格式
 icon: shell
 time: 2019-11-18
 category: Linux
+author: Mr.Hope
 ---
 
 ## 命令提示符
