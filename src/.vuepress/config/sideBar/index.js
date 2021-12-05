@@ -10,15 +10,9 @@ module.exports = {
 
     "/software/": require("./software"),
 
-    "/physics/": require("./physics"),
-
     "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
-    "/note/": require("./note"),
-
     "/linux/": require("./linux"),
-
-    "/design/": require("./design"),
 
     "/code/windows/": [
       "",
@@ -56,15 +50,9 @@ module.exports = {
 
     "/code/language/markdown/": require("./language/markdown"),
 
-    "/code/language/js/": require("./language/javascript"),
-
-    "/code/language/dart/": require("./language/dart"),
-
     "/code/language/": require("./language"),
 
     "/code/github/": require("./github"),
-
-    "/code/basic/": require("./basic"),
 
     "/code/Android/": ["", "intro", "base", "resource"],
 

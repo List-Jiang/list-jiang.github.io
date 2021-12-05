@@ -67,9 +67,6 @@ project:
     type: article
     link: /note/
 
-  - name: 数据结构与算法
-    type: article
-    link: /physics/
 
 footer: '<a href="http://beian.miit.gov.cn/" target="_blank">备案号:XXXXXXXX</a> | <a href="/about/site/">关于网站</a>'
 ---
