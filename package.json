@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "个人博客",
   "scripts": {
-    "serve": "vuepress dev src",
-    "cleanServe": "vuepress dev src --no-cache",
-    "build": "vuepress build src",
+    "docs:dev": "vuepress dev src",
+    "docs:clean-dev": "vuepress dev src --no-cache",
+    "docs:build": "vuepress build src",
     "super:build": "node --max_old_space_size=8192 ./node_modules/vuepress/cli.js build src",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
