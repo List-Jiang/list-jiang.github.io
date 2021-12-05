@@ -2,6 +2,7 @@
 icon: shell
 time: 2019-11-20
 category: Linux
+author: Mr.Hope
 ---
 
 # 环境变量

@@ -3,6 +3,7 @@ title: 链接
 icon: ask
 time: 2019-11-20
 category: Linux
+author: Mr.Hope
 ---
 
 建立硬链接和软链接非常简单，那这两种链接有什么区别? 它们都有什么作用? 这才是链接文件最不容易理解的地方，我们分别来讲讲。

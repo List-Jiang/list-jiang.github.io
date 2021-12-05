@@ -3,6 +3,7 @@ title: WSL
 icon: api
 time: 2019-11-23
 category: Linux
+author: Mr.Hope
 ---
 
 WSL 可以直接在 Windows 系统上安装并运行 Linux。目前最新的版本是 WSL2。

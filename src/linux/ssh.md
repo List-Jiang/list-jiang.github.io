@@ -3,6 +3,7 @@ title: ssh
 icon: mount
 time: 2019-11-23
 category: 基础
+author: Mr.Hope
 ---
 
 ## 使用密码登录

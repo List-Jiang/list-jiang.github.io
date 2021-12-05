@@ -2,6 +2,7 @@
 icon: tool
 time: 2019-11-21
 category: Linux
+author: Mr.Hope
 ---
 
 # 管理工具

@@ -3,6 +3,7 @@ title: 语言
 icon: language
 time: 2019-11-16
 category: Linux
+author: Mr.Hope
 ---
 
 Linux 中大量使用脚本语言，而不是 C 语言!
