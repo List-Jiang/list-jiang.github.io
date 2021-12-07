@@ -6,7 +6,6 @@ module.exports = sidebarConfig([
   "vscode/",
   "chrome",
   "git/",
-  "comsol/",
   {
     title: "工具软件",
     icon: "tool",

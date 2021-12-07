@@ -73,11 +73,6 @@ module.exports = {
             icon: "git",
             link: "git/"
           },
-          {
-            text: "COMSOL",
-            icon: "app",
-            link: "comsol/"
-          },
         ],
       }, ],
     },
