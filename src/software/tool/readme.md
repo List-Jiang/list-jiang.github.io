@@ -13,6 +13,4 @@ icon: tool
 
 - [Potplayer](https://potplayer.daum.net/?lang=zh_CN): 心目中最 NB 的视频播放器，没有之一
 
-- [Terminal](Terminal.md): Windows 终端
-
-- [PowerShell](powershell.md): Windows 的命令行外壳程序和脚本环境
+- [PostMan](): Postman 是一个用于构建和使用 API 的 API 平台。支持 Http、WebSocket 协议

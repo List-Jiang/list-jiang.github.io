@@ -9486,10 +9486,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@2.5.0, "prettier@^1.18.2 || ^2.0.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.0.tgz#a6370e2d4594e093270419d9cc47f7670488f893"
-  integrity sha512-FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==
+prettier@2.5.1, "prettier@^1.18.2 || ^2.0.0":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
+  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
 
 pretty-bytes@^5.3.0:
   version "5.6.0"
@@ -10527,10 +10527,10 @@ remark-lint-unordered-list-marker-style@^3.0.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint@9.1.0, remark-lint@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-9.1.0.tgz#fa2f7f3462438aa3f057cccd1ef6646abd73419c"
-  integrity sha512-47ZaPj1HSs17nqsu3CPg4nIhaj+XTEXJM9cpFybhyA4lzVRZiRXy43BokbEjBt0f1fhY3coQoOh16jJeGBvrJg==
+remark-lint@9.1.1, remark-lint@^9.0.0:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-9.1.1.tgz#58c27adc4edeca93b7ce81e2861f05cbcecef72c"
+  integrity sha512-zhe6twuqgkx/9KgZyNyaO0cceA4jQuJcyzMOBC+JZiAzMN6mFUmcssWZyY30ko8ut9vQDMX/pyQnolGn+Fg/Tw==
   dependencies:
     "@types/mdast" "^3.0.0"
     remark-message-control "^7.0.0"
@@ -10573,10 +10573,10 @@ remark-parse@^9.0.0:
   dependencies:
     mdast-util-from-markdown "^0.8.0"
 
-remark-preset-lint-consistent@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/remark-preset-lint-consistent/-/remark-preset-lint-consistent-5.1.0.tgz#c994fbea71e93c4452368657ee093080d265c4a8"
-  integrity sha512-i5xmsBtOQrymbr1y0TS6cYOXQ9nueIMMfEfSG6xmOJRnLIEQ0wAAhbUn6bOUyr2YmLLnWyScby3aCjQsOiyRBA==
+remark-preset-lint-consistent@5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/remark-preset-lint-consistent/-/remark-preset-lint-consistent-5.1.1.tgz#c870a2379e109cb6d7a10cd2d3b91f34e3f89e71"
+  integrity sha512-DZQfomiVi/1x7NRByWrOiIC+olEGa1PpyykKrowvYp5qr/Seq60FqU7OjBJxtcOLzgnQcu9Y2JXdHxFi4AAPXQ==
   dependencies:
     "@types/mdast" "^3.0.0"
     remark-lint "^9.0.0"
@@ -10646,10 +10646,10 @@ remark-preset-lint-markdown-style-guide@5.1.2:
     remark-lint-unordered-list-marker-style "^3.0.0"
     unified "^10.0.0"
 
-remark-preset-lint-recommended@6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/remark-preset-lint-recommended/-/remark-preset-lint-recommended-6.1.1.tgz#c5756bfbd698f262a988f2ffe4e5ba724f4d1ad7"
-  integrity sha512-ez8/QTY8x/XKZcewXbWd+vQWWhNbgHCEq+NwY6sf9/QuwxBarG9cmSkP9yXi5glYKGVaEefVZmrZRB4jvZWcog==
+remark-preset-lint-recommended@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/remark-preset-lint-recommended/-/remark-preset-lint-recommended-6.1.2.tgz#268eeaab887cef79e6b22fde046e65cf11abcf67"
+  integrity sha512-x9kWufNY8PNAhY4fsl+KD3atgQdo4imP3GDAQYbQ6ylWVyX13suPRLkqnupW0ODRynfUg8ZRt8pVX0wMHwgPAg==
   dependencies:
     "@types/mdast" "^3.0.0"
     remark-lint "^9.0.0"
