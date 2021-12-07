@@ -6,8 +6,6 @@ module.exports = {
 
     "/software/git/": require("./software/git"),
 
-    "/software/comsol/": require("./software/comsol"),
-
     "/software/": require("./software"),
 
     "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
@@ -41,8 +39,6 @@ module.exports = {
       "program",
       "module",
     ],
-
-    "/code/mini-app/": require("./mini-app"),
 
     "/code/language/python/": require("./language/python"),
 

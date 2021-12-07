@@ -14,7 +14,6 @@
     "lint-md:style": "remark --quiet .",
     "lint-md:wording": "textlint ./src/**/*.md",
     "lint-md:wording:fix": "textlint ./src/**/*.md --fix",
-    "comsol:get-words": "node script/comsol/get-words.js",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "author": "List.Jiang",

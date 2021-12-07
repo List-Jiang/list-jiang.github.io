@@ -6,7 +6,6 @@ module.exports = sidebarConfig([
   "vscode/",
   "chrome",
   "git/",
-  "comsol/",
   {
     title: "工具软件",
     icon: "tool",
@@ -15,7 +14,6 @@ module.exports = sidebarConfig([
     children: [
       "",
       "power-toys",
-      "powershell",
       {
         title: "Terminal",
         icon: "shell",

@@ -58,7 +58,3 @@ Recently, I moved it as a teenager’s memory in my blog.
 :::
 
 - [Details](poem/readme.md)
-
-## COMSOL
-
-- [Click Here](/note/comsol/readme.md)
