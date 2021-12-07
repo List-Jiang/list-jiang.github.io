@@ -12,7 +12,7 @@ This site is built with [VuePress](https://v1.vuepress.vuejs.org/guide/).
 
 ## Repository Link
 
-- [**Mr.Hope’s Personal Blog**](https://github.com/List-Jiang/list-jiang.github.com.git)
+- [**Mr.Hope’s Personal Blog**](https://github.com/List-Jiang/list-jiang.github.io.git)
 
 ## Disclamer
 
