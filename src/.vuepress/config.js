@@ -37,7 +37,7 @@ module.exports = config({
     logo: "/logo.png",
     author: "List Jiang",
 
-    repo: "https://github.com/List-Jiang/list-jiang.github.com.git.io",
+    repo: "https://github.com/List-Jiang/list-jiang.github.io.git",
     repoDisplay: false,
     docsDir: "src",
     docsBranch: "main",
