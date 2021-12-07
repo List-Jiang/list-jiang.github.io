@@ -9,6 +9,72 @@ module.exports = {
       link: "/"
     },
     {
+      text: "Java",
+      icon: "spring-gb",
+      items: [{
+          text: "基础",
+          items: [
+            {
+              text:"异常机制",
+              link:"/exception"
+            }
+          ]
+        },
+        {
+          text: "集合",
+          items: [
+            {
+              text:"Collection ArrayList",
+              link:"/array-list"
+            },
+            {
+              text:"Map HashMap",
+              link:"/hash-map"
+            },
+          ]
+        },
+        {
+          text: "IO",
+          items: [
+            {
+              text:"Collection ArrayList",
+              link:"/array-list"
+            },
+            {
+              text:"Map HashMap",
+              link:"/hash-map"
+            },
+          ]
+        },
+        {
+          text: "多线程与并发",
+          items: [
+            {
+              text:"Collection ArrayList",
+              link:"/array-list"
+            },
+            {
+              text:"Map HashMap",
+              link:"/hash-map"
+            },
+          ]
+        },
+        {
+          text: "JVM",
+          items: [
+            {
+              text:"Collection ArrayList",
+              link:"/array-list"
+            },
+            {
+              text:"Map HashMap",
+              link:"/hash-map"
+            },
+          ]
+        },
+      ],
+    },
+    {
       text: "Spring 框架",
       icon: "spring-gb",
       items: [{

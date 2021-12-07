@@ -40,8 +40,6 @@ module.exports = {
       "module",
     ],
 
-    "/code/mini-app/": require("./mini-app"),
-
     "/code/language/python/": require("./language/python"),
 
     "/code/language/typescript/": require("./language/typescript"),

@@ -14,7 +14,6 @@ module.exports = sidebarConfig([
     children: [
       "",
       "power-toys",
-      "powershell",
       {
         title: "Terminal",
         icon: "shell",
