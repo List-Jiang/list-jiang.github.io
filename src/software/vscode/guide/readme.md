@@ -7,7 +7,7 @@ tags:
   - 软件
 ---
 
-- [基础介绍](basic.md)
+- [基础常识](basic.md)
 
 - [个性化介绍](customization.md)
 

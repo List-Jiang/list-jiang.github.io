@@ -98,12 +98,60 @@ module.exports = {
     {
       text: "开发入门",
       icon: "rumen",
+      prefix: "/code",
       items: [{
-          text: "开发入门",
-          icon: "rumen",
-          link: "/code/",
+          text: "基础常识",
           items: [{
-
+            text: "基础常识",
+            icon: "module",
+            link: "/basic/"
+          }, {
+            text: "windows 基础",
+            icon: "windows",
+            link: "/windows/"
+          }, {
+            text: "Git Hub",
+            icon: "github",
+            link: "/github/"
+          }]
+        },{
+          text: "前端开发",
+          items: [{
+            text: "Web 入门",
+            icon: "website",
+            link: "/website/"
+          }, {
+            text: "Node.js",
+            icon: "node",
+            link: "/node-js/"
+          }, {
+            text: "Vue",
+            icon: "vue",
+            link: "/vue/"
+          }, {
+            text: "React",
+            icon: "react",
+            link: "/react/"
+          }]
+        },{
+          text: "辅助语言",
+          prefix: "/language",
+          items: [{
+            text: "语言入门",
+            icon: "learning",
+            link: "/learning/"
+          }, {
+            text: "TypeScript 教程",
+            icon: "typescript",
+            link: "/typescript/"
+          }, {
+            text: "Python 教程",
+            icon: "python",
+            link: "/python/"
+          }, {
+            text: "Linter 介绍",
+            icon: "linter",
+            link: "/linter/"
           }]
         },
         {

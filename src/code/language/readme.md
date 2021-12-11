@@ -13,13 +13,11 @@ star: true
 
 - [TypeScript 教程](typescript/readme.md)
 
-- [Python 教程](python/readme.md) (编写中...)
+- [Python 教程](python/readme.md)
 
 - [Java 教程](https://www.liaoxuefeng.com/wiki/1252599548343744)(廖雪峰的博客)
 
 - [Markdown 教程](markdown/readme.md)
-
-- [JSON 教程](json/readme.md)
 
 ## Linter
 

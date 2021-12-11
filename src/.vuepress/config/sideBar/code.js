@@ -3,7 +3,7 @@ const { sidebarConfig } = require("vuepress-theme-hope");
 module.exports = sidebarConfig([
   "",
   {
-    title: "基础介绍",
+    title: "基础常识",
     icon: "module",
     collapsable: false,
     children: ["basic/", "windows/", "github/"],
@@ -32,10 +32,7 @@ module.exports = sidebarConfig([
       "js/",
       "typescript/",
       "python/",
-      "json/",
       "linter/",
     ],
   },
-  "Android/",
-  "backEnd/",
 ]);
