@@ -96,12 +96,15 @@ module.exports = {
       ],
     },
     {
-      text: "开发基础",
-      icon: "code",
+      text: "开发入门",
+      icon: "rumen",
       items: [{
-          text: "开发基础",
-          icon: "code",
-          link: "/code/"
+          text: "开发入门",
+          icon: "rumen",
+          link: "/code/",
+          items: [{
+
+          }]
         },
         {
           text: "后端运维",
