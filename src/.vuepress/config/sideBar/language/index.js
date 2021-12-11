@@ -45,7 +45,6 @@ module.exports = sidebarConfig([
   },
   "python/",
   "json/",
-  "yaml/",
   {
     title: "Markdown",
     icon: "markdown",

@@ -6,7 +6,7 @@ sticky: 20
 breadcrumb: false
 ---
 
-此处是 Mr.Hope 存放的一些代码笔记。
+此处是 List·Jiang 存放的一些开发入门知识。
 
 <!-- more -->
 
@@ -64,6 +64,8 @@ breadcrumb: false
 
 - [廖雪峰的网站](https://www.liaoxuefeng.com/)
 
+- [哔哩哔哩](https://www.bilibili.com/)
+
 - [MDN](https://developer.mozilla.org/zh-CN/)
 
   ::: info
@@ -79,3 +81,8 @@ breadcrumb: false
 - [w3cschool](https://www.w3cschool.cn) <Badge text="内容最新" /> <Badge text="有手机APP" /> <Badge text="广告信息多" type="warn" />
 
 - [w3school](http://www.w3school.com.cn/) <Badge text="内容比较旧" type="warn" />
+
+### 全球程序员交友网站
+- [GitHub](https://github.com/)
+
+- [Stack Overflow](https://stackoverflow.com/)

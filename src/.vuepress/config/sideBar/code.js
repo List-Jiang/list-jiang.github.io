@@ -33,7 +33,6 @@ module.exports = sidebarConfig([
       "typescript/",
       "python/",
       "json/",
-      "yaml/",
       "linter/",
     ],
   },

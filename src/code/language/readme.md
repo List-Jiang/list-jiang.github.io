@@ -19,8 +19,6 @@ star: true
 
 - [Markdown 教程](markdown/readme.md)
 
-- [YAML 教程](yaml/readme.md)
-
 - [JSON 教程](json/readme.md)
 
 ## Linter
