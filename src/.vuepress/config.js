@@ -25,14 +25,19 @@ module.exports = config({
 
   dest: "dist",
 
+  // 站点多语言配置
   locales: {
-    "/": { lang: "zh-CN" },
+    "/": {
+      lang: "zh-CN"
+    },
     "/en/": {
       title: "My name is List Jiang",
+      lang: 'en-US',
       description: "List Jiang personal blog",
     },
   },
 
+  // 默认主题多语言配置
   themeConfig: {
     logo: "/logo.png",
     author: "List Jiang",
@@ -57,12 +62,10 @@ module.exports = config({
       intro: "/about/",
       sidebarDisplay: "mobile",
       links: {
-        QQ: "http://wpa.qq.com/msgrd?v=3&uin=2754005464&site=qq&menu=yes",
-        Qzone: "https://2754005464.qzone.qq.com/",
-        // Gmail: "mailto:zhangbowang1998@gmail.com",
-        // Zhihu: "https://www.zhihu.com/people/mister-hope",
+        Email: "listjiang@outlook.com",
+        Gitee: "https://gitee.com/J-dw",
+        Github: "https://github.com/List-Jiang",
         Steam: "https://steamcommunity.com/id/ListJiang/",
-        // Weibo: "https://weibo.com/misterhope",
       },
     },
 
@@ -91,7 +94,7 @@ module.exports = config({
       display: true,
     },
 
-    hostname: "https://mrhope.site",
+    hostname: "https://list-jiang.github.io",
 
     algolia: {
       apiKey: "064a2d15d1a0f7b69df3ef1458d1a510",

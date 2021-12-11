@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       text: "Java",
-      icon: "spring-gb",
+      icon: "java",
       items: [{
           text: "基础",
           items: [
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       text: "Spring 框架",
-      icon: "spring-gb",
+      icon: "spring",
       items: [{
           text: "Spring Framework",
           link: "/framework/"
@@ -96,20 +96,12 @@ module.exports = {
       ],
     },
     {
-      text: "代码笔记",
+      text: "开发基础",
       icon: "code",
       items: [{
-          text: "代码笔记",
+          text: "开发基础",
           icon: "code",
           link: "/code/"
-        },
-        {
-          text: "产品设计",
-          items: [{
-            text: "设计教程",
-            icon: "skin",
-            link: "/design/"
-          }],
         },
         {
           text: "后端运维",
