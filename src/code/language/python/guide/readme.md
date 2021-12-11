@@ -1,5 +1,5 @@
 ---
-title: 快速上手
+title: 基础教程
 icon: creative
 author: 廖雪峰
 time: 2020-05-19

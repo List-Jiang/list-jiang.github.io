@@ -27,7 +27,7 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 - [指南](guide/readme.md)
 
-  - [基础介绍](guide/basic.md)
+  - [基础常识](guide/basic.md)
 
   - [个性化介绍](guide/customization.md)
 

@@ -1,6 +1,6 @@
 ---
-title: 代码相关
-icon: code
+title: 开发入门
+icon: rumen
 star: true
 sticky: 20
 breadcrumb: false
@@ -14,7 +14,7 @@ breadcrumb: false
 
 ### 基础
 
-- [基础知识](basic/readme.md)
+- [基础常识](basic/readme.md)
 
 - [Windows 基础](windows/readme.md)
 
@@ -32,29 +32,16 @@ breadcrumb: false
 
 ### 代码学习
 
-- [代码学习](language/readme.md)
-
 - [如何学习一门语言](language/learning.md)
 
 - [JavaScript 教程](language/js/readme.md)
 
 - [TypeScript 教程](language/typescript/readme.md)
 
-- [Python 教程](language/python/readme.md) (编写中...)
+- [Python 教程](language/python/readme.md)
 
 - [Markdown 教程](language/markdown/readme.md)
 
-- [YAML 教程](language/yaml/readme.md)
-
-- [JSON 教程](language/json/readme.md)
-
-### APP
-
-- [Android 开发](Android/readme.md)
-
-### 后端开发
-
-- [后端开发](backEnd/readme.md)
 
 ### 代码学习网站
 
