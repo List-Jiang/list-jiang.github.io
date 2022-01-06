@@ -115,7 +115,7 @@ module.exports = {
             link: "/github/"
           }]
         },{
-          text: "前端开发",
+          text: "前端体系",
           items: [{
             text: "Web 入门",
             icon: "website",

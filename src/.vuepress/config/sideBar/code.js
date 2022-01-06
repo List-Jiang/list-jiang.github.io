@@ -9,7 +9,7 @@ module.exports = sidebarConfig([
     children: ["basic/", "windows/", "github/"],
   },
   {
-    title: "前端开发",
+    title: "前端体系",
     icon: "code",
     collapsable: false,
     children: [
