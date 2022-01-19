@@ -13,62 +13,56 @@ module.exports = {
       icon: "java",
       items: [{
           text: "基础",
-          items: [
-            {
-              text:"异常机制",
-              link:"/exception"
-            }
-          ]
+          items: [{
+            text: "异常机制",
+            link: "/exception"
+          }]
         },
         {
           text: "集合",
-          items: [
-            {
-              text:"Collection ArrayList",
-              link:"/array-list"
+          items: [{
+              text: "Collection ArrayList",
+              link: "/array-list"
             },
             {
-              text:"Map HashMap",
-              link:"/hash-map"
+              text: "Map HashMap",
+              link: "/hash-map"
             },
           ]
         },
         {
           text: "IO",
-          items: [
-            {
-              text:"Collection ArrayList",
-              link:"/array-list"
+          items: [{
+              text: "Collection ArrayList",
+              link: "/array-list"
             },
             {
-              text:"Map HashMap",
-              link:"/hash-map"
+              text: "Map HashMap",
+              link: "/hash-map"
             },
           ]
         },
         {
           text: "多线程与并发",
-          items: [
-            {
-              text:"Collection ArrayList",
-              link:"/array-list"
+          items: [{
+              text: "Collection ArrayList",
+              link: "/array-list"
             },
             {
-              text:"Map HashMap",
-              link:"/hash-map"
+              text: "Map HashMap",
+              link: "/hash-map"
             },
           ]
         },
         {
           text: "JVM",
-          items: [
-            {
-              text:"Collection ArrayList",
-              link:"/array-list"
+          items: [{
+              text: "Collection ArrayList",
+              link: "/array-list"
             },
             {
-              text:"Map HashMap",
-              link:"/hash-map"
+              text: "Map HashMap",
+              link: "/hash-map"
             },
           ]
         },
@@ -114,7 +108,7 @@ module.exports = {
             icon: "github",
             link: "/github/"
           }]
-        },{
+        }, {
           text: "前端体系",
           items: [{
             text: "Web 入门",
@@ -125,15 +119,11 @@ module.exports = {
             icon: "node",
             link: "/node-js/"
           }, {
-            text: "Vue",
-            icon: "vue",
-            link: "/vue/"
-          }, {
             text: "React",
             icon: "react",
             link: "/react/"
           }]
-        },{
+        }, {
           text: "辅助语言",
           prefix: "/language",
           items: [{

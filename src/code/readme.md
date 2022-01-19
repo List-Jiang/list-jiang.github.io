@@ -34,6 +34,8 @@ breadcrumb: false
 
 - [如何学习一门语言](language/learning.md)
 
+- [Kotlin 教程](https://book.kotlincn.net/)
+
 - [JavaScript 教程](language/js/readme.md)
 
 - [TypeScript 教程](language/typescript/readme.md)
