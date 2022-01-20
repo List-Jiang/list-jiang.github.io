@@ -175,6 +175,22 @@ module.exports = {
         ],
       }, ],
     },
+    {
+      text: "随笔",
+      icon: "software",
+      link: "/note/",
+      items: [{
+        text: "随笔一",
+        icon: "software",
+        link: "",
+        items: [{
+            text: "随笔一",
+            icon: "vscode",
+            link: "note1/"
+          },
+        ],
+      }, ],
+    },
   ]),
 
   en: navbarConfig([{
