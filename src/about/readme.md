@@ -3,7 +3,7 @@ layout: Slide
 title: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰 介绍
 icon: people
 tags:
-  - 个人介绍
+  - about
 timeline: false
 star: true
 ---

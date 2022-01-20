@@ -13,18 +13,7 @@ module.exports = sidebarConfig([
     prefix: "tool/",
     children: [
       "",
-      "power-toys",
-      {
-        title: "Terminal",
-        icon: "shell",
-        path: "terminal/",
-        collapsable: false,
-        prefix: "terminal/",
-        children: ["get-started", "settings"],
-      },
     ],
   },
-  "apache",
   "nginx",
-  "mysql/",
 ]);

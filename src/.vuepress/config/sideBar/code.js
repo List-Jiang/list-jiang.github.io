@@ -15,10 +15,7 @@ module.exports = sidebarConfig([
     children: [
       "website/",
       "node-js/",
-      "vue/",
-      "Angular/",
       "react/",
-      "mini-app/",
     ],
   },
   {
@@ -29,7 +26,6 @@ module.exports = sidebarConfig([
     collapsable: false,
     children: [
       "learning",
-      "js/",
       "typescript/",
       "python/",
       "linter/",
