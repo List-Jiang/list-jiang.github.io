@@ -29,8 +29,6 @@ module.exports = {
 
     "/code/website/": require("./website"),
 
-    "/code/vue/": require("./vue"),
-
     "/code/node-js/": [
       "",
       "intro",
