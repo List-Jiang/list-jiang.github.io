@@ -7,6 +7,26 @@ heroText: 𝓛𝓲𝓼𝓽·𝓙𝓲𝓪𝓷𝓰
 heroFullScreen: true
 tagline: 远方无限 砥砺前行
 project:
+  - name: pdai 的 Java 全栈知识体系
+    type: link
+    desc: 无敌的中文java全栈学习网站
+    link: https://www.pdai.tech/
+
+  - name: Spring
+    type: link
+    desc: java程序员必看的网站
+    link: https://spring.io/
+
+  - name: Vue
+    type: link
+    desc: Vue 中文官网
+    link: https://cn.vuejs.org/
+
+  - name: JEECG
+    type: link
+    desc: 一款基于BPM的低代码平台
+    link: http://jeecg.com/
+
   - name: vuepress-theme-hope
     type: link
     desc: 一个功能强大的 Vuepress 主题✨

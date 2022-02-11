@@ -12,6 +12,12 @@ module.exports = {
       text: "Java",
       icon: "java",
       items: [{
+          text: "学习地址",
+          items: [{
+            text: "全栈 @pdai",
+            link: "https://www.pdai.tech/"
+          }]
+        }, {
           text: "基础",
           items: [{
             text: "异常机制",
@@ -70,24 +76,55 @@ module.exports = {
     },
     {
       text: "Spring 框架",
+      link: "https://spring.io/",
+      prefix: "/spring",
       icon: "spring",
       items: [{
           text: "Spring Framework",
-          link: "/framework/"
+          link: "https://spring.io/projects/spring-framework"
         },
         {
           text: "Spring Boot",
-          link: "/boot/"
-        },
-        {
-          text: "Spring Security",
-          link: "/security/"
+          link: "https://spring.io/projects/spring-boot"
         },
         {
           text: "Spring Cloud",
-          link: "/cloud/"
+          link: "https://spring.io/projects/spring-cloud"
+        },
+        {
+          text: "Spring Security",
+          link: "https://spring.io/projects/spring-security"
+        },
+        {
+          text: "Spring Cloud",
+          link: "https://spring.io/projects/spring-security",
+          items: [{
+            text: "Spring Cloud Square",
+            link: "/square"
+          }]
         },
       ],
+    },
+    {
+      text: "数据库",
+      icon: "rumen",
+      prefix: "/database",
+      items: [{
+        text: "MySQL",
+        items: [{
+          text: "基础常识",
+          icon: "module",
+          link: "/basic/"
+        }, {
+          text: "windows 基础",
+          icon: "windows",
+          link: "/windows/"
+        }, {
+          text: "Git Hub",
+          icon: "github",
+          link: "/github/"
+        }]
+      }]
     },
     {
       text: "开发入门",
@@ -184,11 +221,10 @@ module.exports = {
         icon: "software",
         link: "",
         items: [{
-            text: "随笔一",
-            icon: "vscode",
-            link: "note1/"
-          },
-        ],
+          text: "随笔一",
+          icon: "vscode",
+          link: "note1/"
+        }, ],
       }, ],
     },
   ]),
