@@ -5,8 +5,6 @@ icon: tool
 
 ## 目录
 
-- [PowerToys](power-toys.md): Windows 实用工具合集
-
 - [PasteEx](https://github.com/huiyadanli/PasteEx): Paste As File 把剪贴板的内容直接粘贴为文件
 
 - [typora](https://www.typora.io/): 一个页面很漂亮的 Markdown 编辑器
