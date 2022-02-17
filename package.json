@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "vuepress": "1.9.7",
-    "vuepress-theme-hope": "1.27.3"
+    "vuepress-theme-hope": "1.27.4"
   },
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.8",
