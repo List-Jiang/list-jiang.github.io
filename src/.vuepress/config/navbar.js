@@ -215,17 +215,17 @@ module.exports = {
     {
       text: "随笔",
       icon: "software",
-      link: "/note/",
+      prefix: "/note",
       items: [{
-        text: "随笔一",
-        icon: "software",
-        link: "",
+        text: "Spring 随笔",
+        icon: "spring",
+        prefix: "/spring",
         items: [{
-          text: "随笔一",
+          text: "Spring cloud Square笔记",
           icon: "vscode",
-          link: "note1/"
-        }, ],
-      }, ],
+          link: "/square"
+        }]
+      }]
     },
   ]),
 

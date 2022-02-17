@@ -6,10 +6,10 @@ category: 笔记
 tags: 
   - 随笔
 
-author: List·Jiang
+author: List Jiang
 ---
 
 ## 随笔集合
 > 记录工作中的小经验
-
-- [随笔一](note1.md)
+### Spring 随笔
+- [Spring Cloud Square](spring/square.md)
