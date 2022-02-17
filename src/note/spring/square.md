@@ -9,7 +9,7 @@ tags:
 copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
 ---
 
-# 定义
+# spring-cloud-square-retrofit 定义
 微服务远程调用框架，用于弥补 OpenFeign 对于响应式调用的缺失
 # 场景
 响应式微服务之间的调用，例如基于 Spring WebFlux 提供的 http 接口服务。尽管可以通过 WebClient 手动配置 ReactorLoadBalancerExchangeFilterFunction 实例来实现负载。如下案例，但无法像 OpenFeign 那样通过调用方法的方式调用远程服务，而且无法兼容非响应式的 http 接口服务。
