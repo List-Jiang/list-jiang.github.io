@@ -45,7 +45,9 @@ breadcrumb: false
 - [Markdown 教程](language/markdown/readme.md)
 
 
-### 代码学习网站
+### 优秀开源项目
+
+- [JEECG](http://jeecg.com/)
 
 ### 优质网站
 
