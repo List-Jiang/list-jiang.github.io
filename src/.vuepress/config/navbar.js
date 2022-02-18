@@ -77,30 +77,33 @@ module.exports = {
     {
       text: "Spring 框架",
       link: "https://spring.io/",
-      prefix: "/spring",
       icon: "spring",
+      prefix:"",
       items: [{
+          text: "全栈 @pdai",
+          link: "https://www.pdai.tech/"
+        }, {
           text: "Spring Framework",
-          link: "https://spring.io/projects/spring-framework"
+          link: "https://spring.io/projects/spring-framework/"
         },
         {
           text: "Spring Boot",
-          link: "https://spring.io/projects/spring-boot"
+          link: "https://spring.io/projects/spring-boot/"
         },
         {
           text: "Spring Cloud",
-          link: "https://spring.io/projects/spring-cloud"
+          link: "https://spring.io/projects/spring-cloud/"
         },
         {
           text: "Spring Security",
-          link: "https://spring.io/projects/spring-security"
+          link: "https://spring.io/projects/spring-security/"
         },
         {
           text: "Spring Cloud",
-          link: "https://spring.io/projects/spring-security",
+          link: "https://spring.io/projects/spring-security/",
           items: [{
             text: "Spring Cloud Square",
-            link: "/square"
+            link: "/spring/square"
           }]
         },
       ],
@@ -108,21 +111,16 @@ module.exports = {
     {
       text: "数据库",
       icon: "rumen",
-      prefix: "/database",
       items: [{
         text: "MySQL",
         items: [{
-          text: "基础常识",
+          text: "官网地址",
           icon: "module",
-          link: "/basic/"
+          link: "https://www.mysql.com/"
         }, {
-          text: "windows 基础",
+          text: "下载地址",
           icon: "windows",
-          link: "/windows/"
-        }, {
-          text: "Git Hub",
-          icon: "github",
-          link: "/github/"
+          link: "https://www.mysql.com/downloads/"
         }]
       }]
     },
@@ -186,7 +184,7 @@ module.exports = {
           items: [{
             text: "Linux 教程",
             icon: "linux",
-            link: "/linux/"
+            link: "/linux"
           }],
         },
       ],
@@ -222,7 +220,7 @@ module.exports = {
         prefix: "/spring",
         items: [{
           text: "Spring cloud Square笔记",
-          icon: "vscode",
+          icon: "note",
           link: "/square"
         }]
       }]

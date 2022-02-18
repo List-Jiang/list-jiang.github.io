@@ -1,4 +1,5 @@
 const { sidebarConfig } = require("vuepress-theme-hope");
+const spring = require("./spring");
 
 module.exports = {
   zh: sidebarConfig({
@@ -10,7 +11,7 @@ module.exports = {
 
     "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
-    "/linux/": require("./linux"),
+    "/code/linux/": require("./linux"),
 
     "/code/windows/": [
       "",
@@ -55,7 +56,9 @@ module.exports = {
     "/about/": ["", "site"],
 
     // fallback
-    "/": ["", "note/", "code/", "software/", "about/"],
+    "/": ["", "note/", "code/", "spring/","software/"],
+
+    "/spring": require("./spring")
   }),
 
   en: sidebarConfig({
