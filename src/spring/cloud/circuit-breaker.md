@@ -3,6 +3,7 @@ title: Spring Cloud Circuit Breaker
 icon: calculate
 author: List Jiang
 category: Spring
+next: true
 tags:
   - 微服务通信
   - 断路器
