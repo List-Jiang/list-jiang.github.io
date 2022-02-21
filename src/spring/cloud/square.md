@@ -3,6 +3,7 @@ title: Spring Cloud Square
 icon: calculate
 author: List Jiang
 category: Spring
+next: true
 tags:
   - RPC
   - 微服务通信
@@ -10,9 +11,11 @@ copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-s
 ---
 
 # spring-cloud-square-retrofit 定义
-微服务远程调用框架，用于弥补 OpenFeign 对于响应式调用的缺失
-# 场景
+微服务远程调用框架，用于弥补 [OpenFeign](https://spring.io/projects/spring-cloud-openfeign) 对于响应式调用的缺失
+
+::: tip 场景
 响应式微服务之间的调用，例如基于 Spring WebFlux 提供的 http 接口服务。尽管可以通过 WebClient 手动配置 ReactorLoadBalancerExchangeFilterFunction 实例来实现负载。如下案例，但无法像 OpenFeign 那样通过调用方法的方式调用远程服务，而且无法兼容非响应式的 http 接口服务。
+:::
 ```java
     private final WebClient.Builder loadBalancedWebClientBuilder;
 
@@ -134,7 +137,7 @@ dependencies {
 }
 ```
 ## 完整项目源码地址
-gitee: [](https://gitee.com/jdw-silky/silky-parent.git)
+Gitee: [https://gitee.com/jdw-silky/silky-parent.git](https://gitee.com/jdw-silky/silky-parent.git)
 ### 基础启动说明
 1. 以 native 环境启动 silky-eureka-server
 2. 以 native 环境启动 silky-config

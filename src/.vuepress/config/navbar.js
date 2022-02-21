@@ -103,7 +103,10 @@ module.exports = {
           link: "https://spring.io/projects/spring-security/",
           items: [{
             text: "Spring Cloud Square",
-            link: "/spring/square"
+            link: "/spring/cloud/square"
+          },{
+            text: "Spring Cloud Circuit Breaker",
+            link: "/spring/cloud/circuit-breaker"
           }]
         },
       ],
