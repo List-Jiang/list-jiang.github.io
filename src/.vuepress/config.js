@@ -90,7 +90,7 @@ module.exports = config({
     },
 
     footer: {
-      copyright: "Copyright © 2019-present List·Jiang",
+      copyright: "Copyright © 2021-present List Jiang",
       display: true,
     },
 
