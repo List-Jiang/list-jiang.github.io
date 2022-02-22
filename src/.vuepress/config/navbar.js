@@ -75,10 +75,10 @@ module.exports = {
       ],
     },
     {
-      text: "Spring 框架",
+      text: "Spring 系列",
       link: "https://spring.io/",
       icon: "spring",
-      prefix:"",
+      prefix: "",
       items: [{
           text: "全栈 @pdai",
           link: "https://www.pdai.tech/"
@@ -104,9 +104,17 @@ module.exports = {
           items: [{
             text: "Spring Cloud Square",
             link: "/spring/cloud/square"
-          },{
+          }, {
             text: "Spring Cloud Circuit Breaker",
             link: "/spring/cloud/circuit-breaker"
+          }]
+        },
+        {
+          text: "其他框架",
+          items: [{
+            text: "resilience4j",
+            icon: "small-Resilience4j",
+            link: "/spring/resilience4j/resilience4j"
           }]
         },
       ],

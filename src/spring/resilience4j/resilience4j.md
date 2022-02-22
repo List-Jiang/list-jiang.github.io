@@ -1,6 +1,6 @@
 ---
 title: Resilience4j
-icon: calculate
+icon: small-Resilience4j
 author: List Jiang
 category: Resilience4j
 next: true
@@ -158,9 +158,9 @@ bulkhead.getEventPublisher()
     .onCallFinished(event -> logger.info(...));
 ```
 
-### RateLimiter
+### RateLimiter 限流器
 
-#### 介绍
+#### **介绍**
 限流对于保证服务的 规模化、高可用、高可靠是一种必要的技术。<br>
 Resilience4j 提供了一个 RateLimiter，它将从 epoch 开始的所有纳秒分成周期。每个周期都有一个由 RateLimiterConfig.limitRefreshPeriod 配置的持续时间。在每个周期开始时，RateLimiter 将活动权限的数量设置为 RateLimiterConfig.limitForPeriod 。对于 RateLimiter 调用者，它看起来确实像这样，但是对于 AtomicRateLimiter 实现有一些底层优化，如果 RateLimiter 没有被主动使用，则将跳过此刷新。见下图
 
@@ -174,10 +174,135 @@ RateLimiter 的默认实现是 `AtomicRateLimiter` ,通过 AtomicReference 管�
 
 还有一个 `SemaphoreBasedRateLimiter` 使用 Semaphore 和一个调度程序，它将在每个 `RateLimiterConfig#limitRefreshPeriod` 之后刷新权限
 
-#### 创建一个 RateLimiterRegistry
+#### **创建一个 RateLimiterRegistry**
 和 CircuitBreaker 模块一样，该模块提供了一个基于内存的 RateLimiterRegistry，可用于管理（创建和检索）RateLimiter 实例。
 
 ```java
 RateLimiterRegistry rateLimiterRegistry = RateLimiterRegistry.ofDefaults();
 ```
 
+#### **创建和配置 RateLimiter**
+
+|配置属性|默认值|描述|
+|---|---|---|
+|timeoutDuration|`5 [s]`|线程等待权限的默认等待时间|
+|limitRefreshPeriod|`500 [ns]`|限制刷新的周期。 在每个周期之后，速率限制器将其权限计数设置回 limitForPeriod 值|
+|limitForPeriod|50|一个限制刷新周期内可用的权限数|
+
+```java
+// 限制某些方法的调用速率不高于 10 req/ms。
+RateLimiterConfig config = RateLimiterConfig.custom()
+  .limitRefreshPeriod(Duration.ofMillis(1))
+  .limitForPeriod(10)
+  .timeoutDuration(Duration.ofMillis(25))
+  .build();
+
+// Create registry
+RateLimiterRegistry rateLimiterRegistry = RateLimiterRegistry.of(config);
+
+// Use registry
+RateLimiter rateLimiterWithDefaultConfig = rateLimiterRegistry
+  .rateLimiter("name1");
+
+RateLimiter rateLimiterWithCustomConfig = rateLimiterRegistry
+  .rateLimiter("name2", config);
+```
+
+#### **装饰和执行函数接口**
+
+```java
+CheckedRunnable restrictedCall = RateLimiter
+    .decorateCheckedRunnable(rateLimiter, backendService::doSomething);
+
+Try.run(restrictedCall)
+    .andThenTry(restrictedCall)
+    .onFailure((RequestNotPermitted throwable) -> LOG.info("Wait before call it again :)"));
+```
+
+可以使用 changeTimeoutDuration 和 changeLimitForPeriod 在运行时更改速率限制器参数。
+新的超时持续时间不会影响当前正在等待许可的线程。
+新限制不会影响当前期间的权限，只会从下一个期间开始应用。
+
+```java
+// Decorate your call to BackendService.doSomething()
+CheckedRunnable restrictedCall = RateLimiter
+    .decorateCheckedRunnable(rateLimiter, backendService::doSomething);
+
+// during second refresh cycle limiter will get 100 permissions
+rateLimiter.changeLimitForPeriod(100);
+```
+
+### Retry 重试
+大致配置流程都是一样的
+
+|配置属性|默认值|描述|
+|---|---|---|
+|maxAttempts|2|最大尝试次数（包括作为第一次尝试的初始调用）|
+|waitDuration|`500 [ms]`|重试尝试之间的固定等待时间|
+|intervalFunction|numOfAttempts -> waitDuration|修改失败后等待间隔的函数。默认情况下，等待时间保持不变。|
+|intervalBiFunction|`(numOfAttempts, Either<throwable, result>) -> waitDuration`|根据尝试次数和结果或异常修改失败后等待间隔的函数。与 intervalFunction 一起使用时会抛出 IllegalStateException。|
+|retryOnResultPredicate|result -> false|配置一个判断结果是否应该重试的断言。如果结果应该重试，Predicate 必须返回 true，否则它必须返回 false。|
+|retryExceptionPredicate|throwable -> true|配置一个断言来评估是否应该重试异常。如果应该重试异常，Predicate 必须返回 true，否则它必须返回 false。|
+|retryExceptions|empty|配置记录为失败并因此重试的 Throwable 类的列表。此参数支持子类型。注意：如果您使用 Checked Exceptions，则必须使用 CheckedSupplier|
+|ignoreExceptions|empty|配置被忽略并因此不会重试的 Throwable 类的列表。此参数支持子类型。|
+|failAfterMaxAttempts|false|当重试达到配置的 maxAttempts 并且结果仍未通过 retryOnResultPredicate 时启用或禁用抛出 MaxRetriesExceededException 的布尔值|
+
+
+### TimeLimiter 限时器
+|配置属性|默认值|描述|
+|---|---|---|
+|timeoutDuration|`1 [s]`|线程执行超时时间|
+|cancelRunningFuture|true|是否应该在运行的未来调用取消|
+
+
+### cache 缓存
+
+#### 创建和配置缓存
+
+下面的示例展示了如何使用 Cache 抽象来装饰 lambda 表达式。缓存抽象将 lambda 表达式的结果放在缓存实例 ( JCache ) 中，并尝试在调用 lambda 表达式之前从缓存中检索先前缓存的结果。如果从分布式缓存中检索缓存失败，则会处理异常并调用 lambda 表达式。
+
+```java
+// Create a CacheContext by wrapping a JCache instance.
+javax.cache.Cache<String, String> cacheInstance = Caching
+  .getCache("cacheName", String.class, String.class);
+Cache<String, String> cacheContext = Cache.of(cacheInstance);
+
+// Decorate your call to BackendService.doSomething()
+CheckedFunction1<String, String> cachedFunction = Decorators
+    .ofCheckedSupplier(() -> backendService.doSomething())
+    .withCache(cacheContext)
+    .decorate();
+String value = Try.of(() -> cachedFunction.apply("cacheKey")).get();
+```
+
+#### **使用发出的 CacheEvents**
+
+Cache 发出一个 CacheEvents 流。事件可以是缓存命中、缓存未命中或错误。
+
+```java
+cacheContext.getEventPublisher()
+    .onCacheHit(event -> logger.info(...))
+    .onCacheMiss(event -> logger.info(...))
+    .onError(event -> logger.info(...));
+```
+
+#### **Ehcache 示例**
+
+```gradle
+compile 'org.ehcache:ehcache:3.7.1'
+```
+
+```java
+// Configure a cache (once)
+this.cacheManager = Caching.getCachingProvider().getCacheManager();
+this.cache = Cache.of(cacheManager
+    .createCache("booksCache", new MutableConfiguration<>()));
+
+// Get books using a cache
+List<Book> books = Cache.decorateSupplier(cache, library::getBooks)
+    .apply(BOOKS_CACHE_KEY);
+```
+
+::: danger 使用警告
+不建议在生产中使用 JCache参考实现，因为它会导致一些并发问题。使用 Ehcache、Caffeine、Redisson、Hazelcast、Ignite 或其他 JCache 实现。
+:::
