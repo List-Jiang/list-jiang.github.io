@@ -6,7 +6,7 @@ sticky: 20
 breadcrumb: false
 ---
 
-此处是 List·Jiang 存放的一些开发入门知识。
+此处是 List Jiang 存放的一些开发入门知识。
 
 <!-- more -->
 

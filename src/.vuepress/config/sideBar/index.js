@@ -53,6 +53,8 @@ module.exports = {
 
     "/code/": require("./code"),
 
+    "/middleware/": require("./middleware/middleware"),
+
     "/about/": ["", "site"],
 
     // fallback

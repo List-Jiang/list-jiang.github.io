@@ -76,7 +76,7 @@ public static class DemoControllerService {
 resilience4j 文档：[https://resilience4j.readme.io/](https://resilience4j.readme.io/)
 以下内容，部分为 google 机翻
 ## Circuit Breaker 设计思想
-CircuitBreaker 是通过三个典型状态：`CLOSED`、`OPEN` 和 `HALF_OPEN` 以及三个特殊状态 `DISABLED` 、和 `FORCED_OPEN` 实现的
+CircuitBreaker 是通过三个典型状态：`CLOSED`、`OPEN` 和 `HALF_OPEN` 以及~~两个~~特殊状态 `DISABLED` 、和 `FORCED_OPEN` 实现的
 
 ![state_machine](img/state_machine.jpg)
 
@@ -206,3 +206,5 @@ CircuitBreaker circuitBreakerWithCustomConfig = circuitBreakerRegistry .circuitB
 ```
 
 [^first]: Spring cloud 版本为 `2020.0.0`，浏览网站时间为 2022/02/21
+
+
