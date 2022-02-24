@@ -20,6 +20,7 @@ category: 链路跟踪
 - [kibana](https://www.elastic.co/cn/kibana/)
 
 ### 环境准备
+
 - [jdk17](https://jdk.java.net/17/)
 - [maven](https://maven.apache.org/)
 - [Intellij IDEA](https://www.jetbrains.com/idea/)
@@ -41,7 +42,7 @@ docker 对于技术学习测试真的很方便
 
 提一句，微服务集成 zipkin 除了增加了两个引用与少量的环境配置，不改变任何代码。
 
-```grovvy
+```
     implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 ```
@@ -67,6 +68,7 @@ spring:
 [服务器启动方式](quick-start.md)
 
 #### 以源码启动
+
 Intellij IDEA 以源码启动 zipkin 服务，主要难的是这个。此处需要配置 [maven 跳过测试](https://www.cnblogs.com/jiangdewen/p/15928589.html)。
 
 maven 跳过测试配置： `-Dmaven.test.skip=true`
@@ -79,6 +81,7 @@ maven 跳过测试配置： `-Dmaven.test.skip=true`
 > 由于 zipkin-lens 项目用到了 [react](https://react.docschina.org/) 。如果该 zipkin-lens 打包出错，尝试配置 node 环境。
 
 **配置文件修改**
+
 修改项目启动配置文件 zipkin-server-shared.yml，之所以启动配置文件是这个，我们可以在启动类看到配置了 spring 启动参数 `spring.config.name=zipkin-server`。而 zipkin-server.yml 文件指定了 `spring.profiles.include: shared` 
 
 ![](../img/zipkin-code1.png)
@@ -105,22 +108,23 @@ zipkin.storage.elasticsearch.hosts=${ES_HOSTS:http://192.168.137.165:9201,http:/
 ![](../img/zipkin-maven-run.png)
 
 **启动微服务项目**
+
 便于测试可以写几个简单的脚本
 
 - eureka-server.bat
-```cmd
+```bash
 d:
 cd D:\ideaProject\gitee\jdw-silky\silky-parent\silky-eureka-server\build\libs
 java -jar silky-eureka-server-1.0.1.jar --spring.profiles.active=native
 ```
 - config-server.bat
-```cmd
+```bash
 d:
 cd D:\ideaProject\gitee\jdw-silky\silky-parent\silky-config\build\libs
 java -jar silky-config-1.0.1.jar --spring.profiles.active=native
 ```
 - web-server.bat
-```cmd
+```bash
 d:
 cd D:\ideaProject\gitee\jdw-silky\silky-parent\silky-demo-web\build\libs
 java -jar silky-demo-web-1.0.1.jar --spring.profiles.active=native
@@ -131,14 +135,14 @@ java -jar silky-demo-web-1.0.1.jar --spring.profiles.active=native
 
 1. 调用一次 web 服务
 
-![](../img/demo1.png)
+![](../img/test1.png)
 
 2. 在 zipkin 界面查看调用链
 
-![](../img/demo2.png)
+![](../img/test2.png)
 
 3. 使用 kibana 查找调用链记录
 
-![](../img/demo3.png)
+![](../img/test3.png)
 
 可以看到，一个调用链在 zipkin 看到了，并且持久化到 Elastic Search 里面了

@@ -93,6 +93,10 @@ module.exports = {
         text: "resilience4j",
         icon: "small-Resilience4j",
         link: "/spring/resilience4j/resilience4j"
+      },{
+        text: "zipkin",
+        icon: "zipkin",
+        link: "/spring/track/zipkin/"
       }]
     }, ],
   }, {
