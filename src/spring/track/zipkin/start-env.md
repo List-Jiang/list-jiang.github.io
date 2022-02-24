@@ -200,11 +200,11 @@ $ MEM_MAX_SPANS=1000000 java -Xmx1G -jar zipkin.jar
 
 
 ### Cassandra 存储
-Zipkin 的 Elasticsearch 存储组件支持 3.11.3+ 版本
+Zipkin 的 Cassandra 存储组件支持 3.11.3+ 版本
 
 ::: tip Cassandra 相关配置
 
-**当 `STORAGE_TYPE` 设置为 `elasticsearch` 时，以下配置生效：**
+**当 `STORAGE_TYPE` 设置为 `cassandra3` 时，以下配置生效：**
 
 `CASSANDRA_KEYSPACE`: 要使用的键空间，默认为： "zipkin2"
 `CASSANDRA_CONTACT_POINTS`: 以逗号分隔的主机地址列表配置 Cassandra 集群。还可以使用 `host:port` 指定自定义端口。默认为本地主机上的 9042 端口。
