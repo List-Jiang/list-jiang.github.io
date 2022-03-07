@@ -93,7 +93,7 @@ module.exports = {
         text: "resilience4j",
         icon: "small-Resilience4j",
         link: "/spring/resilience4j/resilience4j"
-      },{
+      }, {
         text: "zipkin",
         icon: "zipkin",
         link: "/spring/track/zipkin/"
@@ -133,19 +133,31 @@ module.exports = {
     }]
   }, {
     text: "数据库",
-    icon: "rumen",
+    icon: "database",
+    prefix: "",
     items: [{
-      text: "MySQL",
-      items: [{
-        text: "官网地址",
-        icon: "module",
-        link: "https://www.mysql.com/"
-      }, {
-        text: "下载地址",
-        icon: "windows",
-        link: "https://www.mysql.com/downloads/"
-      }]
-    }]
+        text: "MySQL",
+        icon:"mysql",
+        items: [{
+          text: "官网地址",
+          icon: "module",
+          link: "https://www.mysql.com/"
+        }, {
+          text: "下载地址",
+          icon: "windows",
+          link: "https://www.mysql.com/downloads/"
+        }]
+      },
+      {
+        text: "Redis",
+        icon: "redis",
+        items: [{
+          text: "基础介绍",
+          icon: "redis",
+          link: "/db/redis/"
+        }]
+      }
+    ]
   }, {
     text: "开发入门",
     icon: "rumen",
