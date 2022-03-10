@@ -91,7 +91,7 @@ jdk 1.8 新增的用于处理并发任务的一个工具类，jdk9 做了增强�
 
 CompletableFuture 大致 API 笼统含义
 
-- `then` 围绕 Future 关系组合
+- `then` 围绕 Future 关系组合。只有 thenCombine 相关的三个是并行，别的都是串行。
 - `handle` 中间处理流程，类似于 stream 的 map API
 - `Either` 围绕谁先到谁说了算
 - `complete` 与任务完成状态相关。要么中途临时插手完成任务，要么设置任务完成时需要进行的操作
@@ -99,4 +99,5 @@ CompletableFuture 大致 API 笼统含义
 - `get` 与 `join` 都是获取结果， get 多几个异常，并且可以设置等待时间
 - `run` 不接收上次的运行结果，直接往下继续
 - `failed` 异常失败情景处理
+- `allOf` 和 `anyOf` 这两个一个是全部完成返回，一个是任意一个完成返回。具体的返回值判定可以看下文档
 
