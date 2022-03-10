@@ -42,10 +42,10 @@ module.exports = {
     }, {
       text: "多线程与并发",
       items: [{
-        text: "Collection ArrayList",
-        link: "/array-list"
+        text: "CompletableFuture",
+        link: "/note/java/completable-future/"
       }, {
-        text: "Map HashMap",
+        text: "ThreadLocal",
         link: "/hash-map"
       }, ]
     }, {
