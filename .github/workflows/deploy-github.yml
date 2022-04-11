@@ -48,7 +48,7 @@ jobs:
 
       # 把 dist 文件夹发布到 gh-pages 分支
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
           folder: dist
