@@ -12140,10 +12140,10 @@ textlint-rule-stop-words@3.0.1:
     split-lines "^2.0.0"
     textlint-rule-helper "^2.1.1"
 
-textlint-rule-terminology@2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/textlint-rule-terminology/-/textlint-rule-terminology-2.1.5.tgz#21aaed9409e031f71fd450d024b6de9590be2489"
-  integrity sha512-VW+ea4ByLPddSUqoFkVVJF8zWnO8kqKwvC681wGFAjI4CYz9WhjEQH1ikhoEHXnd5AFXNArcjyoa8hoihrXy0w==
+textlint-rule-terminology@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-terminology/-/textlint-rule-terminology-3.0.0.tgz#7f1fbe23a26b5fa2b4b9ee74b784d8ba5ff0744f"
+  integrity sha512-ySHbdLcA9Mdbbbc/Wkts3f8CVvY2Nsy3r21NH4bK785jhdpZozG771WDR7d7L5nNnFBeH7MmS0IcscfMpxMyvQ==
   dependencies:
     lodash "^4.17.15"
     strip-json-comments "^3.0.1"
