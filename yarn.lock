@@ -11561,11 +11561,6 @@ spdy@^4.0.2:
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
 
-split-lines@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/split-lines/-/split-lines-2.1.0.tgz#3bc9dbf75637c8bae6ed5dcbc7dbd83956b72311"
-  integrity sha512-8dv+1zKgTpfTkOy8XZLFyWrfxO0NV/bj/3EaQ+hBrBxGv2DwiroljPjU8NlCr+59nLnsVm9WYT7lXKwe4TC6bw==
-
 split-on-first@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
@@ -12131,19 +12126,10 @@ textlint-rule-helper@^2.1.1:
     structured-source "^3.0.2"
     unist-util-visit "^2.0.3"
 
-textlint-rule-stop-words@3.0.1:
+textlint-rule-terminology@3.0.1:
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-stop-words/-/textlint-rule-stop-words-3.0.1.tgz#41d437239ea1bdd221eb7d52b3426f7965df1bd0"
-  integrity sha512-gO4N3OnPLvE6+fvJ1Y5m8MzDVrqMEWzW8pTGMXjL8VAXmQkD6YQ9eDMbsVN0/DzEe8tcsBqNgA/iIrQ64oECuQ==
-  dependencies:
-    lodash "^4.17.15"
-    split-lines "^2.0.0"
-    textlint-rule-helper "^2.1.1"
-
-textlint-rule-terminology@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-terminology/-/textlint-rule-terminology-3.0.0.tgz#7f1fbe23a26b5fa2b4b9ee74b784d8ba5ff0744f"
-  integrity sha512-ySHbdLcA9Mdbbbc/Wkts3f8CVvY2Nsy3r21NH4bK785jhdpZozG771WDR7d7L5nNnFBeH7MmS0IcscfMpxMyvQ==
+  resolved "https://registry.yarnpkg.com/textlint-rule-terminology/-/textlint-rule-terminology-3.0.1.tgz#c9da61f592caf424341a0986245b099e226d83b8"
+  integrity sha512-jk2SGGep+XBckhIm9u6CG7NeMZiosJRPfoh7ISlCZizj/JGNk/zheDYGVXwKbFu20SxsguyUIpTF1z/d1Q+NeQ==
   dependencies:
     lodash "^4.17.15"
     strip-json-comments "^3.0.1"
