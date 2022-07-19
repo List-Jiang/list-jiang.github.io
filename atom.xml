@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2022-07-19T07:39:24.434Z</updated>
+  <updated>2022-07-19T07:40:16.455Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -274,48 +274,6 @@
     <id>https://list-jiang.github.io/db/redis/experience/</id>
     <link href="https://list-jiang.github.io/db/redis/experience/"/>
     <updated>2022-03-07T07:53:32.000Z</updated>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="Redis" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-03-07T07:53:32.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Redis</title>
-    <id>https://list-jiang.github.io/db/redis/</id>
-    <link href="https://list-jiang.github.io/db/redis/"/>
-    <updated>2022-03-07T07:53:32.000Z</updated>
-    <content type="html"><![CDATA[<p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件. 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询. Redis 内置了 复制（replication）， LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction）， 事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel） 和自动 分区（Cluster）提供高可用性（high availability）。</p>
-<h2 id="推荐网址"> 推荐网址</h2>
-<ul>
-<li>
-<p><a href="https://redis.io/" target="_blank" rel="noopener noreferrer">官网<i>Content not supported</i></a></p>
-</li>
-<li>
-<p><a href="http://www.redis.cn" target="_blank" rel="noopener noreferrer">redis 汉化中文网1<i>Content not supported</i></a></p>
-</li>
-<li>
-<p><a href="https://www.redis.com.cn/" target="_blank" rel="noopener noreferrer">redis 汉化中文网2<i>Content not supported</i></a></p>
-</li>
-<li>
-<p>热门扩展</p>
-<p>启用其他语言，主题，调试器，命令等。</p>
-</li>
-</ul>
-<h2 id="目录"> 目录</h2>
-<ul>
-<li>
-<p><a href="./interview.html">面试题目</a></p>
-</li>
-<li>
-<p><a href="./experience.html">使用经验</a></p>
-</li>
-</ul>
-]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -699,6 +657,48 @@ Redis后台保存模式依赖现代操作系统的写时拷贝技术。Redis for
     </contributor>
     <published>2022-03-07T07:53:32.000Z</published>
     <rights>Copyright by https://www.redis.com.cn/</rights>
+  </entry>
+  <entry>
+    <title type="html">Redis</title>
+    <id>https://list-jiang.github.io/db/redis/</id>
+    <link href="https://list-jiang.github.io/db/redis/"/>
+    <updated>2022-03-07T07:53:32.000Z</updated>
+    <content type="html"><![CDATA[<p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件. 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询. Redis 内置了 复制（replication）， LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction）， 事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel） 和自动 分区（Cluster）提供高可用性（high availability）。</p>
+<h2 id="推荐网址"> 推荐网址</h2>
+<ul>
+<li>
+<p><a href="https://redis.io/" target="_blank" rel="noopener noreferrer">官网<i>Content not supported</i></a></p>
+</li>
+<li>
+<p><a href="http://www.redis.cn" target="_blank" rel="noopener noreferrer">redis 汉化中文网1<i>Content not supported</i></a></p>
+</li>
+<li>
+<p><a href="https://www.redis.com.cn/" target="_blank" rel="noopener noreferrer">redis 汉化中文网2<i>Content not supported</i></a></p>
+</li>
+<li>
+<p>热门扩展</p>
+<p>启用其他语言，主题，调试器，命令等。</p>
+</li>
+</ul>
+<h2 id="目录"> 目录</h2>
+<ul>
+<li>
+<p><a href="./interview.html">面试题目</a></p>
+</li>
+<li>
+<p><a href="./experience.html">使用经验</a></p>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="Redis" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-03-07T07:53:32.000Z</published>
+    <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
     <title type="html">Zipkin 使用案例</title>
@@ -2308,33 +2308,6 @@ $ java -jar ./zipkin-server/target/zipkin-server-*slim.jar
   </entry>
   <entry>
     <title type="html">kafka</title>
-    <id>https://list-jiang.github.io/middleware/mq/kafka/</id>
-    <link href="https://list-jiang.github.io/middleware/mq/kafka/"/>
-    <updated>2022-02-23T07:50:41.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
-<p>Apache Kafka 是一个开源分布式事件流平台，被数千家公司用于高性能数据管道、流分析、数据集成和关键任务应用程序。</p>
-<ul>
-<li><a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer">官网地址<i>Content not supported</i></a></li>
-<li><a href="./info.html">介绍</a></li>
-<li><a href="./quick-start.html">入门案例</a></li>
-<li><a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer">官方完整文档<i>Content not supported</i></a></li>
-</ul>
-<div><p>建议</p>
-<p>随便写了下介绍与机翻了下入门案例，建议观看 <a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer">官方完整文档<i>Content not supported</i></a> 。网上很多博客与教学视频都是垃圾，还大言不惭的说是 XXXX 年最新。</p>
-</div>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="mq" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-23T00:00:00.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">kafka</title>
     <id>https://list-jiang.github.io/middleware/mq/kafka/quick-start/</id>
     <link href="https://list-jiang.github.io/middleware/mq/kafka/quick-start/"/>
     <updated>2022-02-23T07:50:41.000Z</updated>
@@ -2436,10 +2409,22 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">rabbitmq</title>
-    <id>https://list-jiang.github.io/middleware/mq/rabbitmq/</id>
-    <link href="https://list-jiang.github.io/middleware/mq/rabbitmq/"/>
+    <title type="html">kafka</title>
+    <id>https://list-jiang.github.io/middleware/mq/kafka/</id>
+    <link href="https://list-jiang.github.io/middleware/mq/kafka/"/>
     <updated>2022-02-23T07:50:41.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Apache Kafka 是一个开源分布式事件流平台，被数千家公司用于高性能数据管道、流分析、数据集成和关键任务应用程序。</p>
+<ul>
+<li><a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer">官网地址<i>Content not supported</i></a></li>
+<li><a href="./info.html">介绍</a></li>
+<li><a href="./quick-start.html">入门案例</a></li>
+<li><a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer">官方完整文档<i>Content not supported</i></a></li>
+</ul>
+<div><p>建议</p>
+<p>随便写了下介绍与机翻了下入门案例，建议观看 <a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer">官方完整文档<i>Content not supported</i></a> 。网上很多博客与教学视频都是垃圾，还大言不惭的说是 XXXX 年最新。</p>
+</div>
+]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -2451,9 +2436,9 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">rocketmq</title>
-    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
-    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
+    <title type="html">rabbitmq</title>
+    <id>https://list-jiang.github.io/middleware/mq/rabbitmq/</id>
+    <link href="https://list-jiang.github.io/middleware/mq/rabbitmq/"/>
     <updated>2022-02-23T07:50:41.000Z</updated>
     <author>
       <name>List Jiang</name>
@@ -2482,6 +2467,21 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
       <name>List Jiang</name>
     </contributor>
     <published>2022-02-23T07:50:41.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">rocketmq</title>
+    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
+    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
+    <updated>2022-02-23T07:50:41.000Z</updated>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="mq" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-23T00:00:00.000Z</published>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
@@ -4756,25 +4756,6 @@ f
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">uname</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/uname/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/uname/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="uname"> uname</h1>
-<p><code>uname</code> 命令用来显示内核信息。</p>
-<div><pre><code><span>uname</span> -a
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">tr</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/tr/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/tr/"/>
@@ -4797,6 +4778,25 @@ Bar
 Baz<span>!</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">uname</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/uname/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/uname/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="uname"> uname</h1>
+<p><code>uname</code> 命令用来显示内核信息。</p>
+<div><pre><code><span>uname</span> -a
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -7175,6 +7175,209 @@ colors<span>[</span><span>"blue"</span><span>]</span><span>=</span><span>"#0000f
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
+    <title type="html">脚本除错</title>
+    <id>https://list-jiang.github.io/code/linux/bash/debug/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/debug/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <summary type="html"><![CDATA[<p>本章介绍如何对 Shell 脚本除错。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本章介绍如何对 Shell 脚本除错。</p>
+
+<h2 id="常见错误"> 常见错误</h2>
+<p>编写 Shell 脚本的时候，一定要考虑到命令失败的情况，否则很容易出错。</p>
+<div><pre><code><span>#! /bin/bash</span>
+
+<span>dir_name</span><span>=</span>/path/not/exist
+
+<span>cd</span> <span>$dir_name</span>
+<span>rm</span> *
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面脚本中，如果目录 <code>$dir_name</code> 不存在，<code>cd $dir_name</code> 命令就会执行失败。这时，就不会改变当前目录，脚本会继续执行下去，导致 <code>rm *</code> 命令删光当前目录的文件。</p>
+<p>如果改成下面的样子，也会有问题。</p>
+<div><pre><code><span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>rm</span> *
+</code></pre>
+<div><span>1</span><br></div></div><p>上面脚本中，只有 <code>cd $dir_name</code> 执行成功，才会执行 <code>rm *</code>。但是，如果变量 <code>$dir_name</code> 为空，<code>cd</code> 就会进入用户主目录，从而删光用户主目录的文件。</p>
+<p>下面的写法才是正确的。</p>
+<div><pre><code><span>[</span><span>[</span> -d <span>$dir_name</span> <span>]</span><span>]</span> <span>&amp;&amp;</span> <span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>rm</span> *
+</code></pre>
+<div><span>1</span><br></div></div><p>上面代码中，先判断目录 <code>$dir_name</code> 是否存在，然后才执行其他操作。</p>
+<p>如果不放心删除什么文件，可以先打印出来看一下。</p>
+<div><pre><code><span>[</span><span>[</span> -d <span>$dir_name</span> <span>]</span><span>]</span> <span>&amp;&amp;</span> <span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>echo</span> <span>rm</span> *
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令中，<code>echo rm *</code> 不会删除文件，只会打印出来要删除的文件。</p>
+<h2 id="bash-的-x-参数"> <code>bash</code> 的 <code>-x</code> 参数</h2>
+<p><code>bash</code> 的 <code>-x</code> 参数可以在执行每一行命令之前，打印该命令。这样就不用自己输出执行的命令，一旦出错，比较容易追查。</p>
+<p>下面是一个脚本 <code>script.sh</code>。</p>
+<div><pre><code><span># script.sh</span>
+<span>echo</span> hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>加上 <code>-x</code> 参数，执行每条命令之前，都会显示该命令。</p>
+<div><pre><code>$ <span>bash</span> -x script.sh
++ <span>echo</span> hello world
+hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，行首为 <code>+</code> 的行，显示该行是所要执行的命令，下一行才是该命令的执行结果。</p>
+<p>下面再看一个 <code>-x</code> 写在脚本内部的例子。</p>
+<div><pre><code><span>#! /bin/bash -x</span>
+<span># trouble: script to demonstrate common errors</span>
+
+<span>number</span><span>=</span><span>1</span>
+<span>if</span> <span>[</span> <span>$number</span> <span>=</span> <span>1</span> <span>]</span><span>;</span> <span>then</span>
+  <span>echo</span> <span>"Number is equal to 1."</span>
+<span>else</span>
+  <span>echo</span> <span>"Number is not equal to 1."</span>
+<span>fi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面的脚本执行之后，会输出每一行命令。</p>
+<div><pre><code>$ trouble
++ <span>number</span><span>=</span><span>1</span>
++ <span>'['</span> <span>1</span> <span>=</span> <span>1</span> <span>']'</span>
++ <span>echo</span> <span>'Number is equal to 1.'</span>
+Number is equal to <span>1</span>.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>输出的命令之前的 <code>+</code> 号，是由系统变量 <code>PS4</code> 决定，可以修改这个变量。</p>
+<div><pre><code>$ <span>export</span> <span><span>PS4</span></span><span>=</span><span>'$LINENO + '</span>
+$ trouble
+<span>5</span> + <span>number</span><span>=</span><span>1</span>
+<span>7</span> + <span>'['</span> <span>1</span> <span>=</span> <span>1</span> <span>']'</span>
+<span>8</span> + <span>echo</span> <span>'Number is equal to 1.'</span>
+Number is equal to <span>1</span>.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>另外，<code>set</code> 命令也可以设置 Shell 的行为参数，有利于脚本除错，详见 <a href="./set.html">set 命令</a> 一章。</p>
+<h2 id="环境变量"> 环境变量</h2>
+<p>有一些环境变量常用于除错。</p>
+<h3 id="lineno"> LINENO</h3>
+<p>变量 <code>LINENO</code> 返回它在脚本里面的行号。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>echo</span> <span>"This is line <span>$LINENO</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>执行上面的脚本 <code>test.sh</code>，<code>$LINENO</code> 会返回 <code>3</code>。</p>
+<div><pre><code>$ ./test.sh
+This is line <span>3</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h3 id="funcname"> FUNCNAME</h3>
+<p>变量 <code>FUNCNAME</code> 返回一个数组，内容是当前的函数调用堆栈。该数组的 0 号成员是当前调用的函数，1 号成员是调用当前函数的函数，以此类推。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>function</span> <span>func1</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func1: FUNCNAME0 is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: FUNCNAME1 is <span>${FUNCNAME<span>[</span>1<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: FUNCNAME2 is <span>${FUNCNAME<span>[</span>2<span>]</span>}</span>"</span>
+  func2
+<span>}</span>
+
+<span>function</span> <span>func2</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func2: FUNCNAME0 is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: FUNCNAME1 is <span>${FUNCNAME<span>[</span>1<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: FUNCNAME2 is <span>${FUNCNAME<span>[</span>2<span>]</span>}</span>"</span>
+<span>}</span>
+
+func1
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>执行上面的脚本 <code>test.sh</code>，结果如下。</p>
+<div><pre><code>$ ./test.sh
+func1: FUNCNAME0 is func1
+func1: FUNCNAME1 is main
+func1: FUNCNAME2 is
+func2: FUNCNAME0 is func2
+func2: FUNCNAME1 is func1
+func2: FUNCNAME2 is main
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，执行 <code>func1</code> 时，变量 <code>FUNCNAME</code> 的 0 号成员是 <code>func1</code>，1 号成员是调用 <code>func1</code> 的主脚本 <code>main</code>。执行 <code>func2</code> 时，变量 <code>FUNCNAME</code> 的 0 号成员是 <code>func2</code>，1 号成员是调用 <code>func2</code> 的 <code>func1</code>。</p>
+<h3 id="bash-source"> BASH_SOURCE</h3>
+<p>变量 <code>BASH_SOURCE</code> 返回一个数组，内容是当前的脚本调用堆栈。该数组的 0 号成员是当前执行的脚本，1 号成员是调用当前脚本的脚本，以此类推，跟变量 <code>FUNCNAME</code> 是一一对应关系。</p>
+<p>下面有两个子脚本 <code>lib1.sh</code> 和 <code>lib2.sh</code>。</p>
+<div><pre><code><span># lib1.sh</span>
+<span>function</span> <span>func1</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func1: BASH_SOURCE0 is <span>${<span>BASH_SOURCE</span><span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: BASH_SOURCE1 is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: BASH_SOURCE2 is <span>${<span>BASH_SOURCE</span><span>[</span>2<span>]</span>}</span>"</span>
+  func2
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><div><pre><code><span># lib2.sh</span>
+<span>function</span> <span>func2</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func2: BASH_SOURCE0 is <span>${<span>BASH_SOURCE</span><span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: BASH_SOURCE1 is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: BASH_SOURCE2 is <span>${<span>BASH_SOURCE</span><span>[</span>2<span>]</span>}</span>"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>然后，主脚本 <code>main.sh</code> 调用上面两个子脚本。</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span># main.sh</span>
+
+<span>source</span> lib1.sh
+<span>source</span> lib2.sh
+
+func1
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>执行主脚本 <code>main.sh</code>，会得到下面的结果。</p>
+<div><pre><code>$ ./main.sh
+func1: BASH_SOURCE0 is lib1.sh
+func1: BASH_SOURCE1 is ./main.sh
+func1: BASH_SOURCE2 is
+func2: BASH_SOURCE0 is lib2.sh
+func2: BASH_SOURCE1 is lib1.sh
+func2: BASH_SOURCE2 is ./main.sh
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，执行函数 <code>func1</code> 时，变量 <code>BASH_SOURCE</code> 的 0 号成员是 <code>func1</code> 所在的脚本 <code>lib1.sh</code>，1 号成员是主脚本 <code>main.sh</code>；执行函数 <code>func2</code> 时，变量 <code>BASH_SOURCE</code> 的 0 号成员是 <code>func2</code> 所在的脚本 <code>lib2.sh</code>，1 号成员是调用 <code>func2</code> 的脚本 <code>lib1.sh</code>。</p>
+<h3 id="bash-lineno"> BASH_LINENO</h3>
+<p>变量 <code>BASH_LINENO</code> 返回一个数组，内容是每一轮调用对应的行号。<code>${BASH_LINENO[$i]}</code> 跟 <code>${FUNCNAME[$i]}</code> 是一一对应关系，表示 <code>${FUNCNAME[$i]}</code> 在调用它的脚本文件 <code>${BASH_SOURCE[$i+1]}</code> 里面的行号。</p>
+<p>下面有两个子脚本 <code>lib1.sh</code> 和 <code>lib2.sh</code>。</p>
+<div><pre><code><span># lib1.sh</span>
+<span>function</span> <span>func1</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func1: BASH_LINENO is <span>${<span>BASH_LINENO</span><span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: FUNCNAME is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func1: BASH_SOURCE is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
+
+  func2
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><div><pre><code><span># lib2.sh</span>
+<span>function</span> <span>func2</span><span>(</span><span>)</span>
+<span>{</span>
+  <span>echo</span> <span>"func2: BASH_LINENO is <span>${<span>BASH_LINENO</span><span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: FUNCNAME is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
+  <span>echo</span> <span>"func2: BASH_SOURCE is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>然后，主脚本 <code>main.sh</code> 调用上面两个子脚本。</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span># main.sh</span>
+
+<span>source</span> lib1.sh
+<span>source</span> lib2.sh
+
+func1
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>执行主脚本 <code>main.sh</code>，会得到下面的结果。</p>
+<div><pre><code>$ ./main.sh
+func1: <span>BASH_LINENO</span> is <span>7</span>
+func1: FUNCNAME is func1
+func1: <span>BASH_SOURCE</span> is main.sh
+func2: <span>BASH_LINENO</span> is <span>8</span>
+func2: FUNCNAME is func2
+func2: <span>BASH_SOURCE</span> is lib1.sh
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，函数 <code>func1</code> 是在 <code>main.sh</code> 的第 7 行调用，函数 <code>func2</code> 是在 <code>lib1.sh</code> 的第 8 行调用的。</p>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
     <title type="html">条件判断</title>
     <id>https://list-jiang.github.io/code/linux/bash/condition/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/condition/"/>
@@ -7661,209 +7864,6 @@ Type a character <span>></span> a
 <ul>
 <li><a href="http://linuxcommand.org/tlcl.php" target="_blank" rel="noopener noreferrer">The Linux command-line<i>Content not supported</i></a>, William Shotts</li>
 </ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
-    <title type="html">脚本除错</title>
-    <id>https://list-jiang.github.io/code/linux/bash/debug/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/debug/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章介绍如何对 Shell 脚本除错。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本章介绍如何对 Shell 脚本除错。</p>
-
-<h2 id="常见错误"> 常见错误</h2>
-<p>编写 Shell 脚本的时候，一定要考虑到命令失败的情况，否则很容易出错。</p>
-<div><pre><code><span>#! /bin/bash</span>
-
-<span>dir_name</span><span>=</span>/path/not/exist
-
-<span>cd</span> <span>$dir_name</span>
-<span>rm</span> *
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面脚本中，如果目录 <code>$dir_name</code> 不存在，<code>cd $dir_name</code> 命令就会执行失败。这时，就不会改变当前目录，脚本会继续执行下去，导致 <code>rm *</code> 命令删光当前目录的文件。</p>
-<p>如果改成下面的样子，也会有问题。</p>
-<div><pre><code><span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>rm</span> *
-</code></pre>
-<div><span>1</span><br></div></div><p>上面脚本中，只有 <code>cd $dir_name</code> 执行成功，才会执行 <code>rm *</code>。但是，如果变量 <code>$dir_name</code> 为空，<code>cd</code> 就会进入用户主目录，从而删光用户主目录的文件。</p>
-<p>下面的写法才是正确的。</p>
-<div><pre><code><span>[</span><span>[</span> -d <span>$dir_name</span> <span>]</span><span>]</span> <span>&amp;&amp;</span> <span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>rm</span> *
-</code></pre>
-<div><span>1</span><br></div></div><p>上面代码中，先判断目录 <code>$dir_name</code> 是否存在，然后才执行其他操作。</p>
-<p>如果不放心删除什么文件，可以先打印出来看一下。</p>
-<div><pre><code><span>[</span><span>[</span> -d <span>$dir_name</span> <span>]</span><span>]</span> <span>&amp;&amp;</span> <span>cd</span> <span>$dir_name</span> <span>&amp;&amp;</span> <span>echo</span> <span>rm</span> *
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令中，<code>echo rm *</code> 不会删除文件，只会打印出来要删除的文件。</p>
-<h2 id="bash-的-x-参数"> <code>bash</code> 的 <code>-x</code> 参数</h2>
-<p><code>bash</code> 的 <code>-x</code> 参数可以在执行每一行命令之前，打印该命令。这样就不用自己输出执行的命令，一旦出错，比较容易追查。</p>
-<p>下面是一个脚本 <code>script.sh</code>。</p>
-<div><pre><code><span># script.sh</span>
-<span>echo</span> hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>加上 <code>-x</code> 参数，执行每条命令之前，都会显示该命令。</p>
-<div><pre><code>$ <span>bash</span> -x script.sh
-+ <span>echo</span> hello world
-hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，行首为 <code>+</code> 的行，显示该行是所要执行的命令，下一行才是该命令的执行结果。</p>
-<p>下面再看一个 <code>-x</code> 写在脚本内部的例子。</p>
-<div><pre><code><span>#! /bin/bash -x</span>
-<span># trouble: script to demonstrate common errors</span>
-
-<span>number</span><span>=</span><span>1</span>
-<span>if</span> <span>[</span> <span>$number</span> <span>=</span> <span>1</span> <span>]</span><span>;</span> <span>then</span>
-  <span>echo</span> <span>"Number is equal to 1."</span>
-<span>else</span>
-  <span>echo</span> <span>"Number is not equal to 1."</span>
-<span>fi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面的脚本执行之后，会输出每一行命令。</p>
-<div><pre><code>$ trouble
-+ <span>number</span><span>=</span><span>1</span>
-+ <span>'['</span> <span>1</span> <span>=</span> <span>1</span> <span>']'</span>
-+ <span>echo</span> <span>'Number is equal to 1.'</span>
-Number is equal to <span>1</span>.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>输出的命令之前的 <code>+</code> 号，是由系统变量 <code>PS4</code> 决定，可以修改这个变量。</p>
-<div><pre><code>$ <span>export</span> <span><span>PS4</span></span><span>=</span><span>'$LINENO + '</span>
-$ trouble
-<span>5</span> + <span>number</span><span>=</span><span>1</span>
-<span>7</span> + <span>'['</span> <span>1</span> <span>=</span> <span>1</span> <span>']'</span>
-<span>8</span> + <span>echo</span> <span>'Number is equal to 1.'</span>
-Number is equal to <span>1</span>.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>另外，<code>set</code> 命令也可以设置 Shell 的行为参数，有利于脚本除错，详见 <a href="./set.html">set 命令</a> 一章。</p>
-<h2 id="环境变量"> 环境变量</h2>
-<p>有一些环境变量常用于除错。</p>
-<h3 id="lineno"> LINENO</h3>
-<p>变量 <code>LINENO</code> 返回它在脚本里面的行号。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>echo</span> <span>"This is line <span>$LINENO</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>执行上面的脚本 <code>test.sh</code>，<code>$LINENO</code> 会返回 <code>3</code>。</p>
-<div><pre><code>$ ./test.sh
-This is line <span>3</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h3 id="funcname"> FUNCNAME</h3>
-<p>变量 <code>FUNCNAME</code> 返回一个数组，内容是当前的函数调用堆栈。该数组的 0 号成员是当前调用的函数，1 号成员是调用当前函数的函数，以此类推。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>function</span> <span>func1</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func1: FUNCNAME0 is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: FUNCNAME1 is <span>${FUNCNAME<span>[</span>1<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: FUNCNAME2 is <span>${FUNCNAME<span>[</span>2<span>]</span>}</span>"</span>
-  func2
-<span>}</span>
-
-<span>function</span> <span>func2</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func2: FUNCNAME0 is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: FUNCNAME1 is <span>${FUNCNAME<span>[</span>1<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: FUNCNAME2 is <span>${FUNCNAME<span>[</span>2<span>]</span>}</span>"</span>
-<span>}</span>
-
-func1
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>执行上面的脚本 <code>test.sh</code>，结果如下。</p>
-<div><pre><code>$ ./test.sh
-func1: FUNCNAME0 is func1
-func1: FUNCNAME1 is main
-func1: FUNCNAME2 is
-func2: FUNCNAME0 is func2
-func2: FUNCNAME1 is func1
-func2: FUNCNAME2 is main
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，执行 <code>func1</code> 时，变量 <code>FUNCNAME</code> 的 0 号成员是 <code>func1</code>，1 号成员是调用 <code>func1</code> 的主脚本 <code>main</code>。执行 <code>func2</code> 时，变量 <code>FUNCNAME</code> 的 0 号成员是 <code>func2</code>，1 号成员是调用 <code>func2</code> 的 <code>func1</code>。</p>
-<h3 id="bash-source"> BASH_SOURCE</h3>
-<p>变量 <code>BASH_SOURCE</code> 返回一个数组，内容是当前的脚本调用堆栈。该数组的 0 号成员是当前执行的脚本，1 号成员是调用当前脚本的脚本，以此类推，跟变量 <code>FUNCNAME</code> 是一一对应关系。</p>
-<p>下面有两个子脚本 <code>lib1.sh</code> 和 <code>lib2.sh</code>。</p>
-<div><pre><code><span># lib1.sh</span>
-<span>function</span> <span>func1</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func1: BASH_SOURCE0 is <span>${<span>BASH_SOURCE</span><span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: BASH_SOURCE1 is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: BASH_SOURCE2 is <span>${<span>BASH_SOURCE</span><span>[</span>2<span>]</span>}</span>"</span>
-  func2
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><div><pre><code><span># lib2.sh</span>
-<span>function</span> <span>func2</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func2: BASH_SOURCE0 is <span>${<span>BASH_SOURCE</span><span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: BASH_SOURCE1 is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: BASH_SOURCE2 is <span>${<span>BASH_SOURCE</span><span>[</span>2<span>]</span>}</span>"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>然后，主脚本 <code>main.sh</code> 调用上面两个子脚本。</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span># main.sh</span>
-
-<span>source</span> lib1.sh
-<span>source</span> lib2.sh
-
-func1
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>执行主脚本 <code>main.sh</code>，会得到下面的结果。</p>
-<div><pre><code>$ ./main.sh
-func1: BASH_SOURCE0 is lib1.sh
-func1: BASH_SOURCE1 is ./main.sh
-func1: BASH_SOURCE2 is
-func2: BASH_SOURCE0 is lib2.sh
-func2: BASH_SOURCE1 is lib1.sh
-func2: BASH_SOURCE2 is ./main.sh
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，执行函数 <code>func1</code> 时，变量 <code>BASH_SOURCE</code> 的 0 号成员是 <code>func1</code> 所在的脚本 <code>lib1.sh</code>，1 号成员是主脚本 <code>main.sh</code>；执行函数 <code>func2</code> 时，变量 <code>BASH_SOURCE</code> 的 0 号成员是 <code>func2</code> 所在的脚本 <code>lib2.sh</code>，1 号成员是调用 <code>func2</code> 的脚本 <code>lib1.sh</code>。</p>
-<h3 id="bash-lineno"> BASH_LINENO</h3>
-<p>变量 <code>BASH_LINENO</code> 返回一个数组，内容是每一轮调用对应的行号。<code>${BASH_LINENO[$i]}</code> 跟 <code>${FUNCNAME[$i]}</code> 是一一对应关系，表示 <code>${FUNCNAME[$i]}</code> 在调用它的脚本文件 <code>${BASH_SOURCE[$i+1]}</code> 里面的行号。</p>
-<p>下面有两个子脚本 <code>lib1.sh</code> 和 <code>lib2.sh</code>。</p>
-<div><pre><code><span># lib1.sh</span>
-<span>function</span> <span>func1</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func1: BASH_LINENO is <span>${<span>BASH_LINENO</span><span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: FUNCNAME is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func1: BASH_SOURCE is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
-
-  func2
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><div><pre><code><span># lib2.sh</span>
-<span>function</span> <span>func2</span><span>(</span><span>)</span>
-<span>{</span>
-  <span>echo</span> <span>"func2: BASH_LINENO is <span>${<span>BASH_LINENO</span><span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: FUNCNAME is <span>${FUNCNAME<span>[</span>0<span>]</span>}</span>"</span>
-  <span>echo</span> <span>"func2: BASH_SOURCE is <span>${<span>BASH_SOURCE</span><span>[</span>1<span>]</span>}</span>"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>然后，主脚本 <code>main.sh</code> 调用上面两个子脚本。</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span># main.sh</span>
-
-<span>source</span> lib1.sh
-<span>source</span> lib2.sh
-
-func1
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>执行主脚本 <code>main.sh</code>，会得到下面的结果。</p>
-<div><pre><code>$ ./main.sh
-func1: <span>BASH_LINENO</span> is <span>7</span>
-func1: FUNCNAME is func1
-func1: <span>BASH_SOURCE</span> is main.sh
-func2: <span>BASH_LINENO</span> is <span>8</span>
-func2: FUNCNAME is func2
-func2: <span>BASH_SOURCE</span> is lib1.sh
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，函数 <code>func1</code> 是在 <code>main.sh</code> 的第 7 行调用，函数 <code>func2</code> 是在 <code>lib1.sh</code> 的第 8 行调用的。</p>
 ]]></content>
     <author>
       <name>阮一峰</name>
@@ -10033,254 +10033,6 @@ $ <span>history</span>
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">set 命令</title>
-    <id>https://list-jiang.github.io/code/linux/bash/set/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/set/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p><code>set</code> 命令是 Bash 脚本的重要环节，却常常被忽视，导致脚本的安全性和可维护性出问题。本章介绍 <code>set</code> 的基本用法，帮助您写出更安全的 Bash 脚本。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p><code>set</code> 命令是 Bash 脚本的重要环节，却常常被忽视，导致脚本的安全性和可维护性出问题。本章介绍 <code>set</code> 的基本用法，帮助您写出更安全的 Bash 脚本。</p>
-
-<h2 id="简介"> 简介</h2>
-<p>我们知道，Bash 执行脚本时，会创建一个子 Shell。</p>
-<div><pre><code><span>bash</span> script.sh
-</code></pre>
-<div><span>1</span><br></div></div><p>上面代码中，<code>script.sh</code> 是在一个子 Shell 里面执行。这个子 Shell 就是脚本的执行环境，Bash 默认给定了这个环境的各种参数。</p>
-<p><code>set</code> 命令用来修改子 Shell 环境的运行参数，即定制环境。一共有十几个参数可以定制，<a href="https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html" target="_blank" rel="noopener noreferrer">官方手册<i>Content not supported</i></a>有完整清单，本章介绍其中最常用的几个。</p>
-<p>顺便提一下，如果命令行下不带任何参数，直接运行 <code>set</code>，会显示所有的环境变量和 Shell 函数。</p>
-<div><pre><code><span>set</span>
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="set-u"> set -u</h2>
-<p>执行脚本时，如果遇到不存在的变量，Bash 默认忽略它。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-
-<span>echo</span> <span>$a</span>
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>$a</code> 是一个不存在的变量。执行结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，<code>echo $a</code> 输出了一个空行，Bash 忽略了不存在的 <code>$a</code>，然后继续执行 <code>echo bar</code>。大多数情况下，这不是开发者想要的行为，遇到变量不存在，脚本应该报错，而不是一声不响地往下执行。</p>
-<p><code>set -u</code> 就用来改变这种行为。脚本在头部加上它，遇到不存在的变量就会报错，并停止执行。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-<span>set</span> -u
-
-<span>echo</span> <span>$a</span>
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>运行结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-bash: script.sh:行4: a: 未绑定的变量
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>可以看到，脚本报错了，并且不再执行后面的语句。</p>
-<p><code>-u</code> 还有另一种写法 <code>-o nounset</code>，两者是等价的。</p>
-<div><pre><code><span>set</span> -o nounset
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="set-x"> set -x</h2>
-<p>默认情况下，脚本执行后，只输出运行结果，没有其他内容。如果多个命令连续执行，它们的运行结果就会连续输出。有时会分不清，某一段内容是什么命令产生的。</p>
-<p><code>set -x</code> 用来在运行结果之前，先输出执行的那一行命令。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-<span>set</span> -x
-
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>执行上面的脚本，结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-+ <span>echo</span> bar
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，执行 <code>echo bar</code> 之前，该命令会先打印出来，行首以 <code>+</code> 表示。这对于调试复杂的脚本是很有用的。</p>
-<p><code>-x</code> 还有另一种写法 <code>-o xtrace</code>。</p>
-<div><pre><code><span>set</span> -o xtrace
-</code></pre>
-<div><span>1</span><br></div></div><p>脚本当中如果要关闭命令输出，可以使用 <code>set +x</code>。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>number</span><span>=</span><span>1</span>
-
-<span>set</span> -x
-<span>if</span> <span>[</span> <span>$number</span> <span>=</span> <span>"1"</span> <span>]</span><span>;</span> <span>then</span>
-  <span>echo</span> <span>"Number equals 1"</span>
-<span>else</span>
-  <span>echo</span> <span>"Number does not equal 1"</span>
-<span>fi</span>
-<span>set</span> +x
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的例子中，只对特定的代码段打开命令输出。</p>
-<h2 id="bash-的错误处理"> Bash 的错误处理</h2>
-<p>如果脚本里面有运行失败的命令(返回值非 <code>0</code>)，Bash 默认会继续执行后面的命令。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-
-foo
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面脚本中，<code>foo</code> 是一个不存在的命令，执行时会报错。但是，Bash 会忽略这个错误，继续往下执行。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-script.sh:行3: foo: 未找到命令
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，Bash 只是显示有错误，并没有终止执行。</p>
-<p>这种行为很不利于脚本安全和除错。实际开发中，如果某个命令失败，往往需要脚本停止执行，防止错误累积。这时，一般采用下面的写法。</p>
-<div><pre><code><span>command</span> <span>||</span> <span>exit</span> <span>1</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的写法表示只要 <code>command</code> 有非零返回值，脚本就会停止执行。</p>
-<p>如果停止执行之前需要完成多个操作，就要采用下面三种写法。</p>
-<div><pre><code><span># 写法一</span>
-<span>command</span> <span>||</span> <span>{</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>}</span>
-
-<span># 写法二</span>
-<span>if</span> <span>!</span> <span>command</span><span>;</span> <span>then</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>fi</span>
-
-<span># 写法三</span>
-<span>command</span>
-<span>if</span> <span>[</span> <span>"<span>$?</span>"</span> -ne <span>0</span> <span>]</span><span>;</span> <span>then</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>fi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>另外，除了停止执行，还有一种情况。如果两个命令有继承关系，只有第一个命令成功了，才能继续执行第二个命令，那么就要采用下面的写法。</p>
-<div><pre><code>command1 <span>&amp;&amp;</span> command2
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="set-e"> set -e</h2>
-<p>上面这些写法多少有些麻烦，容易疏忽。<code>set -e</code> 从根本上解决了这个问题，它使得脚本只要发生错误，就终止执行。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-<span>set</span> -e
-
-foo
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-script.sh:行4: foo: 未找到命令
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>可以看到，第 4 行执行失败以后，脚本就终止执行了。</p>
-<p><code>set -e</code> 根据返回值来判断，一个命令是否运行失败。但是，某些命令的非零返回值可能不表示失败，或者开发者希望在命令失败的情况下，脚本继续执行下去。这时可以暂时关闭 <code>set -e</code>，该命令执行结束后，再重新打开 <code>set -e</code>。</p>
-<div><pre><code><span>set</span> +e
-command1
-command2
-<span>set</span> -e
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>set +e</code> 表示关闭 <code>-e</code> 选项，<code>set -e</code> 表示重新打开 <code>-e</code> 选项。</p>
-<p>还有一种方法是使用 <code>command || true</code>，使得该命令即使执行失败，脚本也不会终止执行。</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span>set</span> -e
-
-foo <span>||</span> <span>true</span>
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面代码中，<code>true</code> 使得这一行语句总是会执行成功，后面的 <code>echo bar</code> 会执行。</p>
-<p><code>-e</code> 还有另一种写法 <code>-o errexit</code>。</p>
-<div><pre><code><span>set</span> -o errexit
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="set-o-pipefail"> set -o pipefail</h2>
-<p><code>set -e</code> 有一个例外情况，就是不适用于管道命令。</p>
-<p>所谓管道命令，就是多个子命令通过管道运算符 (<code>|</code>) 组合成为一个大的命令。Bash 会把最后一个子命令的返回值，作为整个命令的返回值。也就是说，只要最后一个子命令不失败，管道命令总是会执行成功，因此它后面命令依然会执行，<code>set -e</code> 就失效了。</p>
-<p>请看下面这个例子。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-<span>set</span> -e
-
-foo <span>|</span> <span>echo</span> a
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-a
-script.sh:行4: foo: 未找到命令
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>foo</code> 是一个不存在的命令，但是 <code>foo | echo a</code> 这个管道命令会执行成功，导致后面的 <code>echo bar</code> 会继续执行。</p>
-<p><code>set -o pipefail</code> 用来解决这种情况，只要一个子命令失败，整个管道命令就失败，脚本就会终止执行。</p>
-<div><pre><code><span>#!/usr/bin/env bash</span>
-<span>set</span> -eo pipefail
-
-foo <span>|</span> <span>echo</span> a
-<span>echo</span> bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>运行后，结果如下。</p>
-<div><pre><code>$ <span>bash</span> script.sh
-a
-script.sh:行4: foo: 未找到命令
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，<code>echo bar</code> 没有执行。</p>
-<h2 id="其他参数"> 其他参数</h2>
-<p><code>set</code> 命令还有一些其他参数。</p>
-<ul>
-<li><code>set -n</code>: 等同于 <code>set -o noexec</code>，不运行命令，只检查语法是否正确。</li>
-<li><code>set -f</code>: 等同于 <code>set -o noglob</code>，表示不对通配符进行文件名扩展。</li>
-<li><code>set -v</code>: 等同于 <code>set -o verbose</code>，表示打印 Shell 接收到的每一行输入。</li>
-</ul>
-<p>上面的 <code>-f</code> 和 <code>-v</code> 参数，可以分别使用 <code>set +f</code>、<code>set +v</code> 关闭。</p>
-<h2 id="set-命令总结"> set 命令总结</h2>
-<p>上面重点介绍的 <code>set</code> 命令的四个参数，一般都放在一起使用。</p>
-<div><pre><code><span># 写法一</span>
-<span>set</span> -euxo pipefail
-
-<span># 写法二</span>
-<span>set</span> -eux
-<span>set</span> -o pipefail
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>这两种写法建议放在所有 Bash 脚本的头部。</p>
-<p>另一种办法是在执行 Bash 脚本的时候，从命令行传入这些参数。</p>
-<div><pre><code><span>bash</span> -euxo pipefail script.sh
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="shopt-命令"> shopt 命令</h2>
-<p><code>shopt</code> 命令用来调整 Shell 的参数，跟 <code>set</code> 命令的作用很类似。之所以会有这两个类似命令的主要原因是，<code>set</code> 是从 Ksh 继承的，属于 POSIX 规范的一部分，而 <code>shopt</code> 是 Bash 特有的。</p>
-<p>直接输入 <code>shopt</code> 可以查看所有参数，以及它们各自打开和关闭的状态。</p>
-<div><pre><code><span>shopt</span>
-</code></pre>
-<div><span>1</span><br></div></div><p><code>shopt</code> 命令后面跟着参数名，可以查询该参数是否打开。</p>
-<div><pre><code>$ <span>shopt</span> globstar
-globstar  off
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子表示 <code>globstar</code> 参数默认是关闭的。</p>
-<ol>
-<li>
-<p><strong><code>-s</code></strong></p>
-<p><code>-s</code> 用来打开某个参数。</p>
-<div><pre><code><span>shopt</span> -s optionNameHere
-</code></pre>
-<div><span>1</span><br></div></div></li>
-<li>
-<p><strong><code>-u</code></strong></p>
-<p><code>-u</code> 用来关闭某个参数。</p>
-<div><pre><code><span>shopt</span> -u optionNameHere
-</code></pre>
-<div><span>1</span><br></div></div><p>举例来说，<code>histappend</code> 这个参数表示退出当前 Shell 时，将操作历史追加到历史文件中。这个参数默认是打开的，如果使用下面的命令将其关闭，那么当前 Shell 的操作历史将替换掉整个历史文件。</p>
-<div><pre><code><span>shopt</span> -u histappend
-</code></pre>
-<div><span>1</span><br></div></div></li>
-<li>
-<p><strong><code>-q</code></strong></p>
-<p><code>-q</code> 的作用也是查询某个参数是否打开，但不是直接输出查询结果，而是通过命令的执行状态 (<code>$?</code>) 表示查询结果。如果状态为 <code>0</code>，表示该参数打开；如果为 <code>1</code>，表示该参数关闭。</p>
-<div><pre><code>$ <span>shopt</span> -q globstar
-$ <span>echo</span> <span>$?</span>
-<span>1</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面命令查询 <code>globstar</code> 参数是否打开。返回状态为 <code>1</code>，表示该参数是关闭的。</p>
-<p>这个用法主要用于脚本，供 <code>if</code> 条件结构使用。</p>
-<div><pre><code><span>if</span> <span>shopt</span> -q globstar<span>;</span> <span>then</span>
-  <span>..</span>.
-<span>if</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div></li>
-</ol>
-<h2 id="参考链接"> 参考链接</h2>
-<ul>
-<li><a href="https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html" target="_blank" rel="noopener noreferrer">The Set built-in<i>Content not supported</i></a></li>
-<li><a href="https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/" target="_blank" rel="noopener noreferrer">Safer bash scripts with 'set -euxo pipefail’<i>Content not supported</i></a></li>
-<li><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/" target="_blank" rel="noopener noreferrer">Writing Robust Bash Shell Scripts<i>Content not supported</i></a></li>
-</ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">Bash 脚本入门</title>
     <id>https://list-jiang.github.io/code/linux/bash/script/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/script/"/>
@@ -10583,6 +10335,254 @@ It says: hello world
 <div><span>1</span><br></div></div><h2 id="参考链接"> 参考链接</h2>
 <ul>
 <li><a href="https://linuxconfig.org/how-to-use-getopts-to-parse-a-script-options" target="_blank" rel="noopener noreferrer">How to use getopts to parse a script options<i>Content not supported</i></a>, Egidio Docile</li>
+</ul>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">set 命令</title>
+    <id>https://list-jiang.github.io/code/linux/bash/set/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/set/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <summary type="html"><![CDATA[<p><code>set</code> 命令是 Bash 脚本的重要环节，却常常被忽视，导致脚本的安全性和可维护性出问题。本章介绍 <code>set</code> 的基本用法，帮助您写出更安全的 Bash 脚本。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><code>set</code> 命令是 Bash 脚本的重要环节，却常常被忽视，导致脚本的安全性和可维护性出问题。本章介绍 <code>set</code> 的基本用法，帮助您写出更安全的 Bash 脚本。</p>
+
+<h2 id="简介"> 简介</h2>
+<p>我们知道，Bash 执行脚本时，会创建一个子 Shell。</p>
+<div><pre><code><span>bash</span> script.sh
+</code></pre>
+<div><span>1</span><br></div></div><p>上面代码中，<code>script.sh</code> 是在一个子 Shell 里面执行。这个子 Shell 就是脚本的执行环境，Bash 默认给定了这个环境的各种参数。</p>
+<p><code>set</code> 命令用来修改子 Shell 环境的运行参数，即定制环境。一共有十几个参数可以定制，<a href="https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html" target="_blank" rel="noopener noreferrer">官方手册<i>Content not supported</i></a>有完整清单，本章介绍其中最常用的几个。</p>
+<p>顺便提一下，如果命令行下不带任何参数，直接运行 <code>set</code>，会显示所有的环境变量和 Shell 函数。</p>
+<div><pre><code><span>set</span>
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="set-u"> set -u</h2>
+<p>执行脚本时，如果遇到不存在的变量，Bash 默认忽略它。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+
+<span>echo</span> <span>$a</span>
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>$a</code> 是一个不存在的变量。执行结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，<code>echo $a</code> 输出了一个空行，Bash 忽略了不存在的 <code>$a</code>，然后继续执行 <code>echo bar</code>。大多数情况下，这不是开发者想要的行为，遇到变量不存在，脚本应该报错，而不是一声不响地往下执行。</p>
+<p><code>set -u</code> 就用来改变这种行为。脚本在头部加上它，遇到不存在的变量就会报错，并停止执行。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+<span>set</span> -u
+
+<span>echo</span> <span>$a</span>
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>运行结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+bash: script.sh:行4: a: 未绑定的变量
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>可以看到，脚本报错了，并且不再执行后面的语句。</p>
+<p><code>-u</code> 还有另一种写法 <code>-o nounset</code>，两者是等价的。</p>
+<div><pre><code><span>set</span> -o nounset
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="set-x"> set -x</h2>
+<p>默认情况下，脚本执行后，只输出运行结果，没有其他内容。如果多个命令连续执行，它们的运行结果就会连续输出。有时会分不清，某一段内容是什么命令产生的。</p>
+<p><code>set -x</code> 用来在运行结果之前，先输出执行的那一行命令。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+<span>set</span> -x
+
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>执行上面的脚本，结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
++ <span>echo</span> bar
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，执行 <code>echo bar</code> 之前，该命令会先打印出来，行首以 <code>+</code> 表示。这对于调试复杂的脚本是很有用的。</p>
+<p><code>-x</code> 还有另一种写法 <code>-o xtrace</code>。</p>
+<div><pre><code><span>set</span> -o xtrace
+</code></pre>
+<div><span>1</span><br></div></div><p>脚本当中如果要关闭命令输出，可以使用 <code>set +x</code>。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>number</span><span>=</span><span>1</span>
+
+<span>set</span> -x
+<span>if</span> <span>[</span> <span>$number</span> <span>=</span> <span>"1"</span> <span>]</span><span>;</span> <span>then</span>
+  <span>echo</span> <span>"Number equals 1"</span>
+<span>else</span>
+  <span>echo</span> <span>"Number does not equal 1"</span>
+<span>fi</span>
+<span>set</span> +x
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的例子中，只对特定的代码段打开命令输出。</p>
+<h2 id="bash-的错误处理"> Bash 的错误处理</h2>
+<p>如果脚本里面有运行失败的命令(返回值非 <code>0</code>)，Bash 默认会继续执行后面的命令。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+
+foo
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面脚本中，<code>foo</code> 是一个不存在的命令，执行时会报错。但是，Bash 会忽略这个错误，继续往下执行。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+script.sh:行3: foo: 未找到命令
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，Bash 只是显示有错误，并没有终止执行。</p>
+<p>这种行为很不利于脚本安全和除错。实际开发中，如果某个命令失败，往往需要脚本停止执行，防止错误累积。这时，一般采用下面的写法。</p>
+<div><pre><code><span>command</span> <span>||</span> <span>exit</span> <span>1</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的写法表示只要 <code>command</code> 有非零返回值，脚本就会停止执行。</p>
+<p>如果停止执行之前需要完成多个操作，就要采用下面三种写法。</p>
+<div><pre><code><span># 写法一</span>
+<span>command</span> <span>||</span> <span>{</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>}</span>
+
+<span># 写法二</span>
+<span>if</span> <span>!</span> <span>command</span><span>;</span> <span>then</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>fi</span>
+
+<span># 写法三</span>
+<span>command</span>
+<span>if</span> <span>[</span> <span>"<span>$?</span>"</span> -ne <span>0</span> <span>]</span><span>;</span> <span>then</span> <span>echo</span> <span>"command failed"</span><span>;</span> <span>exit</span> <span>1</span><span>;</span> <span>fi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>另外，除了停止执行，还有一种情况。如果两个命令有继承关系，只有第一个命令成功了，才能继续执行第二个命令，那么就要采用下面的写法。</p>
+<div><pre><code>command1 <span>&amp;&amp;</span> command2
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="set-e"> set -e</h2>
+<p>上面这些写法多少有些麻烦，容易疏忽。<code>set -e</code> 从根本上解决了这个问题，它使得脚本只要发生错误，就终止执行。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+<span>set</span> -e
+
+foo
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+script.sh:行4: foo: 未找到命令
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>可以看到，第 4 行执行失败以后，脚本就终止执行了。</p>
+<p><code>set -e</code> 根据返回值来判断，一个命令是否运行失败。但是，某些命令的非零返回值可能不表示失败，或者开发者希望在命令失败的情况下，脚本继续执行下去。这时可以暂时关闭 <code>set -e</code>，该命令执行结束后，再重新打开 <code>set -e</code>。</p>
+<div><pre><code><span>set</span> +e
+command1
+command2
+<span>set</span> -e
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>set +e</code> 表示关闭 <code>-e</code> 选项，<code>set -e</code> 表示重新打开 <code>-e</code> 选项。</p>
+<p>还有一种方法是使用 <code>command || true</code>，使得该命令即使执行失败，脚本也不会终止执行。</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span>set</span> -e
+
+foo <span>||</span> <span>true</span>
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面代码中，<code>true</code> 使得这一行语句总是会执行成功，后面的 <code>echo bar</code> 会执行。</p>
+<p><code>-e</code> 还有另一种写法 <code>-o errexit</code>。</p>
+<div><pre><code><span>set</span> -o errexit
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="set-o-pipefail"> set -o pipefail</h2>
+<p><code>set -e</code> 有一个例外情况，就是不适用于管道命令。</p>
+<p>所谓管道命令，就是多个子命令通过管道运算符 (<code>|</code>) 组合成为一个大的命令。Bash 会把最后一个子命令的返回值，作为整个命令的返回值。也就是说，只要最后一个子命令不失败，管道命令总是会执行成功，因此它后面命令依然会执行，<code>set -e</code> 就失效了。</p>
+<p>请看下面这个例子。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+<span>set</span> -e
+
+foo <span>|</span> <span>echo</span> a
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+a
+script.sh:行4: foo: 未找到命令
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>foo</code> 是一个不存在的命令，但是 <code>foo | echo a</code> 这个管道命令会执行成功，导致后面的 <code>echo bar</code> 会继续执行。</p>
+<p><code>set -o pipefail</code> 用来解决这种情况，只要一个子命令失败，整个管道命令就失败，脚本就会终止执行。</p>
+<div><pre><code><span>#!/usr/bin/env bash</span>
+<span>set</span> -eo pipefail
+
+foo <span>|</span> <span>echo</span> a
+<span>echo</span> bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>运行后，结果如下。</p>
+<div><pre><code>$ <span>bash</span> script.sh
+a
+script.sh:行4: foo: 未找到命令
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>可以看到，<code>echo bar</code> 没有执行。</p>
+<h2 id="其他参数"> 其他参数</h2>
+<p><code>set</code> 命令还有一些其他参数。</p>
+<ul>
+<li><code>set -n</code>: 等同于 <code>set -o noexec</code>，不运行命令，只检查语法是否正确。</li>
+<li><code>set -f</code>: 等同于 <code>set -o noglob</code>，表示不对通配符进行文件名扩展。</li>
+<li><code>set -v</code>: 等同于 <code>set -o verbose</code>，表示打印 Shell 接收到的每一行输入。</li>
+</ul>
+<p>上面的 <code>-f</code> 和 <code>-v</code> 参数，可以分别使用 <code>set +f</code>、<code>set +v</code> 关闭。</p>
+<h2 id="set-命令总结"> set 命令总结</h2>
+<p>上面重点介绍的 <code>set</code> 命令的四个参数，一般都放在一起使用。</p>
+<div><pre><code><span># 写法一</span>
+<span>set</span> -euxo pipefail
+
+<span># 写法二</span>
+<span>set</span> -eux
+<span>set</span> -o pipefail
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>这两种写法建议放在所有 Bash 脚本的头部。</p>
+<p>另一种办法是在执行 Bash 脚本的时候，从命令行传入这些参数。</p>
+<div><pre><code><span>bash</span> -euxo pipefail script.sh
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="shopt-命令"> shopt 命令</h2>
+<p><code>shopt</code> 命令用来调整 Shell 的参数，跟 <code>set</code> 命令的作用很类似。之所以会有这两个类似命令的主要原因是，<code>set</code> 是从 Ksh 继承的，属于 POSIX 规范的一部分，而 <code>shopt</code> 是 Bash 特有的。</p>
+<p>直接输入 <code>shopt</code> 可以查看所有参数，以及它们各自打开和关闭的状态。</p>
+<div><pre><code><span>shopt</span>
+</code></pre>
+<div><span>1</span><br></div></div><p><code>shopt</code> 命令后面跟着参数名，可以查询该参数是否打开。</p>
+<div><pre><code>$ <span>shopt</span> globstar
+globstar  off
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子表示 <code>globstar</code> 参数默认是关闭的。</p>
+<ol>
+<li>
+<p><strong><code>-s</code></strong></p>
+<p><code>-s</code> 用来打开某个参数。</p>
+<div><pre><code><span>shopt</span> -s optionNameHere
+</code></pre>
+<div><span>1</span><br></div></div></li>
+<li>
+<p><strong><code>-u</code></strong></p>
+<p><code>-u</code> 用来关闭某个参数。</p>
+<div><pre><code><span>shopt</span> -u optionNameHere
+</code></pre>
+<div><span>1</span><br></div></div><p>举例来说，<code>histappend</code> 这个参数表示退出当前 Shell 时，将操作历史追加到历史文件中。这个参数默认是打开的，如果使用下面的命令将其关闭，那么当前 Shell 的操作历史将替换掉整个历史文件。</p>
+<div><pre><code><span>shopt</span> -u histappend
+</code></pre>
+<div><span>1</span><br></div></div></li>
+<li>
+<p><strong><code>-q</code></strong></p>
+<p><code>-q</code> 的作用也是查询某个参数是否打开，但不是直接输出查询结果，而是通过命令的执行状态 (<code>$?</code>) 表示查询结果。如果状态为 <code>0</code>，表示该参数打开；如果为 <code>1</code>，表示该参数关闭。</p>
+<div><pre><code>$ <span>shopt</span> -q globstar
+$ <span>echo</span> <span>$?</span>
+<span>1</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面命令查询 <code>globstar</code> 参数是否打开。返回状态为 <code>1</code>，表示该参数是关闭的。</p>
+<p>这个用法主要用于脚本，供 <code>if</code> 条件结构使用。</p>
+<div><pre><code><span>if</span> <span>shopt</span> -q globstar<span>;</span> <span>then</span>
+  <span>..</span>.
+<span>if</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div></li>
+</ol>
+<h2 id="参考链接"> 参考链接</h2>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html" target="_blank" rel="noopener noreferrer">The Set built-in<i>Content not supported</i></a></li>
+<li><a href="https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/" target="_blank" rel="noopener noreferrer">Safer bash scripts with 'set -euxo pipefail’<i>Content not supported</i></a></li>
+<li><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/" target="_blank" rel="noopener noreferrer">Writing Robust Bash Shell Scripts<i>Content not supported</i></a></li>
 </ul>
 ]]></content>
     <author>
