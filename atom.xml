@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2022-06-26T01:34:07.419Z</updated>
+  <updated>2022-07-19T07:38:44.265Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -3415,6 +3415,79 @@ $ <span>rsync</span> -av -delete rsync://rsync.gtlib.gatech.edu/path/to/oss fedo
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">异步任务</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/async/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/async/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="异步任务"> 异步任务</h1>
+<p>Bash 脚本有时候需要同时执行多个任务。通常这涉及到启动一个脚本，依次，启动一个或多个子脚本来执行额外的任务，而父脚本继续运行。然而，当一系列脚本 以这种方式运行时，要保持父子脚本之间协调工作，会有一些问题。也就是说，若父脚本或子脚本依赖于另一方，并且 一个脚本必须等待另一个脚本结束任务之后，才能完成它自己的任务，这应该怎么办?</p>
+<p>bash 有一个内置命令，能帮助管理诸如此类的异步执行的任务。wait 命令导致一个父脚本暂停运行，直到一个 特定的进程(例如，子脚本)运行结束。</p>
+<p>首先我们将演示一下 wait 命令的用法。为此，我们需要两个脚本，一个父脚本:</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span># async-parent : Asynchronous execution demo (parent)</span>
+<span>echo</span> <span>"Parent: starting..."</span>
+<span>echo</span> <span>"Parent: launching child script..."</span>
+async-child <span>&amp;</span>
+<span>pid</span><span>=</span><span>$!</span>
+<span>echo</span> <span>"Parent: child (PID= <span>$pid</span>) launched."</span>
+<span>echo</span> <span>"Parent: continuing..."</span>
+<span>sleep</span> <span>2</span>
+<span>echo</span> <span>"Parent: pausing to wait for child to finish..."</span>
+<span>wait</span> <span>$pid</span>
+<span>echo</span> <span>"Parent: child is finished. Continuing..."</span>
+<span>echo</span> <span>"Parent: parent is done. Exiting."</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>和一个子脚本:</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span># async-child : Asynchronous execution demo (child)</span>
+<span>echo</span> <span>"Child: child is running..."</span>
+<span>sleep</span> <span>5</span>
+<span>echo</span> <span>"Child: child is done. Exiting."</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>在这个例子中，我们看到该子脚本是非常简单的。真正的操作通过父脚本完成。在父脚本中，子脚本被启动， 并被放置到后台运行。子脚本的进程 ID 记录在 pid 变量中，这个变量的值是 $! shell 参数的值，它总是 包含放到后台执行的最后一个任务的进程 ID 号。</p>
+<p>父脚本继续，然后执行一个以子进程 PID 为参数的 wait 命令。这就导致父脚本暂停运行，直到子脚本退出， 意味着父脚本结束。</p>
+<p>当执行后，父子脚本产生如下输出:</p>
+<div><pre><code>$ async-parent
+Parent: starting<span>..</span>.
+Parent: launching child script<span>..</span>.
+Parent: child <span>(</span>PID<span>=</span> <span>6741</span><span>)</span> launched.
+Parent: continuing<span>..</span>.
+Child: child is running<span>..</span>.
+Parent: pausing to <span>wait</span> <span>for</span> child to finish<span>..</span>.
+Child: child is done. Exiting.
+Parent: child is finished. Continuing<span>..</span>.
+Parent: parent is done. Exiting.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">alias</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/alias/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/alias/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="alias"> alias</h1>
+<p><code>alias</code> 命令用于设置别名。通常用于在 Bash 设置文件中，设置别名。</p>
+<div><pre><code><span>alias</span> <span>dockerlogin</span><span>=</span><span>'ssh www-data@adnan.local -p2222'</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">Shell 的命令</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/command/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/command/"/>
@@ -3551,60 +3624,6 @@ command1 <span>||</span> command2
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div><p>通过使用 echo 命令，查看展开结果，我们看到子 shell 的输出结果，由一个名为 /dev/fd/63 的文件提供。</p>
 ]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">异步任务</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/async/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/async/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="异步任务"> 异步任务</h1>
-<p>Bash 脚本有时候需要同时执行多个任务。通常这涉及到启动一个脚本，依次，启动一个或多个子脚本来执行额外的任务，而父脚本继续运行。然而，当一系列脚本 以这种方式运行时，要保持父子脚本之间协调工作，会有一些问题。也就是说，若父脚本或子脚本依赖于另一方，并且 一个脚本必须等待另一个脚本结束任务之后，才能完成它自己的任务，这应该怎么办?</p>
-<p>bash 有一个内置命令，能帮助管理诸如此类的异步执行的任务。wait 命令导致一个父脚本暂停运行，直到一个 特定的进程(例如，子脚本)运行结束。</p>
-<p>首先我们将演示一下 wait 命令的用法。为此，我们需要两个脚本，一个父脚本:</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span># async-parent : Asynchronous execution demo (parent)</span>
-<span>echo</span> <span>"Parent: starting..."</span>
-<span>echo</span> <span>"Parent: launching child script..."</span>
-async-child <span>&amp;</span>
-<span>pid</span><span>=</span><span>$!</span>
-<span>echo</span> <span>"Parent: child (PID= <span>$pid</span>) launched."</span>
-<span>echo</span> <span>"Parent: continuing..."</span>
-<span>sleep</span> <span>2</span>
-<span>echo</span> <span>"Parent: pausing to wait for child to finish..."</span>
-<span>wait</span> <span>$pid</span>
-<span>echo</span> <span>"Parent: child is finished. Continuing..."</span>
-<span>echo</span> <span>"Parent: parent is done. Exiting."</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>和一个子脚本:</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span># async-child : Asynchronous execution demo (child)</span>
-<span>echo</span> <span>"Child: child is running..."</span>
-<span>sleep</span> <span>5</span>
-<span>echo</span> <span>"Child: child is done. Exiting."</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>在这个例子中，我们看到该子脚本是非常简单的。真正的操作通过父脚本完成。在父脚本中，子脚本被启动， 并被放置到后台运行。子脚本的进程 ID 记录在 pid 变量中，这个变量的值是 $! shell 参数的值，它总是 包含放到后台执行的最后一个任务的进程 ID 号。</p>
-<p>父脚本继续，然后执行一个以子进程 PID 为参数的 wait 命令。这就导致父脚本暂停运行，直到子脚本退出， 意味着父脚本结束。</p>
-<p>当执行后，父子脚本产生如下输出:</p>
-<div><pre><code>$ async-parent
-Parent: starting<span>..</span>.
-Parent: launching child script<span>..</span>.
-Parent: child <span>(</span>PID<span>=</span> <span>6741</span><span>)</span> launched.
-Parent: continuing<span>..</span>.
-Child: child is running<span>..</span>.
-Parent: pausing to <span>wait</span> <span>for</span> child to finish<span>..</span>.
-Child: child is done. Exiting.
-Parent: child is finished. Continuing<span>..</span>.
-Parent: parent is done. Exiting.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -3772,25 +3791,6 @@ sys
 <li><a href="https://likegeeks.com/awk-command/" target="_blank" rel="noopener noreferrer">30 Examples for Awk Command in Text Processing<i>Content not supported</i></a>, Mokhtar Ebrahim</li>
 </ul>
 ]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">alias</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/alias/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/alias/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="alias"> alias</h1>
-<p><code>alias</code> 命令用于设置别名。通常用于在 Bash 设置文件中，设置别名。</p>
-<div><pre><code><span>alias</span> <span>dockerlogin</span><span>=</span><span>'ssh www-data@adnan.local -p2222'</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4007,39 +4007,6 @@ $ <span>dd</span> <span>if</span><span>=</span>/dev/urandom <span>of</span><span
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">du</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/du/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/du/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="du"> du</h1>
-<p><code>du</code> 命令显示某个文件或目录的磁盘使用量。</p>
-<div><pre><code><span>du</span> filename
-</code></pre>
-<div><span>1</span><br></div></div><p><code>-h</code> 参数将返回的大小显示为人类可读的格式，即显示单位为 K、M、G 等。</p>
-<p><code>-s</code> 参数表示总结(summarize)。</p>
-<p><code>-x</code> 参数表示不显示不在当前分区的目录，通常会忽略<code>/dev</code>、<code>/proc</code>、<code>/sys</code> 等目录。</p>
-<p><code>-c</code> 参数表示显示当前目录总共占用的空间大小。</p>
-<div><pre><code><span># 显示根目录下各级目录占用的空间大小</span>
-$ <span>sudo</span> <span>du</span> -shxc /*
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>--exclude</code> 参数用于排除某些目录或文件。</p>
-<div><pre><code><span>sudo</span> <span>du</span> -shxc /* --exclude<span>=</span>proc
-<span>sudo</span> <span>du</span> -sh --exclude<span>=</span>*.iso
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>--max-depth</code> 参数用于设定目录大小统计到第几层。如果设为 <code>-–max-depth=0</code>，那么等同于 <code>-s</code> 参数。</p>
-<div><pre><code><span>sudo</span> <span>du</span> /home/ -hc --max-depth<span>=</span><span>2</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">egrep</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/egrep/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/egrep/"/>
@@ -4079,6 +4046,39 @@ sanctus est Lorem
 ipsum dolor sit
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">du</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/du/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/du/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="du"> du</h1>
+<p><code>du</code> 命令显示某个文件或目录的磁盘使用量。</p>
+<div><pre><code><span>du</span> filename
+</code></pre>
+<div><span>1</span><br></div></div><p><code>-h</code> 参数将返回的大小显示为人类可读的格式，即显示单位为 K、M、G 等。</p>
+<p><code>-s</code> 参数表示总结(summarize)。</p>
+<p><code>-x</code> 参数表示不显示不在当前分区的目录，通常会忽略<code>/dev</code>、<code>/proc</code>、<code>/sys</code> 等目录。</p>
+<p><code>-c</code> 参数表示显示当前目录总共占用的空间大小。</p>
+<div><pre><code><span># 显示根目录下各级目录占用的空间大小</span>
+$ <span>sudo</span> <span>du</span> -shxc /*
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>--exclude</code> 参数用于排除某些目录或文件。</p>
+<div><pre><code><span>sudo</span> <span>du</span> -shxc /* --exclude<span>=</span>proc
+<span>sudo</span> <span>du</span> -sh --exclude<span>=</span>*.iso
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>--max-depth</code> 参数用于设定目录大小统计到第几层。如果设为 <code>-–max-depth=0</code>，那么等同于 <code>-s</code> 参数。</p>
+<div><pre><code><span>sudo</span> <span>du</span> /home/ -hc --max-depth<span>=</span><span>2</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4462,36 +4462,6 @@ active  adnanad <span>59</span>      demo                            <span>39936
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">ls</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ls/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ls/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="ls"> ls</h1>
-<p><code>ls</code> 命令用于列出当前目录里面的文件和子目录。</p>
-<h2 id="参数"> 参数</h2>
-<ul>
-<li>a: 列出隐藏文件</li>
-<li>l: 以长格式列出文件</li>
-<li>t: 按最后编辑日期排序，最新的最先。这在某个大目录里找出最近修改的文件列表时很有用，比如将结果导入( pipe ) head 或者 sed 10q。或许加上 -l 会效果更好。当然如果您想获取最旧的文件列表，只要加 -r 反转列表即可。</li>
-<li>X: 按文件类型分类。这在多语言或多后缀的项目中特别方便，比如头文件和源文件分开，或区分开源文件和生成文件或目录。</li>
-<li>v: 按照文件名里的版本号排序。</li>
-<li>S: 按文件大小排序。</li>
-<li>R: 递归地列举文件。这个选项和 -l 组合使用并将结果导出到 less 效果很好。</li>
-</ul>
-<p>可以把结果导出给类似 vim 的进程。</p>
-<div><pre><code><span>ls</span> -XR <span>|</span> <span>vim</span> -
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">nl</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/nl/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/nl/"/>
@@ -4543,6 +4513,36 @@ amet.
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p><code>-s</code> 参数表示行号的后缀。</p>
 ]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">ls</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ls/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ls/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ls"> ls</h1>
+<p><code>ls</code> 命令用于列出当前目录里面的文件和子目录。</p>
+<h2 id="参数"> 参数</h2>
+<ul>
+<li>a: 列出隐藏文件</li>
+<li>l: 以长格式列出文件</li>
+<li>t: 按最后编辑日期排序，最新的最先。这在某个大目录里找出最近修改的文件列表时很有用，比如将结果导入( pipe ) head 或者 sed 10q。或许加上 -l 会效果更好。当然如果您想获取最旧的文件列表，只要加 -r 反转列表即可。</li>
+<li>X: 按文件类型分类。这在多语言或多后缀的项目中特别方便，比如头文件和源文件分开，或区分开源文件和生成文件或目录。</li>
+<li>v: 按照文件名里的版本号排序。</li>
+<li>S: 按文件大小排序。</li>
+<li>R: 递归地列举文件。这个选项和 -l 组合使用并将结果导出到 less 效果很好。</li>
+</ul>
+<p>可以把结果导出给类似 vim 的进程。</p>
+<div><pre><code><span>ls</span> -XR <span>|</span> <span>vim</span> -
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -6459,124 +6459,6 @@ $ <span>sed</span> <span>'s/regexp/replacement/g'</span> distros.txt
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">用户管理</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/user/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/user/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="用户管理"> 用户管理</h1>
-<h2 id="id"> id</h2>
-<p><code>id</code> 命令用于查看指定用户的用户名和组名。</p>
-<div><pre><code>$ <span>id</span>
-<span>uid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>gid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>groups</span><span>=</span><span>500</span><span>(</span>me<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>id</code> 输出结果分为三个部分，分别是 UID(用户编号和用户名)、GID(组编号和组名)，groups(用户所在的所有组)。</p>
-<p>用户帐户的信息，存放在<code>/etc/passwd</code> 文件里面；用户组的信息，存放在<code>/etc/group</code> 文件里面。</p>
-<div><pre><code><span># 返回UID</span>
-$ <span>id</span> -u <span>[</span>UserName<span>]</span>
-
-<span># 返回GID</span>
-$ <span>id</span> -g <span>[</span>UserName<span>]</span>
-
-<span># 返回用户名</span>
-$ <span>id</span> -un <span>[</span>UserName<span>]</span>
-
-<span># 返回组名</span>
-$ <span>id</span> -gn <span>[</span>UserName<span>]</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的命令，如果省略用户名，则返回当前用户的信息。</p>
-<h2 id="su"> su</h2>
-<p><code>su</code> 命令允许您以另一个用户的身份，启动一个新的 shell 会话，或者是以这个用户的身份来发布一个命令。</p>
-<div><pre><code><span>su</span> otherUser
-</code></pre>
-<div><span>1</span><br></div></div><p>执行上面的命令以后，系统会提示输入密码。通过以后，就以另一个用户身份在执行命令了。</p>
-<p>如果不加用户名，则表示切换到 root 用户。</p>
-<div><pre><code><span>su</span>
-</code></pre>
-<div><span>1</span><br></div></div><p><code>-l</code> 参数表示启动一个需要登录的新的 Shell，这意味着工作目录会切换到该用户的主目录。它的缩写形式是 <code>-</code>。</p>
-<div><pre><code><span>su</span> -
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令表示，切换到 root 用户的身份，且工作目录也切换到 root 用户的主目录。</p>
-<p><code>-c</code> 参数表示只以其他用户的身份，执行单个命令，而不是启动一个新的 Session。</p>
-<div><pre><code>$ <span>su</span> -c <span>'command'</span>
-
-<span># 实例</span>
-$ <span>su</span> -c <span>'ls -l /root/*'</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sudo"> sudo</h2>
-<p><code>sudo</code> 命令很类似 <code>su</code> 命令，但有几点差别。</p>
-<ul>
-<li>对于管理员来说，<code>sudo</code> 命令的可配置性更高</li>
-<li><code>sudo</code> 命令通常只用于执行单个命令，而不是开启另一个 Session。</li>
-<li><code>sudo</code> 命令不要求超级用户的密码，而是用户使自己的密码来认证。</li>
-</ul>
-<p><code>sudo</code> 的设置在文件<code>/etc/sudoers</code> 之中。</p>
-<p><code>-l</code> 参数列出用户拥有的所有权限。</p>
-<div><pre><code><span>sudo</span> -l
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="chown"> chown</h2>
-<p><code>chown</code> 命令用来更改文件或目录的所有者和用户组。使用这个命令需要超级用户权限。</p>
-<div><pre><code><span>chown</span> <span>[</span>owner<span>]</span><span>[</span>:<span>[</span>group<span>]</span><span>]</span> <span>file</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>下面是一些例子。</p>
-<div><pre><code><span># 更改文件所有者</span>
-$ <span>sudo</span> <span>chown</span> bob foo.txt
-
-<span># 更改文件所有者和用户组</span>
-$ <span>sudo</span> <span>chown</span> bob:users foo.txt
-
-<span># 更改用户组</span>
-$ <span>sudo</span> <span>chown</span> :admins foo.txt
-
-<span># 更改文件所有者和用户组(用户 bob 登录系统时，所属的用户组)</span>
-$ <span>sudo</span> <span>chown</span> bob: foo.txt
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="chgrp"> chgrp</h2>
-<p><code>chgrp</code> 命令更改用户组，用法与 <code>chown</code> 命令类似。</p>
-<h2 id="useradd"> useradd</h2>
-<p><code>useradd</code> 命令用来新增用户。</p>
-<div><pre><code><span>useradd</span> -G admin -d /home/bill -s /bin/bash -m bill
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令新增用户 <code>bill</code>，参数 <code>-G</code> 指定用户所在的组，参数 <code>d</code> 指定用户的主目录，参数 <code>s</code> 指定用户的 Shell，参数 <code>m</code> 表示如果该目录不存在，则创建该目录。</p>
-<h2 id="usermod"> usermod</h2>
-<p><code>usermod</code> 命令用来修改用户的各项属性。</p>
-<div><pre><code><span>usermod</span> -g sales jerry
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的主要用户组为 <code>sales</code>。</p>
-<div><pre><code><span>usermod</span> -G sales jerry
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的次要用户组为 <code>sales</code>。</p>
-<h2 id="adduser"> adduser</h2>
-<p><code>adduser</code> 命令用来将一个用户加入用户组。</p>
-<div><pre><code><span>sudo</span> adduser username grouptoadd
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="groupadd"> groupadd</h2>
-<p><code>groupadd</code> 命令用来新建一个用户组。</p>
-<div><pre><code><span>sudo</span> <span>groupadd</span> group1
-<span>sudo</span> adduser foobar group1
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="groupdel"> groupdel</h2>
-<p><code>groupdel</code> 命令用来删除一个用户组。</p>
-<div><pre><code><span>sudo</span> <span>groupdel</span> group1
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="passwd"> passwd</h2>
-<p><code>passwd</code> 命令用于修改密码。</p>
-<div><pre><code><span># 修改自己的密码</span>
-$ <span>passwd</span>
-
-<span># 修改其他用户的密码</span>
-$ <span>sudo</span> <span>passwd</span> <span>[</span>user<span>]</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">时间管理</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/time/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/time/"/>
@@ -6901,6 +6783,124 @@ expr: 非整数参数
     </contributor>
     <published>2022-02-18T02:39:20.000Z</published>
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">用户管理</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/user/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/user/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="用户管理"> 用户管理</h1>
+<h2 id="id"> id</h2>
+<p><code>id</code> 命令用于查看指定用户的用户名和组名。</p>
+<div><pre><code>$ <span>id</span>
+<span>uid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>gid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>groups</span><span>=</span><span>500</span><span>(</span>me<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>id</code> 输出结果分为三个部分，分别是 UID(用户编号和用户名)、GID(组编号和组名)，groups(用户所在的所有组)。</p>
+<p>用户帐户的信息，存放在<code>/etc/passwd</code> 文件里面；用户组的信息，存放在<code>/etc/group</code> 文件里面。</p>
+<div><pre><code><span># 返回UID</span>
+$ <span>id</span> -u <span>[</span>UserName<span>]</span>
+
+<span># 返回GID</span>
+$ <span>id</span> -g <span>[</span>UserName<span>]</span>
+
+<span># 返回用户名</span>
+$ <span>id</span> -un <span>[</span>UserName<span>]</span>
+
+<span># 返回组名</span>
+$ <span>id</span> -gn <span>[</span>UserName<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的命令，如果省略用户名，则返回当前用户的信息。</p>
+<h2 id="su"> su</h2>
+<p><code>su</code> 命令允许您以另一个用户的身份，启动一个新的 shell 会话，或者是以这个用户的身份来发布一个命令。</p>
+<div><pre><code><span>su</span> otherUser
+</code></pre>
+<div><span>1</span><br></div></div><p>执行上面的命令以后，系统会提示输入密码。通过以后，就以另一个用户身份在执行命令了。</p>
+<p>如果不加用户名，则表示切换到 root 用户。</p>
+<div><pre><code><span>su</span>
+</code></pre>
+<div><span>1</span><br></div></div><p><code>-l</code> 参数表示启动一个需要登录的新的 Shell，这意味着工作目录会切换到该用户的主目录。它的缩写形式是 <code>-</code>。</p>
+<div><pre><code><span>su</span> -
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令表示，切换到 root 用户的身份，且工作目录也切换到 root 用户的主目录。</p>
+<p><code>-c</code> 参数表示只以其他用户的身份，执行单个命令，而不是启动一个新的 Session。</p>
+<div><pre><code>$ <span>su</span> -c <span>'command'</span>
+
+<span># 实例</span>
+$ <span>su</span> -c <span>'ls -l /root/*'</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sudo"> sudo</h2>
+<p><code>sudo</code> 命令很类似 <code>su</code> 命令，但有几点差别。</p>
+<ul>
+<li>对于管理员来说，<code>sudo</code> 命令的可配置性更高</li>
+<li><code>sudo</code> 命令通常只用于执行单个命令，而不是开启另一个 Session。</li>
+<li><code>sudo</code> 命令不要求超级用户的密码，而是用户使自己的密码来认证。</li>
+</ul>
+<p><code>sudo</code> 的设置在文件<code>/etc/sudoers</code> 之中。</p>
+<p><code>-l</code> 参数列出用户拥有的所有权限。</p>
+<div><pre><code><span>sudo</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="chown"> chown</h2>
+<p><code>chown</code> 命令用来更改文件或目录的所有者和用户组。使用这个命令需要超级用户权限。</p>
+<div><pre><code><span>chown</span> <span>[</span>owner<span>]</span><span>[</span>:<span>[</span>group<span>]</span><span>]</span> <span>file</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>下面是一些例子。</p>
+<div><pre><code><span># 更改文件所有者</span>
+$ <span>sudo</span> <span>chown</span> bob foo.txt
+
+<span># 更改文件所有者和用户组</span>
+$ <span>sudo</span> <span>chown</span> bob:users foo.txt
+
+<span># 更改用户组</span>
+$ <span>sudo</span> <span>chown</span> :admins foo.txt
+
+<span># 更改文件所有者和用户组(用户 bob 登录系统时，所属的用户组)</span>
+$ <span>sudo</span> <span>chown</span> bob: foo.txt
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="chgrp"> chgrp</h2>
+<p><code>chgrp</code> 命令更改用户组，用法与 <code>chown</code> 命令类似。</p>
+<h2 id="useradd"> useradd</h2>
+<p><code>useradd</code> 命令用来新增用户。</p>
+<div><pre><code><span>useradd</span> -G admin -d /home/bill -s /bin/bash -m bill
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令新增用户 <code>bill</code>，参数 <code>-G</code> 指定用户所在的组，参数 <code>d</code> 指定用户的主目录，参数 <code>s</code> 指定用户的 Shell，参数 <code>m</code> 表示如果该目录不存在，则创建该目录。</p>
+<h2 id="usermod"> usermod</h2>
+<p><code>usermod</code> 命令用来修改用户的各项属性。</p>
+<div><pre><code><span>usermod</span> -g sales jerry
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的主要用户组为 <code>sales</code>。</p>
+<div><pre><code><span>usermod</span> -G sales jerry
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的次要用户组为 <code>sales</code>。</p>
+<h2 id="adduser"> adduser</h2>
+<p><code>adduser</code> 命令用来将一个用户加入用户组。</p>
+<div><pre><code><span>sudo</span> adduser username grouptoadd
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="groupadd"> groupadd</h2>
+<p><code>groupadd</code> 命令用来新建一个用户组。</p>
+<div><pre><code><span>sudo</span> <span>groupadd</span> group1
+<span>sudo</span> adduser foobar group1
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="groupdel"> groupdel</h2>
+<p><code>groupdel</code> 命令用来删除一个用户组。</p>
+<div><pre><code><span>sudo</span> <span>groupdel</span> group1
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="passwd"> passwd</h2>
+<p><code>passwd</code> 命令用于修改密码。</p>
+<div><pre><code><span># 修改自己的密码</span>
+$ <span>passwd</span>
+
+<span># 修改其他用户的密码</span>
+$ <span>sudo</span> <span>passwd</span> <span>[</span>user<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
     <title type="html">数组</title>
@@ -8398,6 +8398,172 @@ a.txt  sub1/b.txt  sub1/sub2/c.txt
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
+    <title type="html">Bash 的基本语法</title>
+    <id>https://list-jiang.github.io/code/linux/bash/grammar/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/grammar/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <summary type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
+
+<h2 id="echo-命令"> echo 命令</h2>
+<p>由于后面的例子会大量用到 <code>echo</code> 命令，这里先介绍这个命令。</p>
+<p><code>echo</code> 命令的作用是在屏幕输出一行文本，可以将该命令的参数原样输出。</p>
+<div><pre><code>$ <span>echo</span> hello world
+hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>echo</code> 的参数是 <code>hello world</code>，可以原样输出。</p>
+<p>如果想要输出的是多行文本，即包括换行符。这时需要把多行文本放在引号里面。</p>
+<div><pre><code>$ <span>echo</span> <span>"&lt;HTML>
+    &lt;HEAD>
+          &lt;TITLE>Page Title&lt;/TITLE>
+    &lt;/HEAD>
+    &lt;BODY>
+          Page body.
+    &lt;/BODY>
+&lt;/HTML>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面例子中，<code>echo</code> 可以原样输出多行文本。</p>
+<h3 id="n-参数"> <code>-n</code> 参数</h3>
+<p>默认情况下，<code>echo</code> 输出的文本末尾会有一个回车符。<code>-n</code> 参数可以取消末尾的回车符，使得下一个提示符紧跟在输出内容的后面。</p>
+<div><pre><code>$ <span>echo</span> -n hello world
+hello world$
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>world</code> 后面直接就是下一行的提示符 <code>$</code>。</p>
+<div><pre><code>$ <span>echo</span> a<span>;</span><span>echo</span> b
+a
+b
+
+$ <span>echo</span> -n a<span>;</span><span>echo</span> b
+ab
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面例子中，<code>-n</code> 参数可以让两个 <code>echo</code> 命令的输出连在一起，出现在同一行。</p>
+<h3 id="e-参数"> <code>-e</code> 参数</h3>
+<p><code>-e</code> 参数会解释引号(双引号和单引号)里面的特殊字符(比如换行符 <code>\n</code>)。如果不使用 <code>-e</code> 参数，即默认情况下，引号会让特殊字符变成普通字符，<code>echo</code> 不解释它们，原样输出。</p>
+<div><pre><code>$ <span>echo</span> <span>"Hello<span title="\n">\n</span>World"</span>
+Hello<span>\</span>nWorld
+
+<span># 双引号的情况</span>
+$ <span>echo</span> -e <span>"Hello<span title="\n">\n</span>World"</span>
+Hello
+World
+
+<span># 单引号的情况</span>
+$ <span>echo</span> -e <span>'Hello\nWorld'</span>
+Hello
+World
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>上面代码中，<code>-e</code> 参数使得 <code>\n</code> 解释为换行符，导致输出内容里面出现换行。</p>
+<h2 id="命令格式"> 命令格式</h2>
+<p>命令行环境中，主要通过使用 Shell 命令，进行各种操作。Shell 命令基本都是下面的格式。</p>
+<div><pre><code><span>command</span> <span>[</span> arg1 <span>..</span>. <span>[</span> argN <span>]</span><span>]</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面代码中，<code>command</code> 是具体的命令或者一个可执行文件，<code>arg1 ... argN</code> 是传递给命令的参数，它们是可选的。</p>
+<div><pre><code><span>ls</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><p>上面这个命令中，<code>ls</code> 是命令，<code>-l</code> 是参数。</p>
+<p>有些参数是命令的配置项，这些配置项一般都以一个连词线开头，比如上面的 <code>-l</code>。同一个配置项往往有长和短两种形式，比如 <code>-l</code> 是短形式，<code>--list</code> 是长形式，它们的作用完全相同。短形式便于手动输入，长形式一般用在脚本之中，可读性更好，利于解释自身的含义。</p>
+<div><pre><code><span># 短形式</span>
+$ <span>ls</span> -r
+
+<span># 长形式</span>
+$ <span>ls</span> --reverse
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>-r</code> 是短形式，<code>--reverse</code> 是长形式，作用完全一样。前者便于输入，后者便于理解。</p>
+<p>Bash 单个命令一般都是一行，用户按下回车键，就开始执行。有些命令比较长，写成多行会有利于阅读和编辑，这时可以在每一行的结尾加上反斜杠，Bash 就会将下一行跟当前行放在一起解释。</p>
+<div><pre><code>$ <span>echo</span> foo bar
+
+<span># 等同于</span>
+$ <span>echo</span> foo <span>\</span>
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="空格"> 空格</h2>
+<p>Bash 使用空格(或 Tab 键)区分不同的参数。</p>
+<div><pre><code><span>command</span> foo bar
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令中，<code>foo</code> 和 <code>bar</code> 之间有一个空格，所以 Bash 认为它们是两个参数。</p>
+<p>如果参数之间有多个空格，Bash 会自动忽略多余的空格。</p>
+<div><pre><code>$ <span>echo</span> this is a     <span>test</span>
+this is a <span>test</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，<code>a</code> 和 <code>test</code> 之间有多个空格，Bash 会忽略多余的空格。</p>
+<h2 id="分号"> 分号</h2>
+<p>分号(<code>;</code>)是命令的结束符，使得一行可以放置多个命令，上一个命令执行结束后，再执行第二个命令。</p>
+<div><pre><code><span>clear</span><span>;</span> <span>ls</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，Bash 先执行 <code>clear</code> 命令，执行完成后，再执行 <code>ls</code> 命令。</p>
+<p>注意，使用分号时，第二个命令总是接着第一个命令执行，不管第一个命令执行成功或失败。</p>
+<h2 id="命令的组合符-和"> 命令的组合符 <code>&amp;&amp;</code> 和 <code>||</code></h2>
+<p>除了分号，Bash 还提供两个命令组合符 <code>&amp;&amp;</code> 和 <code>||</code>，允许更好地控制多个命令之间的继发关系。</p>
+<div><pre><code>Command1 <span>&amp;&amp;</span> Command2
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行成功，则继续运行 <code>Command2</code> 命令。</p>
+<div><pre><code>Command1 <span>||</span> Command2
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行失败，则继续运行 <code>Command2</code> 命令。</p>
+<p>下面是一些例子。</p>
+<div><pre><code><span>cat</span> filelist.txt <span>;</span> <span>ls</span> -l filelist.txt
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只要 <code>cat</code> 命令执行结束，不管成功或失败，都会继续执行 <code>ls</code> 命令。</p>
+<div><pre><code><span>cat</span> filelist.txt <span>&amp;&amp;</span> <span>ls</span> -l filelist.txt
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只有 <code>cat</code> 命令执行成功，才会继续执行 <code>ls</code> 命令。如果 <code>cat</code> 执行失败(比如不存在文件 <code>flielist.txt</code>)，那么 <code>ls</code> 命令就不会执行。</p>
+<div><pre><code><span>mkdir</span> foo <span>||</span> <span>mkdir</span> bar
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只有 <code>mkdir foo</code> 命令执行失败(比如 <code>foo</code> 目录已经存在)，才会继续执行 <code>mkdir bar</code> 命令。如果 <code>mkdir foo</code> 命令执行成功，就不会创建 <code>bar</code> 目录了。</p>
+<h2 id="type-命令"> type 命令</h2>
+<p>Bash 本身内置了很多命令，同时也可以执行外部程序。怎么知道一个命令是内置命令，还是外部程序呢?</p>
+<p><code>type</code> 命令用来判断命令的来源。</p>
+<div><pre><code>$ <span>type</span> <span>echo</span>
+<span>echo</span> is a shell <span>builtin</span>
+$ <span>type</span> <span>ls</span>
+<span>ls</span> is hashed <span>(</span>/bin/ls<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>type</code> 命令告诉我们，<code>echo</code> 是内部命令，<code>ls</code> 是外部程序 (<code>/bin/ls</code>)。</p>
+<p><code>type</code> 命令本身也是内置命令。</p>
+<div><pre><code>$ <span>type</span> <span>type</span>
+<span>type</span> is a shell <span>builtin</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>如果要查看一个命令的所有定义，可以使用 <code>type</code> 命令的 <code>-a</code> 参数。</p>
+<div><pre><code>$ <span>type</span> -a <span>echo</span>
+<span>echo</span> is shell <span>builtin</span>
+<span>echo</span> is /usr/bin/echo
+<span>echo</span> is /bin/echo
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码表示，<code>echo</code> 命令即是内置命令，也有对应的外部程序。</p>
+<p><code>type</code> 命令的 <code>-t</code> 参数，可以返回一个命令的类型: 别名(alias)，关键词(keyword)，函数(function)，内置命令(builtin)和文件(file)。</p>
+<div><pre><code>$ <span>type</span> -t <span>bash</span>
+<span>file</span>
+$ <span>type</span> -t <span>if</span>
+keyword
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>bash</code> 是文件，<code>if</code> 是关键词。</p>
+<h2 id="快捷键"> 快捷键</h2>
+<p>Bash 提供很多快捷键，可以大大方便操作。下面是一些最常用的快捷键，完整的介绍参见 <a href="./readline.html">行操作</a> 一章。</p>
+<ul>
+<li><code>Ctrl + L</code>: 清除屏幕并将当前行移到页面顶部。</li>
+<li><code>Ctrl + C</code>: 中止当前正在执行的命令。</li>
+<li><code>Shift + PageUp</code>: 向上滚动。</li>
+<li><code>Shift + PageDown</code>: 向下滚动。</li>
+<li><code>Ctrl + U</code>: 从光标位置删除到行首。</li>
+<li><code>Ctrl + K</code>: 从光标位置删除到行尾。</li>
+<li><code>Ctrl + D</code>: 关闭 Shell 会话。</li>
+<li><code>↑</code>，<code>↓</code>: 浏览已执行命令的历史记录。</li>
+</ul>
+<p>除了上面的快捷键，Bash 还具有自动补全功能。命令输入到一半的时候，可以按下 Tab 键，Bash 会自动完成剩下的部分。比如，输入 <code>pw</code>，然后按一下 Tab 键，Bash 会自动补上 <code>d</code>。</p>
+<p>除了命令的自动补全，Bash 还支持路径的自动补全。有时，需要输入很长的路径，这时只需要输入前面的部分，然后按下 Tab 键，就会自动补全后面的部分。如果有多个可能的选择，按两次 Tab 键，Bash 会显示所有选项，让您选择。</p>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
     <title type="html">Bash 函数</title>
     <id>https://list-jiang.github.io/code/linux/bash/function/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/function/"/>
@@ -8554,172 +8720,6 @@ global: foo <span>=</span>
 <ul>
 <li><a href="https://www.linuxtechi.com/define-use-functions-linux-shell-script/" target="_blank" rel="noopener noreferrer">How to define and use functions in Linux Shell Script<i>Content not supported</i></a>, by Pradeep Kumar</li>
 </ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
-    <title type="html">Bash 的基本语法</title>
-    <id>https://list-jiang.github.io/code/linux/bash/grammar/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/grammar/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
-
-<h2 id="echo-命令"> echo 命令</h2>
-<p>由于后面的例子会大量用到 <code>echo</code> 命令，这里先介绍这个命令。</p>
-<p><code>echo</code> 命令的作用是在屏幕输出一行文本，可以将该命令的参数原样输出。</p>
-<div><pre><code>$ <span>echo</span> hello world
-hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>echo</code> 的参数是 <code>hello world</code>，可以原样输出。</p>
-<p>如果想要输出的是多行文本，即包括换行符。这时需要把多行文本放在引号里面。</p>
-<div><pre><code>$ <span>echo</span> <span>"&lt;HTML>
-    &lt;HEAD>
-          &lt;TITLE>Page Title&lt;/TITLE>
-    &lt;/HEAD>
-    &lt;BODY>
-          Page body.
-    &lt;/BODY>
-&lt;/HTML>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面例子中，<code>echo</code> 可以原样输出多行文本。</p>
-<h3 id="n-参数"> <code>-n</code> 参数</h3>
-<p>默认情况下，<code>echo</code> 输出的文本末尾会有一个回车符。<code>-n</code> 参数可以取消末尾的回车符，使得下一个提示符紧跟在输出内容的后面。</p>
-<div><pre><code>$ <span>echo</span> -n hello world
-hello world$
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>world</code> 后面直接就是下一行的提示符 <code>$</code>。</p>
-<div><pre><code>$ <span>echo</span> a<span>;</span><span>echo</span> b
-a
-b
-
-$ <span>echo</span> -n a<span>;</span><span>echo</span> b
-ab
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面例子中，<code>-n</code> 参数可以让两个 <code>echo</code> 命令的输出连在一起，出现在同一行。</p>
-<h3 id="e-参数"> <code>-e</code> 参数</h3>
-<p><code>-e</code> 参数会解释引号(双引号和单引号)里面的特殊字符(比如换行符 <code>\n</code>)。如果不使用 <code>-e</code> 参数，即默认情况下，引号会让特殊字符变成普通字符，<code>echo</code> 不解释它们，原样输出。</p>
-<div><pre><code>$ <span>echo</span> <span>"Hello<span title="\n">\n</span>World"</span>
-Hello<span>\</span>nWorld
-
-<span># 双引号的情况</span>
-$ <span>echo</span> -e <span>"Hello<span title="\n">\n</span>World"</span>
-Hello
-World
-
-<span># 单引号的情况</span>
-$ <span>echo</span> -e <span>'Hello\nWorld'</span>
-Hello
-World
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>上面代码中，<code>-e</code> 参数使得 <code>\n</code> 解释为换行符，导致输出内容里面出现换行。</p>
-<h2 id="命令格式"> 命令格式</h2>
-<p>命令行环境中，主要通过使用 Shell 命令，进行各种操作。Shell 命令基本都是下面的格式。</p>
-<div><pre><code><span>command</span> <span>[</span> arg1 <span>..</span>. <span>[</span> argN <span>]</span><span>]</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面代码中，<code>command</code> 是具体的命令或者一个可执行文件，<code>arg1 ... argN</code> 是传递给命令的参数，它们是可选的。</p>
-<div><pre><code><span>ls</span> -l
-</code></pre>
-<div><span>1</span><br></div></div><p>上面这个命令中，<code>ls</code> 是命令，<code>-l</code> 是参数。</p>
-<p>有些参数是命令的配置项，这些配置项一般都以一个连词线开头，比如上面的 <code>-l</code>。同一个配置项往往有长和短两种形式，比如 <code>-l</code> 是短形式，<code>--list</code> 是长形式，它们的作用完全相同。短形式便于手动输入，长形式一般用在脚本之中，可读性更好，利于解释自身的含义。</p>
-<div><pre><code><span># 短形式</span>
-$ <span>ls</span> -r
-
-<span># 长形式</span>
-$ <span>ls</span> --reverse
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>-r</code> 是短形式，<code>--reverse</code> 是长形式，作用完全一样。前者便于输入，后者便于理解。</p>
-<p>Bash 单个命令一般都是一行，用户按下回车键，就开始执行。有些命令比较长，写成多行会有利于阅读和编辑，这时可以在每一行的结尾加上反斜杠，Bash 就会将下一行跟当前行放在一起解释。</p>
-<div><pre><code>$ <span>echo</span> foo bar
-
-<span># 等同于</span>
-$ <span>echo</span> foo <span>\</span>
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="空格"> 空格</h2>
-<p>Bash 使用空格(或 Tab 键)区分不同的参数。</p>
-<div><pre><code><span>command</span> foo bar
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令中，<code>foo</code> 和 <code>bar</code> 之间有一个空格，所以 Bash 认为它们是两个参数。</p>
-<p>如果参数之间有多个空格，Bash 会自动忽略多余的空格。</p>
-<div><pre><code>$ <span>echo</span> this is a     <span>test</span>
-this is a <span>test</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，<code>a</code> 和 <code>test</code> 之间有多个空格，Bash 会忽略多余的空格。</p>
-<h2 id="分号"> 分号</h2>
-<p>分号(<code>;</code>)是命令的结束符，使得一行可以放置多个命令，上一个命令执行结束后，再执行第二个命令。</p>
-<div><pre><code><span>clear</span><span>;</span> <span>ls</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，Bash 先执行 <code>clear</code> 命令，执行完成后，再执行 <code>ls</code> 命令。</p>
-<p>注意，使用分号时，第二个命令总是接着第一个命令执行，不管第一个命令执行成功或失败。</p>
-<h2 id="命令的组合符-和"> 命令的组合符 <code>&amp;&amp;</code> 和 <code>||</code></h2>
-<p>除了分号，Bash 还提供两个命令组合符 <code>&amp;&amp;</code> 和 <code>||</code>，允许更好地控制多个命令之间的继发关系。</p>
-<div><pre><code>Command1 <span>&amp;&amp;</span> Command2
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行成功，则继续运行 <code>Command2</code> 命令。</p>
-<div><pre><code>Command1 <span>||</span> Command2
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行失败，则继续运行 <code>Command2</code> 命令。</p>
-<p>下面是一些例子。</p>
-<div><pre><code><span>cat</span> filelist.txt <span>;</span> <span>ls</span> -l filelist.txt
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只要 <code>cat</code> 命令执行结束，不管成功或失败，都会继续执行 <code>ls</code> 命令。</p>
-<div><pre><code><span>cat</span> filelist.txt <span>&amp;&amp;</span> <span>ls</span> -l filelist.txt
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只有 <code>cat</code> 命令执行成功，才会继续执行 <code>ls</code> 命令。如果 <code>cat</code> 执行失败(比如不存在文件 <code>flielist.txt</code>)，那么 <code>ls</code> 命令就不会执行。</p>
-<div><pre><code><span>mkdir</span> foo <span>||</span> <span>mkdir</span> bar
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只有 <code>mkdir foo</code> 命令执行失败(比如 <code>foo</code> 目录已经存在)，才会继续执行 <code>mkdir bar</code> 命令。如果 <code>mkdir foo</code> 命令执行成功，就不会创建 <code>bar</code> 目录了。</p>
-<h2 id="type-命令"> type 命令</h2>
-<p>Bash 本身内置了很多命令，同时也可以执行外部程序。怎么知道一个命令是内置命令，还是外部程序呢?</p>
-<p><code>type</code> 命令用来判断命令的来源。</p>
-<div><pre><code>$ <span>type</span> <span>echo</span>
-<span>echo</span> is a shell <span>builtin</span>
-$ <span>type</span> <span>ls</span>
-<span>ls</span> is hashed <span>(</span>/bin/ls<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>type</code> 命令告诉我们，<code>echo</code> 是内部命令，<code>ls</code> 是外部程序 (<code>/bin/ls</code>)。</p>
-<p><code>type</code> 命令本身也是内置命令。</p>
-<div><pre><code>$ <span>type</span> <span>type</span>
-<span>type</span> is a shell <span>builtin</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>如果要查看一个命令的所有定义，可以使用 <code>type</code> 命令的 <code>-a</code> 参数。</p>
-<div><pre><code>$ <span>type</span> -a <span>echo</span>
-<span>echo</span> is shell <span>builtin</span>
-<span>echo</span> is /usr/bin/echo
-<span>echo</span> is /bin/echo
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码表示，<code>echo</code> 命令即是内置命令，也有对应的外部程序。</p>
-<p><code>type</code> 命令的 <code>-t</code> 参数，可以返回一个命令的类型: 别名(alias)，关键词(keyword)，函数(function)，内置命令(builtin)和文件(file)。</p>
-<div><pre><code>$ <span>type</span> -t <span>bash</span>
-<span>file</span>
-$ <span>type</span> -t <span>if</span>
-keyword
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>bash</code> 是文件，<code>if</code> 是关键词。</p>
-<h2 id="快捷键"> 快捷键</h2>
-<p>Bash 提供很多快捷键，可以大大方便操作。下面是一些最常用的快捷键，完整的介绍参见 <a href="./readline.html">行操作</a> 一章。</p>
-<ul>
-<li><code>Ctrl + L</code>: 清除屏幕并将当前行移到页面顶部。</li>
-<li><code>Ctrl + C</code>: 中止当前正在执行的命令。</li>
-<li><code>Shift + PageUp</code>: 向上滚动。</li>
-<li><code>Shift + PageDown</code>: 向下滚动。</li>
-<li><code>Ctrl + U</code>: 从光标位置删除到行首。</li>
-<li><code>Ctrl + K</code>: 从光标位置删除到行尾。</li>
-<li><code>Ctrl + D</code>: 关闭 Shell 会话。</li>
-<li><code>↑</code>，<code>↓</code>: 浏览已执行命令的历史记录。</li>
-</ul>
-<p>除了上面的快捷键，Bash 还具有自动补全功能。命令输入到一半的时候，可以按下 Tab 键，Bash 会自动完成剩下的部分。比如，输入 <code>pw</code>，然后按一下 Tab 键，Bash 会自动补上 <code>d</code>。</p>
-<p>除了命令的自动补全，Bash 还支持路径的自动补全。有时，需要输入很长的路径，这时只需要输入前面的部分，然后按下 Tab 键，就会自动补全后面的部分。如果有多个可能的选择，按两次 Tab 键，Bash 会显示所有选项，让您选择。</p>
 ]]></content>
     <author>
       <name>阮一峰</name>
