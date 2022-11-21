@@ -6,8 +6,8 @@
     <link>https://list-jiang.github.io/</link>
     <description>远方无限 砥砺前行</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 21 Nov 2022 12:36:02 GMT</pubDate>
-    <lastBuildDate>Mon, 21 Nov 2022 12:36:02 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Nov 2022 12:36:14 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Nov 2022 12:36:14 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2021-present List Jiang</copyright>
@@ -2305,6 +2305,14 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
 ]]></content:encoded>
     </item>
     <item>
+      <title>rabbitmq</title>
+      <link>https://list-jiang.github.io/middleware/mq/rabbitmq/</link>
+      <guid>https://list-jiang.github.io/middleware/mq/rabbitmq/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">rabbitmq</source>
+      <category>mq</category>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>消息队列</title>
       <link>https://list-jiang.github.io/middleware/mq/</link>
       <guid>https://list-jiang.github.io/middleware/mq/</guid>
@@ -2315,14 +2323,6 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
 <li><a href="./kafka/">Apache kafka</a></li>
 </ul>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>rabbitmq</title>
-      <link>https://list-jiang.github.io/middleware/mq/rabbitmq/</link>
-      <guid>https://list-jiang.github.io/middleware/mq/rabbitmq/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">rabbitmq</source>
-      <category>mq</category>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>rocketmq</title>
@@ -4411,16 +4411,6 @@ d
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>uptime</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">uptime</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="uptime"> uptime</h1>
-<p><code>uptime</code> 命令显示本次开机运行的时间。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>w</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</guid>
@@ -4428,6 +4418,16 @@ d
       <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="w"> w</h1>
 <p><code>w</code> 命令显示当期谁在线。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>uptime</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">uptime</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="uptime"> uptime</h1>
+<p><code>uptime</code> 命令显示本次开机运行的时间。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -4458,19 +4458,6 @@ d
 <div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>which</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/which/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/which/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">which</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="which"> which</h1>
-<p><code>which</code> 命令根据 <code>PATH</code> 环境变量指定的顺序，返回最早发现某个命令的位置。即不指定路径时，实际执行的命令的完整路径。</p>
-<div><pre><code>$ <span>which</span> node
-/usr/bin/node
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>who</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/who/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/who/</guid>
@@ -4482,6 +4469,19 @@ d
 <p><code>-b</code> 参数显示上一次系统启动的时间。</p>
 <div><pre><code>$ <span>who</span> -b
 system boot  <span>2017</span>-06-20 <span>17</span>:41
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>which</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/which/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/which/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">which</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="which"> which</h1>
+<p><code>which</code> 命令根据 <code>PATH</code> 环境变量指定的顺序，返回最早发现某个命令的位置。即不指定路径时，实际执行的命令的完整路径。</p>
+<div><pre><code>$ <span>which</span> node
+/usr/bin/node
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
     </item>
@@ -4742,6 +4742,224 @@ $ <span>ln</span> <span>file</span> <span>link</span>
 $ <span>ln</span> -s item <span>link</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>硬件操作</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/hardware/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/hardware/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">硬件操作</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="硬件操作"> 硬件操作</h1>
+<h2 id="df"> df</h2>
+<p><code>df</code> 命令查看硬盘信息。</p>
+<div><pre><code>$ <span>df</span>
+Filesystem 1K-blocks Used Available Use% Mounted on
+/dev/sda2 <span>15115452</span> <span>5012392</span> <span>9949716</span> <span>34</span>% /
+/dev/sda5 <span>59631908</span> <span>26545424</span> <span>30008432</span> <span>47</span>% /home
+/dev/sda1 <span>147764</span> <span>17370</span> <span>122765</span> <span>13</span>% /boot
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="free"> free</h2>
+<p><code>free</code> 命令查看内存占用情况。</p>
+<div><pre><code>$ <span>free</span>
+ total used <span>free</span> shared buffers cached
+Mem: <span>513712</span> <span>503976</span> <span>9736</span> <span>0</span> <span>5312</span> <span>122916</span>
+-/+ buffers/cache: <span>375748</span> <span>137964</span>
+Swap: <span>1052248</span> <span>104712</span> <span>947536</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="硬盘"> 硬盘</h2>
+<p>文件<code>/etc/fstab</code> 配置系统启动时要挂载的设备。</p>
+<div><pre><code>LABEL=/12               /               ext3        defaults        1   1
+LABEL=/home             /home           ext3        defaults        1   2
+LABEL=/boot             /boot           ext3        defaults        1   2
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>输出结果一共有 6 个字段，含义依次如下。</p>
+<ul>
+<li>设备名: 与物理设备相关联的设备文件(或设备标签)的名字，比如说<code>/dev/hda1</code>(第一个 IDE 通道上第一个主设备分区)。</li>
+<li>挂载点: 设备所连接到的文件系统树的目录。</li>
+<li>文件系统类型: Linux 允许挂载许多文件系统类型。</li>
+<li>选项: 文件系统可以通过各种各样的选项来挂载。</li>
+<li>频率: 一位数字，指定是否和在什么时间用 dump 命令来备份一个文件系统。</li>
+<li>次序: 一位数字，指定 fsck 命令按照什么次序来检查文件系统。</li>
+</ul>
+<h2 id="mount"> mount</h2>
+<p><code>mount</code> 不带参数时，显示当前挂载的文件系统。</p>
+<div><pre><code>$ <span>mount</span>
+/dev/sda2 on / <span>type</span> ext3 <span>(</span>rw<span>)</span>
+proc on /proc <span>type</span> proc <span>(</span>rw<span>)</span>
+sysfs on /sys <span>type</span> sysfs <span>(</span>rw<span>)</span>
+devpts on /dev/pts <span>type</span> devpts <span>(</span>rw,gid<span>=</span><span>5</span>,mode<span>=</span><span>620</span><span>)</span>
+/dev/sda5 on /home <span>type</span> ext3 <span>(</span>rw<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>这个列表的格式是: 设备 on 挂载点 type 文件系统类型(可选的)。</p>
+<p><code>mount</code> 带参数时，用于将设备文件挂载到挂载点，<code>-t</code> 参数用来指定文件系统类型。</p>
+<div><pre><code>$ <span>mount</span> -t iso9660 /dev/hdc /mnt/cdrom
+
+<span># 挂载一个iso文件</span>
+$ <span>mount</span> -t iso9660 -o loop image.iso /mnt/iso_image
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="umount"> umount</h2>
+<p><code>umount</code> 命令用来卸载设备。</p>
+<div><pre><code><span>umount</span> <span>[</span>设备名<span>]</span>
+
+<span>umount</span> /dev/hdc
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="fdisk"> fdisk</h2>
+<p><code>fdisk</code> 命令用于格式化磁盘。</p>
+<div><pre><code><span>sudo</span> <span>umount</span> /dev/sdb1
+<span>sudo</span> <span>fdisk</span> /dev/sdb
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="mkfs"> mkfs</h2>
+<p><code>mkfs</code> 命令用于在一个设备上新建文件系统。</p>
+<div><pre><code><span>sudo</span> <span>mkfs</span> -t ext3 /dev/sdb1
+<span>sudo</span> <span>mkfs</span> -t vfat /dev/sdb1
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="fsck"> fsck</h2>
+<p><code>fsck</code> 命令用于检查(修复)文件系统。</p>
+<div><pre><code><span>sudo</span> <span>fsck</span> /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="dd"> dd</h2>
+<p><code>dd</code> 命令用于将大型数据块，从一个磁盘复制到另一个磁盘。</p>
+<div><pre><code>$ <span>dd</span> <span>if</span><span>=</span>input_file <span>of</span><span>=</span>output_file <span>[</span>bs<span>=</span>block_size <span>[</span>count<span>=</span>blocks<span>]</span><span>]</span>
+
+<span># 将 /dev/sdb 的所有数据复制到 /dev/sdc</span>
+$ <span>dd</span> <span>if</span><span>=</span>/dev/sdb <span>of</span><span>=</span>/dev/sdc
+
+<span># 将 /dev/sdb 的所有数据拷贝到一个镜像文件</span>
+$ <span>dd</span> <span>if</span><span>=</span>/dev/sdb <span>of</span><span>=</span>flash_drive.img
+
+<span># 从cdrom制作一个iso文件</span>
+$ <span>dd</span> <span>if</span><span>=</span>/dev/cdrom <span>of</span><span>=</span>ubuntu.iso
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h2 id="dmidecode"> dmidecode</h2>
+<p><code>dmidecode</code> 命令用于输出 BIOS 信息。</p>
+<div><pre><code><span>sudo</span> dmidecode
+</code></pre>
+<div><span>1</span><br></div></div><p>以上命令会输出全部 BIOS 信息。为了便于查看，往往需要指定所需信息的类别。</p>
+<ul>
+<li>0 BIOS</li>
+<li>1 System</li>
+<li>2 Base Board</li>
+<li>3 Chassis 4 Processor</li>
+<li>5 Memory Controller</li>
+<li>6 Memory Module</li>
+<li>7 Cache</li>
+<li>8 Port Connector</li>
+<li>9 System Slots</li>
+<li>10 On Board Devices</li>
+<li>11 OEM Strings</li>
+<li>12 System Configuration Options</li>
+<li>13 BIOS Language</li>
+<li>14 Group Associations</li>
+<li>15 System Event Log</li>
+<li>16 Physical Memory Array</li>
+<li>17 Memory Device</li>
+<li>18 32-bit Memory Error</li>
+<li>19 Memory Array Mapped Address</li>
+<li>20 Memory Device Mapped Address</li>
+<li>21 Built-in Pointing Device</li>
+<li>22 Portable Battery</li>
+<li>23 System Reset</li>
+<li>24 Hardware Security</li>
+<li>25 System Power Controls</li>
+<li>26 Voltage Probe</li>
+<li>27 Cooling Device</li>
+<li>28 Temperature Probe</li>
+<li>29 Electrical Current Probe</li>
+<li>30 Out-of-band Remote Access</li>
+<li>31 Boot Integrity Services</li>
+<li>32 System Boot</li>
+<li>33 64-bit Memory Error</li>
+<li>34 Management Device</li>
+<li>35 Management Device Component</li>
+<li>36 Management Device Threshold Data</li>
+<li>37 Memory Channel</li>
+<li>38 IPMI Device</li>
+<li>39 Power Supply</li>
+</ul>
+<p>查看内存信息的命令如下。</p>
+<div><pre><code>$ <span>sudo</span> dmidecode -t <span>17</span>
+<span># 或者</span>
+$ dmidecode --type <span>17</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以下是其他一些选项。</p>
+<div><pre><code><span># 查看BIOS信息</span>
+$ <span>sudo</span> dmidecode –t <span>0</span>
+
+<span># 查看CPU信息</span>
+$ <span>sudo</span> dmidecode -t <span>4</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><code>dmidecode</code> 也支持关键词查看，关键词与类别的对应关系如下。</p>
+<ul>
+<li>bios 0, 13</li>
+<li>system 1, 12, 15, 23, 32</li>
+<li>baseboard 2, 10</li>
+<li>chassis 3</li>
+<li>processor 4</li>
+<li>memory 5, 6, 16, 17</li>
+<li>cache 7</li>
+<li>connector 8</li>
+<li>slot 9</li>
+</ul>
+<p>查看系统信息的命令如下。</p>
+<div><pre><code><span>sudo</span> dmidecode -t system
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="lspci"> lspci</h2>
+<p><code>lspci</code> 命令列出本机的所有 PCI 设备。</p>
+<div><pre><code>lspci
+</code></pre>
+<div><span>1</span><br></div></div><p>该命令输出信息的格式如下。</p>
+<div><pre><code>03:00.0 Unassigned class <span>[</span>ff00<span>]</span>: Realtek Semiconductor Co., Ltd. RTS5209 PCI Express Card Reader <span>(</span>rev 01<span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>输出信息一共分成三个字段。</p>
+<ul>
+<li>Field 1: PCI bus slot 的编号</li>
+<li>Field 2: PCI slot 的名字</li>
+<li>Field 3: 设备名和厂商名</li>
+</ul>
+<p>如果想查看更详细信息，可以使用下面的命令。</p>
+<div><pre><code>lspci -vmm
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="lsusb"> lsusb</h2>
+<p><code>lsusb</code> 命令用于操作 USB 端口。</p>
+<p>下面命令列出本机所有 USB 端口。</p>
+<div><pre><code>lsusb
+</code></pre>
+<div><span>1</span><br></div></div><p>它的输出格式如下。</p>
+<div><pre><code>Bus 002 Device 003: ID 0781:5567 SanDisk Corp. Cruzer Blade
+</code></pre>
+<div><span>1</span><br></div></div><p>各个字段的含义如下。</p>
+<ul>
+<li>Bus 002 : bus 编号</li>
+<li>Device 003: bus 002 连接的第三个设备</li>
+<li>ID 0781:5567: 当前设备的编号，冒号前是厂商编号，冒号后是设备编号</li>
+<li>SanDisk Corp. Cruzer Blade: 厂商和设备名</li>
+</ul>
+<p>找出本机有多少个 USB 接口可用。</p>
+<div><pre><code>$ <span>find</span> /dev/bus/
+/dev/bus/
+/dev/bus/usb
+/dev/bus/usb/002
+/dev/bus/usb/002/006
+/dev/bus/usb/002/005
+/dev/bus/usb/002/004
+/dev/bus/usb/002/002
+/dev/bus/usb/002/001
+/dev/bus/usb/001
+/dev/bus/usb/001/007
+/dev/bus/usb/001/003
+/dev/bus/usb/001/002
+/dev/bus/usb/001/001
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p>查看某个 USB 设备的详细情况。</p>
+<div><pre><code>lsusb -D /dev/bus/usb/002/005
+</code></pre>
+<div><span>1</span><br></div></div><p>查看所有设备的详细情况。</p>
+<div><pre><code>lsusb -v
+</code></pre>
+<div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
+<div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>文件系统</title>
@@ -5085,224 +5303,6 @@ $ <span>find</span> ~ -type f -name <span>'foo*'</span> -exec <span>ls</span> -l
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="xargs"> xargs</h2>
 <p><code>xargs</code> 命令从标准输入接受输入，并把输入转换为一个特定命令的参数列表。</p>
 <div><pre><code><span>find</span> ~ -type f -name <span>'foo\*'</span> -print <span>|</span> <span>xargs</span> <span>ls</span> -l
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>硬件操作</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/hardware/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/hardware/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">硬件操作</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="硬件操作"> 硬件操作</h1>
-<h2 id="df"> df</h2>
-<p><code>df</code> 命令查看硬盘信息。</p>
-<div><pre><code>$ <span>df</span>
-Filesystem 1K-blocks Used Available Use% Mounted on
-/dev/sda2 <span>15115452</span> <span>5012392</span> <span>9949716</span> <span>34</span>% /
-/dev/sda5 <span>59631908</span> <span>26545424</span> <span>30008432</span> <span>47</span>% /home
-/dev/sda1 <span>147764</span> <span>17370</span> <span>122765</span> <span>13</span>% /boot
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="free"> free</h2>
-<p><code>free</code> 命令查看内存占用情况。</p>
-<div><pre><code>$ <span>free</span>
- total used <span>free</span> shared buffers cached
-Mem: <span>513712</span> <span>503976</span> <span>9736</span> <span>0</span> <span>5312</span> <span>122916</span>
--/+ buffers/cache: <span>375748</span> <span>137964</span>
-Swap: <span>1052248</span> <span>104712</span> <span>947536</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="硬盘"> 硬盘</h2>
-<p>文件<code>/etc/fstab</code> 配置系统启动时要挂载的设备。</p>
-<div><pre><code>LABEL=/12               /               ext3        defaults        1   1
-LABEL=/home             /home           ext3        defaults        1   2
-LABEL=/boot             /boot           ext3        defaults        1   2
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>输出结果一共有 6 个字段，含义依次如下。</p>
-<ul>
-<li>设备名: 与物理设备相关联的设备文件(或设备标签)的名字，比如说<code>/dev/hda1</code>(第一个 IDE 通道上第一个主设备分区)。</li>
-<li>挂载点: 设备所连接到的文件系统树的目录。</li>
-<li>文件系统类型: Linux 允许挂载许多文件系统类型。</li>
-<li>选项: 文件系统可以通过各种各样的选项来挂载。</li>
-<li>频率: 一位数字，指定是否和在什么时间用 dump 命令来备份一个文件系统。</li>
-<li>次序: 一位数字，指定 fsck 命令按照什么次序来检查文件系统。</li>
-</ul>
-<h2 id="mount"> mount</h2>
-<p><code>mount</code> 不带参数时，显示当前挂载的文件系统。</p>
-<div><pre><code>$ <span>mount</span>
-/dev/sda2 on / <span>type</span> ext3 <span>(</span>rw<span>)</span>
-proc on /proc <span>type</span> proc <span>(</span>rw<span>)</span>
-sysfs on /sys <span>type</span> sysfs <span>(</span>rw<span>)</span>
-devpts on /dev/pts <span>type</span> devpts <span>(</span>rw,gid<span>=</span><span>5</span>,mode<span>=</span><span>620</span><span>)</span>
-/dev/sda5 on /home <span>type</span> ext3 <span>(</span>rw<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>这个列表的格式是: 设备 on 挂载点 type 文件系统类型(可选的)。</p>
-<p><code>mount</code> 带参数时，用于将设备文件挂载到挂载点，<code>-t</code> 参数用来指定文件系统类型。</p>
-<div><pre><code>$ <span>mount</span> -t iso9660 /dev/hdc /mnt/cdrom
-
-<span># 挂载一个iso文件</span>
-$ <span>mount</span> -t iso9660 -o loop image.iso /mnt/iso_image
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="umount"> umount</h2>
-<p><code>umount</code> 命令用来卸载设备。</p>
-<div><pre><code><span>umount</span> <span>[</span>设备名<span>]</span>
-
-<span>umount</span> /dev/hdc
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="fdisk"> fdisk</h2>
-<p><code>fdisk</code> 命令用于格式化磁盘。</p>
-<div><pre><code><span>sudo</span> <span>umount</span> /dev/sdb1
-<span>sudo</span> <span>fdisk</span> /dev/sdb
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="mkfs"> mkfs</h2>
-<p><code>mkfs</code> 命令用于在一个设备上新建文件系统。</p>
-<div><pre><code><span>sudo</span> <span>mkfs</span> -t ext3 /dev/sdb1
-<span>sudo</span> <span>mkfs</span> -t vfat /dev/sdb1
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="fsck"> fsck</h2>
-<p><code>fsck</code> 命令用于检查(修复)文件系统。</p>
-<div><pre><code><span>sudo</span> <span>fsck</span> /dev/sdb1
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="dd"> dd</h2>
-<p><code>dd</code> 命令用于将大型数据块，从一个磁盘复制到另一个磁盘。</p>
-<div><pre><code>$ <span>dd</span> <span>if</span><span>=</span>input_file <span>of</span><span>=</span>output_file <span>[</span>bs<span>=</span>block_size <span>[</span>count<span>=</span>blocks<span>]</span><span>]</span>
-
-<span># 将 /dev/sdb 的所有数据复制到 /dev/sdc</span>
-$ <span>dd</span> <span>if</span><span>=</span>/dev/sdb <span>of</span><span>=</span>/dev/sdc
-
-<span># 将 /dev/sdb 的所有数据拷贝到一个镜像文件</span>
-$ <span>dd</span> <span>if</span><span>=</span>/dev/sdb <span>of</span><span>=</span>flash_drive.img
-
-<span># 从cdrom制作一个iso文件</span>
-$ <span>dd</span> <span>if</span><span>=</span>/dev/cdrom <span>of</span><span>=</span>ubuntu.iso
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h2 id="dmidecode"> dmidecode</h2>
-<p><code>dmidecode</code> 命令用于输出 BIOS 信息。</p>
-<div><pre><code><span>sudo</span> dmidecode
-</code></pre>
-<div><span>1</span><br></div></div><p>以上命令会输出全部 BIOS 信息。为了便于查看，往往需要指定所需信息的类别。</p>
-<ul>
-<li>0 BIOS</li>
-<li>1 System</li>
-<li>2 Base Board</li>
-<li>3 Chassis 4 Processor</li>
-<li>5 Memory Controller</li>
-<li>6 Memory Module</li>
-<li>7 Cache</li>
-<li>8 Port Connector</li>
-<li>9 System Slots</li>
-<li>10 On Board Devices</li>
-<li>11 OEM Strings</li>
-<li>12 System Configuration Options</li>
-<li>13 BIOS Language</li>
-<li>14 Group Associations</li>
-<li>15 System Event Log</li>
-<li>16 Physical Memory Array</li>
-<li>17 Memory Device</li>
-<li>18 32-bit Memory Error</li>
-<li>19 Memory Array Mapped Address</li>
-<li>20 Memory Device Mapped Address</li>
-<li>21 Built-in Pointing Device</li>
-<li>22 Portable Battery</li>
-<li>23 System Reset</li>
-<li>24 Hardware Security</li>
-<li>25 System Power Controls</li>
-<li>26 Voltage Probe</li>
-<li>27 Cooling Device</li>
-<li>28 Temperature Probe</li>
-<li>29 Electrical Current Probe</li>
-<li>30 Out-of-band Remote Access</li>
-<li>31 Boot Integrity Services</li>
-<li>32 System Boot</li>
-<li>33 64-bit Memory Error</li>
-<li>34 Management Device</li>
-<li>35 Management Device Component</li>
-<li>36 Management Device Threshold Data</li>
-<li>37 Memory Channel</li>
-<li>38 IPMI Device</li>
-<li>39 Power Supply</li>
-</ul>
-<p>查看内存信息的命令如下。</p>
-<div><pre><code>$ <span>sudo</span> dmidecode -t <span>17</span>
-<span># 或者</span>
-$ dmidecode --type <span>17</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以下是其他一些选项。</p>
-<div><pre><code><span># 查看BIOS信息</span>
-$ <span>sudo</span> dmidecode –t <span>0</span>
-
-<span># 查看CPU信息</span>
-$ <span>sudo</span> dmidecode -t <span>4</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><code>dmidecode</code> 也支持关键词查看，关键词与类别的对应关系如下。</p>
-<ul>
-<li>bios 0, 13</li>
-<li>system 1, 12, 15, 23, 32</li>
-<li>baseboard 2, 10</li>
-<li>chassis 3</li>
-<li>processor 4</li>
-<li>memory 5, 6, 16, 17</li>
-<li>cache 7</li>
-<li>connector 8</li>
-<li>slot 9</li>
-</ul>
-<p>查看系统信息的命令如下。</p>
-<div><pre><code><span>sudo</span> dmidecode -t system
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="lspci"> lspci</h2>
-<p><code>lspci</code> 命令列出本机的所有 PCI 设备。</p>
-<div><pre><code>lspci
-</code></pre>
-<div><span>1</span><br></div></div><p>该命令输出信息的格式如下。</p>
-<div><pre><code>03:00.0 Unassigned class <span>[</span>ff00<span>]</span>: Realtek Semiconductor Co., Ltd. RTS5209 PCI Express Card Reader <span>(</span>rev 01<span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>输出信息一共分成三个字段。</p>
-<ul>
-<li>Field 1: PCI bus slot 的编号</li>
-<li>Field 2: PCI slot 的名字</li>
-<li>Field 3: 设备名和厂商名</li>
-</ul>
-<p>如果想查看更详细信息，可以使用下面的命令。</p>
-<div><pre><code>lspci -vmm
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="lsusb"> lsusb</h2>
-<p><code>lsusb</code> 命令用于操作 USB 端口。</p>
-<p>下面命令列出本机所有 USB 端口。</p>
-<div><pre><code>lsusb
-</code></pre>
-<div><span>1</span><br></div></div><p>它的输出格式如下。</p>
-<div><pre><code>Bus 002 Device 003: ID 0781:5567 SanDisk Corp. Cruzer Blade
-</code></pre>
-<div><span>1</span><br></div></div><p>各个字段的含义如下。</p>
-<ul>
-<li>Bus 002 : bus 编号</li>
-<li>Device 003: bus 002 连接的第三个设备</li>
-<li>ID 0781:5567: 当前设备的编号，冒号前是厂商编号，冒号后是设备编号</li>
-<li>SanDisk Corp. Cruzer Blade: 厂商和设备名</li>
-</ul>
-<p>找出本机有多少个 USB 接口可用。</p>
-<div><pre><code>$ <span>find</span> /dev/bus/
-/dev/bus/
-/dev/bus/usb
-/dev/bus/usb/002
-/dev/bus/usb/002/006
-/dev/bus/usb/002/005
-/dev/bus/usb/002/004
-/dev/bus/usb/002/002
-/dev/bus/usb/002/001
-/dev/bus/usb/001
-/dev/bus/usb/001/007
-/dev/bus/usb/001/003
-/dev/bus/usb/001/002
-/dev/bus/usb/001/001
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p>查看某个 USB 设备的详细情况。</p>
-<div><pre><code>lsusb -D /dev/bus/usb/002/005
-</code></pre>
-<div><span>1</span><br></div></div><p>查看所有设备的详细情况。</p>
-<div><pre><code>lsusb -v
-</code></pre>
-<div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
-<div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
 </code></pre>
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
@@ -5981,6 +5981,117 @@ $ <span>date</span> +%F-%T
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>用户管理</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/user/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/user/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">用户管理</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="用户管理"> 用户管理</h1>
+<h2 id="id"> id</h2>
+<p><code>id</code> 命令用于查看指定用户的用户名和组名。</p>
+<div><pre><code>$ <span>id</span>
+<span>uid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>gid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>groups</span><span>=</span><span>500</span><span>(</span>me<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>id</code> 输出结果分为三个部分，分别是 UID(用户编号和用户名)、GID(组编号和组名)，groups(用户所在的所有组)。</p>
+<p>用户帐户的信息，存放在<code>/etc/passwd</code> 文件里面；用户组的信息，存放在<code>/etc/group</code> 文件里面。</p>
+<div><pre><code><span># 返回UID</span>
+$ <span>id</span> -u <span>[</span>UserName<span>]</span>
+
+<span># 返回GID</span>
+$ <span>id</span> -g <span>[</span>UserName<span>]</span>
+
+<span># 返回用户名</span>
+$ <span>id</span> -un <span>[</span>UserName<span>]</span>
+
+<span># 返回组名</span>
+$ <span>id</span> -gn <span>[</span>UserName<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的命令，如果省略用户名，则返回当前用户的信息。</p>
+<h2 id="su"> su</h2>
+<p><code>su</code> 命令允许您以另一个用户的身份，启动一个新的 shell 会话，或者是以这个用户的身份来发布一个命令。</p>
+<div><pre><code><span>su</span> otherUser
+</code></pre>
+<div><span>1</span><br></div></div><p>执行上面的命令以后，系统会提示输入密码。通过以后，就以另一个用户身份在执行命令了。</p>
+<p>如果不加用户名，则表示切换到 root 用户。</p>
+<div><pre><code><span>su</span>
+</code></pre>
+<div><span>1</span><br></div></div><p><code>-l</code> 参数表示启动一个需要登录的新的 Shell，这意味着工作目录会切换到该用户的主目录。它的缩写形式是 <code>-</code>。</p>
+<div><pre><code><span>su</span> -
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令表示，切换到 root 用户的身份，且工作目录也切换到 root 用户的主目录。</p>
+<p><code>-c</code> 参数表示只以其他用户的身份，执行单个命令，而不是启动一个新的 Session。</p>
+<div><pre><code>$ <span>su</span> -c <span>'command'</span>
+
+<span># 实例</span>
+$ <span>su</span> -c <span>'ls -l /root/*'</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sudo"> sudo</h2>
+<p><code>sudo</code> 命令很类似 <code>su</code> 命令，但有几点差别。</p>
+<ul>
+<li>对于管理员来说，<code>sudo</code> 命令的可配置性更高</li>
+<li><code>sudo</code> 命令通常只用于执行单个命令，而不是开启另一个 Session。</li>
+<li><code>sudo</code> 命令不要求超级用户的密码，而是用户使自己的密码来认证。</li>
+</ul>
+<p><code>sudo</code> 的设置在文件<code>/etc/sudoers</code> 之中。</p>
+<p><code>-l</code> 参数列出用户拥有的所有权限。</p>
+<div><pre><code><span>sudo</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="chown"> chown</h2>
+<p><code>chown</code> 命令用来更改文件或目录的所有者和用户组。使用这个命令需要超级用户权限。</p>
+<div><pre><code><span>chown</span> <span>[</span>owner<span>]</span><span>[</span>:<span>[</span>group<span>]</span><span>]</span> <span>file</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>下面是一些例子。</p>
+<div><pre><code><span># 更改文件所有者</span>
+$ <span>sudo</span> <span>chown</span> bob foo.txt
+
+<span># 更改文件所有者和用户组</span>
+$ <span>sudo</span> <span>chown</span> bob:users foo.txt
+
+<span># 更改用户组</span>
+$ <span>sudo</span> <span>chown</span> :admins foo.txt
+
+<span># 更改文件所有者和用户组(用户 bob 登录系统时，所属的用户组)</span>
+$ <span>sudo</span> <span>chown</span> bob: foo.txt
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="chgrp"> chgrp</h2>
+<p><code>chgrp</code> 命令更改用户组，用法与 <code>chown</code> 命令类似。</p>
+<h2 id="useradd"> useradd</h2>
+<p><code>useradd</code> 命令用来新增用户。</p>
+<div><pre><code><span>useradd</span> -G admin -d /home/bill -s /bin/bash -m bill
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令新增用户 <code>bill</code>，参数 <code>-G</code> 指定用户所在的组，参数 <code>d</code> 指定用户的主目录，参数 <code>s</code> 指定用户的 Shell，参数 <code>m</code> 表示如果该目录不存在，则创建该目录。</p>
+<h2 id="usermod"> usermod</h2>
+<p><code>usermod</code> 命令用来修改用户的各项属性。</p>
+<div><pre><code><span>usermod</span> -g sales jerry
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的主要用户组为 <code>sales</code>。</p>
+<div><pre><code><span>usermod</span> -G sales jerry
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的次要用户组为 <code>sales</code>。</p>
+<h2 id="adduser"> adduser</h2>
+<p><code>adduser</code> 命令用来将一个用户加入用户组。</p>
+<div><pre><code><span>sudo</span> adduser username grouptoadd
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="groupadd"> groupadd</h2>
+<p><code>groupadd</code> 命令用来新建一个用户组。</p>
+<div><pre><code><span>sudo</span> <span>groupadd</span> group1
+<span>sudo</span> adduser foobar group1
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="groupdel"> groupdel</h2>
+<p><code>groupdel</code> 命令用来删除一个用户组。</p>
+<div><pre><code><span>sudo</span> <span>groupdel</span> group1
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="passwd"> passwd</h2>
+<p><code>passwd</code> 命令用于修改密码。</p>
+<div><pre><code><span># 修改自己的密码</span>
+$ <span>passwd</span>
+
+<span># 修改其他用户的密码</span>
+$ <span>sudo</span> <span>passwd</span> <span>[</span>user<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>Bash 的算术运算</title>
       <link>https://list-jiang.github.io/code/linux/bash/arithmetic/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/arithmetic/</guid>
@@ -6214,115 +6325,269 @@ expr: 非整数参数
 ]]></content:encoded>
     </item>
     <item>
-      <title>用户管理</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/user/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/user/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">用户管理</source>
+      <title>数组</title>
+      <link>https://list-jiang.github.io/code/linux/bash/array/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/array/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">数组</source>
+      <description>数组(array)是一个包含多个值的变量。成员的编号从 0 开始，数量没有上限，也没有要求成员被连续索引。
+</description>
+      <category>Linux</category>
       <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="用户管理"> 用户管理</h1>
-<h2 id="id"> id</h2>
-<p><code>id</code> 命令用于查看指定用户的用户名和组名。</p>
-<div><pre><code>$ <span>id</span>
-<span>uid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>gid</span><span>=</span><span>500</span><span>(</span>me<span>)</span> <span>groups</span><span>=</span><span>500</span><span>(</span>me<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>id</code> 输出结果分为三个部分，分别是 UID(用户编号和用户名)、GID(组编号和组名)，groups(用户所在的所有组)。</p>
-<p>用户帐户的信息，存放在<code>/etc/passwd</code> 文件里面；用户组的信息，存放在<code>/etc/group</code> 文件里面。</p>
-<div><pre><code><span># 返回UID</span>
-$ <span>id</span> -u <span>[</span>UserName<span>]</span>
+      <content:encoded><![CDATA[<p>数组(array)是一个包含多个值的变量。成员的编号从 0 开始，数量没有上限，也没有要求成员被连续索引。</p>
 
-<span># 返回GID</span>
-$ <span>id</span> -g <span>[</span>UserName<span>]</span>
+<h2 id="创建数组"> 创建数组</h2>
+<p>数组可以采用逐个赋值的方法创建。</p>
+<div><pre><code>ARRAY<span>[</span>INDEX<span>]</span><span>=</span>value
+</code></pre>
+<div><span>1</span><br></div></div><p>上面语法中，<code>ARRAY</code> 是数组的名字，可以是任意合法的变量名。<code>INDEX</code> 是一个大于或等于零的整数，也可以是算术表达式。注意数组第一个元素的下标是 0， 而不是 1。</p>
+<p>下面创建一个三个成员的数组。</p>
+<div><pre><code>array<span>[</span><span>0</span><span>]</span><span>=</span>val
+array<span>[</span><span>1</span><span>]</span><span>=</span>val
+array<span>[</span><span>2</span><span>]</span><span>=</span>val
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>数组也可以采用一次性赋值的方式创建。</p>
+<div><pre><code><span>ARRAY</span><span>=</span><span>(</span>value1 value2 <span>..</span>. valueN<span>)</span>
 
-<span># 返回用户名</span>
-$ <span>id</span> -un <span>[</span>UserName<span>]</span>
+<span># 等同于</span>
 
-<span># 返回组名</span>
-$ <span>id</span> -gn <span>[</span>UserName<span>]</span>
+<span>ARRAY</span><span>=</span><span>(</span>
+  value1
+  value2
+  value3
+<span>)</span>
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>上面的命令，如果省略用户名，则返回当前用户的信息。</p>
-<h2 id="su"> su</h2>
-<p><code>su</code> 命令允许您以另一个用户的身份，启动一个新的 shell 会话，或者是以这个用户的身份来发布一个命令。</p>
-<div><pre><code><span>su</span> otherUser
-</code></pre>
-<div><span>1</span><br></div></div><p>执行上面的命令以后，系统会提示输入密码。通过以后，就以另一个用户身份在执行命令了。</p>
-<p>如果不加用户名，则表示切换到 root 用户。</p>
-<div><pre><code><span>su</span>
-</code></pre>
-<div><span>1</span><br></div></div><p><code>-l</code> 参数表示启动一个需要登录的新的 Shell，这意味着工作目录会切换到该用户的主目录。它的缩写形式是 <code>-</code>。</p>
-<div><pre><code><span>su</span> -
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令表示，切换到 root 用户的身份，且工作目录也切换到 root 用户的主目录。</p>
-<p><code>-c</code> 参数表示只以其他用户的身份，执行单个命令，而不是启动一个新的 Session。</p>
-<div><pre><code>$ <span>su</span> -c <span>'command'</span>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>采用上面方式创建数组时，可以按照默认顺序赋值，也可以在每个值前面指定位置。</p>
+<div><pre><code><span>array</span><span>=</span><span>(</span>a b c<span>)</span>
+<span>array</span><span>=</span><span>(</span><span>[</span><span>2</span><span>]</span><span>=</span>c <span>[</span><span>0</span><span>]</span><span>=</span>a <span>[</span><span>1</span><span>]</span><span>=</span>b<span>)</span>
 
-<span># 实例</span>
-$ <span>su</span> -c <span>'ls -l /root/*'</span>
+<span>days</span><span>=</span><span>(</span>Sun Mon Tue Wed Thu Fri Sat<span>)</span>
+<span>days</span><span>=</span><span>(</span><span>[</span><span>0</span><span>]</span><span>=</span>Sun <span>[</span><span>1</span><span>]</span><span>=</span>Mon <span>[</span><span>2</span><span>]</span><span>=</span>Tue <span>[</span><span>3</span><span>]</span><span>=</span>Wed <span>[</span><span>4</span><span>]</span><span>=</span>Thu <span>[</span><span>5</span><span>]</span><span>=</span>Fri <span>[</span><span>6</span><span>]</span><span>=</span>Sat<span>)</span>
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="sudo"> sudo</h2>
-<p><code>sudo</code> 命令很类似 <code>su</code> 命令，但有几点差别。</p>
-<ul>
-<li>对于管理员来说，<code>sudo</code> 命令的可配置性更高</li>
-<li><code>sudo</code> 命令通常只用于执行单个命令，而不是开启另一个 Session。</li>
-<li><code>sudo</code> 命令不要求超级用户的密码，而是用户使自己的密码来认证。</li>
-</ul>
-<p><code>sudo</code> 的设置在文件<code>/etc/sudoers</code> 之中。</p>
-<p><code>-l</code> 参数列出用户拥有的所有权限。</p>
-<div><pre><code><span>sudo</span> -l
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>只为某些值指定位置，也是可以的。</p>
+<div><pre><code><span>names</span><span>=</span><span>(</span>hatter <span>[</span><span>5</span><span>]</span><span>=</span>duchess alice<span>)</span>
 </code></pre>
-<div><span>1</span><br></div></div><h2 id="chown"> chown</h2>
-<p><code>chown</code> 命令用来更改文件或目录的所有者和用户组。使用这个命令需要超级用户权限。</p>
-<div><pre><code><span>chown</span> <span>[</span>owner<span>]</span><span>[</span>:<span>[</span>group<span>]</span><span>]</span> <span>file</span>
+<div><span>1</span><br></div></div><p>上面例子中，<code>hatter</code> 是数组的 0 号位置，<code>duchess</code> 是 5 号位置，<code>alice</code> 是 6 号位置。</p>
+<p>没有赋值的数组元素的默认值是空字符串。</p>
+<p>定义数组的时候，可以使用通配符。</p>
+<div><pre><code><span>mp3s</span><span>=</span><span>(</span> *.mp3 <span>)</span>
 </code></pre>
-<div><span>1</span><br></div></div><p>下面是一些例子。</p>
-<div><pre><code><span># 更改文件所有者</span>
-$ <span>sudo</span> <span>chown</span> bob foo.txt
+<div><span>1</span><br></div></div><p>上面例子中，将当前目录的所有 MP3 文件，放进一个数组。</p>
+<p>先用 <code>declare -a</code> 命令声明一个数组，也是可以的。</p>
+<div><pre><code><span>declare</span> -a ARRAYNAME
+</code></pre>
+<div><span>1</span><br></div></div><p><code>read -a</code> 命令则是将用户的命令行输入，读入一个数组。</p>
+<div><pre><code><span>read</span> -a dice
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令将用户的命令行输入，读入数组 <code>dice</code>。</p>
+<h2 id="读取数组"> 读取数组</h2>
+<h3 id="读取单个元素"> 读取单个元素</h3>
+<p>读取数组指定位置的成员，要使用下面的语法。</p>
+<div><pre><code><span>echo</span> <span>${array<span>[</span>i<span>]</span>}</span>     <span># i 是索引</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面语法里面的大括号是必不可少的，否则 Bash 会把索引部分 <code>[i]</code> 按照原样输出。</p>
+<div><pre><code>$ array<span>[</span><span>0</span><span>]</span><span>=</span>a
 
-<span># 更改文件所有者和用户组</span>
-$ <span>sudo</span> <span>chown</span> bob:users foo.txt
+$ <span>echo</span> <span>${array<span>[</span>0<span>]</span>}</span>
+a
 
-<span># 更改用户组</span>
-$ <span>sudo</span> <span>chown</span> :admins foo.txt
+$ <span>echo</span> <span>$array</span><span>[</span><span>0</span><span>]</span>
+a<span>[</span><span>0</span><span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，数组的第一个元素是 <code>a</code>。如果不加大括号，Bash 会直接读取 <code>$array</code> 首成员的值，然后将 <code>[0]</code> 按照原样输出。</p>
+<h3 id="读取所有成员"> 读取所有成员</h3>
+<p><code>@</code> 和 <code>*</code> 是数组的特殊索引，表示返回数组的所有成员。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a b c d e f
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>这两个特殊索引配合 <code>for</code> 循环，就可以用来遍历数组。</p>
+<div><pre><code><span>for</span> <span>i</span> <span>in</span> <span>"<span>${names<span>[</span>@<span>]</span>}</span>"</span><span>;</span> <span>do</span>
+  <span>echo</span> <span>$i</span>
+<span>done</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>@</code> 和 <code>*</code> 放不放在双引号之中，是有差别的。</p>
+<div><pre><code>$ <span>activities</span><span>=</span><span>(</span> swimming <span>"water skiing"</span> canoeing <span>"white-water rafting"</span> surfing <span>)</span>
+$ <span>for</span> <span>act</span> <span>in</span> <span>${activities<span>[</span>@<span>]</span>}</span><span>;</span> <span>\</span>
+<span>do</span> <span>\</span>
+<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
+<span>done</span>
 
-<span># 更改文件所有者和用户组(用户 bob 登录系统时，所属的用户组)</span>
-$ <span>sudo</span> <span>chown</span> bob: foo.txt
+Activity: swimming
+Activity: water
+Activity: skiing
+Activity: canoeing
+Activity: white-water
+Activity: rafting
+Activity: surfing
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="chgrp"> chgrp</h2>
-<p><code>chgrp</code> 命令更改用户组，用法与 <code>chown</code> 命令类似。</p>
-<h2 id="useradd"> useradd</h2>
-<p><code>useradd</code> 命令用来新增用户。</p>
-<div><pre><code><span>useradd</span> -G admin -d /home/bill -s /bin/bash -m bill
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令新增用户 <code>bill</code>，参数 <code>-G</code> 指定用户所在的组，参数 <code>d</code> 指定用户的主目录，参数 <code>s</code> 指定用户的 Shell，参数 <code>m</code> 表示如果该目录不存在，则创建该目录。</p>
-<h2 id="usermod"> usermod</h2>
-<p><code>usermod</code> 命令用来修改用户的各项属性。</p>
-<div><pre><code><span>usermod</span> -g sales jerry
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的主要用户组为 <code>sales</code>。</p>
-<div><pre><code><span>usermod</span> -G sales jerry
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的命令修改用户 <code>jerry</code> 属于的次要用户组为 <code>sales</code>。</p>
-<h2 id="adduser"> adduser</h2>
-<p><code>adduser</code> 命令用来将一个用户加入用户组。</p>
-<div><pre><code><span>sudo</span> adduser username grouptoadd
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="groupadd"> groupadd</h2>
-<p><code>groupadd</code> 命令用来新建一个用户组。</p>
-<div><pre><code><span>sudo</span> <span>groupadd</span> group1
-<span>sudo</span> adduser foobar group1
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="groupdel"> groupdel</h2>
-<p><code>groupdel</code> 命令用来删除一个用户组。</p>
-<div><pre><code><span>sudo</span> <span>groupdel</span> group1
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="passwd"> passwd</h2>
-<p><code>passwd</code> 命令用于修改密码。</p>
-<div><pre><code><span># 修改自己的密码</span>
-$ <span>passwd</span>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>上面的例子中，数组 <code>activities</code> 实际包含 5 个元素，但是 <code>for...in</code> 循环直接遍历 <code>${activities[@]}</code>，会导致返回 7 个结果。为了避免这种情况，一般把 <code>${activities[@]}</code> 放在双引号之中。</p>
+<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>"<span>${activities<span>[</span>@<span>]</span>}</span>"</span><span>;</span> <span>\</span>
+<span>do</span> <span>\</span>
+<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
+<span>done</span>
 
-<span># 修改其他用户的密码</span>
-$ <span>sudo</span> <span>passwd</span> <span>[</span>user<span>]</span>
+Activity: swimming
+Activity: water skiing
+Activity: canoeing
+Activity: white-water rafting
+Activity: surfing
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>上面例子中，<code>${activities[@]}</code> 放在双引号之中，遍历就会返回正确的结果。</p>
+<p><code>${activities[*]}</code> 不放在双引号之中，跟 <code>${activities[@]}</code> 不放在双引号之中是一样的。</p>
+<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>${activities<span>[</span>*<span>]</span>}</span><span>;</span> <span>\</span>
+<span>do</span> <span>\</span>
+<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
+<span>done</span>
+
+Activity: swimming
+Activity: water
+Activity: skiing
+Activity: canoeing
+Activity: white-water
+Activity: rafting
+Activity: surfing
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p><code>${activities[*]}</code> 放在双引号之中，所有元素就会变成单个字符串返回。</p>
+<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>"<span>${activities<span>[</span>*<span>]</span>}</span>"</span><span>;</span> <span>\</span>
+<span>do</span> <span>\</span>
+<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
+<span>done</span>
+
+Activity: swimming water skiing canoeing white-water rafting surfing
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>所以，拷贝一个数组的最方便方法，就是写成下面这样。</p>
+<div><pre><code><span>hobbies</span><span>=</span><span>(</span> <span>"<span>${activities<span>[</span>@<span>]</span>}</span>"</span> <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，数组 <code>activities</code> 被拷贝给了另一个数组 <code>hobbies</code>。</p>
+<p>这种写法也可以用来为新数组添加成员。</p>
+<div><pre><code><span>hobbies</span><span>=</span><span>(</span> <span>"${activities[@]"</span> diving <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，新数组 <code>hobbies</code> 在数组 <code>activities</code> 的所有成员之后，又添加了一个成员。</p>
+<h3 id="默认位置"> 默认位置</h3>
+<p>如果读取数组成员时，没有读取指定哪一个位置的成员，默认使用 <code>0</code> 号位置。</p>
+<div><pre><code>$ <span>declare</span> -a foo
+$ <span>foo</span><span>=</span>A
+$ <span>echo</span> <span>${foo<span>[</span>0<span>]</span>}</span>
+A
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>foo</code> 是一个数组，赋值的时候不指定位置，实际上是给 <code>foo[0]</code> 赋值。</p>
+<p>引用一个不带下标的数组变量，则引用的是 <code>0</code> 号位置的数组元素。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
+$ <span>echo</span> <span>${foo}</span>
+a
+$ <span>echo</span> <span>$foo</span>
+a
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，引用数组元素的时候，没有指定位置，结果返回的是 <code>0</code> 号位置。</p>
+<h2 id="数组的长度"> 数组的长度</h2>
+<p>要想知道数组的长度(即一共包含多少成员)，可以使用下面两种语法。</p>
+<div><pre><code><span>${<span>#</span>array<span>[</span>*<span>]</span>}</span>
+<span>${<span>#</span>array<span>[</span>@<span>]</span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>下面是一个例子。</p>
+<div><pre><code>$ a<span>[</span><span>100</span><span>]</span><span>=</span>foo
+
+$ <span>echo</span> <span>${<span>#</span>a<span>[</span>*<span>]</span>}</span>
+<span>1</span>
+
+$ <span>echo</span> <span>${<span>#</span>a<span>[</span>@<span>]</span>}</span>
+<span>1</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，把字符串赋值给 <code>100</code> 位置的数组元素，这时的数组只有一个元素。</p>
+<p>注意，如果用这种语法去读取具体的数组成员，就会返回该成员的字符串长度。这一点必须小心。</p>
+<div><pre><code>$ a<span>[</span><span>100</span><span>]</span><span>=</span>foo
+$ <span>echo</span> <span>${<span>#</span>a<span>[</span>100<span>]</span>}</span>
+<span>3</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，<code>${#a[100]}</code> 实际上是返回数组第 100 号成员 <code>a[100]</code> 的值(<code>foo</code>)的字符串长度。</p>
+<h2 id="提取数组序号"> 提取数组序号</h2>
+<p><code>${!array[@]}</code> 或 <code>${!array[*]}</code>，可以返回数组的成员序号，即哪些位置是有值的。</p>
+<div><pre><code>$ <span>arr</span><span>=</span><span>(</span><span>[</span><span>5</span><span>]</span><span>=</span>a <span>[</span><span>9</span><span>]</span><span>=</span>b <span>[</span><span>23</span><span>]</span><span>=</span>c<span>)</span>
+$ <span>echo</span> <span>${<span>!</span>arr<span>[</span>@<span>]</span>}</span>
+<span>5</span> <span>9</span> <span>23</span>
+$ <span>echo</span> <span>${<span>!</span>arr<span>[</span>*<span>]</span>}</span>
+<span>5</span> <span>9</span> <span>23</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，数组的 5、9、23 号位置有值。</p>
+<p>利用这个语法，也可以通过 <code>for</code> 循环遍历数组。</p>
+<div><pre><code><span>arr</span><span>=</span><span>(</span>a b c d<span>)</span>
+
+<span>for</span> <span>i</span> <span>in</span> <span>${<span>!</span>arr<span>[</span>@<span>]</span>}</span><span>;</span><span>do</span>
+  <span>echo</span> <span>${arr<span>[</span>i<span>]</span>}</span>
+<span>done</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="提取数组成员"> 提取数组成员</h2>
+<p><code>${array[@]:position:length}</code> 的语法可以提取数组成员。</p>
+<div><pre><code>$ <span>food</span><span>=</span><span>(</span> apples bananas cucumbers dates eggs fajitas grapes <span>)</span>
+$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>1<span>:</span>1}</span>
+bananas
+$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>1<span>:</span>3}</span>
+bananas cucumbers dates
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，<code>${food[@]:1:1}</code> 返回从数组 1 号位置开始的 1 个成员，<code>${food[@]:1:3}</code> 返回从 1 号位置开始的 3 个成员。</p>
+<p>如果省略长度参数 <code>length</code>，则返回从指定位置开始的所有成员。</p>
+<div><pre><code>$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>4}</span>
+eggs fajitas grapes
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子返回从 4 号位置开始到结束的所有成员。</p>
+<h2 id="追加数组成员"> 追加数组成员</h2>
+<p>数组末尾追加成员，可以使用 <code>+=</code> 赋值运算符。它能够自动地把值追加到数组末尾。否则，就需要知道数组的最大序号，比较麻烦。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c<span>)</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a b c
+
+$ <span>foo</span><span>+=</span><span>(</span>d e f<span>)</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a b c d e f
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="删除数组"> 删除数组</h2>
+<p>删除一个数组成员，使用 <code>unset</code> 命令。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a b c d e f
+
+$ <span>unset</span> foo<span>[</span><span>2</span><span>]</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a b d e f
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，删除了数组中的第三个元素，下标为 2。</p>
+<p>删除成员也可以将这个成员设为空值。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
+$ foo<span>[</span><span>1</span><span>]</span><span>=</span><span>''</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+a c d e f
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，将数组的第二个成员设为空字符串，就删除了这个成员。</p>
+<p>由于空值就是空字符串，所以下面这样写也可以，但是不建议这种写法。</p>
+<div><pre><code>foo<span>[</span><span>1</span><span>]</span><span>=</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的写法也相当于删除了数组的第二个成员。</p>
+<p>直接将数组变量赋值为空字符串，相当于删除数组的第一个成员。</p>
+<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
+$ <span>foo</span><span>=</span><span>''</span>
+$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
+b c d e f
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面的写法相当于删除了数组的第一个成员。</p>
+<p><code>unset ArrayName</code> 可以清空整个数组。</p>
+<div><pre><code>$ <span>unset</span> ARRAY
+
+$ <span>echo</span> <span>${ARRAY<span>[</span>*<span>]</span>}</span>
+<span>&lt;</span>--no output--<span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="关联数组"> 关联数组</h2>
+<p>Bash 的新版本支持关联数组。关联数组使用字符串而不是整数作为数组索引。</p>
+<p><code>declare -A</code> 可以声明关联数组。</p>
+<div><pre><code><span>declare</span> -A colors
+colors<span>[</span><span>"red"</span><span>]</span><span>=</span><span>"#ff0000"</span>
+colors<span>[</span><span>"green"</span><span>]</span><span>=</span><span>"#00ff00"</span>
+colors<span>[</span><span>"blue"</span><span>]</span><span>=</span><span>"#0000ff"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>整数索引的数组，可以直接使用变量名创建数组，关联数组则必须用带有 <code>-A</code> 选项的 <code>declare</code> 命令声明创建。</p>
+<p>访问关联数组成员的方式，几乎与整数索引数组相同。</p>
+<div><pre><code><span>echo</span> <span>${colors<span>[</span>"blue"<span>]</span>}</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>条件判断</title>
@@ -6814,271 +7079,6 @@ Type a character <span>></span> a
 <li><a href="http://linuxcommand.org/tlcl.php" target="_blank" rel="noopener noreferrer">The Linux command-line<i>Content not supported</i></a>, William Shotts</li>
 </ul>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>数组</title>
-      <link>https://list-jiang.github.io/code/linux/bash/array/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/array/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">数组</source>
-      <description>数组(array)是一个包含多个值的变量。成员的编号从 0 开始，数量没有上限，也没有要求成员被连续索引。
-</description>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<p>数组(array)是一个包含多个值的变量。成员的编号从 0 开始，数量没有上限，也没有要求成员被连续索引。</p>
-
-<h2 id="创建数组"> 创建数组</h2>
-<p>数组可以采用逐个赋值的方法创建。</p>
-<div><pre><code>ARRAY<span>[</span>INDEX<span>]</span><span>=</span>value
-</code></pre>
-<div><span>1</span><br></div></div><p>上面语法中，<code>ARRAY</code> 是数组的名字，可以是任意合法的变量名。<code>INDEX</code> 是一个大于或等于零的整数，也可以是算术表达式。注意数组第一个元素的下标是 0， 而不是 1。</p>
-<p>下面创建一个三个成员的数组。</p>
-<div><pre><code>array<span>[</span><span>0</span><span>]</span><span>=</span>val
-array<span>[</span><span>1</span><span>]</span><span>=</span>val
-array<span>[</span><span>2</span><span>]</span><span>=</span>val
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>数组也可以采用一次性赋值的方式创建。</p>
-<div><pre><code><span>ARRAY</span><span>=</span><span>(</span>value1 value2 <span>..</span>. valueN<span>)</span>
-
-<span># 等同于</span>
-
-<span>ARRAY</span><span>=</span><span>(</span>
-  value1
-  value2
-  value3
-<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>采用上面方式创建数组时，可以按照默认顺序赋值，也可以在每个值前面指定位置。</p>
-<div><pre><code><span>array</span><span>=</span><span>(</span>a b c<span>)</span>
-<span>array</span><span>=</span><span>(</span><span>[</span><span>2</span><span>]</span><span>=</span>c <span>[</span><span>0</span><span>]</span><span>=</span>a <span>[</span><span>1</span><span>]</span><span>=</span>b<span>)</span>
-
-<span>days</span><span>=</span><span>(</span>Sun Mon Tue Wed Thu Fri Sat<span>)</span>
-<span>days</span><span>=</span><span>(</span><span>[</span><span>0</span><span>]</span><span>=</span>Sun <span>[</span><span>1</span><span>]</span><span>=</span>Mon <span>[</span><span>2</span><span>]</span><span>=</span>Tue <span>[</span><span>3</span><span>]</span><span>=</span>Wed <span>[</span><span>4</span><span>]</span><span>=</span>Thu <span>[</span><span>5</span><span>]</span><span>=</span>Fri <span>[</span><span>6</span><span>]</span><span>=</span>Sat<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>只为某些值指定位置，也是可以的。</p>
-<div><pre><code><span>names</span><span>=</span><span>(</span>hatter <span>[</span><span>5</span><span>]</span><span>=</span>duchess alice<span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，<code>hatter</code> 是数组的 0 号位置，<code>duchess</code> 是 5 号位置，<code>alice</code> 是 6 号位置。</p>
-<p>没有赋值的数组元素的默认值是空字符串。</p>
-<p>定义数组的时候，可以使用通配符。</p>
-<div><pre><code><span>mp3s</span><span>=</span><span>(</span> *.mp3 <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，将当前目录的所有 MP3 文件，放进一个数组。</p>
-<p>先用 <code>declare -a</code> 命令声明一个数组，也是可以的。</p>
-<div><pre><code><span>declare</span> -a ARRAYNAME
-</code></pre>
-<div><span>1</span><br></div></div><p><code>read -a</code> 命令则是将用户的命令行输入，读入一个数组。</p>
-<div><pre><code><span>read</span> -a dice
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令将用户的命令行输入，读入数组 <code>dice</code>。</p>
-<h2 id="读取数组"> 读取数组</h2>
-<h3 id="读取单个元素"> 读取单个元素</h3>
-<p>读取数组指定位置的成员，要使用下面的语法。</p>
-<div><pre><code><span>echo</span> <span>${array<span>[</span>i<span>]</span>}</span>     <span># i 是索引</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面语法里面的大括号是必不可少的，否则 Bash 会把索引部分 <code>[i]</code> 按照原样输出。</p>
-<div><pre><code>$ array<span>[</span><span>0</span><span>]</span><span>=</span>a
-
-$ <span>echo</span> <span>${array<span>[</span>0<span>]</span>}</span>
-a
-
-$ <span>echo</span> <span>$array</span><span>[</span><span>0</span><span>]</span>
-a<span>[</span><span>0</span><span>]</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，数组的第一个元素是 <code>a</code>。如果不加大括号，Bash 会直接读取 <code>$array</code> 首成员的值，然后将 <code>[0]</code> 按照原样输出。</p>
-<h3 id="读取所有成员"> 读取所有成员</h3>
-<p><code>@</code> 和 <code>*</code> 是数组的特殊索引，表示返回数组的所有成员。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a b c d e f
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>这两个特殊索引配合 <code>for</code> 循环，就可以用来遍历数组。</p>
-<div><pre><code><span>for</span> <span>i</span> <span>in</span> <span>"<span>${names<span>[</span>@<span>]</span>}</span>"</span><span>;</span> <span>do</span>
-  <span>echo</span> <span>$i</span>
-<span>done</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>@</code> 和 <code>*</code> 放不放在双引号之中，是有差别的。</p>
-<div><pre><code>$ <span>activities</span><span>=</span><span>(</span> swimming <span>"water skiing"</span> canoeing <span>"white-water rafting"</span> surfing <span>)</span>
-$ <span>for</span> <span>act</span> <span>in</span> <span>${activities<span>[</span>@<span>]</span>}</span><span>;</span> <span>\</span>
-<span>do</span> <span>\</span>
-<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
-<span>done</span>
-
-Activity: swimming
-Activity: water
-Activity: skiing
-Activity: canoeing
-Activity: white-water
-Activity: rafting
-Activity: surfing
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>上面的例子中，数组 <code>activities</code> 实际包含 5 个元素，但是 <code>for...in</code> 循环直接遍历 <code>${activities[@]}</code>，会导致返回 7 个结果。为了避免这种情况，一般把 <code>${activities[@]}</code> 放在双引号之中。</p>
-<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>"<span>${activities<span>[</span>@<span>]</span>}</span>"</span><span>;</span> <span>\</span>
-<span>do</span> <span>\</span>
-<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
-<span>done</span>
-
-Activity: swimming
-Activity: water skiing
-Activity: canoeing
-Activity: white-water rafting
-Activity: surfing
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>上面例子中，<code>${activities[@]}</code> 放在双引号之中，遍历就会返回正确的结果。</p>
-<p><code>${activities[*]}</code> 不放在双引号之中，跟 <code>${activities[@]}</code> 不放在双引号之中是一样的。</p>
-<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>${activities<span>[</span>*<span>]</span>}</span><span>;</span> <span>\</span>
-<span>do</span> <span>\</span>
-<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
-<span>done</span>
-
-Activity: swimming
-Activity: water
-Activity: skiing
-Activity: canoeing
-Activity: white-water
-Activity: rafting
-Activity: surfing
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p><code>${activities[*]}</code> 放在双引号之中，所有元素就会变成单个字符串返回。</p>
-<div><pre><code>$ <span>for</span> <span>act</span> <span>in</span> <span>"<span>${activities<span>[</span>*<span>]</span>}</span>"</span><span>;</span> <span>\</span>
-<span>do</span> <span>\</span>
-<span>echo</span> <span>"Activity: <span>$act</span>"</span><span>;</span> <span>\</span>
-<span>done</span>
-
-Activity: swimming water skiing canoeing white-water rafting surfing
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>所以，拷贝一个数组的最方便方法，就是写成下面这样。</p>
-<div><pre><code><span>hobbies</span><span>=</span><span>(</span> <span>"<span>${activities<span>[</span>@<span>]</span>}</span>"</span> <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，数组 <code>activities</code> 被拷贝给了另一个数组 <code>hobbies</code>。</p>
-<p>这种写法也可以用来为新数组添加成员。</p>
-<div><pre><code><span>hobbies</span><span>=</span><span>(</span> <span>"${activities[@]"</span> diving <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，新数组 <code>hobbies</code> 在数组 <code>activities</code> 的所有成员之后，又添加了一个成员。</p>
-<h3 id="默认位置"> 默认位置</h3>
-<p>如果读取数组成员时，没有读取指定哪一个位置的成员，默认使用 <code>0</code> 号位置。</p>
-<div><pre><code>$ <span>declare</span> -a foo
-$ <span>foo</span><span>=</span>A
-$ <span>echo</span> <span>${foo<span>[</span>0<span>]</span>}</span>
-A
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>foo</code> 是一个数组，赋值的时候不指定位置，实际上是给 <code>foo[0]</code> 赋值。</p>
-<p>引用一个不带下标的数组变量，则引用的是 <code>0</code> 号位置的数组元素。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
-$ <span>echo</span> <span>${foo}</span>
-a
-$ <span>echo</span> <span>$foo</span>
-a
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，引用数组元素的时候，没有指定位置，结果返回的是 <code>0</code> 号位置。</p>
-<h2 id="数组的长度"> 数组的长度</h2>
-<p>要想知道数组的长度(即一共包含多少成员)，可以使用下面两种语法。</p>
-<div><pre><code><span>${<span>#</span>array<span>[</span>*<span>]</span>}</span>
-<span>${<span>#</span>array<span>[</span>@<span>]</span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>下面是一个例子。</p>
-<div><pre><code>$ a<span>[</span><span>100</span><span>]</span><span>=</span>foo
-
-$ <span>echo</span> <span>${<span>#</span>a<span>[</span>*<span>]</span>}</span>
-<span>1</span>
-
-$ <span>echo</span> <span>${<span>#</span>a<span>[</span>@<span>]</span>}</span>
-<span>1</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，把字符串赋值给 <code>100</code> 位置的数组元素，这时的数组只有一个元素。</p>
-<p>注意，如果用这种语法去读取具体的数组成员，就会返回该成员的字符串长度。这一点必须小心。</p>
-<div><pre><code>$ a<span>[</span><span>100</span><span>]</span><span>=</span>foo
-$ <span>echo</span> <span>${<span>#</span>a<span>[</span>100<span>]</span>}</span>
-<span>3</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，<code>${#a[100]}</code> 实际上是返回数组第 100 号成员 <code>a[100]</code> 的值(<code>foo</code>)的字符串长度。</p>
-<h2 id="提取数组序号"> 提取数组序号</h2>
-<p><code>${!array[@]}</code> 或 <code>${!array[*]}</code>，可以返回数组的成员序号，即哪些位置是有值的。</p>
-<div><pre><code>$ <span>arr</span><span>=</span><span>(</span><span>[</span><span>5</span><span>]</span><span>=</span>a <span>[</span><span>9</span><span>]</span><span>=</span>b <span>[</span><span>23</span><span>]</span><span>=</span>c<span>)</span>
-$ <span>echo</span> <span>${<span>!</span>arr<span>[</span>@<span>]</span>}</span>
-<span>5</span> <span>9</span> <span>23</span>
-$ <span>echo</span> <span>${<span>!</span>arr<span>[</span>*<span>]</span>}</span>
-<span>5</span> <span>9</span> <span>23</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，数组的 5、9、23 号位置有值。</p>
-<p>利用这个语法，也可以通过 <code>for</code> 循环遍历数组。</p>
-<div><pre><code><span>arr</span><span>=</span><span>(</span>a b c d<span>)</span>
-
-<span>for</span> <span>i</span> <span>in</span> <span>${<span>!</span>arr<span>[</span>@<span>]</span>}</span><span>;</span><span>do</span>
-  <span>echo</span> <span>${arr<span>[</span>i<span>]</span>}</span>
-<span>done</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="提取数组成员"> 提取数组成员</h2>
-<p><code>${array[@]:position:length}</code> 的语法可以提取数组成员。</p>
-<div><pre><code>$ <span>food</span><span>=</span><span>(</span> apples bananas cucumbers dates eggs fajitas grapes <span>)</span>
-$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>1<span>:</span>1}</span>
-bananas
-$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>1<span>:</span>3}</span>
-bananas cucumbers dates
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面例子中，<code>${food[@]:1:1}</code> 返回从数组 1 号位置开始的 1 个成员，<code>${food[@]:1:3}</code> 返回从 1 号位置开始的 3 个成员。</p>
-<p>如果省略长度参数 <code>length</code>，则返回从指定位置开始的所有成员。</p>
-<div><pre><code>$ <span>echo</span> <span>${food<span>[</span>@<span>]</span><span>:</span>4}</span>
-eggs fajitas grapes
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子返回从 4 号位置开始到结束的所有成员。</p>
-<h2 id="追加数组成员"> 追加数组成员</h2>
-<p>数组末尾追加成员，可以使用 <code>+=</code> 赋值运算符。它能够自动地把值追加到数组末尾。否则，就需要知道数组的最大序号，比较麻烦。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c<span>)</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a b c
-
-$ <span>foo</span><span>+=</span><span>(</span>d e f<span>)</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a b c d e f
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="删除数组"> 删除数组</h2>
-<p>删除一个数组成员，使用 <code>unset</code> 命令。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a b c d e f
-
-$ <span>unset</span> foo<span>[</span><span>2</span><span>]</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a b d e f
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面例子中，删除了数组中的第三个元素，下标为 2。</p>
-<p>删除成员也可以将这个成员设为空值。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
-$ foo<span>[</span><span>1</span><span>]</span><span>=</span><span>''</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-a c d e f
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，将数组的第二个成员设为空字符串，就删除了这个成员。</p>
-<p>由于空值就是空字符串，所以下面这样写也可以，但是不建议这种写法。</p>
-<div><pre><code>foo<span>[</span><span>1</span><span>]</span><span>=</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的写法也相当于删除了数组的第二个成员。</p>
-<p>直接将数组变量赋值为空字符串，相当于删除数组的第一个成员。</p>
-<div><pre><code>$ <span>foo</span><span>=</span><span>(</span>a b c d e f<span>)</span>
-$ <span>foo</span><span>=</span><span>''</span>
-$ <span>echo</span> <span>${foo<span>[</span>@<span>]</span>}</span>
-b c d e f
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面的写法相当于删除了数组的第一个成员。</p>
-<p><code>unset ArrayName</code> 可以清空整个数组。</p>
-<div><pre><code>$ <span>unset</span> ARRAY
-
-$ <span>echo</span> <span>${ARRAY<span>[</span>*<span>]</span>}</span>
-<span>&lt;</span>--no output--<span>></span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="关联数组"> 关联数组</h2>
-<p>Bash 的新版本支持关联数组。关联数组使用字符串而不是整数作为数组索引。</p>
-<p><code>declare -A</code> 可以声明关联数组。</p>
-<div><pre><code><span>declare</span> -A colors
-colors<span>[</span><span>"red"</span><span>]</span><span>=</span><span>"#ff0000"</span>
-colors<span>[</span><span>"green"</span><span>]</span><span>=</span><span>"#00ff00"</span>
-colors<span>[</span><span>"blue"</span><span>]</span><span>=</span><span>"#0000ff"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>整数索引的数组，可以直接使用变量名创建数组，关联数组则必须用带有 <code>-A</code> 选项的 <code>declare</code> 命令声明创建。</p>
-<p>访问关联数组成员的方式，几乎与整数索引数组相同。</p>
-<div><pre><code><span>echo</span> <span>${colors<span>[</span>"blue"<span>]</span>}</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>脚本除错</title>
@@ -8112,6 +8112,99 @@ keyword
 ]]></content:encoded>
     </item>
     <item>
+      <title>Bash 简介</title>
+      <link>https://list-jiang.github.io/code/linux/bash/intro/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/intro/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Bash 简介</source>
+      <description>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。
+</description>
+      <category>Linux</category>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
+
+<h2 id="shell-的含义"> Shell 的含义</h2>
+<p>学习 Bash，首先需要理解 Shell 是什么。Shell 这个单词的原意是“外壳”，跟 kernel(内核)相对应，比喻内核外面的一层，即用户跟内核交互的对话界面。</p>
+<p>具体来说，Shell 这个词有多种含义。</p>
+<p>首先，Shell 是一个程序，提供一个与用户对话的环境。这个环境只有一个命令提示符，让用户从键盘输入命令，所以又称为命令行环境(commandline，简写为 CLI)。Shell 接收到用户输入的命令，将命令送入操作系统执行，并将结果返回给用户。本书中，除非特别指明，Shell 指的就是命令行环境。</p>
+<p>其次，Shell 是一个命令解释器，解释用户输入的命令。它支持变量、条件判断、循环操作等语法，所以用户可以用 Shell 命令写出各种小程序，又称为脚本(script)。这些脚本都通过 Shell 的解释执行，而不通过编译。</p>
+<p>最后，Shell 是一个工具箱，提供了各种小工具，供用户方便地使用操作系统的功能。</p>
+<h2 id="shell-的种类"> Shell 的种类</h2>
+<p>Shell 有很多种，只要能给用户提供命令行环境的程序，都可以看作是 Shell。</p>
+<p>历史上，主要的 Shell 有下面这些。</p>
+<ul>
+<li>Bourne Shell(sh)</li>
+<li>Bourne Again shell(bash)</li>
+<li>C Shell(csh)</li>
+<li>TENEX C Shell(tcsh)</li>
+<li>Korn shell(ksh)</li>
+<li>Z Shell(zsh)</li>
+<li>Friendly Interactive Shell(fish)</li>
+</ul>
+<p>Bash 是目前最常用的 Shell，除非特别指明，下文的 Shell 和 Bash 当作同义词使用，可以互换。</p>
+<p>下面的命令可以查看当前运行的 Shell。</p>
+<div><pre><code>$ <span>echo</span> <span>$SHELL</span>
+/bin/bash
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令可以查看当前的 Linux 系统安装的所有 Shell。</p>
+<div><pre><code><span>cat</span> /etc/shells
+</code></pre>
+<div><span>1</span><br></div></div><p>上面两个命令中，<code>$</code> 是命令行环境的提示符，用户只需要输入提示符后面的内容。</p>
+<p>Linux 允许每个用户使用不同的 Shell，用户的默认 Shell 一般都是 Bash，或者与 Bash 兼容。</p>
+<h2 id="命令行环境"> 命令行环境</h2>
+<h3 id="终端模拟器"> 终端模拟器</h3>
+<p>如果是不带有图形环境的 Linux 系统(比如专用于服务器的系统)，启动后就直接是命令行环境。</p>
+<p>不过，现在大部分的 Linux 发行版，尤其是针对普通用户的发行版，都是图形环境。用户登录系统后，自动进入图形环境，需要自己启动终端模拟器，才能进入命令行环境。</p>
+<p>所谓“终端模拟器”(terminal emulator)就是一个模拟命令行窗口的程序，让用户在一个窗口中使用命令行环境，并且提供各种附加功能，比如调整颜色、字体大小、行距等等。</p>
+<p>不同 Linux 发行版(准确地说是不同的桌面环境)带有的终端程序是不一样的，比如 KDE 桌面环境的终端程序是 konsole，Gnome 桌面环境的终端程序是 gnome-terminal，用户也可以安装第三方的终端程序。所有终端程序，尽管名字不同，基本功能都是一样的，就是让用户可以进入命令行环境，使用 Shell。</p>
+<h3 id="命令行提示符"> 命令行提示符</h3>
+<p>进入命令行环境以后，用户会看到 Shell 的提示符。提示符往往是一串前缀，最后以一个美元符号 <code>$</code> 结尾，用户可以在这个符号后面输入各种命令。</p>
+<div><pre><code><span>[</span>user@hostname<span>]</span> $
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，完整的提示符是 <code>[user@hostname] $</code>，其中前缀是用户名(<code>user</code>)加上 <code>@</code>，再加主机名(<code>hostname</code>)。比如，用户名是 <code>bill</code>，主机名是 <code>home-machine</code>，前缀就是 <code>bill@home-machine</code>。</p>
+<p>注意，根用户(root)的提示符，不以美元符号 (<code>$</code>) 结尾，而以井号 (<code>#</code>) 结尾，用来提醒用户，现在具有根权限，可以执行各种操作，务必小心，不要出现误操作。这个符号是可以自己定义的，详见《命令提示符》一章。</p>
+<p>为了简洁，后文的命令行提示符都只使用 <code>$</code> 表示。</p>
+<h3 id="进入和退出方法"> 进入和退出方法</h3>
+<p>进入命令行环境以后，一般就已经打开 Bash 了。如果您的 Shell 不是 Bash，可以输入 <code>bash</code> 命令启动 Bash。</p>
+<div><pre><code><span>bash</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>退出 Bash 环境，可以使用 <code>exit</code> 命令，也可以同时按下 <code>Ctrl + d</code>。</p>
+<div><pre><code><span>exit</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>Bash 的基本用法就是在命令行输入各种命令，非常直观。作为练习，可以试着输入 <code>pwd</code> 命令。按下回车键，就会显示当前所在的目录。</p>
+<div><pre><code>$ <span>pwd</span>
+/home/me
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>如果不小心输入了 <code>pwe</code>，会返回一个提示，表示输入出错，没有对应的可执行程序。</p>
+<div><pre><code>$ pwe
+bash: pwe: 未找到命令
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="shell-和-bash-的历史"> Shell 和 Bash 的历史</h2>
+<p>Shell 伴随着 Unix 系统的诞生而诞生。</p>
+<p>1969 年，Ken Thompson 和 Dennis Ritchie 开发了第一版的 Unix。</p>
+<p>1971 年，Ken Thompson 编写了最初的 Shell，称为 Thompson shell，程序名是 <code>sh</code>，方便用户使用 Unix。</p>
+<p>1973 年至 1975 年间，John R. Mashey 扩展了最初的 Thompson shell，添加了编程功能，使得 Shell 成为一种编程语言。这个版本的 Shell 称为 Mashey shell。</p>
+<p>1976 年，Stephen Bourne 结合 Mashey shell 的功能，重写一个新的 Shell，称为 Bourne shell。</p>
+<p>1978 年，加州大学伯克利分校的 Bill Joy 开发了 C shell，为 Shell 提供 C 语言的语法，程序名是 <code>csh</code>。它是第一个真正替代 <code>sh</code> 的 UNIX shell，被合并到 Berkeley UNIX 的 2BSD 版本中。</p>
+<p>1979 年，UNIX 第七版发布，内置了 Bourne Shell，导致它成为 Unix 的默认 Shell。注意，Thompson shell、Mashey shell 和 Bourne shell 都是贝尔实验室的产品，程序名都是 <code>sh</code>。对于用户来说，它们是同一个东西，只是底层代码不同而已。</p>
+<p>1983 年，David Korn 开发了 Korn shell，程序名是 <code>ksh</code>。</p>
+<p>1985 年，Richard Stallman 成立了自由软件基金会(FSF)，由于 Shell 的版权属于贝尔公司，所以他决定写一个自由版权的、使用 GNU 许可证的 Shell 程序，避免 Unix 的版权争议。</p>
+<p>1988 年，自由软件基金会的第一个付薪程序员 Brian Fox 写了一个 Shell，功能基本上是 Bourne shell 的克隆，叫做 Bourne-Again SHell，简称 Bash，程序名为 <code>bash</code>，任何人都可以免费使用。后来，它逐渐成为 Linux 系统的标准 Shell。</p>
+<p>1989 年，Bash 发布 1.0 版。</p>
+<p>1996 年，Bash 发布 2.0 版。</p>
+<p>2004 年，Bash 发布 3.0 版。</p>
+<p>2009 年，Bash 发布 4.0 版。</p>
+<p>2019 年，Bash 发布 5.0 版。</p>
+<p>用户可以通过 <code>bash</code> 命令的 <code>--version</code> 参数或者环境变量 <code>$BASH_VERSION</code>，查看本机的 Bash 版本。</p>
+<div><pre><code>$ <span>bash</span> --version
+GNU bash，版本 <span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release <span>(</span>x86_64-pc-linux-gnu<span>)</span>
+
+<span># 或者</span>
+$ <span>echo</span> <span>$BASH_VERSION</span>
+<span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>循环</title>
       <link>https://list-jiang.github.io/code/linux/bash/loop/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/loop/</guid>
@@ -8512,215 +8605,6 @@ $ <span>ls</span> -l /tmp/tmp.4GcsWSG4vj
 ]]></content:encoded>
     </item>
     <item>
-      <title>Bash 简介</title>
-      <link>https://list-jiang.github.io/code/linux/bash/intro/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/intro/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Bash 简介</source>
-      <description>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。
-</description>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
-
-<h2 id="shell-的含义"> Shell 的含义</h2>
-<p>学习 Bash，首先需要理解 Shell 是什么。Shell 这个单词的原意是“外壳”，跟 kernel(内核)相对应，比喻内核外面的一层，即用户跟内核交互的对话界面。</p>
-<p>具体来说，Shell 这个词有多种含义。</p>
-<p>首先，Shell 是一个程序，提供一个与用户对话的环境。这个环境只有一个命令提示符，让用户从键盘输入命令，所以又称为命令行环境(commandline，简写为 CLI)。Shell 接收到用户输入的命令，将命令送入操作系统执行，并将结果返回给用户。本书中，除非特别指明，Shell 指的就是命令行环境。</p>
-<p>其次，Shell 是一个命令解释器，解释用户输入的命令。它支持变量、条件判断、循环操作等语法，所以用户可以用 Shell 命令写出各种小程序，又称为脚本(script)。这些脚本都通过 Shell 的解释执行，而不通过编译。</p>
-<p>最后，Shell 是一个工具箱，提供了各种小工具，供用户方便地使用操作系统的功能。</p>
-<h2 id="shell-的种类"> Shell 的种类</h2>
-<p>Shell 有很多种，只要能给用户提供命令行环境的程序，都可以看作是 Shell。</p>
-<p>历史上，主要的 Shell 有下面这些。</p>
-<ul>
-<li>Bourne Shell(sh)</li>
-<li>Bourne Again shell(bash)</li>
-<li>C Shell(csh)</li>
-<li>TENEX C Shell(tcsh)</li>
-<li>Korn shell(ksh)</li>
-<li>Z Shell(zsh)</li>
-<li>Friendly Interactive Shell(fish)</li>
-</ul>
-<p>Bash 是目前最常用的 Shell，除非特别指明，下文的 Shell 和 Bash 当作同义词使用，可以互换。</p>
-<p>下面的命令可以查看当前运行的 Shell。</p>
-<div><pre><code>$ <span>echo</span> <span>$SHELL</span>
-/bin/bash
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令可以查看当前的 Linux 系统安装的所有 Shell。</p>
-<div><pre><code><span>cat</span> /etc/shells
-</code></pre>
-<div><span>1</span><br></div></div><p>上面两个命令中，<code>$</code> 是命令行环境的提示符，用户只需要输入提示符后面的内容。</p>
-<p>Linux 允许每个用户使用不同的 Shell，用户的默认 Shell 一般都是 Bash，或者与 Bash 兼容。</p>
-<h2 id="命令行环境"> 命令行环境</h2>
-<h3 id="终端模拟器"> 终端模拟器</h3>
-<p>如果是不带有图形环境的 Linux 系统(比如专用于服务器的系统)，启动后就直接是命令行环境。</p>
-<p>不过，现在大部分的 Linux 发行版，尤其是针对普通用户的发行版，都是图形环境。用户登录系统后，自动进入图形环境，需要自己启动终端模拟器，才能进入命令行环境。</p>
-<p>所谓“终端模拟器”(terminal emulator)就是一个模拟命令行窗口的程序，让用户在一个窗口中使用命令行环境，并且提供各种附加功能，比如调整颜色、字体大小、行距等等。</p>
-<p>不同 Linux 发行版(准确地说是不同的桌面环境)带有的终端程序是不一样的，比如 KDE 桌面环境的终端程序是 konsole，Gnome 桌面环境的终端程序是 gnome-terminal，用户也可以安装第三方的终端程序。所有终端程序，尽管名字不同，基本功能都是一样的，就是让用户可以进入命令行环境，使用 Shell。</p>
-<h3 id="命令行提示符"> 命令行提示符</h3>
-<p>进入命令行环境以后，用户会看到 Shell 的提示符。提示符往往是一串前缀，最后以一个美元符号 <code>$</code> 结尾，用户可以在这个符号后面输入各种命令。</p>
-<div><pre><code><span>[</span>user@hostname<span>]</span> $
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，完整的提示符是 <code>[user@hostname] $</code>，其中前缀是用户名(<code>user</code>)加上 <code>@</code>，再加主机名(<code>hostname</code>)。比如，用户名是 <code>bill</code>，主机名是 <code>home-machine</code>，前缀就是 <code>bill@home-machine</code>。</p>
-<p>注意，根用户(root)的提示符，不以美元符号 (<code>$</code>) 结尾，而以井号 (<code>#</code>) 结尾，用来提醒用户，现在具有根权限，可以执行各种操作，务必小心，不要出现误操作。这个符号是可以自己定义的，详见《命令提示符》一章。</p>
-<p>为了简洁，后文的命令行提示符都只使用 <code>$</code> 表示。</p>
-<h3 id="进入和退出方法"> 进入和退出方法</h3>
-<p>进入命令行环境以后，一般就已经打开 Bash 了。如果您的 Shell 不是 Bash，可以输入 <code>bash</code> 命令启动 Bash。</p>
-<div><pre><code><span>bash</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>退出 Bash 环境，可以使用 <code>exit</code> 命令，也可以同时按下 <code>Ctrl + d</code>。</p>
-<div><pre><code><span>exit</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>Bash 的基本用法就是在命令行输入各种命令，非常直观。作为练习，可以试着输入 <code>pwd</code> 命令。按下回车键，就会显示当前所在的目录。</p>
-<div><pre><code>$ <span>pwd</span>
-/home/me
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>如果不小心输入了 <code>pwe</code>，会返回一个提示，表示输入出错，没有对应的可执行程序。</p>
-<div><pre><code>$ pwe
-bash: pwe: 未找到命令
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="shell-和-bash-的历史"> Shell 和 Bash 的历史</h2>
-<p>Shell 伴随着 Unix 系统的诞生而诞生。</p>
-<p>1969 年，Ken Thompson 和 Dennis Ritchie 开发了第一版的 Unix。</p>
-<p>1971 年，Ken Thompson 编写了最初的 Shell，称为 Thompson shell，程序名是 <code>sh</code>，方便用户使用 Unix。</p>
-<p>1973 年至 1975 年间，John R. Mashey 扩展了最初的 Thompson shell，添加了编程功能，使得 Shell 成为一种编程语言。这个版本的 Shell 称为 Mashey shell。</p>
-<p>1976 年，Stephen Bourne 结合 Mashey shell 的功能，重写一个新的 Shell，称为 Bourne shell。</p>
-<p>1978 年，加州大学伯克利分校的 Bill Joy 开发了 C shell，为 Shell 提供 C 语言的语法，程序名是 <code>csh</code>。它是第一个真正替代 <code>sh</code> 的 UNIX shell，被合并到 Berkeley UNIX 的 2BSD 版本中。</p>
-<p>1979 年，UNIX 第七版发布，内置了 Bourne Shell，导致它成为 Unix 的默认 Shell。注意，Thompson shell、Mashey shell 和 Bourne shell 都是贝尔实验室的产品，程序名都是 <code>sh</code>。对于用户来说，它们是同一个东西，只是底层代码不同而已。</p>
-<p>1983 年，David Korn 开发了 Korn shell，程序名是 <code>ksh</code>。</p>
-<p>1985 年，Richard Stallman 成立了自由软件基金会(FSF)，由于 Shell 的版权属于贝尔公司，所以他决定写一个自由版权的、使用 GNU 许可证的 Shell 程序，避免 Unix 的版权争议。</p>
-<p>1988 年，自由软件基金会的第一个付薪程序员 Brian Fox 写了一个 Shell，功能基本上是 Bourne shell 的克隆，叫做 Bourne-Again SHell，简称 Bash，程序名为 <code>bash</code>，任何人都可以免费使用。后来，它逐渐成为 Linux 系统的标准 Shell。</p>
-<p>1989 年，Bash 发布 1.0 版。</p>
-<p>1996 年，Bash 发布 2.0 版。</p>
-<p>2004 年，Bash 发布 3.0 版。</p>
-<p>2009 年，Bash 发布 4.0 版。</p>
-<p>2019 年，Bash 发布 5.0 版。</p>
-<p>用户可以通过 <code>bash</code> 命令的 <code>--version</code> 参数或者环境变量 <code>$BASH_VERSION</code>，查看本机的 Bash 版本。</p>
-<div><pre><code>$ <span>bash</span> --version
-GNU bash，版本 <span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release <span>(</span>x86_64-pc-linux-gnu<span>)</span>
-
-<span># 或者</span>
-$ <span>echo</span> <span>$BASH_VERSION</span>
-<span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>命令提示符</title>
-      <link>https://list-jiang.github.io/code/linux/bash/prompt/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/prompt/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">命令提示符</source>
-      <description>用户进入 Bash 以后，Bash 会显示一个命令提示符，用来提示用户在该位置后面输入命令。
-</description>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<p>用户进入 Bash 以后，Bash 会显示一个命令提示符，用来提示用户在该位置后面输入命令。</p>
-
-<h2 id="环境变量-ps1"> 环境变量 PS1</h2>
-<p>命令提示符通常是美元符号 <code>$</code>，对于根用户则是井号 <code>#</code>。这个符号是环境变量 <code>PS1</code> 决定的，执行下面的命令，可以看到当前命令提示符的定义。</p>
-<div><pre><code><span>echo</span> <span>$PS1</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>Bash 允许用户自定义命令提示符，只要改写这个变量即可。改写后 的 <code>PS1</code>，可以放在用户的 Bash 配置文件 <code>.bashrc</code> 里面，以后新建 Bash 对话时，新的提示符就会生效。要在当前窗口看到修改后的提示符，可以执行下面的命令。</p>
-<div><pre><code><span>source</span> ~/.bashrc
-</code></pre>
-<div><span>1</span><br></div></div><p>命令提示符的定义，可以包含特殊的转义字符，表示特定内容。</p>
-<ul>
-<li><code>\a</code>: 响铃，计算机发出一记声音。</li>
-<li><code>\d</code>: 以星期、月、日格式表示当前日期，例如“Mon May 26”。</li>
-<li><code>\h</code>: 本机的主机名。</li>
-<li><code>\H</code>: 完整的主机名。</li>
-<li><code>\j</code>: 运行在当前 Shell 会话的工作数。</li>
-<li><code>\l</code>: 当前终端设备名。</li>
-<li><code>\n</code>: 一个换行符。</li>
-<li><code>\r</code>: 一个回车符。</li>
-<li><code>\s</code>: Shell 的名称。</li>
-<li><code>\t</code>: 24 小时制的 <code>hours:minutes:seconds</code> 格式表示当前时间。</li>
-<li><code>\T</code>: 12 小时制的当前时间。</li>
-<li><code>\@</code>: 12 小时制的 <code>AM/PM</code> 格式表示当前时间。</li>
-<li><code>\A</code>: 24 小时制的 <code>hours:minutes</code> 表示当前时间。</li>
-<li><code>\u</code>: 当前用户名。</li>
-<li><code>\v</code>: Shell 的版本号。</li>
-<li><code>\V</code>: Shell 的版本号和发布号。</li>
-<li><code>\w</code>: 当前的工作路径。</li>
-<li><code>\W</code>: 当前目录名。</li>
-<li><code>\!</code>: 当前命令在命令历史中的编号。</li>
-<li><code>\#</code>: 当前 shell 会话中的命令数。</li>
-<li><code>\$</code>: 普通用户显示为 <code>$</code> 字符，根用户显示为 <code>#</code> 字符。</li>
-<li><code>\[</code>: 非打印字符序列的开始标志。</li>
-<li><code>\]</code>: 非打印字符序列的结束标志。</li>
-</ul>
-<p>举例来说，<code>[\u@\h \W]\$</code> 这个提示符定义，显示出来就是 <code>[user@host ~]$</code> (具体的显示内容取决于您的系统)。</p>
-<div><pre><code><span>[</span>user@host ~<span>]</span>$ <span>echo</span> <span>$PS1</span>
-<span>[</span><span>\</span>u@<span>\</span>h <span>\</span>W<span>]</span><span>\</span>$
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>改写 <code>PS1</code> 变量，就可以改变这个命令提示符。</p>
-<div><pre><code>$ <span><span>PS1</span></span><span>=</span><span>"\A \h \$ "</span>
-<span>17</span>:33 <span>host</span> $
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>注意，<code>$</code> 后面最好跟一个空格，这样的话，用户的输入与提示符就不会连在一起。</p>
-<h2 id="颜色"> 颜色</h2>
-<p>默认情况下，命令提示符是显示终端预定义的颜色。Bash 允许自定义提示符颜色。</p>
-<p>使用下面的代码，可以设定其后文本的颜色。</p>
-<ul>
-<li><code>\033[0;30m</code>: 黑色</li>
-<li><code>\033[1;30m</code>: 深灰色</li>
-<li><code>\033[0;31m</code>: 红色</li>
-<li><code>\033[1;31m</code>: 浅红色</li>
-<li><code>\033[0;32m</code>: 绿色</li>
-<li><code>\033[1;32m</code>: 浅绿色</li>
-<li><code>\033[0;33m</code>: 棕色</li>
-<li><code>\033[1;33m</code>: 黄色</li>
-<li><code>\033[0;34m</code>: 蓝色</li>
-<li><code>\033[1;34m</code>: 浅蓝色</li>
-<li><code>\033[0;35m</code>: 粉红</li>
-<li><code>\033[1;35m</code>: 浅粉色</li>
-<li><code>\033[0;36m</code>: 青色</li>
-<li><code>\033[1;36m</code>: 浅青色</li>
-<li><code>\033[0;37m</code>: 浅灰色</li>
-<li><code>\033[1;37m</code>: 白色</li>
-</ul>
-<p>举例来说，如果要将提示符设为红色，可以将 <code>PS1</code> 设成下面的代码。</p>
-<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;31m\]&lt;\u@\h \W>\$'</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>但是，上面这样设置以后，用户在提示符后面输入的文本也是红色的。为了解决这个问题， 可以在结尾添加另一个特殊代码 <code>\[\033[00m\]</code>，表示将其后的文本恢复到默认颜色。</p>
-<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;31m\]&lt;\u@\h \W>\$\[\033[00m\]'</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>除了设置前景颜色，Bash 还允许设置背景颜色。</p>
-<ul>
-<li><code>\033[0;40m</code>: 蓝色</li>
-<li><code>\033[1;44m</code>: 黑色</li>
-<li><code>\033[0;41m</code>: 红色</li>
-<li><code>\033[1;45m</code>: 粉红</li>
-<li><code>\033[0;42m</code>: 绿色</li>
-<li><code>\033[1;46m</code>: 青色</li>
-<li><code>\033[0;43m</code>: 棕色</li>
-<li><code>\033[1;47m</code>: 浅灰色</li>
-</ul>
-<p>下面是一个带有红色背景的提示符。</p>
-<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;41m\]&lt;\u@\h \W>\$\[\033[0m\] '</span>
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="环境变量-ps2-ps3-ps4"> 环境变量 PS2，PS3，PS4</h2>
-<p>除了 <code>PS1</code>，Bash 还提供了提示符相关的另外三个环境变量。</p>
-<p>环境变量 <code>PS2</code> 是命令行折行输入时系统的提示符，默认为 <code>&gt;</code>。</p>
-<div><pre><code>$ <span>echo</span> <span>"hello
-> world"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，输入 <code>hello</code> 以后按下回车键，系统会提示继续输入。这时，第二行显示的提示符就是 <code>PS2</code> 定义的 <code>&gt;</code>。</p>
-<p>环境变量 <code>PS3</code> 是使用 <code>select</code> 命令时，系统输入菜单的提示符。</p>
-<p>环境变量 <code>PS4</code> 默认为 <code>+</code>。它是使用 Bash 的 <code>-x</code> 参数执行脚本时，每一行命令在执行前都会先打印出来，并且在行首出现的那个提示符。</p>
-<p>比如下面是脚本 <code>test.sh</code>。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>echo</span> <span>"hello world"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>使用 <code>-x</code> 参数执行这个脚本。</p>
-<div><pre><code>$ <span>bash</span> -x test.sh
-+ <span>echo</span> <span>'hello world'</span>
-hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，输出的第一行前面有一个 <code>+</code>，这就是变量 <code>PS4</code> 定义的。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>引号和转义</title>
       <link>https://list-jiang.github.io/code/linux/bash/quotation/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/quotation/</guid>
@@ -8935,6 +8819,122 @@ $ <span>echo</span> <span>'hi there'</span> <span>|</span> <span>cat</span>
 $ <span>echo</span> <span>'ddd'</span> <span>|</span> md5sum
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，<code>md5sum</code> 命令只能接受标准输入作为参数，不能直接将字符串放在命令后面，会被当作文件名，即 <code>md5sum ddd</code> 里面的 <code>ddd</code> 会被解释成文件名。这时就可以用 Here 字符串，将字符串传给 <code>md5sum</code> 命令。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>命令提示符</title>
+      <link>https://list-jiang.github.io/code/linux/bash/prompt/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/prompt/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">命令提示符</source>
+      <description>用户进入 Bash 以后，Bash 会显示一个命令提示符，用来提示用户在该位置后面输入命令。
+</description>
+      <category>Linux</category>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<p>用户进入 Bash 以后，Bash 会显示一个命令提示符，用来提示用户在该位置后面输入命令。</p>
+
+<h2 id="环境变量-ps1"> 环境变量 PS1</h2>
+<p>命令提示符通常是美元符号 <code>$</code>，对于根用户则是井号 <code>#</code>。这个符号是环境变量 <code>PS1</code> 决定的，执行下面的命令，可以看到当前命令提示符的定义。</p>
+<div><pre><code><span>echo</span> <span>$PS1</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>Bash 允许用户自定义命令提示符，只要改写这个变量即可。改写后 的 <code>PS1</code>，可以放在用户的 Bash 配置文件 <code>.bashrc</code> 里面，以后新建 Bash 对话时，新的提示符就会生效。要在当前窗口看到修改后的提示符，可以执行下面的命令。</p>
+<div><pre><code><span>source</span> ~/.bashrc
+</code></pre>
+<div><span>1</span><br></div></div><p>命令提示符的定义，可以包含特殊的转义字符，表示特定内容。</p>
+<ul>
+<li><code>\a</code>: 响铃，计算机发出一记声音。</li>
+<li><code>\d</code>: 以星期、月、日格式表示当前日期，例如“Mon May 26”。</li>
+<li><code>\h</code>: 本机的主机名。</li>
+<li><code>\H</code>: 完整的主机名。</li>
+<li><code>\j</code>: 运行在当前 Shell 会话的工作数。</li>
+<li><code>\l</code>: 当前终端设备名。</li>
+<li><code>\n</code>: 一个换行符。</li>
+<li><code>\r</code>: 一个回车符。</li>
+<li><code>\s</code>: Shell 的名称。</li>
+<li><code>\t</code>: 24 小时制的 <code>hours:minutes:seconds</code> 格式表示当前时间。</li>
+<li><code>\T</code>: 12 小时制的当前时间。</li>
+<li><code>\@</code>: 12 小时制的 <code>AM/PM</code> 格式表示当前时间。</li>
+<li><code>\A</code>: 24 小时制的 <code>hours:minutes</code> 表示当前时间。</li>
+<li><code>\u</code>: 当前用户名。</li>
+<li><code>\v</code>: Shell 的版本号。</li>
+<li><code>\V</code>: Shell 的版本号和发布号。</li>
+<li><code>\w</code>: 当前的工作路径。</li>
+<li><code>\W</code>: 当前目录名。</li>
+<li><code>\!</code>: 当前命令在命令历史中的编号。</li>
+<li><code>\#</code>: 当前 shell 会话中的命令数。</li>
+<li><code>\$</code>: 普通用户显示为 <code>$</code> 字符，根用户显示为 <code>#</code> 字符。</li>
+<li><code>\[</code>: 非打印字符序列的开始标志。</li>
+<li><code>\]</code>: 非打印字符序列的结束标志。</li>
+</ul>
+<p>举例来说，<code>[\u@\h \W]\$</code> 这个提示符定义，显示出来就是 <code>[user@host ~]$</code> (具体的显示内容取决于您的系统)。</p>
+<div><pre><code><span>[</span>user@host ~<span>]</span>$ <span>echo</span> <span>$PS1</span>
+<span>[</span><span>\</span>u@<span>\</span>h <span>\</span>W<span>]</span><span>\</span>$
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>改写 <code>PS1</code> 变量，就可以改变这个命令提示符。</p>
+<div><pre><code>$ <span><span>PS1</span></span><span>=</span><span>"\A \h \$ "</span>
+<span>17</span>:33 <span>host</span> $
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>注意，<code>$</code> 后面最好跟一个空格，这样的话，用户的输入与提示符就不会连在一起。</p>
+<h2 id="颜色"> 颜色</h2>
+<p>默认情况下，命令提示符是显示终端预定义的颜色。Bash 允许自定义提示符颜色。</p>
+<p>使用下面的代码，可以设定其后文本的颜色。</p>
+<ul>
+<li><code>\033[0;30m</code>: 黑色</li>
+<li><code>\033[1;30m</code>: 深灰色</li>
+<li><code>\033[0;31m</code>: 红色</li>
+<li><code>\033[1;31m</code>: 浅红色</li>
+<li><code>\033[0;32m</code>: 绿色</li>
+<li><code>\033[1;32m</code>: 浅绿色</li>
+<li><code>\033[0;33m</code>: 棕色</li>
+<li><code>\033[1;33m</code>: 黄色</li>
+<li><code>\033[0;34m</code>: 蓝色</li>
+<li><code>\033[1;34m</code>: 浅蓝色</li>
+<li><code>\033[0;35m</code>: 粉红</li>
+<li><code>\033[1;35m</code>: 浅粉色</li>
+<li><code>\033[0;36m</code>: 青色</li>
+<li><code>\033[1;36m</code>: 浅青色</li>
+<li><code>\033[0;37m</code>: 浅灰色</li>
+<li><code>\033[1;37m</code>: 白色</li>
+</ul>
+<p>举例来说，如果要将提示符设为红色，可以将 <code>PS1</code> 设成下面的代码。</p>
+<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;31m\]&lt;\u@\h \W>\$'</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>但是，上面这样设置以后，用户在提示符后面输入的文本也是红色的。为了解决这个问题， 可以在结尾添加另一个特殊代码 <code>\[\033[00m\]</code>，表示将其后的文本恢复到默认颜色。</p>
+<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;31m\]&lt;\u@\h \W>\$\[\033[00m\]'</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>除了设置前景颜色，Bash 还允许设置背景颜色。</p>
+<ul>
+<li><code>\033[0;40m</code>: 蓝色</li>
+<li><code>\033[1;44m</code>: 黑色</li>
+<li><code>\033[0;41m</code>: 红色</li>
+<li><code>\033[1;45m</code>: 粉红</li>
+<li><code>\033[0;42m</code>: 绿色</li>
+<li><code>\033[1;46m</code>: 青色</li>
+<li><code>\033[0;43m</code>: 棕色</li>
+<li><code>\033[1;47m</code>: 浅灰色</li>
+</ul>
+<p>下面是一个带有红色背景的提示符。</p>
+<div><pre><code><span><span>PS1</span></span><span>=</span><span>'\[\033[0;41m\]&lt;\u@\h \W>\$\[\033[0m\] '</span>
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="环境变量-ps2-ps3-ps4"> 环境变量 PS2，PS3，PS4</h2>
+<p>除了 <code>PS1</code>，Bash 还提供了提示符相关的另外三个环境变量。</p>
+<p>环境变量 <code>PS2</code> 是命令行折行输入时系统的提示符，默认为 <code>&gt;</code>。</p>
+<div><pre><code>$ <span>echo</span> <span>"hello
+> world"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，输入 <code>hello</code> 以后按下回车键，系统会提示继续输入。这时，第二行显示的提示符就是 <code>PS2</code> 定义的 <code>&gt;</code>。</p>
+<p>环境变量 <code>PS3</code> 是使用 <code>select</code> 命令时，系统输入菜单的提示符。</p>
+<p>环境变量 <code>PS4</code> 默认为 <code>+</code>。它是使用 Bash 的 <code>-x</code> 参数执行脚本时，每一行命令在执行前都会先打印出来，并且在行首出现的那个提示符。</p>
+<p>比如下面是脚本 <code>test.sh</code>。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>echo</span> <span>"hello world"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>使用 <code>-x</code> 参数执行这个脚本。</p>
+<div><pre><code>$ <span>bash</span> -x test.sh
++ <span>echo</span> <span>'hello world'</span>
+hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，输出的第一行前面有一个 <code>+</code>，这就是变量 <code>PS4</code> 定义的。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -9285,78 +9285,6 @@ $ <span>history</span>
 ]]></content:encoded>
     </item>
     <item>
-      <title>Bash 教程</title>
-      <link>https://list-jiang.github.io/code/linux/bash/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Bash 教程</source>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="目录"> 目录</h2>
-<ul>
-<li>
-<p><a href="./intro.html">简介</a></p>
-</li>
-<li>
-<p><a href="./grammar.html">基本语法</a></p>
-</li>
-<li>
-<p><a href="./expansion.html">模式扩展</a></p>
-</li>
-<li>
-<p><a href="./quotation.html">引号和转义</a></p>
-</li>
-<li>
-<p><a href="./variable.html">变量</a></p>
-</li>
-<li>
-<p><a href="./string.html">字符串操作</a></p>
-</li>
-<li>
-<p><a href="./arithmetic.html">算术运算</a></p>
-</li>
-<li>
-<p><a href="./readline.html">行操作</a></p>
-</li>
-<li>
-<p><a href="./stack.html">目录堆栈</a></p>
-</li>
-<li>
-<p><a href="./script.html">脚本入门</a></p>
-</li>
-<li>
-<p><a href="./read.html">read 命令</a></p>
-</li>
-<li>
-<p><a href="./condition.html">条件判断</a></p>
-</li>
-<li>
-<p><a href="./loop.html">循环</a></p>
-</li>
-<li>
-<p><a href="./function.html">函数</a></p>
-</li>
-<li>
-<p><a href="./array.html">数组</a></p>
-</li>
-<li>
-<p><a href="./set.html">set 命令</a></p>
-</li>
-<li>
-<p><a href="./debug.html">脚本除错</a></p>
-</li>
-<li>
-<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
-</li>
-<li>
-<p><a href="./startup.html">启动环境</a></p>
-</li>
-<li>
-<p><a href="./prompt.html">命令提示符</a></p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Bash 脚本入门</title>
       <link>https://list-jiang.github.io/code/linux/bash/script/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/script/</guid>
@@ -9661,6 +9589,78 @@ It says: hello world
 <div><span>1</span><br></div></div><h2 id="参考链接"> 参考链接</h2>
 <ul>
 <li><a href="https://linuxconfig.org/how-to-use-getopts-to-parse-a-script-options" target="_blank" rel="noopener noreferrer">How to use getopts to parse a script options<i>Content not supported</i></a>, Egidio Docile</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Bash 教程</title>
+      <link>https://list-jiang.github.io/code/linux/bash/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Bash 教程</source>
+      <category>Linux</category>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="目录"> 目录</h2>
+<ul>
+<li>
+<p><a href="./intro.html">简介</a></p>
+</li>
+<li>
+<p><a href="./grammar.html">基本语法</a></p>
+</li>
+<li>
+<p><a href="./expansion.html">模式扩展</a></p>
+</li>
+<li>
+<p><a href="./quotation.html">引号和转义</a></p>
+</li>
+<li>
+<p><a href="./variable.html">变量</a></p>
+</li>
+<li>
+<p><a href="./string.html">字符串操作</a></p>
+</li>
+<li>
+<p><a href="./arithmetic.html">算术运算</a></p>
+</li>
+<li>
+<p><a href="./readline.html">行操作</a></p>
+</li>
+<li>
+<p><a href="./stack.html">目录堆栈</a></p>
+</li>
+<li>
+<p><a href="./script.html">脚本入门</a></p>
+</li>
+<li>
+<p><a href="./read.html">read 命令</a></p>
+</li>
+<li>
+<p><a href="./condition.html">条件判断</a></p>
+</li>
+<li>
+<p><a href="./loop.html">循环</a></p>
+</li>
+<li>
+<p><a href="./function.html">函数</a></p>
+</li>
+<li>
+<p><a href="./array.html">数组</a></p>
+</li>
+<li>
+<p><a href="./set.html">set 命令</a></p>
+</li>
+<li>
+<p><a href="./debug.html">脚本除错</a></p>
+</li>
+<li>
+<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
+</li>
+<li>
+<p><a href="./startup.html">启动环境</a></p>
+</li>
+<li>
+<p><a href="./prompt.html">命令提示符</a></p>
+</li>
 </ul>
 ]]></content:encoded>
     </item>
