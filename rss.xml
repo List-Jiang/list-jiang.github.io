@@ -6,8 +6,8 @@
     <link>https://list-jiang.github.io/</link>
     <description>远方无限 砥砺前行</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Nov 2022 03:34:50 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Nov 2022 03:34:50 GMT</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2022 08:02:38 GMT</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2022 08:02:38 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2021-present List Jiang</copyright>
@@ -868,6 +868,593 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
     </item>
     <item>
       <title>Zipkin</title>
+      <link>https://list-jiang.github.io/spring/track/zipkin/start-env/</link>
+      <guid>https://list-jiang.github.io/spring/track/zipkin/start-env/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Zipkin</source>
+      <pubDate>Thu, 24 Feb 2022 06:38:19 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="zipkin-server"> zipkin-server</h1>
+<p>Zipkin Server 是一个 Java 1.8+ 服务，打包为一个可执行的 jar。 跨度存储和收集器是可配置的。默认情况下，存储在内存中，启用 HTTP 收集器（POST /api/v2/spans 端点），服务器侦听端口 9411。 Zipkin Server 使用 <a href="https://github.com/line/armeria" target="_blank" rel="noopener noreferrer">Armeria<i>Content not supported</i></a> 实现。 虽然它在内部使用 Spring Boot  （打开新窗口）
+，不应将 Zipkin Server 视为普通的 <a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/" target="_blank" rel="noopener noreferrer">Spring Boot<i>Content not supported</i></a> 应用程序。</p>
+<h2 id="不支持自定义服务器"> 不支持自定义服务器</h2>
+<p>不支持通过类似于 spring boot 应用程序添加 <code>zipkin-server</code> 引用这种方式来构建服务。</p>
+<h2 id="快速启动"> 快速启动</h2>
+<p>最快的上手方式是通过 <a href="https://search.maven.org/remote_content?g=io.zipkin&amp;a=zipkin-server&amp;v=LATEST&amp;c=exec" target="_blank" rel="noopener noreferrer">最新 jar 发布服务器<i>Content not supported</i></a> 获取一个独立的可执行jar。请注意，Zipkin 服务器需要最低 JRE 8。</p>
+<div><pre><code>$ <span>curl</span> -sSL https://zipkin.io/quickstart.sh <span>|</span> <span>bash</span> -s
+$ java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>启动后，浏览 http://your_host:9411 验证</p>
+<h2 id="端点"> 端点</h2>
+<p>以下端点在服务基础url http://your_host:9411 下定义</p>
+<ul>
+<li>/ - <a href="../zipkin-ui">UI</a></li>
+<li>/config.json - UI 配置</li>
+<li>/api/v2 - <a href="https://zipkin.io/zipkin-api/#/" target="_blank" rel="noopener noreferrer">API<i>Content not supported</i></a></li>
+<li>/health - 如果正常则返回 200</li>
+<li>/info - 提供正在运行的实例的版本</li>
+<li>/metrics - 包括按传输类型细分的收集器指标</li>
+<li>/prometheus - Prometheus 抓取端点</li>
+</ul>
+<p><a href="https://zipkin.io/zipkin-api/#/" target="_blank" rel="noopener noreferrer">旧版 /api/v1 API<i>Content not supported</i></a> 仍然支持。后端通过数据转换与 HTTP API 分离。这意味着您仍然可以在新后端接受旧数据，反之亦然。进入 <code>https://zipkin.io/zipkin-api/zipkin-api.yaml</code> Swagger UI 的探索框查看旧定义</p>
+<h3 id="cors-跨域资源共享"> CORS（跨域资源共享）</h3>
+<p>默认情况下，所有端点 <code>/api/v2</code> 都配置为允许跨域请求。</p>
+<p>这可以通过修改 <code>zipkin.query.allowed-origins</code> 属性来改变。</p>
+<p>例如，要允许来自 <code>http://foo.bar.com</code> 域名下的 CORS 请求：</p>
+<div><pre><code>ZIPKIN_QUERY_ALLOWED_ORIGINS=http://foo.bar.com
+</code></pre>
+<div><span>1</span><br></div></div><p>更多的相关配置请看  。</p>
+<h3 id="服务和跨度名称查询"> 服务和跨度名称查询</h3>
+<p>Zipkin <a href="https://zipkin.io/zipkin-api/#/default/get_services" target="_blank" rel="noopener noreferrer">API<i>Content not supported</i></a> 不包括返回多远查找服务或跨度名称的参数。为了防止负载过大，服务和跨度名称查询通过配置
+<code>QUERY_LOOKBACK</code> 限制，默认为24小时（每天两个桶：今天一个，昨天一个）</p>
+<h2 id="日志"> 日志</h2>
+<p>默认情况下， zipkin 以 INFO 或更高级别将日志写入控制台。所以可以通过配置  <code>logging.level.XXX</code> 属性调整日志级别</p>
+<p>例如，如果您想为所有 zipkin 类别启用调试日志记录，您可以像这样启动服务器：</p>
+<div><pre><code>$ java -jar zipkin.jar --logging.level.zipkin2<span>=</span>DEBUG
+</code></pre>
+<div><span>1</span><br></div></div><p>更多的相关配置请看  。</p>
+<h3 id="高级日志配置"> 高级日志配置</h3>
+<p>实际上，服务器使用 <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html#howto-configure-logback-for-logging" target="_blank" rel="noopener noreferrer">Spring Boot - Logback集成<i>Content not supported</i></a> 处理日志，所以可以通过配置 <code>--logging.exception-conversion-word=%wEx{full}</code> 转储完整堆栈跟踪而不是截断的跟踪。</p>
+<h2 id="metrics"> Metrics</h2>
+<p>收集器指标被导出到路径 <code>/metrics</code> 。这些和其他指标被导出到路径 <code>/prometheus</code> 。</p>
+<h3 id="示例-prometheus-配置"> 示例 Prometheus 配置</h3>
+<p>Here's an example <code>/prometheus</code> configuration, using the Prometheus
+exposition [text format version 0.0.4]</p>
+<p>这是一个示例 <code>/prometheus</code> 配置，使用 Prometheus exposition<a href="https://prometheus.io/docs/instrumenting/exposition_formats/" target="_blank" rel="noopener noreferrer">文本格式版本 0.0.4<i>Content not supported</i></a></p>
+<div><pre><code>  <span>-</span> <span>job_name</span><span>:</span> <span>'zipkin'</span>
+    <span>scrape_interval</span><span>:</span> 5s
+    <span>metrics_path</span><span>:</span> <span>'/prometheus'</span>
+    <span>static_configs</span><span>:</span>
+      <span>-</span> <span>targets</span><span>:</span> <span>[</span><span>'localhost:9411'</span><span>]</span>
+    <span>metric_relabel_configs</span><span>:</span>
+      <span># Response code count</span>
+      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
+        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
+        <span>replacement</span><span>:</span> <span>'${1}'</span>
+        <span>target_label</span><span>:</span> status
+      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
+        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
+        <span>replacement</span><span>:</span> <span>'${2}'</span>
+        <span>target_label</span><span>:</span> path
+      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
+        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
+        <span>replacement</span><span>:</span> <span>'http_requests_total'</span>
+        <span>target_label</span><span>:</span> __name__
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h3 id="收集器"> 收集器</h3>
+<p>Metric 收集器按传输细分。以下内容被导出到 <code>/metrics</code> 端点：</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>counter.zipkin_collector.messages.$transport</td>
+<td>收到的累积消息；应该与检测应用程序报告的消息相关</td>
+</tr>
+<tr>
+<td>counter.zipkin_collector.messages_dropped.$transport</td>
+<td>累积消息丢弃；原因包括客户端断开连接或格式错误的内容</td>
+</tr>
+<tr>
+<td>counter.zipkin_collector.bytes.$transport</td>
+<td>累积消息字节</td>
+</tr>
+<tr>
+<td>counter.zipkin_collector.spans.$transport</td>
+<td>累积跨度读取；应该与检测应用程序报告的消息相关</td>
+</tr>
+<tr>
+<td>counter.zipkin_collector.spans_dropped.$transport</td>
+<td>累积跨度下降；原因包括采样或存储故障</td>
+</tr>
+<tr>
+<td>gauge.zipkin_collector.message_spans.$transport</td>
+<td>消息中的最后一个跨度计数</td>
+</tr>
+<tr>
+<td>gauge.zipkin_collector.message_bytes.$transport</td>
+<td>消息中的最后一个字节数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置"> 配置</h2>
+<p>我们支持 ENV 变量配置，例如 <code>STORAGE_TYPE=cassandra3</code> ，因为它们为管理员所熟悉，并且易于在 Docker 等运行时环境中使用</p>
+<p>以下是 Zipkin 的顶层配置：</p>
+<ul>
+<li><code>QUERY_PORT</code>: HTTP API 和 Web UI 的监听端口；默认为 <code>9411</code></li>
+<li><code>QUERY_ENABLED</code>: 配置 <code>false</code> 禁用 '/api/v2' 端点。这也会导致 UI 不可用，因为 UI 依赖于 API。 如果您的唯一目标是限制搜索, 请配置 <code>SEARCH_ENABLED</code> 为 <code>false</code></li>
+<li><code>SEARCH_ENABLED</code>: <code>false</code> 禁用查询 API 中的搜索以及收集器中的任何索引或后处理以支持搜索。这不会禁用整个 UI ，因为按 ID 和依赖项查询的跟踪仍在运行。当您使用其他服务（例如日志）来查找跟踪 ID 时禁用此功能。默认为 true</li>
+<li><code>QUERY_TIMEOUT</code>: 设置查询请求的硬超时。接受任何持续时间字符串（例如， <code>100ms</code> ）。值 <code>0</code> 将完全禁用超时。默认为 <code>11s</code> 。</li>
+<li><code>QUERY_LOG_LEVEL</code>: 写入控制台的日志级别；默认为 <code>INFO</code></li>
+<li><code>QUERY_NAMES_MAX_AGE</code>: 控制 zipkin-server 对 UI 请求的最大响应时间。默认为 300 秒。</li>
+<li><code>QUERY_LOOKBACK</code>: 从 endTs 可以回溯多少毫秒查询；默认为 24​​ 小时（每天两个时段：今天一个，昨天一个）</li>
+<li><code>STORAGE_TYPE</code>: SpanStore 实现: <code>mem</code>, <code>mysql</code>, <code>cassandra3</code>, <code>elasticsearch</code> 中取一个</li>
+<li><code>COLLECTOR_SAMPLE_RATE</code>: 保留的记录道百分比，默认为“始终采样”（1.0）。</li>
+<li><code>AUTOCOMPLETE_KEYS</code>: 会通过 <code>/api/v2/autocompleteTags</code> 端点返回的跨度标签键列表；标签键应以逗号分隔，例如 &quot;instance_id,user_id,env&quot;</li>
+<li><code>AUTOCOMPLETE_TTL</code>: 以毫秒为单位抑制调用写入相同的自动完成键/值对的时间。默认 3600000（1 小时）</li>
+</ul>
+<h3 id="配置文件覆盖"> 配置文件覆盖</h3>
+<p>在场景下，所有配置都由 Spring Boot 管理。这意味着属性也可能被系统属性或 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank" rel="noopener noreferrer">Spring Boot<i>Content not supported</i></a> 支持的任何其他替代方案覆盖</p>
+<p>我们使用 yaml 配置将更短或更惯用的 ENV 变量绑定到最终使用的 Spring 属性。虽然大多数用户应该只使用环境变量，但有些用户可能希望使用属性文件方法来覆盖设置。例如，知道我们设置 <code>spring.config.name=zipkin-server</code> 了 ，Spring Boot 会自动在当前目录中查找一个名为的文件 <code>zipkin-server.properties</code> ，并且可以通过这种方式覆盖我们在 yaml 中设置的相同属性。</p>
+<p>如果您选择使用基于属性的配置而不是 ENV 变量，那么您就是在自定义配置。这意味着您将使用 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank" rel="noopener noreferrer">Spring Boot 文档<i>Content not supported</i></a> 或 <a href="https://stackoverflow.com/questions/tagged/spring-boot" target="_blank" rel="noopener noreferrer">堆栈溢出<i>Content not supported</i></a> 解决参数配置问题，而不是提出问题或使用我们的聊天支持。我们必须提到这一点，因为 Spring 的配置通常消耗资源很大，我们必须为 Zipkin 相关任务尽可能节省资源。</p>
+<h2 id="ui"> UI</h2>
+<p>Zipkin 有一个 Web UI，自动包含在 exec jar 中，默认托管在端口 9411 上。</p>
+<p>当 UI 加载时，它会从 <code>/config.json</code> 端点读取默认配置。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>environment</td>
+<td>zipkin.ui.environment</td>
+<td>这里的值变成右上角的标签。非必填</td>
+</tr>
+<tr>
+<td>defaultLookback</td>
+<td>zipkin.ui.default-lookback</td>
+<td>查找跟踪时回溯的默认持续时间（以毫秒为单位）。影响 UI 中的“开始时间”元素。默认为 900000（以毫秒为单位的 15 分钟）</td>
+</tr>
+<tr>
+<td>searchEnabled</td>
+<td>zipkin.ui.search-enabled</td>
+<td>如果启用了 Discover 屏幕。默认为真</td>
+</tr>
+<tr>
+<td>queryLimit</td>
+<td>zipkin.ui.query-limit</td>
+<td>查找 track 的默认限制。默认为 10</td>
+</tr>
+<tr>
+<td>instrumented</td>
+<td>zipkin.ui.instrumented</td>
+<td>此 Zipkin UI 涵盖哪些站点,正则表达式语法案例 <code>http:\/\/example.com\/.*</code> ，默认 (<code>.*</code>) 包含所有站点</td>
+</tr>
+<tr>
+<td>logsUrl</td>
+<td>zipkin.ui.logs-url</td>
+<td>记录查询服务 url 模式。如果指定，将在跟踪页面上显示一个按钮，并将 URL 中的 {traceId} 替换为 traceId。非必填</td>
+</tr>
+<tr>
+<td>supportUrl</td>
+<td>zipkin.ui.support-url</td>
+<td>用户可以请求支持的 URL。如果指定，将在侧面菜单中放置指向此 URL 的链接，例如用于提交支持票的页面。非必填</td>
+</tr>
+<tr>
+<td>archivePostUrl</td>
+<td>zipkin.ui.archive-post-url</td>
+<td>以 Zipkin v2 json 格式发布当前跟踪的 URL。例如 <code>https://longterm/api/v2/spans</code> 。如果指定，一个按钮将相应地出现在跟踪页面上。非必填</td>
+</tr>
+<tr>
+<td>archiveUrl</td>
+<td>zipkin.ui.archive-url</td>
+<td>提供归档跟踪的 Web 应用程序的 URL，以“{traceId}”为模板。例如 <code>https://longterm/zipkin/trace/{traceId}</code> 。跟踪成功发布到“archivePostUrl”后，确认消息中会显示此信息.非必填</td>
+</tr>
+<tr>
+<td>dependency.enabled</td>
+<td>zipkin.ui.dependency.enabled</td>
+<td>UI 依赖项展示是否启用. 默认为 true</td>
+</tr>
+<tr>
+<td>dependency.lowErrorRate</td>
+<td>zipkin.ui.dependency.low-error-rate</td>
+<td>依赖项链接变黄的错误率阈值。默认值为 0.5 (50%) 设置为 &gt;1 以禁用</td>
+</tr>
+<tr>
+<td>dependency.highErrorRate</td>
+<td>zipkin.ui.dependency.high-error-rate</td>
+<td>依赖项链接变红的错误率阈值。默认值为 0.75 (75%) 设置为 &gt;1 以禁用</td>
+</tr>
+<tr>
+<td>basePath</td>
+<td>zipkin.ui.basepath</td>
+<td>放置在 UI HTML 标签中的路径前缀；在反向代理后面运行时很有用。默认 <code>/zipkin</code></td>
+</tr>
+</tbody>
+</table>
+<p>要将属性映射到环境变量，请将它们更改为大写下划线格式。例如，如果使用 docker，您可以设置 ZIPKIN_UI_QUERY_LIMIT=100 相当于 <code>$.queryLimit</code> 在 <code>/config.json</code></p>
+<h3 id="跟踪存档"> 跟踪存档</h3>
+<p>大多数生产 Zipkin 集群使用有限的 TTL 存储跟踪。这使得共享跟踪有点不方便，因为它的链接将在几天后过期。</p>
+<p>&quot;跟踪归档&quot; 功能对此有所帮助。启动第二个 zipkin 服务器，指向一个比常规的 TTL 更长的存储，并设置 archivePostUrl 和 archiveUrl UI 配置指向这第二个服务器。设置 archivePostUrl 后，跟踪视图页面上将出现一个新的 &quot;Archive Trace&quot; 按钮。</p>
+<h2 id="存储"> 存储</h2>
+<h3 id="基于内存存储"> 基于内存存储</h3>
+<p>Zipkin 的 <a href="../zipkin/src/main/java/zipkin2/storage/InMemoryStorage.java">内存存储</a> 将所有数据保存在内存中，根据跨度限制清除旧数据。它适用于 <code>STORAGE_TYPE</code> 未设置或设置为 mem</p>
+<blockquote>
+<ul>
+<li><code>MEM_MAX_SPANS</code>: 超过此限制时，将首先清除最旧的记录道（及其跨度）。默认为 500000</li>
+</ul>
+</blockquote>
+<p>示例用法：</p>
+<div><pre><code>$ java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><div><p>警告</p>
+<p>注意：这个存储组件主要是为测试而开发的，也是一种在没有外部依赖的情况下快速启动和运行 Zipkin 服务器的方法。它对于高工作量是不可行的。也就是说，如果您遇到内存不足错误，请尝试减少 MEM_MAX_SPANS 或增加堆大小 (-Xmx)。 将内存中保存的跨度数量加倍的示例：</p>
+<p>将内存中保存的跨度数量加倍的示例：</p>
+<div><pre><code>$ <span>MEM_MAX_SPANS</span><span>=</span><span>1000000</span> java -Xmx1G -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div></div>
+<h3 id="cassandra-存储"> Cassandra 存储</h3>
+<p>Zipkin 的 Cassandra 存储组件支持 3.11.3+ 版本</p>
+<div><p>Cassandra 相关配置</p>
+<p><strong>当 <code>STORAGE_TYPE</code> 设置为 <code>cassandra3</code> 时，以下配置生效：</strong></p>
+<p><code>CASSANDRA_KEYSPACE</code>: 要使用的键空间，默认为： &quot;zipkin2&quot;
+<code>CASSANDRA_CONTACT_POINTS</code>: 以逗号分隔的主机地址列表配置 Cassandra 集群。还可以使用 <code>host:port</code> 指定自定义端口。默认为本地主机上的 9042 端口。
+<code>CASSANDRA_LOCAL_DC</code>: 将被视为负载平衡的 local 数据中心的名称。默认为 datacenter1
+<code>CASSANDRA_ENSURE_SCHEMA</code>: 确保 cassandra 使用最新模式。如果启用则尝试执行以 <code>cassandra-schema-cql3</code> 的前缀的脚本. 默认为 true
+<code>CASSANDRA_USERNAME</code>：Cassandra 认证账号
+<code>CASSANDRA_PASSWORD</code>: Cassandra 认证密码，如果认真失败会抛出错误，未设置默认值。
+<code>CASSANDRA_USE_SSL</code>: 需要 <code>javax.net.ssl.trustStore</code> 和 <code>javax.net.ssl.trustStorePassword</code>, 默认为 false.</p>
+<p><strong>以下是可能不涉及所有用户的调整参数：</strong></p>
+<ul>
+<li><code>CASSANDRA_MAX_CONNECTIONS</code>: 每个数据中心本地主机的最大池连接数。默认为8</li>
+<li><code>CASSANDRA_INDEX_CACHE_MAX</code>: 要缓存的最大跟踪索引元数据项。零禁用缓存。默认值为100000。</li>
+<li><code>CASSANDRA_INDEX_CACHE_TTL</code>: 缓存跟踪的索引元数据需要多少秒。默认值为60。</li>
+<li><code>CASSANDRA_INDEX_FETCH_MULTIPLIER</code>: 要获取的索引行比用户提供的查询限制多多少。默认为3。</li>
+</ul>
+</div>
+<p>使用 Cassandra 和请求日志记录的示例用法（TRACE 显示查询值）：</p>
+<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>cassandra3 java -jar zipkin.jar <span>\</span>
+--logging.level.com.datastax.oss.driver.internal.core.tracker.RequestLogger<span>=</span>DEBUG
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h3 id="elasticsearch-存储"> Elasticsearch 存储</h3>
+<p>Zipkin 的 Elasticsearch 存储组件支持 5-7.x 版本</p>
+<div><p>Elasticsearch 相关配置</p>
+<h2 id="当-storage-type-设置为-elasticsearch-时-以下配置生效"> <strong>当 <code>STORAGE_TYPE</code> 设置为 <code>elasticsearch</code> 时，以下配置生效：</strong></h2>
+<ul>
+<li><code>ES_HOSTS</code>: 以逗号分隔的 elasticsearch 连接 url 列表，默认值为： &quot;http://localhost:9200&quot;</li>
+<li><code>ES_PIPELINE</code>: 指示为跨距编制索引之前使用的摄取管道，无默认值</li>
+<li><code>ES_TIMEOUT</code>: 配置 Elasticsearch API 的连接、读写超时时间，默认值为 10000 (10秒)</li>
+<li><code>ES_INDEX</code>: 生成每日索引名称时要使用的索引前缀，默认值为： zipkin.</li>
+<li><code>ES_DATE_SEPARATOR</code>: 生成每日索引名称时要使用的日期分隔符，默认值为： '-' .</li>
+<li><code>ES_INDEX_SHARDS</code>: 索引分片数。每个碎片及其副本分配给群集中的一台机器。增加碎片的数量集群中的机器将提高读写性能。无法更改现有索引的碎片数量，但可以更改新的每日索引。默认为 5</li>
+<li><code>ES_INDEX_REPLICAS</code>: 索引碎片副本数。相对条件下数值越大读性能越好，写性能越差。默认值为 1 。设置为 0 意味着机器故障很大可能会导致数据丢失。</li>
+<li><code>ES_ENSURE_TEMPLATES</code>: 缺失时安装Zipkin索引模板。将此设置为 false ，当索引模板与预期不匹配时，会导致数据损坏。如果如果将其设置为 true ，则会自动处理数据故障或迁移问题，而不是依靠人工手动来解决。默认为true</li>
+<li><code>ES_USERNAME</code> and <code>ES_PASSWORD</code>: Elasticsearch基本身份验证，默认为空字符串。当X-Pack安全（以前称为Shield）就位时使用。</li>
+<li><code>ES_CREDENTIALS_FILE</code>: ES 认证凭据文件位置, 包含以下属性，该文件优先级大于 ES_USERNAME 与 ES_PASSWORD 配置
+<ul>
+<li><code>zipkin.storage.elasticsearch.username</code>：用户名</li>
+<li><code>zipkin.storage.elasticsearch.password</code>：密码</li>
+</ul>
+</li>
+<li><code>ES_CREDENTIALS_REFRESH_INTERVAL</code>: 定期刷新 <code>ES_CREDENTIALS_FILE</code> 文件周期（单位：秒），默认值为：1</li>
+<li><code>ES_HTTP_LOGGING</code>: 设置后，配置 Elasticsearch API 的 HTTP 日志记录，包含：Options are BASIC, HEADERS, BODY</li>
+<li><code>ES_SSL_NO_VERIFY</code>: 如果为true，则禁用服务器密钥证书链的验证。这不适合生产。默认为false。</li>
+<li><code>ES_TEMPLATE_PRIORITY</code>: 可组合索引模板的优先级值。这仅适用于ES 7.8或更高版本。必须设置为0才能使用可组合模板</li>
+</ul>
+</div>
+<p>使用示例：</p>
+<p>简单连接 ES :</p>
+<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch <span>ES_HOSTS</span><span>=</span>http://myhost:9200 java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><p>记录 ES http 请求日志:</p>
+<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch <span>ES_HTTP_LOGGING</span><span>=</span>BASIC java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><h4 id="使用自定义密钥库或信任库-ssl"> 使用自定义密钥库或信任库 (SSL)</h4>
+<p>如果您的 Elasticsearch 端点自定义 SSL 配置（例如自签名）证书，您可以使用以下任何 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#T6" target="_blank" rel="noopener noreferrer">JSSE 属性子集<i>Content not supported</i></a> 连接。</p>
+<ul>
+<li>javax.net.ssl.keyStore</li>
+<li>javax.net.ssl.keyStorePassword</li>
+<li>javax.net.ssl.keyStoreType</li>
+<li>javax.net.ssl.trustStore</li>
+<li>javax.net.ssl.trustStorePassword</li>
+<li>javax.net.ssl.trustStoreType</li>
+</ul>
+<p>使用示例：</p>
+<div><pre><code>$ <span>JAVA_OPTS</span><span>=</span><span>'-Djavax.net.ssl.keyStore=keystore.p12 -Djavax.net.ssl.keyStorePassword=keypassword -Djavax.net.ssl.keyStoreType=PKCS12 -Djavax.net.ssl.trustStore=truststore.p12 -Djavax.net.ssl.trustStorePassword=trustpassword -Djavax.net.ssl.trustStoreType=PKCS12'</span>
+$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch java <span>$JAVA_OPTS</span> -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>在该场景下，这些映射到属性 <code>prefixed zipkin.storage.elasticsearch.ssl.</code>，这会影响用于连接到 Elasticsearch 的 Armeria 客户端。</p>
+<p>上述属性允许最常见的 SSL 开箱即用的设置。如果您需要更多定制，请提交 <a href="https://github.com/openzipkin/zipkin/issues/2774" target="_blank" rel="noopener noreferrer">issue<i>Content not supported</i></a></p>
+<h4 id="自动创建索引"> 自动创建索引</h4>
+<p>当需要的时候 Zipkin 自动创建 ES 索引。 Elasticsearch 默认 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html#index-creation" target="_blank" rel="noopener noreferrer">允许<i>Content not supported</i></a> 自动创建索引, 你可以在集群中验证这个设置: <code>action.auto_create_index: false</code>.</p>
+<h4 id="mysql-存储"> MySQL 存储</h4>
+<p>Zipkin 的 MySQL 存储组件支持 5.7 版本
+当 <code>STORAGE_TYPE</code> 设置为 <code>mysql</code> 时，以下属性生效：</p>
+<ul>
+<li><code>MYSQL_DB</code>: MySQL 使用数据库，默认为 &quot;zipkin&quot;.</li>
+<li><code>MYSQL_USER</code> and <code>MYSQL_PASS</code>: MySQL 认证信息, 默认值为空.</li>
+<li><code>MYSQL_HOST</code>: 默认值为 localhost</li>
+<li><code>MYSQL_TCP_PORT</code>: 默认值为 3306</li>
+<li><code>MYSQL_MAX_CONNECTIONS</code>:  MySQL 最大连接数, defaults to 10</li>
+<li><code>MYSQL_USE_SSL</code>: 需要 <code>javax.net.ssl.trustStore</code> and <code>javax.net.ssl.trustStorePassword</code>, 默认为 false.</li>
+</ul>
+<p>注意：不建议将此模块用于生产用途。使用前，需要进行以下环境配置：</p>
+<div><pre><code><span># Barracuda supports compression (In AWS RDS, this must be assigned in a parameter group)</span>
+$ mysql -uroot -e <span>"SET GLOBAL innodb_file_format=Barracuda"</span>
+<span># This command should work even in RDS, and return "Barracuda"</span>
+$ mysql -uroot -e <span>"show global variables like 'innodb_file_format'"</span>
+
+<span># install the schema and indexes</span>
+<span># sql 文件获取：https://github.com/openzipkin/zipkin/blob/master/zipkin-storage/mysql-v1/src/main/resources/mysql.sql</span>
+$ mysql -uroot -e <span>"create database if not exists zipkin"</span>
+$ mysql -uroot -Dzipkin <span>&lt;</span> zipkin-storage/mysql-v1/src/main/resources/mysql.sql
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>或者，您可以 <code>MYSQL_JDBC_URL</code> 自己使用并指定完整的 JDBC url。请注意，使用上述单独设置构建的 URL 还将包含以下参数： <code>?autoReconnect=true&amp;useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8</code>。</p>
+<p>示例用法：</p>
+<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>mysql <span>MYSQL_USER</span><span>=</span>root java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="throttled-存储-实验性"> Throttled 存储 (实验性)</h3>
+<p>这些设置可用于帮助调整 Zipkin 将数据刷新到另一个底层 <code>StorageComponent</code> （例如 Elasticsearch）的速率：</p>
+<ul>
+<li><code>STORAGE_THROTTLE_ENABLED</code>: Enables throttling</li>
+<li><code>STORAGE_THROTTLE_MIN_CONCURRENCY</code>: Minimum number of Threads to use for writing to storage.</li>
+<li><code>STORAGE_THROTTLE_MAX_CONCURRENCY</code>: Maximum number of Threads to use for writing to storage.</li>
+<li><code>STORAGE_THROTTLE_MAX_QUEUE_SIZE</code>: How many messages to buffer while all Threads are writing data before abandoning a message (0 = no buffering).</li>
+</ul>
+<p>由于此功能是实验性的，因此不建议在生产环境中运行此功能。</p>
+<h2 id="收集器-2"> 收集器</h2>
+<h3 id="http-收集器"> HTTP 收集器</h3>
+<p>HTTP 收集器默认启用。 他支持 <code>POST /api/v1/spans</code> and <code>POST /api/v2/spans</code>.
+HTTP 收集器默支持以下配置:</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLLECTOR_HTTP_ENABLED</code></td>
+<td><code>zipkin.collector.http.enabled</code></td>
+<td><code>false</code> 禁用 HTTP 收集器。默认为 <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scribe-legacy-collector"> Scribe (Legacy) Collector</h3>
+<p>支持 Scribe 的收集器在 <code>COLLECTOR_SCRIBE_ENABLED=true</code> 时启用. 不鼓励新站点使用此收集器，因为 Scribe 是一种存档技术。</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLLECTOR_PORT</code></td>
+<td><code>zipkin.collector.scribe.port</code></td>
+<td>监听 thrift RPC scribe 请求的端口。默认为 9410</td>
+</tr>
+<tr>
+<td><code>SCRIBE_CATEGORY</code></td>
+<td><code>zipkin.collector.scribe.category</code></td>
+<td>类别 zipkin 将从中消耗。默认为 <code>zipkin</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="activemq-收集器"> ActiveMQ 收集器</h3>
+<p>Zipkin 的 ActiveMQ 收集器组件支持 v5.x 版本，当配置 <code>ACTIVEMQ_URL</code> 值时启用，支持以下属性配置</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLLECTOR_ACTIVEMQ_ENABLED</code></td>
+<td><code>zipkin.collector.activemq.enabled</code></td>
+<td><code>false</code> 禁用 ActiveMQ 收集器。默认为 <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_URL</code></td>
+<td><code>zipkin.collector.activemq.url</code></td>
+<td><a href="https://activemq.apache.org/uri-protocols" target="_blank" rel="noopener noreferrer">Connection URL<i>Content not supported</i></a> 连接设置, 例如 <code>tcp://localhost:61616</code> 或 <code>failover:(tcp://localhost:61616,tcp://remotehost:61616)</code></td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_QUEUE</code></td>
+<td><code>zipkin.collector.activemq.queue</code></td>
+<td>从中收集消息的队列名称。 默认为 <code>zipkin</code></td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_CLIENT_ID_PREFIX</code></td>
+<td><code>zipkin.collector.activemq.client-id-prefix</code></td>
+<td>队列使用者的客户端ID前缀。默认为 <code>zipkin</code></td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_CONCURRENCY</code></td>
+<td><code>zipkin.collector.activemq.concurrency</code></td>
+<td>并发消费数量。 默认为 <code>1</code></td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_USERNAME</code></td>
+<td><code>zipkin.collector.activemq.username</code></td>
+<td>ActiveMQ 连接用户名</td>
+</tr>
+<tr>
+<td><code>ACTIVEMQ_PASSWORD</code></td>
+<td><code>zipkin.collector.activemq.password</code></td>
+<td>ActiveMQ 连接密码</td>
+</tr>
+</tbody>
+</table>
+<p>示例用法：</p>
+<div><pre><code>$ <span>ACTIVEMQ_URL</span><span>=</span>tcp://localhost:61616 java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="kafka-收集器"> Kafka 收集器</h3>
+<p>Zipkin 的 Kafka 收集器组件支持 v0.10+ 版本，当配置 <code>KAFKA_BOOTSTRAP_SERVERS</code> 值时启用，支持以下属性配置</p>
+<p>关于 kafka 的新消费者配置请看 <a href="https://kafka.apache.org/documentation/#newconsumerconfigs" target="_blank" rel="noopener noreferrer">这里<i>Content not supported</i></a>.</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>New Consumer Config</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLLECTOR_KAFKA_ENABLED</code></td>
+<td>N/A</td>
+<td><code>false</code> 禁用 Kafka 收集器。默认为 <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>KAFKA_BOOTSTRAP_SERVERS</code></td>
+<td>bootstrap.servers</td>
+<td>以逗号分隔的连接配置列表, 例如： 127.0.0.1:9092。无默认值</td>
+</tr>
+<tr>
+<td><code>KAFKA_GROUP_ID</code></td>
+<td>group.id</td>
+<td>此进程所代表的消费组。默认为 <code>zipkin</code></td>
+</tr>
+<tr>
+<td><code>KAFKA_TOPIC</code></td>
+<td>N/A</td>
+<td>kafka 消费者 topic 配置。默认为 <code>zipkin</code></td>
+</tr>
+<tr>
+<td><code>KAFKA_STREAMS</code></td>
+<td>N/A</td>
+<td>topic 消费线程数。默认为  <code>1</code></td>
+</tr>
+</tbody>
+</table>
+<p>示例用法：</p>
+<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><h4 id="其他的-kafka-消费者属性配置"> 其他的 kafka 消费者属性配置</h4>
+<p>您可能需要设置其他 <a href="https://kafka.apache.org/documentation/#newconsumerconfigs" target="_blank" rel="noopener noreferrer">Kafka 消费者属性<i>Content not supported</i></a>，除了由收集器定义的具有显式属性的那些。在这种情况下，您需要在该属性名称前面加上前缀 <code>zipkin.collector.kafka.overrides</code> 并将其作为系统属性参数传递。
+例如，要覆盖 <code>auto.offset.reset</code> 属性, 你需要设置一个名为 <code>zipkin.collector.kafka.overrides.auto.offset.reset</code> 的属性:</p>
+<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
+    java -Dzipkin.collector.kafka.overrides.auto.offset.reset<span>=</span>latest -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h4 id="详细示例"> 详细示例</h4>
+<p>针对在 Docker 中运行的 Kafka 的示例：</p>
+<div><pre><code>$ <span>export</span> <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span><span>$(</span>docker-machine <span>ip</span> `docker-machine active`<span>)</span></span>
+<span># 后台运行 kafka</span>
+$ docker run -d -p <span>9092</span>:9092 <span>\</span>
+    --env <span>ADVERTISED_HOST</span><span>=</span><span>$KAFKA_BOOTSTRAP_SERVERS</span> <span>\</span>
+    --env <span>AUTO_CREATE_TOPICS</span><span>=</span>true <span>\</span>
+    spotify/kafka
+<span># 通过 $KAFKA_BOOTSTRAP_SERVERS 环境变脸启动 zipkin 服务</span>
+$ java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>多个 bootstrap servers 配置:</p>
+<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span>broker1.local:9092,broker2.local:9092 <span>\</span>
+    java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>备用 topic 名称配置:</p>
+<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
+    java -Dzipkin.collector.kafka.topic<span>=</span>zapkin,zipken -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>将 bootstrap servers 指定为系统属性，而不是环境变量:</p>
+<div><pre><code>$ java -Dzipkin.collector.kafka.bootstrap-servers<span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
+    -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h3 id="rabbitmq-收集器"> RabbitMQ 收集器</h3>
+<p>当设置 <code>addresses</code> 或 <code>uri</code> 的时候， <a href="../zipkin-collector/rabbitmq">RabbitMQ 收集器</a> 会启动</p>
+<p>示例用法：</p>
+<div><pre><code>$ <span>RABBIT_ADDRESSES</span><span>=</span>localhost java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="grpc-收集器-实验性"> gRPC 收集器 (实验性)</h3>
+<p>您可以通过设置 <code>COLLECTOR_GRPC_ENABLED=true</code> 启用 gRPC 收集器端点。 <code>zipkin.proto3.SpanService/Report</code> 端点会和普通 http 服务一样运行。</p>
+<p>示例用法：</p>
+<div><pre><code>$ <span>COLLECTOR_GRPC_ENABLED</span><span>=</span>true java -jar zipkin.jar
+</code></pre>
+<div><span>1</span><br></div></div><p>由于此服务是实验性的，因此不建议在生产环境中运行此服务。</p>
+<h2 id="自我追踪"> 自我追踪</h2>
+<p>存在自我跟踪以帮助解决 zipkin 服务器的性能问题。在生产部署应该将自我跟踪的应将采样率从 1.0 (100%) 降低到更小的速率，例如 0.001（0.1% 或千分之一）。</p>
+<p>当配置 <code>zipkin.self-tracing.enabled=true</code>, Zipkin 将自动启动对服务 &quot;zipkin-server&quot; 的 API 的调用进行自我追踪</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SELF_TRACING_ENABLED</td>
+<td>zipkin.self-tracing.enabled</td>
+<td>设置为 true 以启用自我跟踪。默认为 false</td>
+</tr>
+<tr>
+<td>SELF_TRACING_SAMPLE_RATE</td>
+<td>zipkin.self-tracing.sample-rate</td>
+<td>要保留的自我跟踪的百分比，默认为始终采样 (1.0)。</td>
+</tr>
+<tr>
+<td>SELF_TRACING_FLUSH_INTERVAL</td>
+<td>zipkin.self-tracing.flush-interval</td>
+<td>将自跟踪数据刷新到存储的时间间隔（以秒为单位）。默认为 1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_128-位跟踪-id"> 128 位跟踪 ID</h3>
+<p>Zipkin 支持 64 位和 128 位跟踪标识符，通常序列化为 16 或 32 个字符的十六进制字符串。默认情况下，向 zipkin 报告的具有相同跟踪 ID 的跨度将被考虑在同一跟踪中。</p>
+<p>例如， <code>463ac35c9f6413ad48485a3953bb6124</code> 是 128 位的跟踪 ID，而 <code>48485a3953bb6124</code> 是 64 位的。</p>
+<p>注意：跟踪中的跨度（或父）ID 是 64 位的，无论其跟踪 ID 的长度或值如何</p>
+<h4 id="从-64-位迁移到-128-位跟踪-id"> 从 64 位迁移到 128 位跟踪 ID</h4>
+<p>除非您在所有应用程序都支持时仅发出 128 位跟踪，否则将应用程序从 64 位跟踪 ID 更新到 128 位跟踪 ID 的过程会导致混合状态。这种混合状态通过设置 <code>STRICT_TRACE_ID=false</code> 来缓解。如下所述，迁移完成后，删除 <code>STRICT_TRACE_ID=false</code> 设置，或者将其设置为 true</p>
+<p>以下是一些跟踪ID，它们可以帮助您了解此设置过程中发生的情况。</p>
+<ul>
+<li>Trace ID A: 463ac35c9f6413ad48485a3953bb6124</li>
+<li>Trace ID B: 48485a3953bb6124</li>
+<li>Trace ID C: 463ac35c9f6413adf1a48a8cff464e0e</li>
+<li>Trace ID D: 463ac35c9f6413ad</li>
+</ul>
+<p>在 64 位环境中，跟踪 ID 看起来像上面的 B 或 D。当应用程序升级到 128 位检测并决定创建 128 位跟踪时，其跟踪 ID 将类似于上面的 A 或 C。</p>
+<p>尚不支持 128 位的应用程序通常只保留跟踪 ID 最右边的 16 个字符。发生这种情况时，同一跟踪可能会报告为跟踪 ID A 或跟踪 ID B。</p>
+<p>默认情况下，Zipkin 会认为这些是不同的跟踪 ID，因为它们是不同的字符串。在从 64 位到 128 位跟踪 ID 的转换过程中，跨度将出现在两个 ID 之间。例如，它可能以跟踪 ID A 开始，但下一跃点可能会将其截断为跟踪 ID B。这会使系统无法用于执行升级的应用程序。</p>
+<p>解决此问题的一种方法是在所有应用程序都支持之前不使用 128 位跟踪 ID。这以协调为代价防止了混合情况。另一种方法是设置 <code>STRICT_TRACE_ID=false</code></p>
+<p>当设置 <code>STRICT_TRACE_ID=false</code> ，在对跟踪进行分组或检索时，只考虑 32 个字符的跟踪 ID 中最右边的 16 个。此设置应仅在从 64 位跟踪 ID 转换到 128 位跟踪 ID 时应用，并在转换完成后删除。</p>
+<p>请查看 <a href="https://github.com/openzipkin/b3-propagation/issues/6" target="_blank" rel="noopener noreferrer">https://github.com/openzipkin/b3-propagation/issues/6<i>Content not supported</i></a> 了解 128 位跟踪标识符上已知开源库的状态。</p>
+<p>查看源码 <code>zipkin2.storage.StorageComponent.Builder</code> 了解更多信息</p>
+<h2 id="tls-ssl"> TLS/SSL</h2>
+<p>如果需要，可以使 Zipkin-server 与 TLS 一起运行：</p>
+<div><pre><code><span># assuming you generate the key like this</span>
+keytool -genkeypair -alias mysite -keyalg RSA -keysize <span>2048</span> -storetype PKCS12 -keystore zipkin.p12 -validity <span>3650</span>
+
+java -jar zipkin.jar --armeria.ssl.key-store<span>=</span>zipkin.p12 --armeria.ssl.key-store-type<span>=</span>PKCS12 --armeria.ssl.key-store-password<span>=</span><span>123123</span> --armeria.ssl.key-alias<span>=</span>mysite  --armeria.ssl.enabled<span>=</span>true --armeria.ports<span>[</span><span>0</span><span>]</span>.port<span>=</span><span>9411</span> --armeria.ports<span>[</span><span>0</span><span>]</span>.protocols<span>[</span><span>0</span><span>]</span><span>=</span>https
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="运行在-docker-中"> 运行在 Docker 中</h2>
+<p>zipkin-server 的发布版本以 <code>openzipkin/zipkin</code> 发布在 <a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">Docker Hub<i>Content not supported</i></a> 。点击 <a href="https://github.com/openzipkin/docker-zipkin" target="_blank" rel="noopener noreferrer">docker-zipkin<i>Content not supported</i></a> 查看详情</p>
+<h2 id="本地构建"> 本地构建</h2>
+<p>要从源码构建和运行服务器，请输入以下内容</p>
+<div><pre><code><span># Build the server and also make its dependencies</span>
+$ ./mvnw -T1C -q --batch-mode -DskipTests --also-make -pl zipkin-server clean package
+<span># Run the server</span>
+$ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
+<span># or Run the slim server</span>
+$ java -jar ./zipkin-server/target/zipkin-server-*slim.jar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Zipkin</title>
       <link>https://list-jiang.github.io/spring/track/zipkin/start-env%20copy/</link>
       <guid>https://list-jiang.github.io/spring/track/zipkin/start-env%20copy/</guid>
       <source url="https://list-jiang.github.io/rss.xml">Zipkin</source>
@@ -1532,593 +2119,6 @@ java -jar zipkin.jar --armeria.ssl.key-store<span>=</span>zipkin.p12 --armeria.s
 See <a href="https://github.com/openzipkin/docker-zipkin" target="_blank" rel="noopener noreferrer">docker-zipkin<i>Content not supported</i></a> for details.</p>
 <h2 id="building-locally"> Building locally</h2>
 <p>To build and run the server from the currently checked out source, enter the following.</p>
-<div><pre><code><span># Build the server and also make its dependencies</span>
-$ ./mvnw -T1C -q --batch-mode -DskipTests --also-make -pl zipkin-server clean package
-<span># Run the server</span>
-$ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
-<span># or Run the slim server</span>
-$ java -jar ./zipkin-server/target/zipkin-server-*slim.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>Zipkin</title>
-      <link>https://list-jiang.github.io/spring/track/zipkin/start-env/</link>
-      <guid>https://list-jiang.github.io/spring/track/zipkin/start-env/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Zipkin</source>
-      <pubDate>Thu, 24 Feb 2022 06:38:19 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="zipkin-server"> zipkin-server</h1>
-<p>Zipkin Server 是一个 Java 1.8+ 服务，打包为一个可执行的 jar。 跨度存储和收集器是可配置的。默认情况下，存储在内存中，启用 HTTP 收集器（POST /api/v2/spans 端点），服务器侦听端口 9411。 Zipkin Server 使用 <a href="https://github.com/line/armeria" target="_blank" rel="noopener noreferrer">Armeria<i>Content not supported</i></a> 实现。 虽然它在内部使用 Spring Boot  （打开新窗口）
-，不应将 Zipkin Server 视为普通的 <a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/" target="_blank" rel="noopener noreferrer">Spring Boot<i>Content not supported</i></a> 应用程序。</p>
-<h2 id="不支持自定义服务器"> 不支持自定义服务器</h2>
-<p>不支持通过类似于 spring boot 应用程序添加 <code>zipkin-server</code> 引用这种方式来构建服务。</p>
-<h2 id="快速启动"> 快速启动</h2>
-<p>最快的上手方式是通过 <a href="https://search.maven.org/remote_content?g=io.zipkin&amp;a=zipkin-server&amp;v=LATEST&amp;c=exec" target="_blank" rel="noopener noreferrer">最新 jar 发布服务器<i>Content not supported</i></a> 获取一个独立的可执行jar。请注意，Zipkin 服务器需要最低 JRE 8。</p>
-<div><pre><code>$ <span>curl</span> -sSL https://zipkin.io/quickstart.sh <span>|</span> <span>bash</span> -s
-$ java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>启动后，浏览 http://your_host:9411 验证</p>
-<h2 id="端点"> 端点</h2>
-<p>以下端点在服务基础url http://your_host:9411 下定义</p>
-<ul>
-<li>/ - <a href="../zipkin-ui">UI</a></li>
-<li>/config.json - UI 配置</li>
-<li>/api/v2 - <a href="https://zipkin.io/zipkin-api/#/" target="_blank" rel="noopener noreferrer">API<i>Content not supported</i></a></li>
-<li>/health - 如果正常则返回 200</li>
-<li>/info - 提供正在运行的实例的版本</li>
-<li>/metrics - 包括按传输类型细分的收集器指标</li>
-<li>/prometheus - Prometheus 抓取端点</li>
-</ul>
-<p><a href="https://zipkin.io/zipkin-api/#/" target="_blank" rel="noopener noreferrer">旧版 /api/v1 API<i>Content not supported</i></a> 仍然支持。后端通过数据转换与 HTTP API 分离。这意味着您仍然可以在新后端接受旧数据，反之亦然。进入 <code>https://zipkin.io/zipkin-api/zipkin-api.yaml</code> Swagger UI 的探索框查看旧定义</p>
-<h3 id="cors-跨域资源共享"> CORS（跨域资源共享）</h3>
-<p>默认情况下，所有端点 <code>/api/v2</code> 都配置为允许跨域请求。</p>
-<p>这可以通过修改 <code>zipkin.query.allowed-origins</code> 属性来改变。</p>
-<p>例如，要允许来自 <code>http://foo.bar.com</code> 域名下的 CORS 请求：</p>
-<div><pre><code>ZIPKIN_QUERY_ALLOWED_ORIGINS=http://foo.bar.com
-</code></pre>
-<div><span>1</span><br></div></div><p>更多的相关配置请看  。</p>
-<h3 id="服务和跨度名称查询"> 服务和跨度名称查询</h3>
-<p>Zipkin <a href="https://zipkin.io/zipkin-api/#/default/get_services" target="_blank" rel="noopener noreferrer">API<i>Content not supported</i></a> 不包括返回多远查找服务或跨度名称的参数。为了防止负载过大，服务和跨度名称查询通过配置
-<code>QUERY_LOOKBACK</code> 限制，默认为24小时（每天两个桶：今天一个，昨天一个）</p>
-<h2 id="日志"> 日志</h2>
-<p>默认情况下， zipkin 以 INFO 或更高级别将日志写入控制台。所以可以通过配置  <code>logging.level.XXX</code> 属性调整日志级别</p>
-<p>例如，如果您想为所有 zipkin 类别启用调试日志记录，您可以像这样启动服务器：</p>
-<div><pre><code>$ java -jar zipkin.jar --logging.level.zipkin2<span>=</span>DEBUG
-</code></pre>
-<div><span>1</span><br></div></div><p>更多的相关配置请看  。</p>
-<h3 id="高级日志配置"> 高级日志配置</h3>
-<p>实际上，服务器使用 <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html#howto-configure-logback-for-logging" target="_blank" rel="noopener noreferrer">Spring Boot - Logback集成<i>Content not supported</i></a> 处理日志，所以可以通过配置 <code>--logging.exception-conversion-word=%wEx{full}</code> 转储完整堆栈跟踪而不是截断的跟踪。</p>
-<h2 id="metrics"> Metrics</h2>
-<p>收集器指标被导出到路径 <code>/metrics</code> 。这些和其他指标被导出到路径 <code>/prometheus</code> 。</p>
-<h3 id="示例-prometheus-配置"> 示例 Prometheus 配置</h3>
-<p>Here's an example <code>/prometheus</code> configuration, using the Prometheus
-exposition [text format version 0.0.4]</p>
-<p>这是一个示例 <code>/prometheus</code> 配置，使用 Prometheus exposition<a href="https://prometheus.io/docs/instrumenting/exposition_formats/" target="_blank" rel="noopener noreferrer">文本格式版本 0.0.4<i>Content not supported</i></a></p>
-<div><pre><code>  <span>-</span> <span>job_name</span><span>:</span> <span>'zipkin'</span>
-    <span>scrape_interval</span><span>:</span> 5s
-    <span>metrics_path</span><span>:</span> <span>'/prometheus'</span>
-    <span>static_configs</span><span>:</span>
-      <span>-</span> <span>targets</span><span>:</span> <span>[</span><span>'localhost:9411'</span><span>]</span>
-    <span>metric_relabel_configs</span><span>:</span>
-      <span># Response code count</span>
-      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
-        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
-        <span>replacement</span><span>:</span> <span>'${1}'</span>
-        <span>target_label</span><span>:</span> status
-      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
-        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
-        <span>replacement</span><span>:</span> <span>'${2}'</span>
-        <span>target_label</span><span>:</span> path
-      <span>-</span> <span>source_labels</span><span>:</span> <span>[</span>__name__<span>]</span>
-        <span>regex</span><span>:</span> <span>'^status_(\d+)_(.*)$'</span>
-        <span>replacement</span><span>:</span> <span>'http_requests_total'</span>
-        <span>target_label</span><span>:</span> __name__
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h3 id="收集器"> 收集器</h3>
-<p>Metric 收集器按传输细分。以下内容被导出到 <code>/metrics</code> 端点：</p>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>counter.zipkin_collector.messages.$transport</td>
-<td>收到的累积消息；应该与检测应用程序报告的消息相关</td>
-</tr>
-<tr>
-<td>counter.zipkin_collector.messages_dropped.$transport</td>
-<td>累积消息丢弃；原因包括客户端断开连接或格式错误的内容</td>
-</tr>
-<tr>
-<td>counter.zipkin_collector.bytes.$transport</td>
-<td>累积消息字节</td>
-</tr>
-<tr>
-<td>counter.zipkin_collector.spans.$transport</td>
-<td>累积跨度读取；应该与检测应用程序报告的消息相关</td>
-</tr>
-<tr>
-<td>counter.zipkin_collector.spans_dropped.$transport</td>
-<td>累积跨度下降；原因包括采样或存储故障</td>
-</tr>
-<tr>
-<td>gauge.zipkin_collector.message_spans.$transport</td>
-<td>消息中的最后一个跨度计数</td>
-</tr>
-<tr>
-<td>gauge.zipkin_collector.message_bytes.$transport</td>
-<td>消息中的最后一个字节数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="配置"> 配置</h2>
-<p>我们支持 ENV 变量配置，例如 <code>STORAGE_TYPE=cassandra3</code> ，因为它们为管理员所熟悉，并且易于在 Docker 等运行时环境中使用</p>
-<p>以下是 Zipkin 的顶层配置：</p>
-<ul>
-<li><code>QUERY_PORT</code>: HTTP API 和 Web UI 的监听端口；默认为 <code>9411</code></li>
-<li><code>QUERY_ENABLED</code>: 配置 <code>false</code> 禁用 '/api/v2' 端点。这也会导致 UI 不可用，因为 UI 依赖于 API。 如果您的唯一目标是限制搜索, 请配置 <code>SEARCH_ENABLED</code> 为 <code>false</code></li>
-<li><code>SEARCH_ENABLED</code>: <code>false</code> 禁用查询 API 中的搜索以及收集器中的任何索引或后处理以支持搜索。这不会禁用整个 UI ，因为按 ID 和依赖项查询的跟踪仍在运行。当您使用其他服务（例如日志）来查找跟踪 ID 时禁用此功能。默认为 true</li>
-<li><code>QUERY_TIMEOUT</code>: 设置查询请求的硬超时。接受任何持续时间字符串（例如， <code>100ms</code> ）。值 <code>0</code> 将完全禁用超时。默认为 <code>11s</code> 。</li>
-<li><code>QUERY_LOG_LEVEL</code>: 写入控制台的日志级别；默认为 <code>INFO</code></li>
-<li><code>QUERY_NAMES_MAX_AGE</code>: 控制 zipkin-server 对 UI 请求的最大响应时间。默认为 300 秒。</li>
-<li><code>QUERY_LOOKBACK</code>: 从 endTs 可以回溯多少毫秒查询；默认为 24​​ 小时（每天两个时段：今天一个，昨天一个）</li>
-<li><code>STORAGE_TYPE</code>: SpanStore 实现: <code>mem</code>, <code>mysql</code>, <code>cassandra3</code>, <code>elasticsearch</code> 中取一个</li>
-<li><code>COLLECTOR_SAMPLE_RATE</code>: 保留的记录道百分比，默认为“始终采样”（1.0）。</li>
-<li><code>AUTOCOMPLETE_KEYS</code>: 会通过 <code>/api/v2/autocompleteTags</code> 端点返回的跨度标签键列表；标签键应以逗号分隔，例如 &quot;instance_id,user_id,env&quot;</li>
-<li><code>AUTOCOMPLETE_TTL</code>: 以毫秒为单位抑制调用写入相同的自动完成键/值对的时间。默认 3600000（1 小时）</li>
-</ul>
-<h3 id="配置文件覆盖"> 配置文件覆盖</h3>
-<p>在场景下，所有配置都由 Spring Boot 管理。这意味着属性也可能被系统属性或 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank" rel="noopener noreferrer">Spring Boot<i>Content not supported</i></a> 支持的任何其他替代方案覆盖</p>
-<p>我们使用 yaml 配置将更短或更惯用的 ENV 变量绑定到最终使用的 Spring 属性。虽然大多数用户应该只使用环境变量，但有些用户可能希望使用属性文件方法来覆盖设置。例如，知道我们设置 <code>spring.config.name=zipkin-server</code> 了 ，Spring Boot 会自动在当前目录中查找一个名为的文件 <code>zipkin-server.properties</code> ，并且可以通过这种方式覆盖我们在 yaml 中设置的相同属性。</p>
-<p>如果您选择使用基于属性的配置而不是 ENV 变量，那么您就是在自定义配置。这意味着您将使用 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank" rel="noopener noreferrer">Spring Boot 文档<i>Content not supported</i></a> 或 <a href="https://stackoverflow.com/questions/tagged/spring-boot" target="_blank" rel="noopener noreferrer">堆栈溢出<i>Content not supported</i></a> 解决参数配置问题，而不是提出问题或使用我们的聊天支持。我们必须提到这一点，因为 Spring 的配置通常消耗资源很大，我们必须为 Zipkin 相关任务尽可能节省资源。</p>
-<h2 id="ui"> UI</h2>
-<p>Zipkin 有一个 Web UI，自动包含在 exec jar 中，默认托管在端口 9411 上。</p>
-<p>当 UI 加载时，它会从 <code>/config.json</code> 端点读取默认配置。</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>environment</td>
-<td>zipkin.ui.environment</td>
-<td>这里的值变成右上角的标签。非必填</td>
-</tr>
-<tr>
-<td>defaultLookback</td>
-<td>zipkin.ui.default-lookback</td>
-<td>查找跟踪时回溯的默认持续时间（以毫秒为单位）。影响 UI 中的“开始时间”元素。默认为 900000（以毫秒为单位的 15 分钟）</td>
-</tr>
-<tr>
-<td>searchEnabled</td>
-<td>zipkin.ui.search-enabled</td>
-<td>如果启用了 Discover 屏幕。默认为真</td>
-</tr>
-<tr>
-<td>queryLimit</td>
-<td>zipkin.ui.query-limit</td>
-<td>查找 track 的默认限制。默认为 10</td>
-</tr>
-<tr>
-<td>instrumented</td>
-<td>zipkin.ui.instrumented</td>
-<td>此 Zipkin UI 涵盖哪些站点,正则表达式语法案例 <code>http:\/\/example.com\/.*</code> ，默认 (<code>.*</code>) 包含所有站点</td>
-</tr>
-<tr>
-<td>logsUrl</td>
-<td>zipkin.ui.logs-url</td>
-<td>记录查询服务 url 模式。如果指定，将在跟踪页面上显示一个按钮，并将 URL 中的 {traceId} 替换为 traceId。非必填</td>
-</tr>
-<tr>
-<td>supportUrl</td>
-<td>zipkin.ui.support-url</td>
-<td>用户可以请求支持的 URL。如果指定，将在侧面菜单中放置指向此 URL 的链接，例如用于提交支持票的页面。非必填</td>
-</tr>
-<tr>
-<td>archivePostUrl</td>
-<td>zipkin.ui.archive-post-url</td>
-<td>以 Zipkin v2 json 格式发布当前跟踪的 URL。例如 <code>https://longterm/api/v2/spans</code> 。如果指定，一个按钮将相应地出现在跟踪页面上。非必填</td>
-</tr>
-<tr>
-<td>archiveUrl</td>
-<td>zipkin.ui.archive-url</td>
-<td>提供归档跟踪的 Web 应用程序的 URL，以“{traceId}”为模板。例如 <code>https://longterm/zipkin/trace/{traceId}</code> 。跟踪成功发布到“archivePostUrl”后，确认消息中会显示此信息.非必填</td>
-</tr>
-<tr>
-<td>dependency.enabled</td>
-<td>zipkin.ui.dependency.enabled</td>
-<td>UI 依赖项展示是否启用. 默认为 true</td>
-</tr>
-<tr>
-<td>dependency.lowErrorRate</td>
-<td>zipkin.ui.dependency.low-error-rate</td>
-<td>依赖项链接变黄的错误率阈值。默认值为 0.5 (50%) 设置为 &gt;1 以禁用</td>
-</tr>
-<tr>
-<td>dependency.highErrorRate</td>
-<td>zipkin.ui.dependency.high-error-rate</td>
-<td>依赖项链接变红的错误率阈值。默认值为 0.75 (75%) 设置为 &gt;1 以禁用</td>
-</tr>
-<tr>
-<td>basePath</td>
-<td>zipkin.ui.basepath</td>
-<td>放置在 UI HTML 标签中的路径前缀；在反向代理后面运行时很有用。默认 <code>/zipkin</code></td>
-</tr>
-</tbody>
-</table>
-<p>要将属性映射到环境变量，请将它们更改为大写下划线格式。例如，如果使用 docker，您可以设置 ZIPKIN_UI_QUERY_LIMIT=100 相当于 <code>$.queryLimit</code> 在 <code>/config.json</code></p>
-<h3 id="跟踪存档"> 跟踪存档</h3>
-<p>大多数生产 Zipkin 集群使用有限的 TTL 存储跟踪。这使得共享跟踪有点不方便，因为它的链接将在几天后过期。</p>
-<p>&quot;跟踪归档&quot; 功能对此有所帮助。启动第二个 zipkin 服务器，指向一个比常规的 TTL 更长的存储，并设置 archivePostUrl 和 archiveUrl UI 配置指向这第二个服务器。设置 archivePostUrl 后，跟踪视图页面上将出现一个新的 &quot;Archive Trace&quot; 按钮。</p>
-<h2 id="存储"> 存储</h2>
-<h3 id="基于内存存储"> 基于内存存储</h3>
-<p>Zipkin 的 <a href="../zipkin/src/main/java/zipkin2/storage/InMemoryStorage.java">内存存储</a> 将所有数据保存在内存中，根据跨度限制清除旧数据。它适用于 <code>STORAGE_TYPE</code> 未设置或设置为 mem</p>
-<blockquote>
-<ul>
-<li><code>MEM_MAX_SPANS</code>: 超过此限制时，将首先清除最旧的记录道（及其跨度）。默认为 500000</li>
-</ul>
-</blockquote>
-<p>示例用法：</p>
-<div><pre><code>$ java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><div><p>警告</p>
-<p>注意：这个存储组件主要是为测试而开发的，也是一种在没有外部依赖的情况下快速启动和运行 Zipkin 服务器的方法。它对于高工作量是不可行的。也就是说，如果您遇到内存不足错误，请尝试减少 MEM_MAX_SPANS 或增加堆大小 (-Xmx)。 将内存中保存的跨度数量加倍的示例：</p>
-<p>将内存中保存的跨度数量加倍的示例：</p>
-<div><pre><code>$ <span>MEM_MAX_SPANS</span><span>=</span><span>1000000</span> java -Xmx1G -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div></div>
-<h3 id="cassandra-存储"> Cassandra 存储</h3>
-<p>Zipkin 的 Cassandra 存储组件支持 3.11.3+ 版本</p>
-<div><p>Cassandra 相关配置</p>
-<p><strong>当 <code>STORAGE_TYPE</code> 设置为 <code>cassandra3</code> 时，以下配置生效：</strong></p>
-<p><code>CASSANDRA_KEYSPACE</code>: 要使用的键空间，默认为： &quot;zipkin2&quot;
-<code>CASSANDRA_CONTACT_POINTS</code>: 以逗号分隔的主机地址列表配置 Cassandra 集群。还可以使用 <code>host:port</code> 指定自定义端口。默认为本地主机上的 9042 端口。
-<code>CASSANDRA_LOCAL_DC</code>: 将被视为负载平衡的 local 数据中心的名称。默认为 datacenter1
-<code>CASSANDRA_ENSURE_SCHEMA</code>: 确保 cassandra 使用最新模式。如果启用则尝试执行以 <code>cassandra-schema-cql3</code> 的前缀的脚本. 默认为 true
-<code>CASSANDRA_USERNAME</code>：Cassandra 认证账号
-<code>CASSANDRA_PASSWORD</code>: Cassandra 认证密码，如果认真失败会抛出错误，未设置默认值。
-<code>CASSANDRA_USE_SSL</code>: 需要 <code>javax.net.ssl.trustStore</code> 和 <code>javax.net.ssl.trustStorePassword</code>, 默认为 false.</p>
-<p><strong>以下是可能不涉及所有用户的调整参数：</strong></p>
-<ul>
-<li><code>CASSANDRA_MAX_CONNECTIONS</code>: 每个数据中心本地主机的最大池连接数。默认为8</li>
-<li><code>CASSANDRA_INDEX_CACHE_MAX</code>: 要缓存的最大跟踪索引元数据项。零禁用缓存。默认值为100000。</li>
-<li><code>CASSANDRA_INDEX_CACHE_TTL</code>: 缓存跟踪的索引元数据需要多少秒。默认值为60。</li>
-<li><code>CASSANDRA_INDEX_FETCH_MULTIPLIER</code>: 要获取的索引行比用户提供的查询限制多多少。默认为3。</li>
-</ul>
-</div>
-<p>使用 Cassandra 和请求日志记录的示例用法（TRACE 显示查询值）：</p>
-<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>cassandra3 java -jar zipkin.jar <span>\</span>
---logging.level.com.datastax.oss.driver.internal.core.tracker.RequestLogger<span>=</span>DEBUG
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h3 id="elasticsearch-存储"> Elasticsearch 存储</h3>
-<p>Zipkin 的 Elasticsearch 存储组件支持 5-7.x 版本</p>
-<div><p>Elasticsearch 相关配置</p>
-<h2 id="当-storage-type-设置为-elasticsearch-时-以下配置生效"> <strong>当 <code>STORAGE_TYPE</code> 设置为 <code>elasticsearch</code> 时，以下配置生效：</strong></h2>
-<ul>
-<li><code>ES_HOSTS</code>: 以逗号分隔的 elasticsearch 连接 url 列表，默认值为： &quot;http://localhost:9200&quot;</li>
-<li><code>ES_PIPELINE</code>: 指示为跨距编制索引之前使用的摄取管道，无默认值</li>
-<li><code>ES_TIMEOUT</code>: 配置 Elasticsearch API 的连接、读写超时时间，默认值为 10000 (10秒)</li>
-<li><code>ES_INDEX</code>: 生成每日索引名称时要使用的索引前缀，默认值为： zipkin.</li>
-<li><code>ES_DATE_SEPARATOR</code>: 生成每日索引名称时要使用的日期分隔符，默认值为： '-' .</li>
-<li><code>ES_INDEX_SHARDS</code>: 索引分片数。每个碎片及其副本分配给群集中的一台机器。增加碎片的数量集群中的机器将提高读写性能。无法更改现有索引的碎片数量，但可以更改新的每日索引。默认为 5</li>
-<li><code>ES_INDEX_REPLICAS</code>: 索引碎片副本数。相对条件下数值越大读性能越好，写性能越差。默认值为 1 。设置为 0 意味着机器故障很大可能会导致数据丢失。</li>
-<li><code>ES_ENSURE_TEMPLATES</code>: 缺失时安装Zipkin索引模板。将此设置为 false ，当索引模板与预期不匹配时，会导致数据损坏。如果如果将其设置为 true ，则会自动处理数据故障或迁移问题，而不是依靠人工手动来解决。默认为true</li>
-<li><code>ES_USERNAME</code> and <code>ES_PASSWORD</code>: Elasticsearch基本身份验证，默认为空字符串。当X-Pack安全（以前称为Shield）就位时使用。</li>
-<li><code>ES_CREDENTIALS_FILE</code>: ES 认证凭据文件位置, 包含以下属性，该文件优先级大于 ES_USERNAME 与 ES_PASSWORD 配置
-<ul>
-<li><code>zipkin.storage.elasticsearch.username</code>：用户名</li>
-<li><code>zipkin.storage.elasticsearch.password</code>：密码</li>
-</ul>
-</li>
-<li><code>ES_CREDENTIALS_REFRESH_INTERVAL</code>: 定期刷新 <code>ES_CREDENTIALS_FILE</code> 文件周期（单位：秒），默认值为：1</li>
-<li><code>ES_HTTP_LOGGING</code>: 设置后，配置 Elasticsearch API 的 HTTP 日志记录，包含：Options are BASIC, HEADERS, BODY</li>
-<li><code>ES_SSL_NO_VERIFY</code>: 如果为true，则禁用服务器密钥证书链的验证。这不适合生产。默认为false。</li>
-<li><code>ES_TEMPLATE_PRIORITY</code>: 可组合索引模板的优先级值。这仅适用于ES 7.8或更高版本。必须设置为0才能使用可组合模板</li>
-</ul>
-</div>
-<p>使用示例：</p>
-<p>简单连接 ES :</p>
-<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch <span>ES_HOSTS</span><span>=</span>http://myhost:9200 java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><p>记录 ES http 请求日志:</p>
-<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch <span>ES_HTTP_LOGGING</span><span>=</span>BASIC java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><h4 id="使用自定义密钥库或信任库-ssl"> 使用自定义密钥库或信任库 (SSL)</h4>
-<p>如果您的 Elasticsearch 端点自定义 SSL 配置（例如自签名）证书，您可以使用以下任何 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#T6" target="_blank" rel="noopener noreferrer">JSSE 属性子集<i>Content not supported</i></a> 连接。</p>
-<ul>
-<li>javax.net.ssl.keyStore</li>
-<li>javax.net.ssl.keyStorePassword</li>
-<li>javax.net.ssl.keyStoreType</li>
-<li>javax.net.ssl.trustStore</li>
-<li>javax.net.ssl.trustStorePassword</li>
-<li>javax.net.ssl.trustStoreType</li>
-</ul>
-<p>使用示例：</p>
-<div><pre><code>$ <span>JAVA_OPTS</span><span>=</span><span>'-Djavax.net.ssl.keyStore=keystore.p12 -Djavax.net.ssl.keyStorePassword=keypassword -Djavax.net.ssl.keyStoreType=PKCS12 -Djavax.net.ssl.trustStore=truststore.p12 -Djavax.net.ssl.trustStorePassword=trustpassword -Djavax.net.ssl.trustStoreType=PKCS12'</span>
-$ <span>STORAGE_TYPE</span><span>=</span>elasticsearch java <span>$JAVA_OPTS</span> -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>在该场景下，这些映射到属性 <code>prefixed zipkin.storage.elasticsearch.ssl.</code>，这会影响用于连接到 Elasticsearch 的 Armeria 客户端。</p>
-<p>上述属性允许最常见的 SSL 开箱即用的设置。如果您需要更多定制，请提交 <a href="https://github.com/openzipkin/zipkin/issues/2774" target="_blank" rel="noopener noreferrer">issue<i>Content not supported</i></a></p>
-<h4 id="自动创建索引"> 自动创建索引</h4>
-<p>当需要的时候 Zipkin 自动创建 ES 索引。 Elasticsearch 默认 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html#index-creation" target="_blank" rel="noopener noreferrer">允许<i>Content not supported</i></a> 自动创建索引, 你可以在集群中验证这个设置: <code>action.auto_create_index: false</code>.</p>
-<h4 id="mysql-存储"> MySQL 存储</h4>
-<p>Zipkin 的 MySQL 存储组件支持 5.7 版本
-当 <code>STORAGE_TYPE</code> 设置为 <code>mysql</code> 时，以下属性生效：</p>
-<ul>
-<li><code>MYSQL_DB</code>: MySQL 使用数据库，默认为 &quot;zipkin&quot;.</li>
-<li><code>MYSQL_USER</code> and <code>MYSQL_PASS</code>: MySQL 认证信息, 默认值为空.</li>
-<li><code>MYSQL_HOST</code>: 默认值为 localhost</li>
-<li><code>MYSQL_TCP_PORT</code>: 默认值为 3306</li>
-<li><code>MYSQL_MAX_CONNECTIONS</code>:  MySQL 最大连接数, defaults to 10</li>
-<li><code>MYSQL_USE_SSL</code>: 需要 <code>javax.net.ssl.trustStore</code> and <code>javax.net.ssl.trustStorePassword</code>, 默认为 false.</li>
-</ul>
-<p>注意：不建议将此模块用于生产用途。使用前，需要进行以下环境配置：</p>
-<div><pre><code><span># Barracuda supports compression (In AWS RDS, this must be assigned in a parameter group)</span>
-$ mysql -uroot -e <span>"SET GLOBAL innodb_file_format=Barracuda"</span>
-<span># This command should work even in RDS, and return "Barracuda"</span>
-$ mysql -uroot -e <span>"show global variables like 'innodb_file_format'"</span>
-
-<span># install the schema and indexes</span>
-<span># sql 文件获取：https://github.com/openzipkin/zipkin/blob/master/zipkin-storage/mysql-v1/src/main/resources/mysql.sql</span>
-$ mysql -uroot -e <span>"create database if not exists zipkin"</span>
-$ mysql -uroot -Dzipkin <span>&lt;</span> zipkin-storage/mysql-v1/src/main/resources/mysql.sql
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>或者，您可以 <code>MYSQL_JDBC_URL</code> 自己使用并指定完整的 JDBC url。请注意，使用上述单独设置构建的 URL 还将包含以下参数： <code>?autoReconnect=true&amp;useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8</code>。</p>
-<p>示例用法：</p>
-<div><pre><code>$ <span>STORAGE_TYPE</span><span>=</span>mysql <span>MYSQL_USER</span><span>=</span>root java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="throttled-存储-实验性"> Throttled 存储 (实验性)</h3>
-<p>这些设置可用于帮助调整 Zipkin 将数据刷新到另一个底层 <code>StorageComponent</code> （例如 Elasticsearch）的速率：</p>
-<ul>
-<li><code>STORAGE_THROTTLE_ENABLED</code>: Enables throttling</li>
-<li><code>STORAGE_THROTTLE_MIN_CONCURRENCY</code>: Minimum number of Threads to use for writing to storage.</li>
-<li><code>STORAGE_THROTTLE_MAX_CONCURRENCY</code>: Maximum number of Threads to use for writing to storage.</li>
-<li><code>STORAGE_THROTTLE_MAX_QUEUE_SIZE</code>: How many messages to buffer while all Threads are writing data before abandoning a message (0 = no buffering).</li>
-</ul>
-<p>由于此功能是实验性的，因此不建议在生产环境中运行此功能。</p>
-<h2 id="收集器-2"> 收集器</h2>
-<h3 id="http-收集器"> HTTP 收集器</h3>
-<p>HTTP 收集器默认启用。 他支持 <code>POST /api/v1/spans</code> and <code>POST /api/v2/spans</code>.
-HTTP 收集器默支持以下配置:</p>
-<table>
-<thead>
-<tr>
-<th>环境变量</th>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>COLLECTOR_HTTP_ENABLED</code></td>
-<td><code>zipkin.collector.http.enabled</code></td>
-<td><code>false</code> 禁用 HTTP 收集器。默认为 <code>true</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="scribe-legacy-collector"> Scribe (Legacy) Collector</h3>
-<p>支持 Scribe 的收集器在 <code>COLLECTOR_SCRIBE_ENABLED=true</code> 时启用. 不鼓励新站点使用此收集器，因为 Scribe 是一种存档技术。</p>
-<table>
-<thead>
-<tr>
-<th>环境变量</th>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>COLLECTOR_PORT</code></td>
-<td><code>zipkin.collector.scribe.port</code></td>
-<td>监听 thrift RPC scribe 请求的端口。默认为 9410</td>
-</tr>
-<tr>
-<td><code>SCRIBE_CATEGORY</code></td>
-<td><code>zipkin.collector.scribe.category</code></td>
-<td>类别 zipkin 将从中消耗。默认为 <code>zipkin</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="activemq-收集器"> ActiveMQ 收集器</h3>
-<p>Zipkin 的 ActiveMQ 收集器组件支持 v5.x 版本，当配置 <code>ACTIVEMQ_URL</code> 值时启用，支持以下属性配置</p>
-<table>
-<thead>
-<tr>
-<th>环境变量</th>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>COLLECTOR_ACTIVEMQ_ENABLED</code></td>
-<td><code>zipkin.collector.activemq.enabled</code></td>
-<td><code>false</code> 禁用 ActiveMQ 收集器。默认为 <code>true</code>.</td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_URL</code></td>
-<td><code>zipkin.collector.activemq.url</code></td>
-<td><a href="https://activemq.apache.org/uri-protocols" target="_blank" rel="noopener noreferrer">Connection URL<i>Content not supported</i></a> 连接设置, 例如 <code>tcp://localhost:61616</code> 或 <code>failover:(tcp://localhost:61616,tcp://remotehost:61616)</code></td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_QUEUE</code></td>
-<td><code>zipkin.collector.activemq.queue</code></td>
-<td>从中收集消息的队列名称。 默认为 <code>zipkin</code></td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_CLIENT_ID_PREFIX</code></td>
-<td><code>zipkin.collector.activemq.client-id-prefix</code></td>
-<td>队列使用者的客户端ID前缀。默认为 <code>zipkin</code></td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_CONCURRENCY</code></td>
-<td><code>zipkin.collector.activemq.concurrency</code></td>
-<td>并发消费数量。 默认为 <code>1</code></td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_USERNAME</code></td>
-<td><code>zipkin.collector.activemq.username</code></td>
-<td>ActiveMQ 连接用户名</td>
-</tr>
-<tr>
-<td><code>ACTIVEMQ_PASSWORD</code></td>
-<td><code>zipkin.collector.activemq.password</code></td>
-<td>ActiveMQ 连接密码</td>
-</tr>
-</tbody>
-</table>
-<p>示例用法：</p>
-<div><pre><code>$ <span>ACTIVEMQ_URL</span><span>=</span>tcp://localhost:61616 java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="kafka-收集器"> Kafka 收集器</h3>
-<p>Zipkin 的 Kafka 收集器组件支持 v0.10+ 版本，当配置 <code>KAFKA_BOOTSTRAP_SERVERS</code> 值时启用，支持以下属性配置</p>
-<p>关于 kafka 的新消费者配置请看 <a href="https://kafka.apache.org/documentation/#newconsumerconfigs" target="_blank" rel="noopener noreferrer">这里<i>Content not supported</i></a>.</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>New Consumer Config</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>COLLECTOR_KAFKA_ENABLED</code></td>
-<td>N/A</td>
-<td><code>false</code> 禁用 Kafka 收集器。默认为 <code>true</code>.</td>
-</tr>
-<tr>
-<td><code>KAFKA_BOOTSTRAP_SERVERS</code></td>
-<td>bootstrap.servers</td>
-<td>以逗号分隔的连接配置列表, 例如： 127.0.0.1:9092。无默认值</td>
-</tr>
-<tr>
-<td><code>KAFKA_GROUP_ID</code></td>
-<td>group.id</td>
-<td>此进程所代表的消费组。默认为 <code>zipkin</code></td>
-</tr>
-<tr>
-<td><code>KAFKA_TOPIC</code></td>
-<td>N/A</td>
-<td>kafka 消费者 topic 配置。默认为 <code>zipkin</code></td>
-</tr>
-<tr>
-<td><code>KAFKA_STREAMS</code></td>
-<td>N/A</td>
-<td>topic 消费线程数。默认为  <code>1</code></td>
-</tr>
-</tbody>
-</table>
-<p>示例用法：</p>
-<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><h4 id="其他的-kafka-消费者属性配置"> 其他的 kafka 消费者属性配置</h4>
-<p>您可能需要设置其他 <a href="https://kafka.apache.org/documentation/#newconsumerconfigs" target="_blank" rel="noopener noreferrer">Kafka 消费者属性<i>Content not supported</i></a>，除了由收集器定义的具有显式属性的那些。在这种情况下，您需要在该属性名称前面加上前缀 <code>zipkin.collector.kafka.overrides</code> 并将其作为系统属性参数传递。
-例如，要覆盖 <code>auto.offset.reset</code> 属性, 你需要设置一个名为 <code>zipkin.collector.kafka.overrides.auto.offset.reset</code> 的属性:</p>
-<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
-    java -Dzipkin.collector.kafka.overrides.auto.offset.reset<span>=</span>latest -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h4 id="详细示例"> 详细示例</h4>
-<p>针对在 Docker 中运行的 Kafka 的示例：</p>
-<div><pre><code>$ <span>export</span> <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span><span>$(</span>docker-machine <span>ip</span> `docker-machine active`<span>)</span></span>
-<span># 后台运行 kafka</span>
-$ docker run -d -p <span>9092</span>:9092 <span>\</span>
-    --env <span>ADVERTISED_HOST</span><span>=</span><span>$KAFKA_BOOTSTRAP_SERVERS</span> <span>\</span>
-    --env <span>AUTO_CREATE_TOPICS</span><span>=</span>true <span>\</span>
-    spotify/kafka
-<span># 通过 $KAFKA_BOOTSTRAP_SERVERS 环境变脸启动 zipkin 服务</span>
-$ java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>多个 bootstrap servers 配置:</p>
-<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span>broker1.local:9092,broker2.local:9092 <span>\</span>
-    java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>备用 topic 名称配置:</p>
-<div><pre><code>$ <span>KAFKA_BOOTSTRAP_SERVERS</span><span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
-    java -Dzipkin.collector.kafka.topic<span>=</span>zapkin,zipken -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>将 bootstrap servers 指定为系统属性，而不是环境变量:</p>
-<div><pre><code>$ java -Dzipkin.collector.kafka.bootstrap-servers<span>=</span><span>127.0</span>.0.1:9092 <span>\</span>
-    -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h3 id="rabbitmq-收集器"> RabbitMQ 收集器</h3>
-<p>当设置 <code>addresses</code> 或 <code>uri</code> 的时候， <a href="../zipkin-collector/rabbitmq">RabbitMQ 收集器</a> 会启动</p>
-<p>示例用法：</p>
-<div><pre><code>$ <span>RABBIT_ADDRESSES</span><span>=</span>localhost java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="grpc-收集器-实验性"> gRPC 收集器 (实验性)</h3>
-<p>您可以通过设置 <code>COLLECTOR_GRPC_ENABLED=true</code> 启用 gRPC 收集器端点。 <code>zipkin.proto3.SpanService/Report</code> 端点会和普通 http 服务一样运行。</p>
-<p>示例用法：</p>
-<div><pre><code>$ <span>COLLECTOR_GRPC_ENABLED</span><span>=</span>true java -jar zipkin.jar
-</code></pre>
-<div><span>1</span><br></div></div><p>由于此服务是实验性的，因此不建议在生产环境中运行此服务。</p>
-<h2 id="自我追踪"> 自我追踪</h2>
-<p>存在自我跟踪以帮助解决 zipkin 服务器的性能问题。在生产部署应该将自我跟踪的应将采样率从 1.0 (100%) 降低到更小的速率，例如 0.001（0.1% 或千分之一）。</p>
-<p>当配置 <code>zipkin.self-tracing.enabled=true</code>, Zipkin 将自动启动对服务 &quot;zipkin-server&quot; 的 API 的调用进行自我追踪</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SELF_TRACING_ENABLED</td>
-<td>zipkin.self-tracing.enabled</td>
-<td>设置为 true 以启用自我跟踪。默认为 false</td>
-</tr>
-<tr>
-<td>SELF_TRACING_SAMPLE_RATE</td>
-<td>zipkin.self-tracing.sample-rate</td>
-<td>要保留的自我跟踪的百分比，默认为始终采样 (1.0)。</td>
-</tr>
-<tr>
-<td>SELF_TRACING_FLUSH_INTERVAL</td>
-<td>zipkin.self-tracing.flush-interval</td>
-<td>将自跟踪数据刷新到存储的时间间隔（以秒为单位）。默认为 1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_128-位跟踪-id"> 128 位跟踪 ID</h3>
-<p>Zipkin 支持 64 位和 128 位跟踪标识符，通常序列化为 16 或 32 个字符的十六进制字符串。默认情况下，向 zipkin 报告的具有相同跟踪 ID 的跨度将被考虑在同一跟踪中。</p>
-<p>例如， <code>463ac35c9f6413ad48485a3953bb6124</code> 是 128 位的跟踪 ID，而 <code>48485a3953bb6124</code> 是 64 位的。</p>
-<p>注意：跟踪中的跨度（或父）ID 是 64 位的，无论其跟踪 ID 的长度或值如何</p>
-<h4 id="从-64-位迁移到-128-位跟踪-id"> 从 64 位迁移到 128 位跟踪 ID</h4>
-<p>除非您在所有应用程序都支持时仅发出 128 位跟踪，否则将应用程序从 64 位跟踪 ID 更新到 128 位跟踪 ID 的过程会导致混合状态。这种混合状态通过设置 <code>STRICT_TRACE_ID=false</code> 来缓解。如下所述，迁移完成后，删除 <code>STRICT_TRACE_ID=false</code> 设置，或者将其设置为 true</p>
-<p>以下是一些跟踪ID，它们可以帮助您了解此设置过程中发生的情况。</p>
-<ul>
-<li>Trace ID A: 463ac35c9f6413ad48485a3953bb6124</li>
-<li>Trace ID B: 48485a3953bb6124</li>
-<li>Trace ID C: 463ac35c9f6413adf1a48a8cff464e0e</li>
-<li>Trace ID D: 463ac35c9f6413ad</li>
-</ul>
-<p>在 64 位环境中，跟踪 ID 看起来像上面的 B 或 D。当应用程序升级到 128 位检测并决定创建 128 位跟踪时，其跟踪 ID 将类似于上面的 A 或 C。</p>
-<p>尚不支持 128 位的应用程序通常只保留跟踪 ID 最右边的 16 个字符。发生这种情况时，同一跟踪可能会报告为跟踪 ID A 或跟踪 ID B。</p>
-<p>默认情况下，Zipkin 会认为这些是不同的跟踪 ID，因为它们是不同的字符串。在从 64 位到 128 位跟踪 ID 的转换过程中，跨度将出现在两个 ID 之间。例如，它可能以跟踪 ID A 开始，但下一跃点可能会将其截断为跟踪 ID B。这会使系统无法用于执行升级的应用程序。</p>
-<p>解决此问题的一种方法是在所有应用程序都支持之前不使用 128 位跟踪 ID。这以协调为代价防止了混合情况。另一种方法是设置 <code>STRICT_TRACE_ID=false</code></p>
-<p>当设置 <code>STRICT_TRACE_ID=false</code> ，在对跟踪进行分组或检索时，只考虑 32 个字符的跟踪 ID 中最右边的 16 个。此设置应仅在从 64 位跟踪 ID 转换到 128 位跟踪 ID 时应用，并在转换完成后删除。</p>
-<p>请查看 <a href="https://github.com/openzipkin/b3-propagation/issues/6" target="_blank" rel="noopener noreferrer">https://github.com/openzipkin/b3-propagation/issues/6<i>Content not supported</i></a> 了解 128 位跟踪标识符上已知开源库的状态。</p>
-<p>查看源码 <code>zipkin2.storage.StorageComponent.Builder</code> 了解更多信息</p>
-<h2 id="tls-ssl"> TLS/SSL</h2>
-<p>如果需要，可以使 Zipkin-server 与 TLS 一起运行：</p>
-<div><pre><code><span># assuming you generate the key like this</span>
-keytool -genkeypair -alias mysite -keyalg RSA -keysize <span>2048</span> -storetype PKCS12 -keystore zipkin.p12 -validity <span>3650</span>
-
-java -jar zipkin.jar --armeria.ssl.key-store<span>=</span>zipkin.p12 --armeria.ssl.key-store-type<span>=</span>PKCS12 --armeria.ssl.key-store-password<span>=</span><span>123123</span> --armeria.ssl.key-alias<span>=</span>mysite  --armeria.ssl.enabled<span>=</span>true --armeria.ports<span>[</span><span>0</span><span>]</span>.port<span>=</span><span>9411</span> --armeria.ports<span>[</span><span>0</span><span>]</span>.protocols<span>[</span><span>0</span><span>]</span><span>=</span>https
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="运行在-docker-中"> 运行在 Docker 中</h2>
-<p>zipkin-server 的发布版本以 <code>openzipkin/zipkin</code> 发布在 <a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">Docker Hub<i>Content not supported</i></a> 。点击 <a href="https://github.com/openzipkin/docker-zipkin" target="_blank" rel="noopener noreferrer">docker-zipkin<i>Content not supported</i></a> 查看详情</p>
-<h2 id="本地构建"> 本地构建</h2>
-<p>要从源码构建和运行服务器，请输入以下内容</p>
 <div><pre><code><span># Build the server and also make its dependencies</span>
 $ ./mvnw -T1C -q --batch-mode -DskipTests --also-make -pl zipkin-server clean package
 <span># Run the server</span>
@@ -4033,18 +4033,6 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</spa
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>killall</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">killall</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="killall"> killall</h1>
-<p><code>killall</code> 命令终止给定名字的一系列相关进程。</p>
-<div><pre><code><span>killall</span> processname
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>last</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/last/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/last/</guid>
@@ -4056,6 +4044,18 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</spa
 </code></pre>
 <div><span>1</span><br></div></div><p><code>last</code> 命令后面加上用户名，会显示该用户上次登录的信息。</p>
 <div><pre><code>last yourUsername
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>killall</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">killall</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="killall"> killall</h1>
+<p><code>killall</code> 命令终止给定名字的一系列相关进程。</p>
+<div><pre><code><span>killall</span> processname
 </code></pre>
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
@@ -5307,19 +5307,6 @@ $ <span>sudo</span> dmidecode -t <span>4</span>
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>主机管理</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/host/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/host/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">主机管理</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="主机管理"> 主机管理</h1>
-<h2 id="hostname-命令"> hostname 命令</h2>
-<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
-<div><pre><code><span>hostname</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>命名管道</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/named-pipe/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/named-pipe/</guid>
@@ -5352,6 +5339,19 @@ prw-r--r-- <span>1</span> me me <span>0</span> <span>2009</span>-07-17 06:41 pip
 </code></pre>
 <div><span>1</span><br></div></div><p>然后产自第一个终端窗口的目录列表出现在第二个终端中，并作为来自 cat 命令的输出。在第一个终端 窗口中的 ls 命令一旦它不再阻塞，会成功地结束。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>主机管理</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/host/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/host/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">主机管理</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="主机管理"> 主机管理</h1>
+<h2 id="hostname-命令"> hostname 命令</h2>
+<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
+<div><pre><code><span>hostname</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>进程管理</title>
@@ -10007,6 +10007,87 @@ $ <span>popd</span> -3
 ]]></content:encoded>
     </item>
     <item>
+      <title>Bash 启动环境</title>
+      <link>https://list-jiang.github.io/code/linux/bash/startup/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/startup/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Bash 启动环境</source>
+      <category>Linux</category>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="session"> Session</h2>
+<p>用户每次使用 Shell，都会开启一个与 Shell 的 Session(对话)。</p>
+<p>Session 有两种类型: 登录 Session 和非登录 Session，也可以叫做 login shell 和 non-login shell。</p>
+<h3 id="登录-session"> 登录 Session</h3>
+<p>登录 Session 是用户登录系统以后，系统为用户开启的原始 Session，通常需要用户输入用户名和密码进行登录。</p>
+<p>登录 Session 一般进行整个系统环境的初始化，启动的初始化脚本依次如下。</p>
+<ul>
+<li><code>/etc/profile</code>: 所有用户的全局配置脚本。</li>
+<li><code>/etc/profile.d</code> 目录里面所有 <code>.sh</code> 文件</li>
+<li><code>~/.bash_profile</code>: 用户的个人配置脚本。如果该脚本存在，则执行完就不再往下执行。</li>
+<li><code>~/.bash_login</code>: 如果 <code>~/.bash_profile</code> 没找到，则尝试执行这个脚本(C shell 的初始化脚本)。如果该脚本存在，则执行完就不再往下执行。</li>
+<li><code>~/.profile</code>: 如果<code>~/.bash_profile</code> 和 <code>~/.bash_login</code> 都没找到，则尝试读取这个脚本(Bourne shell 和 Korn shell 的初始化脚本)。</li>
+</ul>
+<p>Linux 发行版更新的时候，会更新 <code>/etc</code> 里面的文件，比如 <code>/etc/profile</code>，因此不要直接修改这个文件。如果想修改所有用户的登陆环境，就在 <code>/etc/profile.d</code> 目录里面新建 <code>.sh</code> 脚本。</p>
+<p>如果想修改您个人的登录环境，一般是写在 <code>~/.bash_profile</code> 里面。下面是一个典型的 <code>.bash_profile</code> 文件。</p>
+<div><pre><code><span># .bash_profile</span>
+<span><span>PATH</span></span><span>=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+<span><span>PATH</span></span><span>=</span><span>$PATH</span><span>:</span><span>$HOME</span>/bin
+
+<span><span>SHELL</span></span><span>=</span>/bin/bash
+<span>MANPATH</span><span>=</span>/usr/man:/usr/X11/man
+<span>EDITOR</span><span>=</span>/usr/bin/vi
+<span><span>PS1</span></span><span>=</span><span>'\h:\w\$ '</span>
+<span><span>PS2</span></span><span>=</span><span>'> '</span>
+
+<span>if</span> <span>[</span> -f ~/.bashrc <span>]</span><span>;</span> <span>then</span>
+<span>.</span> ~/.bashrc
+<span>fi</span>
+
+<span>export</span> <span>PATH</span>
+<span>export</span> EDITOR
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>可以看到，这个脚本定义了一些最基本的环境变量，然后执行了 <code>~/.bashrc</code>。</p>
+<p><code>bash</code> 命令的 <code>--login</code> 参数，会强制执行登录 Session 会执行的脚本。</p>
+<div><pre><code><span>bash</span> --login
+</code></pre>
+<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--noprofile</code> 参数，会跳过上面这些 Profile 脚本。</p>
+<div><pre><code><span>bash</span> --noprofile
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="非登录-session"> 非登录 Session</h3>
+<p>非登录 Session 是用户进入系统以后，手动新建的 Session，这时不会进行环境初始化。比如，在命令行执行 <code>bash</code> 命令，就会新建一个非登录 Session。</p>
+<p>非登录 Session 的初始化脚本依次如下。</p>
+<ul>
+<li><code>/etc/bash.bashrc</code>: 对全体用户有效。</li>
+<li><code>~/.bashrc</code>: 仅对当前用户有效。</li>
+</ul>
+<p>对用户来说，<code>~/.bashrc</code> 通常是最重要的脚本。非登录 Session 默认会执行它，而登陆 Session 一般也会通过调用执行它。由于每次执行 Bash 脚本，都会新建一个非登录 Session，所以 <code>~/.bashrc</code> 也是每次执行脚本都会执行的。</p>
+<p><code>bash</code> 命令的 <code>--norc</code> 参数，可以禁止在非登录 Session 执行 <code>~/.bashrc</code> 脚本。</p>
+<div><pre><code><span>bash</span> --norc
+</code></pre>
+<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--rcfile</code> 参数，指定另一个脚本代替 <code>.bashrc</code>。</p>
+<div><pre><code><span>bash</span> --rcfile testrc
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="bash-logout"> .bash_logout</h3>
+<p><code>~/.bash_logout</code> 脚本在每次退出 Session 时执行，通常用来做一些清理工作和记录工作，比如删除临时文件，记录用户在本次 Session 花费的时间。</p>
+<p>如果没有退出时要执行的命令，这个文件也可以不存在。</p>
+<h2 id="启动选项"> 启动选项</h2>
+<p>为了方便 Debug，有时在启动 Bash 的时候，可以加上启动参数。</p>
+<ul>
+<li><code>-n</code>: 不运行脚本，只检查是否有语法错误。</li>
+<li><code>-v</code>: 输出每一行语句运行结果前，会先输出该行语句。</li>
+<li><code>-x</code>: 每一个命令处理完以后，先输出该命令，再进行下一个命令的处理。</li>
+</ul>
+<div><pre><code><span>bash</span> -n scriptname
+<span>bash</span> -v scriptname
+<span>bash</span> -x scriptname
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="键盘绑定"> 键盘绑定</h2>
+<p>Bash 允许用户定义自己的快捷键。全局的键盘绑定文件默认为 <code>/etc/inputrc</code>，您可以在主目录创建自己的键盘绑定文件 <code>.inputrc</code> 文件。如果定义了这个文件，需要在其中加入下面这行，保证全局绑定不会被遗漏。</p>
+<div><pre><code><span>$include</span> /etc/inputrc
+</code></pre>
+<div><span>1</span><br></div></div><p><code>.inputrc</code> 文件里面的快捷键，可以像这样定义，<code>&quot;\C-t&quot;:&quot;pwd\n&quot;</code> 表示将 <code>Ctrl + t</code> 绑定为运行 <code>pwd</code> 命令。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>字符串操作</title>
       <link>https://list-jiang.github.io/code/linux/bash/string/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/string/</guid>
@@ -10228,87 +10309,6 @@ $ <span>echo</span> <span>${foo<span>,,</span>}</span>
 hello
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>Bash 启动环境</title>
-      <link>https://list-jiang.github.io/code/linux/bash/startup/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/startup/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Bash 启动环境</source>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="session"> Session</h2>
-<p>用户每次使用 Shell，都会开启一个与 Shell 的 Session(对话)。</p>
-<p>Session 有两种类型: 登录 Session 和非登录 Session，也可以叫做 login shell 和 non-login shell。</p>
-<h3 id="登录-session"> 登录 Session</h3>
-<p>登录 Session 是用户登录系统以后，系统为用户开启的原始 Session，通常需要用户输入用户名和密码进行登录。</p>
-<p>登录 Session 一般进行整个系统环境的初始化，启动的初始化脚本依次如下。</p>
-<ul>
-<li><code>/etc/profile</code>: 所有用户的全局配置脚本。</li>
-<li><code>/etc/profile.d</code> 目录里面所有 <code>.sh</code> 文件</li>
-<li><code>~/.bash_profile</code>: 用户的个人配置脚本。如果该脚本存在，则执行完就不再往下执行。</li>
-<li><code>~/.bash_login</code>: 如果 <code>~/.bash_profile</code> 没找到，则尝试执行这个脚本(C shell 的初始化脚本)。如果该脚本存在，则执行完就不再往下执行。</li>
-<li><code>~/.profile</code>: 如果<code>~/.bash_profile</code> 和 <code>~/.bash_login</code> 都没找到，则尝试读取这个脚本(Bourne shell 和 Korn shell 的初始化脚本)。</li>
-</ul>
-<p>Linux 发行版更新的时候，会更新 <code>/etc</code> 里面的文件，比如 <code>/etc/profile</code>，因此不要直接修改这个文件。如果想修改所有用户的登陆环境，就在 <code>/etc/profile.d</code> 目录里面新建 <code>.sh</code> 脚本。</p>
-<p>如果想修改您个人的登录环境，一般是写在 <code>~/.bash_profile</code> 里面。下面是一个典型的 <code>.bash_profile</code> 文件。</p>
-<div><pre><code><span># .bash_profile</span>
-<span><span>PATH</span></span><span>=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-<span><span>PATH</span></span><span>=</span><span>$PATH</span><span>:</span><span>$HOME</span>/bin
-
-<span><span>SHELL</span></span><span>=</span>/bin/bash
-<span>MANPATH</span><span>=</span>/usr/man:/usr/X11/man
-<span>EDITOR</span><span>=</span>/usr/bin/vi
-<span><span>PS1</span></span><span>=</span><span>'\h:\w\$ '</span>
-<span><span>PS2</span></span><span>=</span><span>'> '</span>
-
-<span>if</span> <span>[</span> -f ~/.bashrc <span>]</span><span>;</span> <span>then</span>
-<span>.</span> ~/.bashrc
-<span>fi</span>
-
-<span>export</span> <span>PATH</span>
-<span>export</span> EDITOR
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>可以看到，这个脚本定义了一些最基本的环境变量，然后执行了 <code>~/.bashrc</code>。</p>
-<p><code>bash</code> 命令的 <code>--login</code> 参数，会强制执行登录 Session 会执行的脚本。</p>
-<div><pre><code><span>bash</span> --login
-</code></pre>
-<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--noprofile</code> 参数，会跳过上面这些 Profile 脚本。</p>
-<div><pre><code><span>bash</span> --noprofile
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="非登录-session"> 非登录 Session</h3>
-<p>非登录 Session 是用户进入系统以后，手动新建的 Session，这时不会进行环境初始化。比如，在命令行执行 <code>bash</code> 命令，就会新建一个非登录 Session。</p>
-<p>非登录 Session 的初始化脚本依次如下。</p>
-<ul>
-<li><code>/etc/bash.bashrc</code>: 对全体用户有效。</li>
-<li><code>~/.bashrc</code>: 仅对当前用户有效。</li>
-</ul>
-<p>对用户来说，<code>~/.bashrc</code> 通常是最重要的脚本。非登录 Session 默认会执行它，而登陆 Session 一般也会通过调用执行它。由于每次执行 Bash 脚本，都会新建一个非登录 Session，所以 <code>~/.bashrc</code> 也是每次执行脚本都会执行的。</p>
-<p><code>bash</code> 命令的 <code>--norc</code> 参数，可以禁止在非登录 Session 执行 <code>~/.bashrc</code> 脚本。</p>
-<div><pre><code><span>bash</span> --norc
-</code></pre>
-<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--rcfile</code> 参数，指定另一个脚本代替 <code>.bashrc</code>。</p>
-<div><pre><code><span>bash</span> --rcfile testrc
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="bash-logout"> .bash_logout</h3>
-<p><code>~/.bash_logout</code> 脚本在每次退出 Session 时执行，通常用来做一些清理工作和记录工作，比如删除临时文件，记录用户在本次 Session 花费的时间。</p>
-<p>如果没有退出时要执行的命令，这个文件也可以不存在。</p>
-<h2 id="启动选项"> 启动选项</h2>
-<p>为了方便 Debug，有时在启动 Bash 的时候，可以加上启动参数。</p>
-<ul>
-<li><code>-n</code>: 不运行脚本，只检查是否有语法错误。</li>
-<li><code>-v</code>: 输出每一行语句运行结果前，会先输出该行语句。</li>
-<li><code>-x</code>: 每一个命令处理完以后，先输出该命令，再进行下一个命令的处理。</li>
-</ul>
-<div><pre><code><span>bash</span> -n scriptname
-<span>bash</span> -v scriptname
-<span>bash</span> -x scriptname
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="键盘绑定"> 键盘绑定</h2>
-<p>Bash 允许用户定义自己的快捷键。全局的键盘绑定文件默认为 <code>/etc/inputrc</code>，您可以在主目录创建自己的键盘绑定文件 <code>.inputrc</code> 文件。如果定义了这个文件，需要在其中加入下面这行，保证全局绑定不会被遗漏。</p>
-<div><pre><code><span>$include</span> /etc/inputrc
-</code></pre>
-<div><span>1</span><br></div></div><p><code>.inputrc</code> 文件里面的快捷键，可以像这样定义，<code>&quot;\C-t&quot;:&quot;pwd\n&quot;</code> 表示将 <code>Ctrl + t</code> 绑定为运行 <code>pwd</code> 命令。</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
