@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2023-01-09T05:03:11.749Z</updated>
+  <updated>2023-01-09T05:03:49.526Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -267,21 +267,6 @@
       <name>List Jiang</name>
     </contributor>
     <published>2022-03-10T07:21:56.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Redis 使用经验</title>
-    <id>https://list-jiang.github.io/db/redis/experience/</id>
-    <link href="https://list-jiang.github.io/db/redis/experience/"/>
-    <updated>2022-03-07T07:53:32.000Z</updated>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="Redis" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-03-07T07:53:32.000Z</published>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
@@ -659,6 +644,21 @@ Redis后台保存模式依赖现代操作系统的写时拷贝技术。Redis for
     <rights>Copyright by https://www.redis.com.cn/</rights>
   </entry>
   <entry>
+    <title type="html">Redis 使用经验</title>
+    <id>https://list-jiang.github.io/db/redis/experience/</id>
+    <link href="https://list-jiang.github.io/db/redis/experience/"/>
+    <updated>2022-03-07T07:53:32.000Z</updated>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="Redis" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-03-07T07:53:32.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">Redis</title>
     <id>https://list-jiang.github.io/db/redis/</id>
     <link href="https://list-jiang.github.io/db/redis/"/>
@@ -859,28 +859,6 @@ java -jar silky-demo-web-1.0.1.jar --spring.profiles.active<span>=</span>native
   </entry>
   <entry>
     <title type="html">Zipkin 快速入门</title>
-    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
-    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
-    <updated>2022-02-24T06:38:19.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
-<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
-<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
-<p><img src="./../img/web-screenshot.png" alt=""></p>
-<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
-<p><img src="./../img/dependency-graph.png" alt=""></p>
-<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-24T06:38:19.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Zipkin 快速入门</title>
     <id>https://list-jiang.github.io/spring/track/zipkin/quick-start/</id>
     <link href="https://list-jiang.github.io/spring/track/zipkin/quick-start/"/>
     <updated>2022-02-24T06:38:19.000Z</updated>
@@ -909,6 +887,50 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 <p><strong>源码编译补充</strong></p>
 <p>如果我们使用 Intellij IDEA 打开源码的话， maven 打包需要配置跳过测试。以父模块全项目打包，需要确保 nodeJs 环境。</p>
 <p><img src="./../img/zipkin-idea-package.jpg" alt=""></p>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-24T06:38:19.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Zipkin 快速入门</title>
+    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
+    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
+    <updated>2022-02-24T06:38:19.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
+<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
+<p><img src="./../img/web-screenshot.png" alt=""></p>
+<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
+<p><img src="./../img/dependency-graph.png" alt=""></p>
+<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-24T06:38:19.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Zipkin</title>
+    <id>https://list-jiang.github.io/spring/track/zipkin/</id>
+    <link href="https://list-jiang.github.io/spring/track/zipkin/"/>
+    <updated>2022-02-24T15:57:23.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
+<ul>
+<li><a href="./info.html">介绍</a></li>
+<li><a href="./quick-start.html">快速入门</a></li>
+<li><a href="./start-env.html">zipkin启动及环境配置</a></li>
+<li><a href="./demo.html">生产案例</a></li>
+</ul>
 ]]></content>
     <author>
       <name>List Jiang</name>
@@ -1592,28 +1614,6 @@ $ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 $ java -jar ./zipkin-server/target/zipkin-server-*slim.jar
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-24T06:38:19.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Zipkin</title>
-    <id>https://list-jiang.github.io/spring/track/zipkin/</id>
-    <link href="https://list-jiang.github.io/spring/track/zipkin/"/>
-    <updated>2022-02-24T15:57:23.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
-<ul>
-<li><a href="./info.html">介绍</a></li>
-<li><a href="./quick-start.html">快速入门</a></li>
-<li><a href="./start-env.html">zipkin启动及环境配置</a></li>
-<li><a href="./demo.html">生产案例</a></li>
-</ul>
-]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -2470,6 +2470,21 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">rocketmq</title>
+    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
+    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
+    <updated>2022-02-23T07:50:41.000Z</updated>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="mq" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-23T00:00:00.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">中间件</title>
     <id>https://list-jiang.github.io/middleware/</id>
     <link href="https://list-jiang.github.io/middleware/"/>
@@ -2490,21 +2505,6 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
       <name>List Jiang</name>
     </contributor>
     <published>2022-02-23T07:50:41.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">rocketmq</title>
-    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
-    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
-    <updated>2022-02-23T07:50:41.000Z</updated>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="mq" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-23T00:00:00.000Z</published>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
@@ -3469,25 +3469,6 @@ Parent: parent is done. Exiting.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">alias</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/alias/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/alias/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="alias"> alias</h1>
-<p><code>alias</code> 命令用于设置别名。通常用于在 Bash 设置文件中，设置别名。</p>
-<div><pre><code><span>alias</span> <span>dockerlogin</span><span>=</span><span>'ssh www-data@adnan.local -p2222'</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">Shell 的命令</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/command/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/command/"/>
@@ -3624,6 +3605,25 @@ command1 <span>||</span> command2
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div><p>通过使用 echo 命令，查看展开结果，我们看到子 shell 的输出结果，由一个名为 /dev/fd/63 的文件提供。</p>
 ]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">alias</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/alias/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/alias/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="alias"> alias</h1>
+<p><code>alias</code> 命令用于设置别名。通常用于在 Bash 设置文件中，设置别名。</p>
+<div><pre><code><span>alias</span> <span>dockerlogin</span><span>=</span><span>'ssh www-data@adnan.local -p2222'</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4154,48 +4154,6 @@ ipsum dolor sit
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">fmt</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="fmt"> fmt</h1>
-<p><code>fmt</code> 命令用于对文本指定样式。</p>
-<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
-<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</code></pre>
-<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
-<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
-Lorem ipsum
-dolor sit amet,
-consetetur
-sadipscing elitr,
-<span>sed</span> diam nonumy
-eirmod tempor
-invidunt ut labore
-et dolore magna
-aliquyam erat, <span>sed</span>
-diam voluptua. At
-vero eos et
-accusam et justo
-duo dolores et ea
-rebum. Stet clita
-kasd gubergren,
-no sea takimata
-sanctus est Lorem
-ipsum dolor sit
-amet.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">find</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/find/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/find/"/>
@@ -4246,6 +4204,48 @@ amet.
 <div><pre><code><span>find</span> -name <span>'*.c'</span> -exec <span>vim</span> <span>{</span><span>}</span> +
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">fmt</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="fmt"> fmt</h1>
+<p><code>fmt</code> 命令用于对文本指定样式。</p>
+<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
+<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</code></pre>
+<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
+<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
+Lorem ipsum
+dolor sit amet,
+consetetur
+sadipscing elitr,
+<span>sed</span> diam nonumy
+eirmod tempor
+invidunt ut labore
+et dolore magna
+aliquyam erat, <span>sed</span>
+diam voluptua. At
+vero eos et
+accusam et justo
+duo dolores et ea
+rebum. Stet clita
+kasd gubergren,
+no sea takimata
+sanctus est Lorem
+ipsum dolor sit
+amet.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4380,16 +4380,13 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</spa
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">last</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/last/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/last/"/>
+    <title type="html">killall</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/killall/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="last"> last</h1>
-<p><code>last</code> 命令显示用户登录系统的记录。</p>
-<div><pre><code>last
-</code></pre>
-<div><span>1</span><br></div></div><p><code>last</code> 命令后面加上用户名，会显示该用户上次登录的信息。</p>
-<div><pre><code>last yourUsername
+    <content type="html"><![CDATA[<h1 id="killall"> killall</h1>
+<p><code>killall</code> 命令终止给定名字的一系列相关进程。</p>
+<div><pre><code><span>killall</span> processname
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
@@ -4402,13 +4399,16 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</spa
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">killall</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/killall/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/killall/"/>
+    <title type="html">last</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/last/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/last/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="killall"> killall</h1>
-<p><code>killall</code> 命令终止给定名字的一系列相关进程。</p>
-<div><pre><code><span>killall</span> processname
+    <content type="html"><![CDATA[<h1 id="last"> last</h1>
+<p><code>last</code> 命令显示用户登录系统的记录。</p>
+<div><pre><code>last
+</code></pre>
+<div><span>1</span><br></div></div><p><code>last</code> 命令后面加上用户名，会显示该用户上次登录的信息。</p>
+<div><pre><code>last yourUsername
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
@@ -4578,35 +4578,6 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">sed</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/sed/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/sed/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="sed"> sed</h1>
-<p><code>sed</code> 命令用于对文本进行过滤和变形处理。</p>
-<p>下面是 <code>example.txt</code> 文件的内容。</p>
-<div><pre><code>Hello This is a Test <span>1</span> <span>2</span> <span>3</span> <span>4</span>
-replace all spaces with hyphens
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>sed</code> 命令将所有的空格换成连词线 <code>-</code>。</p>
-<div><pre><code>$ <span>sed</span> <span>'s/ /-/g'</span> example.txt
-Hello-This-is-a-Test-1-2-3-4
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令将数字换成字母 <code>d</code>。</p>
-<div><pre><code>$ <span>sed</span> <span>'s/[0-9]/d/g'</span> example.txt
-Hello This is a Test d d d d
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">scp</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/scp/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/scp/"/>
@@ -4699,6 +4670,35 @@ $ <span>scp</span> user1@host1.com:/files/file.txt user2@host2.com:/files
 </code></pre>
 <div><span>1</span><br></div></div><p><code>-r</code> 参数表示是否以递归方式复制目录。</p>
 ]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">sed</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/sed/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/sed/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="sed"> sed</h1>
+<p><code>sed</code> 命令用于对文本进行过滤和变形处理。</p>
+<p>下面是 <code>example.txt</code> 文件的内容。</p>
+<div><pre><code>Hello This is a Test <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+replace all spaces with hyphens
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>sed</code> 命令将所有的空格换成连词线 <code>-</code>。</p>
+<div><pre><code>$ <span>sed</span> <span>'s/ /-/g'</span> example.txt
+Hello-This-is-a-Test-1-2-3-4
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令将数字换成字母 <code>d</code>。</p>
+<div><pre><code>$ <span>sed</span> <span>'s/[0-9]/d/g'</span> example.txt
+Hello This is a Test d d d d
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -5590,6 +5590,26 @@ $ <span>find</span> ~ -type f -name <span>'foo*'</span> -exec <span>ls</span> -l
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">主机管理</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
+<h2 id="hostname-命令"> hostname 命令</h2>
+<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
+<div><pre><code><span>hostname</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">硬件操作</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/hardware/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/hardware/"/>
@@ -5803,26 +5823,6 @@ $ <span>sudo</span> dmidecode -t <span>4</span>
 </code></pre>
 <div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
 <div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">主机管理</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
-<h2 id="hostname-命令"> hostname 命令</h2>
-<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
-<div><pre><code><span>hostname</span>
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
@@ -7876,174 +7876,6 @@ func2: <span>BASH_SOURCE</span> is lib1.sh
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 函数</title>
-    <id>https://list-jiang.github.io/code/linux/bash/function/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/function/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章介绍 Bash 函数的用法。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本章介绍 Bash 函数的用法。</p>
-
-<h2 id="简介"> 简介</h2>
-<p>函数(function)是可以重复使用的代码片段，有利于代码的复用。它与别名(alias)的区别是，别名只适合封装简单的单个命令，函数则可以封装复杂的多行命令。</p>
-<p>函数总是在当前 Shell 执行，这是跟脚本的一个重大区别，Bash 会新建一个子 Shell 执行脚本。如果函数与脚本同名，函数会优先执行。但是，函数的优先级不如别名，即如果函数与别名同名，那么别名优先执行。</p>
-<p>Bash 函数定义的语法有两种。</p>
-<div><pre><code><span># 第一种</span>
-<span>fn</span><span>(</span><span>)</span> <span>{</span>
-  <span># codes</span>
-<span>}</span>
-
-<span># 第二种</span>
-<span>function</span> <span>fn</span><span>(</span><span>)</span> <span>{</span>
-  <span># codes</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面代码中，<code>fn</code> 是自定义的函数名，函数代码就写在大括号之中。这两种写法是等价的。</p>
-<p>下面是一个简单函数的例子。</p>
-<div><pre><code><span>hello</span><span>(</span><span>)</span> <span>{</span>
-  <span>echo</span> <span>"Hello <span>$1</span>"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面代码中，函数体里面的 <code>$1</code> 表示函数调用时的第一个参数。</p>
-<p>调用时，就直接写函数名，参数跟在函数名后面。</p>
-<div><pre><code>$ hello world
-hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>下面是一个多行函数的例子，显示当前日期时间。</p>
-<div><pre><code><span>today</span><span>(</span><span>)</span> <span>{</span>
-  <span>echo</span> -n <span>"Today's date is: "</span>
-  <span>date</span> +<span>"%A, %B %-d, %Y"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>删除一个函数，可以使用 <code>unset</code> 命令。</p>
-<div><pre><code><span>unset</span> -f functionName
-</code></pre>
-<div><span>1</span><br></div></div><p>查看当前 Shell 已经定义的所有函数，可以使用 <code>declare</code> 命令。</p>
-<div><pre><code><span>declare</span> -f
-</code></pre>
-<div><span>1</span><br></div></div><p>上面的 <code>declare</code> 命令不仅会输出函数名，还会输出所有定义。输出顺序是按照函数名的字母表顺序。由于会输出很多内容，最好通过管道命令配合 <code>more</code> 或 <code>less</code> 使用。</p>
-<p><code>declare</code> 命令还支持查看单个函数的定义。</p>
-<div><pre><code><span>declare</span> -f functionName
-</code></pre>
-<div><span>1</span><br></div></div><p><code>declare -F</code> 可以输出所有已经定义的函数名，不含函数体。</p>
-<div><pre><code><span>declare</span> -F
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="参数变量"> 参数变量</h2>
-<p>函数体内可以使用参数变量，获取函数参数。函数的参数变量，与脚本参数变量是一致的。</p>
-<ul>
-<li><code>$1</code> ~ <code>$9</code>: 函数的第一个到第 9 个的参数。</li>
-<li><code>$0</code>: 函数所在的脚本名。</li>
-<li><code>$#</code>: 函数的参数总数。</li>
-<li><code>$@</code>: 函数的全部参数，参数之间使用空格分隔。</li>
-<li><code>$*</code>: 函数的全部参数，参数之间使用变量 <code>$IFS</code> 值的第一个字符分隔，默认为空格，但是可以自定义。</li>
-</ul>
-<p>如果函数的参数多于 9 个，那么第 10 个参数可以用 <code>${10}</code> 的形式引用，以此类推。</p>
-<p>下面是一个示例脚本 <code>test.sh</code>。</p>
-<div><pre><code><span>#!/bin/bash</span>
-<span># test.sh</span>
-
-<span>function</span> <span>alice</span> <span>{</span>
-  <span>echo</span> <span>"alice: <span>$@</span>"</span>
-  <span>echo</span> <span>"<span>$0</span>: <span>$1</span> <span>$2</span> <span>$3</span> <span>$4</span>"</span>
-  <span>echo</span> <span>"<span>$#</span> arguments"</span>
-
-<span>}</span>
-
-alice <span>in</span> wonderland
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>运行该脚本，结果如下。</p>
-<div><pre><code>$ <span>bash</span> test.sh
-alice: <span>in</span> wonderland
-test.sh: <span>in</span> wonderland
-<span>2</span> arguments
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，由于函数 <code>alice</code> 只有第一个和第二个参数，所以第三个和第四个参数为空。</p>
-<p>下面是一个日志函数的例子。</p>
-<div><pre><code><span>function</span> <span>log_msg</span> <span>{</span>
-  <span>echo</span> <span>"[<span><span>`</span><span>date</span> <span>'+ %F %T'</span><span>`</span></span> ]: <span>$@</span>"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>使用方法如下。</p>
-<div><pre><code>$ log_msg <span>"This is sample log message"</span>
-<span>[</span> <span>2018</span>-08-16 <span>19</span>:56:34 <span>]</span>: This is sample log message
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="return-命令"> return 命令</h2>
-<p><code>return</code> 命令用于从函数返回一个值。函数执行到这条命令，就不再往下执行了，直接返回了。</p>
-<div><pre><code><span>function</span> <span>func_return_value</span> <span>{</span>
-  <span>return</span> <span>10</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>函数将返回值返回给调用者。如果命令行直接执行函数，下一个命令可以用 <code>$?</code> 拿到返回值。</p>
-<div><pre><code>$ func_return_value
-$ <span>echo</span> <span>"Value returned by function is: <span>$?</span>"</span>
-Value returned by <span>function</span> is: <span>10</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>return</code> 后面不跟参数，只用于返回也是可以的。</p>
-<div><pre><code><span>function</span> <span>name</span> <span>{</span>
-  commands
-  <span>return</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="全局变量和局部变量-local-命令"> 全局变量和局部变量，local 命令</h2>
-<p>Bash 函数体内直接声明的变量，属于全局变量，整个脚本都可以读取。这一点需要特别小心。</p>
-<div><pre><code><span># 脚本 test.sh</span>
-<span>fn</span> <span>(</span><span>)</span> <span>{</span>
-  <span>foo</span><span>=</span><span>1</span>
-  <span>echo</span> <span>"fn: foo = <span>$foo</span>"</span>
-<span>}</span>
-
-fn
-<span>echo</span> <span>"global: foo = <span>$foo</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面脚本的运行结果如下。</p>
-<div><pre><code>$ <span>bash</span> test.sh
-fn: foo <span>=</span> <span>1</span>
-global: foo <span>=</span> <span>1</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，变量 <code>$foo</code> 是在函数 <code>fn</code> 内部声明的，函数体外也可以读取。</p>
-<p>函数体内不仅可以声明全局变量，还可以修改全局变量。</p>
-<div><pre><code><span>foo</span><span>=</span><span>1</span>
-
-<span>fn</span> <span>(</span><span>)</span> <span>{</span>
-  <span>foo</span><span>=</span><span>2</span>
-<span>}</span>
-
-<span>echo</span> <span>$foo</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面代码执行后，输出的变量 <code>$foo</code> 值为 2。</p>
-<p>函数里面可以用 <code>local</code> 命令声明局部变量。</p>
-<div><pre><code><span># 脚本 test.sh</span>
-<span>fn</span> <span>(</span><span>)</span> <span>{</span>
-  <span>local</span> foo
-  <span>foo</span><span>=</span><span>1</span>
-  <span>echo</span> <span>"fn: foo = <span>$foo</span>"</span>
-<span>}</span>
-
-fn
-<span>echo</span> <span>"global: foo = <span>$foo</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面脚本的运行结果如下。</p>
-<div><pre><code>$ <span>bash</span> test.sh
-fn: foo <span>=</span> <span>1</span>
-global: foo <span>=</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，<code>local</code> 命令声明的 <code>$foo</code> 变量，只在函数体内有效，函数体外没有定义。</p>
-<h2 id="参考链接"> 参考链接</h2>
-<ul>
-<li><a href="https://www.linuxtechi.com/define-use-functions-linux-shell-script/" target="_blank" rel="noopener noreferrer">How to define and use functions in Linux Shell Script<i>Content not supported</i></a>, by Pradeep Kumar</li>
-</ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">Bash 的模式扩展</title>
     <id>https://list-jiang.github.io/code/linux/bash/expansion/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/expansion/"/>
@@ -8566,95 +8398,163 @@ a.txt  sub1/b.txt  sub1/sub2/c.txt
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 简介</title>
-    <id>https://list-jiang.github.io/code/linux/bash/intro/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/intro/"/>
+    <title type="html">Bash 函数</title>
+    <id>https://list-jiang.github.io/code/linux/bash/function/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/function/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
+    <summary type="html"><![CDATA[<p>本章介绍 Bash 函数的用法。</p>
 ]]></summary>
-    <content type="html"><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
+    <content type="html"><![CDATA[<p>本章介绍 Bash 函数的用法。</p>
 
-<h2 id="shell-的含义"> Shell 的含义</h2>
-<p>学习 Bash，首先需要理解 Shell 是什么。Shell 这个单词的原意是“外壳”，跟 kernel(内核)相对应，比喻内核外面的一层，即用户跟内核交互的对话界面。</p>
-<p>具体来说，Shell 这个词有多种含义。</p>
-<p>首先，Shell 是一个程序，提供一个与用户对话的环境。这个环境只有一个命令提示符，让用户从键盘输入命令，所以又称为命令行环境(commandline，简写为 CLI)。Shell 接收到用户输入的命令，将命令送入操作系统执行，并将结果返回给用户。本书中，除非特别指明，Shell 指的就是命令行环境。</p>
-<p>其次，Shell 是一个命令解释器，解释用户输入的命令。它支持变量、条件判断、循环操作等语法，所以用户可以用 Shell 命令写出各种小程序，又称为脚本(script)。这些脚本都通过 Shell 的解释执行，而不通过编译。</p>
-<p>最后，Shell 是一个工具箱，提供了各种小工具，供用户方便地使用操作系统的功能。</p>
-<h2 id="shell-的种类"> Shell 的种类</h2>
-<p>Shell 有很多种，只要能给用户提供命令行环境的程序，都可以看作是 Shell。</p>
-<p>历史上，主要的 Shell 有下面这些。</p>
+<h2 id="简介"> 简介</h2>
+<p>函数(function)是可以重复使用的代码片段，有利于代码的复用。它与别名(alias)的区别是，别名只适合封装简单的单个命令，函数则可以封装复杂的多行命令。</p>
+<p>函数总是在当前 Shell 执行，这是跟脚本的一个重大区别，Bash 会新建一个子 Shell 执行脚本。如果函数与脚本同名，函数会优先执行。但是，函数的优先级不如别名，即如果函数与别名同名，那么别名优先执行。</p>
+<p>Bash 函数定义的语法有两种。</p>
+<div><pre><code><span># 第一种</span>
+<span>fn</span><span>(</span><span>)</span> <span>{</span>
+  <span># codes</span>
+<span>}</span>
+
+<span># 第二种</span>
+<span>function</span> <span>fn</span><span>(</span><span>)</span> <span>{</span>
+  <span># codes</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面代码中，<code>fn</code> 是自定义的函数名，函数代码就写在大括号之中。这两种写法是等价的。</p>
+<p>下面是一个简单函数的例子。</p>
+<div><pre><code><span>hello</span><span>(</span><span>)</span> <span>{</span>
+  <span>echo</span> <span>"Hello <span>$1</span>"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面代码中，函数体里面的 <code>$1</code> 表示函数调用时的第一个参数。</p>
+<p>调用时，就直接写函数名，参数跟在函数名后面。</p>
+<div><pre><code>$ hello world
+hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>下面是一个多行函数的例子，显示当前日期时间。</p>
+<div><pre><code><span>today</span><span>(</span><span>)</span> <span>{</span>
+  <span>echo</span> -n <span>"Today's date is: "</span>
+  <span>date</span> +<span>"%A, %B %-d, %Y"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>删除一个函数，可以使用 <code>unset</code> 命令。</p>
+<div><pre><code><span>unset</span> -f functionName
+</code></pre>
+<div><span>1</span><br></div></div><p>查看当前 Shell 已经定义的所有函数，可以使用 <code>declare</code> 命令。</p>
+<div><pre><code><span>declare</span> -f
+</code></pre>
+<div><span>1</span><br></div></div><p>上面的 <code>declare</code> 命令不仅会输出函数名，还会输出所有定义。输出顺序是按照函数名的字母表顺序。由于会输出很多内容，最好通过管道命令配合 <code>more</code> 或 <code>less</code> 使用。</p>
+<p><code>declare</code> 命令还支持查看单个函数的定义。</p>
+<div><pre><code><span>declare</span> -f functionName
+</code></pre>
+<div><span>1</span><br></div></div><p><code>declare -F</code> 可以输出所有已经定义的函数名，不含函数体。</p>
+<div><pre><code><span>declare</span> -F
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="参数变量"> 参数变量</h2>
+<p>函数体内可以使用参数变量，获取函数参数。函数的参数变量，与脚本参数变量是一致的。</p>
 <ul>
-<li>Bourne Shell(sh)</li>
-<li>Bourne Again shell(bash)</li>
-<li>C Shell(csh)</li>
-<li>TENEX C Shell(tcsh)</li>
-<li>Korn shell(ksh)</li>
-<li>Z Shell(zsh)</li>
-<li>Friendly Interactive Shell(fish)</li>
+<li><code>$1</code> ~ <code>$9</code>: 函数的第一个到第 9 个的参数。</li>
+<li><code>$0</code>: 函数所在的脚本名。</li>
+<li><code>$#</code>: 函数的参数总数。</li>
+<li><code>$@</code>: 函数的全部参数，参数之间使用空格分隔。</li>
+<li><code>$*</code>: 函数的全部参数，参数之间使用变量 <code>$IFS</code> 值的第一个字符分隔，默认为空格，但是可以自定义。</li>
 </ul>
-<p>Bash 是目前最常用的 Shell，除非特别指明，下文的 Shell 和 Bash 当作同义词使用，可以互换。</p>
-<p>下面的命令可以查看当前运行的 Shell。</p>
-<div><pre><code>$ <span>echo</span> <span>$SHELL</span>
-/bin/bash
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令可以查看当前的 Linux 系统安装的所有 Shell。</p>
-<div><pre><code><span>cat</span> /etc/shells
-</code></pre>
-<div><span>1</span><br></div></div><p>上面两个命令中，<code>$</code> 是命令行环境的提示符，用户只需要输入提示符后面的内容。</p>
-<p>Linux 允许每个用户使用不同的 Shell，用户的默认 Shell 一般都是 Bash，或者与 Bash 兼容。</p>
-<h2 id="命令行环境"> 命令行环境</h2>
-<h3 id="终端模拟器"> 终端模拟器</h3>
-<p>如果是不带有图形环境的 Linux 系统(比如专用于服务器的系统)，启动后就直接是命令行环境。</p>
-<p>不过，现在大部分的 Linux 发行版，尤其是针对普通用户的发行版，都是图形环境。用户登录系统后，自动进入图形环境，需要自己启动终端模拟器，才能进入命令行环境。</p>
-<p>所谓“终端模拟器”(terminal emulator)就是一个模拟命令行窗口的程序，让用户在一个窗口中使用命令行环境，并且提供各种附加功能，比如调整颜色、字体大小、行距等等。</p>
-<p>不同 Linux 发行版(准确地说是不同的桌面环境)带有的终端程序是不一样的，比如 KDE 桌面环境的终端程序是 konsole，Gnome 桌面环境的终端程序是 gnome-terminal，用户也可以安装第三方的终端程序。所有终端程序，尽管名字不同，基本功能都是一样的，就是让用户可以进入命令行环境，使用 Shell。</p>
-<h3 id="命令行提示符"> 命令行提示符</h3>
-<p>进入命令行环境以后，用户会看到 Shell 的提示符。提示符往往是一串前缀，最后以一个美元符号 <code>$</code> 结尾，用户可以在这个符号后面输入各种命令。</p>
-<div><pre><code><span>[</span>user@hostname<span>]</span> $
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，完整的提示符是 <code>[user@hostname] $</code>，其中前缀是用户名(<code>user</code>)加上 <code>@</code>，再加主机名(<code>hostname</code>)。比如，用户名是 <code>bill</code>，主机名是 <code>home-machine</code>，前缀就是 <code>bill@home-machine</code>。</p>
-<p>注意，根用户(root)的提示符，不以美元符号 (<code>$</code>) 结尾，而以井号 (<code>#</code>) 结尾，用来提醒用户，现在具有根权限，可以执行各种操作，务必小心，不要出现误操作。这个符号是可以自己定义的，详见《命令提示符》一章。</p>
-<p>为了简洁，后文的命令行提示符都只使用 <code>$</code> 表示。</p>
-<h3 id="进入和退出方法"> 进入和退出方法</h3>
-<p>进入命令行环境以后，一般就已经打开 Bash 了。如果您的 Shell 不是 Bash，可以输入 <code>bash</code> 命令启动 Bash。</p>
-<div><pre><code><span>bash</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>退出 Bash 环境，可以使用 <code>exit</code> 命令，也可以同时按下 <code>Ctrl + d</code>。</p>
-<div><pre><code><span>exit</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>Bash 的基本用法就是在命令行输入各种命令，非常直观。作为练习，可以试着输入 <code>pwd</code> 命令。按下回车键，就会显示当前所在的目录。</p>
-<div><pre><code>$ <span>pwd</span>
-/home/me
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>如果不小心输入了 <code>pwe</code>，会返回一个提示，表示输入出错，没有对应的可执行程序。</p>
-<div><pre><code>$ pwe
-bash: pwe: 未找到命令
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="shell-和-bash-的历史"> Shell 和 Bash 的历史</h2>
-<p>Shell 伴随着 Unix 系统的诞生而诞生。</p>
-<p>1969 年，Ken Thompson 和 Dennis Ritchie 开发了第一版的 Unix。</p>
-<p>1971 年，Ken Thompson 编写了最初的 Shell，称为 Thompson shell，程序名是 <code>sh</code>，方便用户使用 Unix。</p>
-<p>1973 年至 1975 年间，John R. Mashey 扩展了最初的 Thompson shell，添加了编程功能，使得 Shell 成为一种编程语言。这个版本的 Shell 称为 Mashey shell。</p>
-<p>1976 年，Stephen Bourne 结合 Mashey shell 的功能，重写一个新的 Shell，称为 Bourne shell。</p>
-<p>1978 年，加州大学伯克利分校的 Bill Joy 开发了 C shell，为 Shell 提供 C 语言的语法，程序名是 <code>csh</code>。它是第一个真正替代 <code>sh</code> 的 UNIX shell，被合并到 Berkeley UNIX 的 2BSD 版本中。</p>
-<p>1979 年，UNIX 第七版发布，内置了 Bourne Shell，导致它成为 Unix 的默认 Shell。注意，Thompson shell、Mashey shell 和 Bourne shell 都是贝尔实验室的产品，程序名都是 <code>sh</code>。对于用户来说，它们是同一个东西，只是底层代码不同而已。</p>
-<p>1983 年，David Korn 开发了 Korn shell，程序名是 <code>ksh</code>。</p>
-<p>1985 年，Richard Stallman 成立了自由软件基金会(FSF)，由于 Shell 的版权属于贝尔公司，所以他决定写一个自由版权的、使用 GNU 许可证的 Shell 程序，避免 Unix 的版权争议。</p>
-<p>1988 年，自由软件基金会的第一个付薪程序员 Brian Fox 写了一个 Shell，功能基本上是 Bourne shell 的克隆，叫做 Bourne-Again SHell，简称 Bash，程序名为 <code>bash</code>，任何人都可以免费使用。后来，它逐渐成为 Linux 系统的标准 Shell。</p>
-<p>1989 年，Bash 发布 1.0 版。</p>
-<p>1996 年，Bash 发布 2.0 版。</p>
-<p>2004 年，Bash 发布 3.0 版。</p>
-<p>2009 年，Bash 发布 4.0 版。</p>
-<p>2019 年，Bash 发布 5.0 版。</p>
-<p>用户可以通过 <code>bash</code> 命令的 <code>--version</code> 参数或者环境变量 <code>$BASH_VERSION</code>，查看本机的 Bash 版本。</p>
-<div><pre><code>$ <span>bash</span> --version
-GNU bash，版本 <span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release <span>(</span>x86_64-pc-linux-gnu<span>)</span>
+<p>如果函数的参数多于 9 个，那么第 10 个参数可以用 <code>${10}</code> 的形式引用，以此类推。</p>
+<p>下面是一个示例脚本 <code>test.sh</code>。</p>
+<div><pre><code><span>#!/bin/bash</span>
+<span># test.sh</span>
 
-<span># 或者</span>
-$ <span>echo</span> <span>$BASH_VERSION</span>
-<span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release
+<span>function</span> <span>alice</span> <span>{</span>
+  <span>echo</span> <span>"alice: <span>$@</span>"</span>
+  <span>echo</span> <span>"<span>$0</span>: <span>$1</span> <span>$2</span> <span>$3</span> <span>$4</span>"</span>
+  <span>echo</span> <span>"<span>$#</span> arguments"</span>
+
+<span>}</span>
+
+alice <span>in</span> wonderland
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>运行该脚本，结果如下。</p>
+<div><pre><code>$ <span>bash</span> test.sh
+alice: <span>in</span> wonderland
+test.sh: <span>in</span> wonderland
+<span>2</span> arguments
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，由于函数 <code>alice</code> 只有第一个和第二个参数，所以第三个和第四个参数为空。</p>
+<p>下面是一个日志函数的例子。</p>
+<div><pre><code><span>function</span> <span>log_msg</span> <span>{</span>
+  <span>echo</span> <span>"[<span><span>`</span><span>date</span> <span>'+ %F %T'</span><span>`</span></span> ]: <span>$@</span>"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>使用方法如下。</p>
+<div><pre><code>$ log_msg <span>"This is sample log message"</span>
+<span>[</span> <span>2018</span>-08-16 <span>19</span>:56:34 <span>]</span>: This is sample log message
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="return-命令"> return 命令</h2>
+<p><code>return</code> 命令用于从函数返回一个值。函数执行到这条命令，就不再往下执行了，直接返回了。</p>
+<div><pre><code><span>function</span> <span>func_return_value</span> <span>{</span>
+  <span>return</span> <span>10</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>函数将返回值返回给调用者。如果命令行直接执行函数，下一个命令可以用 <code>$?</code> 拿到返回值。</p>
+<div><pre><code>$ func_return_value
+$ <span>echo</span> <span>"Value returned by function is: <span>$?</span>"</span>
+Value returned by <span>function</span> is: <span>10</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>return</code> 后面不跟参数，只用于返回也是可以的。</p>
+<div><pre><code><span>function</span> <span>name</span> <span>{</span>
+  commands
+  <span>return</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="全局变量和局部变量-local-命令"> 全局变量和局部变量，local 命令</h2>
+<p>Bash 函数体内直接声明的变量，属于全局变量，整个脚本都可以读取。这一点需要特别小心。</p>
+<div><pre><code><span># 脚本 test.sh</span>
+<span>fn</span> <span>(</span><span>)</span> <span>{</span>
+  <span>foo</span><span>=</span><span>1</span>
+  <span>echo</span> <span>"fn: foo = <span>$foo</span>"</span>
+<span>}</span>
+
+fn
+<span>echo</span> <span>"global: foo = <span>$foo</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面脚本的运行结果如下。</p>
+<div><pre><code>$ <span>bash</span> test.sh
+fn: foo <span>=</span> <span>1</span>
+global: foo <span>=</span> <span>1</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，变量 <code>$foo</code> 是在函数 <code>fn</code> 内部声明的，函数体外也可以读取。</p>
+<p>函数体内不仅可以声明全局变量，还可以修改全局变量。</p>
+<div><pre><code><span>foo</span><span>=</span><span>1</span>
+
+<span>fn</span> <span>(</span><span>)</span> <span>{</span>
+  <span>foo</span><span>=</span><span>2</span>
+<span>}</span>
+
+<span>echo</span> <span>$foo</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>上面代码执行后，输出的变量 <code>$foo</code> 值为 2。</p>
+<p>函数里面可以用 <code>local</code> 命令声明局部变量。</p>
+<div><pre><code><span># 脚本 test.sh</span>
+<span>fn</span> <span>(</span><span>)</span> <span>{</span>
+  <span>local</span> foo
+  <span>foo</span><span>=</span><span>1</span>
+  <span>echo</span> <span>"fn: foo = <span>$foo</span>"</span>
+<span>}</span>
+
+fn
+<span>echo</span> <span>"global: foo = <span>$foo</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面脚本的运行结果如下。</p>
+<div><pre><code>$ <span>bash</span> test.sh
+fn: foo <span>=</span> <span>1</span>
+global: foo <span>=</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面例子中，<code>local</code> 命令声明的 <code>$foo</code> 变量，只在函数体内有效，函数体外没有定义。</p>
+<h2 id="参考链接"> 参考链接</h2>
+<ul>
+<li><a href="https://www.linuxtechi.com/define-use-functions-linux-shell-script/" target="_blank" rel="noopener noreferrer">How to define and use functions in Linux Shell Script<i>Content not supported</i></a>, by Pradeep Kumar</li>
+</ul>
+]]></content>
     <author>
       <name>阮一峰</name>
     </author>
@@ -8821,6 +8721,106 @@ keyword
 <p>除了上面的快捷键，Bash 还具有自动补全功能。命令输入到一半的时候，可以按下 Tab 键，Bash 会自动完成剩下的部分。比如，输入 <code>pw</code>，然后按一下 Tab 键，Bash 会自动补上 <code>d</code>。</p>
 <p>除了命令的自动补全，Bash 还支持路径的自动补全。有时，需要输入很长的路径，这时只需要输入前面的部分，然后按下 Tab 键，就会自动补全后面的部分。如果有多个可能的选择，按两次 Tab 键，Bash 会显示所有选项，让您选择。</p>
 ]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">Bash 简介</title>
+    <id>https://list-jiang.github.io/code/linux/bash/intro/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/intro/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <summary type="html"><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Bash 是 Unix 系统和 Linux 系统的一种 Shell(命令行环境)，是目前绝大多数 Linux 发行版的默认 Shell。</p>
+
+<h2 id="shell-的含义"> Shell 的含义</h2>
+<p>学习 Bash，首先需要理解 Shell 是什么。Shell 这个单词的原意是“外壳”，跟 kernel(内核)相对应，比喻内核外面的一层，即用户跟内核交互的对话界面。</p>
+<p>具体来说，Shell 这个词有多种含义。</p>
+<p>首先，Shell 是一个程序，提供一个与用户对话的环境。这个环境只有一个命令提示符，让用户从键盘输入命令，所以又称为命令行环境(commandline，简写为 CLI)。Shell 接收到用户输入的命令，将命令送入操作系统执行，并将结果返回给用户。本书中，除非特别指明，Shell 指的就是命令行环境。</p>
+<p>其次，Shell 是一个命令解释器，解释用户输入的命令。它支持变量、条件判断、循环操作等语法，所以用户可以用 Shell 命令写出各种小程序，又称为脚本(script)。这些脚本都通过 Shell 的解释执行，而不通过编译。</p>
+<p>最后，Shell 是一个工具箱，提供了各种小工具，供用户方便地使用操作系统的功能。</p>
+<h2 id="shell-的种类"> Shell 的种类</h2>
+<p>Shell 有很多种，只要能给用户提供命令行环境的程序，都可以看作是 Shell。</p>
+<p>历史上，主要的 Shell 有下面这些。</p>
+<ul>
+<li>Bourne Shell(sh)</li>
+<li>Bourne Again shell(bash)</li>
+<li>C Shell(csh)</li>
+<li>TENEX C Shell(tcsh)</li>
+<li>Korn shell(ksh)</li>
+<li>Z Shell(zsh)</li>
+<li>Friendly Interactive Shell(fish)</li>
+</ul>
+<p>Bash 是目前最常用的 Shell，除非特别指明，下文的 Shell 和 Bash 当作同义词使用，可以互换。</p>
+<p>下面的命令可以查看当前运行的 Shell。</p>
+<div><pre><code>$ <span>echo</span> <span>$SHELL</span>
+/bin/bash
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>下面的命令可以查看当前的 Linux 系统安装的所有 Shell。</p>
+<div><pre><code><span>cat</span> /etc/shells
+</code></pre>
+<div><span>1</span><br></div></div><p>上面两个命令中，<code>$</code> 是命令行环境的提示符，用户只需要输入提示符后面的内容。</p>
+<p>Linux 允许每个用户使用不同的 Shell，用户的默认 Shell 一般都是 Bash，或者与 Bash 兼容。</p>
+<h2 id="命令行环境"> 命令行环境</h2>
+<h3 id="终端模拟器"> 终端模拟器</h3>
+<p>如果是不带有图形环境的 Linux 系统(比如专用于服务器的系统)，启动后就直接是命令行环境。</p>
+<p>不过，现在大部分的 Linux 发行版，尤其是针对普通用户的发行版，都是图形环境。用户登录系统后，自动进入图形环境，需要自己启动终端模拟器，才能进入命令行环境。</p>
+<p>所谓“终端模拟器”(terminal emulator)就是一个模拟命令行窗口的程序，让用户在一个窗口中使用命令行环境，并且提供各种附加功能，比如调整颜色、字体大小、行距等等。</p>
+<p>不同 Linux 发行版(准确地说是不同的桌面环境)带有的终端程序是不一样的，比如 KDE 桌面环境的终端程序是 konsole，Gnome 桌面环境的终端程序是 gnome-terminal，用户也可以安装第三方的终端程序。所有终端程序，尽管名字不同，基本功能都是一样的，就是让用户可以进入命令行环境，使用 Shell。</p>
+<h3 id="命令行提示符"> 命令行提示符</h3>
+<p>进入命令行环境以后，用户会看到 Shell 的提示符。提示符往往是一串前缀，最后以一个美元符号 <code>$</code> 结尾，用户可以在这个符号后面输入各种命令。</p>
+<div><pre><code><span>[</span>user@hostname<span>]</span> $
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，完整的提示符是 <code>[user@hostname] $</code>，其中前缀是用户名(<code>user</code>)加上 <code>@</code>，再加主机名(<code>hostname</code>)。比如，用户名是 <code>bill</code>，主机名是 <code>home-machine</code>，前缀就是 <code>bill@home-machine</code>。</p>
+<p>注意，根用户(root)的提示符，不以美元符号 (<code>$</code>) 结尾，而以井号 (<code>#</code>) 结尾，用来提醒用户，现在具有根权限，可以执行各种操作，务必小心，不要出现误操作。这个符号是可以自己定义的，详见《命令提示符》一章。</p>
+<p>为了简洁，后文的命令行提示符都只使用 <code>$</code> 表示。</p>
+<h3 id="进入和退出方法"> 进入和退出方法</h3>
+<p>进入命令行环境以后，一般就已经打开 Bash 了。如果您的 Shell 不是 Bash，可以输入 <code>bash</code> 命令启动 Bash。</p>
+<div><pre><code><span>bash</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>退出 Bash 环境，可以使用 <code>exit</code> 命令，也可以同时按下 <code>Ctrl + d</code>。</p>
+<div><pre><code><span>exit</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>Bash 的基本用法就是在命令行输入各种命令，非常直观。作为练习，可以试着输入 <code>pwd</code> 命令。按下回车键，就会显示当前所在的目录。</p>
+<div><pre><code>$ <span>pwd</span>
+/home/me
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>如果不小心输入了 <code>pwe</code>，会返回一个提示，表示输入出错，没有对应的可执行程序。</p>
+<div><pre><code>$ pwe
+bash: pwe: 未找到命令
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="shell-和-bash-的历史"> Shell 和 Bash 的历史</h2>
+<p>Shell 伴随着 Unix 系统的诞生而诞生。</p>
+<p>1969 年，Ken Thompson 和 Dennis Ritchie 开发了第一版的 Unix。</p>
+<p>1971 年，Ken Thompson 编写了最初的 Shell，称为 Thompson shell，程序名是 <code>sh</code>，方便用户使用 Unix。</p>
+<p>1973 年至 1975 年间，John R. Mashey 扩展了最初的 Thompson shell，添加了编程功能，使得 Shell 成为一种编程语言。这个版本的 Shell 称为 Mashey shell。</p>
+<p>1976 年，Stephen Bourne 结合 Mashey shell 的功能，重写一个新的 Shell，称为 Bourne shell。</p>
+<p>1978 年，加州大学伯克利分校的 Bill Joy 开发了 C shell，为 Shell 提供 C 语言的语法，程序名是 <code>csh</code>。它是第一个真正替代 <code>sh</code> 的 UNIX shell，被合并到 Berkeley UNIX 的 2BSD 版本中。</p>
+<p>1979 年，UNIX 第七版发布，内置了 Bourne Shell，导致它成为 Unix 的默认 Shell。注意，Thompson shell、Mashey shell 和 Bourne shell 都是贝尔实验室的产品，程序名都是 <code>sh</code>。对于用户来说，它们是同一个东西，只是底层代码不同而已。</p>
+<p>1983 年，David Korn 开发了 Korn shell，程序名是 <code>ksh</code>。</p>
+<p>1985 年，Richard Stallman 成立了自由软件基金会(FSF)，由于 Shell 的版权属于贝尔公司，所以他决定写一个自由版权的、使用 GNU 许可证的 Shell 程序，避免 Unix 的版权争议。</p>
+<p>1988 年，自由软件基金会的第一个付薪程序员 Brian Fox 写了一个 Shell，功能基本上是 Bourne shell 的克隆，叫做 Bourne-Again SHell，简称 Bash，程序名为 <code>bash</code>，任何人都可以免费使用。后来，它逐渐成为 Linux 系统的标准 Shell。</p>
+<p>1989 年，Bash 发布 1.0 版。</p>
+<p>1996 年，Bash 发布 2.0 版。</p>
+<p>2004 年，Bash 发布 3.0 版。</p>
+<p>2009 年，Bash 发布 4.0 版。</p>
+<p>2019 年，Bash 发布 5.0 版。</p>
+<p>用户可以通过 <code>bash</code> 命令的 <code>--version</code> 参数或者环境变量 <code>$BASH_VERSION</code>，查看本机的 Bash 版本。</p>
+<div><pre><code>$ <span>bash</span> --version
+GNU bash，版本 <span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release <span>(</span>x86_64-pc-linux-gnu<span>)</span>
+
+<span># 或者</span>
+$ <span>echo</span> <span>$BASH_VERSION</span>
+<span>5.0</span>.3<span>(</span><span>1</span><span>)</span>-release
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
     <author>
       <name>阮一峰</name>
     </author>
