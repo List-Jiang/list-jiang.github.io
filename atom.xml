@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2023-01-09T05:03:49.526Z</updated>
+  <updated>2023-01-09T05:04:24.926Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -267,6 +267,21 @@
       <name>List Jiang</name>
     </contributor>
     <published>2022-03-10T07:21:56.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Redis 使用经验</title>
+    <id>https://list-jiang.github.io/db/redis/experience/</id>
+    <link href="https://list-jiang.github.io/db/redis/experience/"/>
+    <updated>2022-03-07T07:53:32.000Z</updated>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="Redis" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-03-07T07:53:32.000Z</published>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
@@ -644,21 +659,6 @@ Redis后台保存模式依赖现代操作系统的写时拷贝技术。Redis for
     <rights>Copyright by https://www.redis.com.cn/</rights>
   </entry>
   <entry>
-    <title type="html">Redis 使用经验</title>
-    <id>https://list-jiang.github.io/db/redis/experience/</id>
-    <link href="https://list-jiang.github.io/db/redis/experience/"/>
-    <updated>2022-03-07T07:53:32.000Z</updated>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="Redis" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-03-07T07:53:32.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">Redis</title>
     <id>https://list-jiang.github.io/db/redis/</id>
     <link href="https://list-jiang.github.io/db/redis/"/>
@@ -898,28 +898,6 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">Zipkin 快速入门</title>
-    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
-    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
-    <updated>2022-02-24T06:38:19.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
-<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
-<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
-<p><img src="./../img/web-screenshot.png" alt=""></p>
-<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
-<p><img src="./../img/dependency-graph.png" alt=""></p>
-<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-24T06:38:19.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">Zipkin</title>
     <id>https://list-jiang.github.io/spring/track/zipkin/</id>
     <link href="https://list-jiang.github.io/spring/track/zipkin/"/>
@@ -931,6 +909,28 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 <li><a href="./start-env.html">zipkin启动及环境配置</a></li>
 <li><a href="./demo.html">生产案例</a></li>
 </ul>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-24T06:38:19.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Zipkin 快速入门</title>
+    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
+    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
+    <updated>2022-02-24T06:38:19.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
+<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
+<p><img src="./../img/web-screenshot.png" alt=""></p>
+<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
+<p><img src="./../img/dependency-graph.png" alt=""></p>
+<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
 ]]></content>
     <author>
       <name>List Jiang</name>
@@ -4256,6 +4256,23 @@ amet.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">gunzip</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="gunzip"> gunzip</h1>
+<p><code>gunzip</code> 命令用于解压 <code>gzip</code> 命令压缩的文件。</p>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">grep</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/grep/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/grep/"/>
@@ -4298,23 +4315,6 @@ _krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/f
 $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</span> <span>grep</span> -v <span>grep</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">gunzip</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="gunzip"> gunzip</h1>
-<p><code>gunzip</code> 命令用于解压 <code>gzip</code> 命令压缩的文件。</p>
-]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4492,6 +4492,31 @@ active  adnanad <span>59</span>      demo                            <span>39936
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">ps</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ps/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ps"> ps</h1>
+<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
+<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
+<div><pre><code><span># 找出正在运行 vim 的进程</span>
+$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
+<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
+<div><pre><code><span>ps</span> -u yourusername
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">nl</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/nl/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/nl/"/>
@@ -4543,31 +4568,6 @@ amet.
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p><code>-s</code> 参数表示行号的后缀。</p>
 ]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">ps</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ps/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="ps"> ps</h1>
-<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
-<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
-<div><pre><code><span># 找出正在运行 vim 的进程</span>
-$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
-<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
-<div><pre><code><span>ps</span> -u yourusername
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -5590,26 +5590,6 @@ $ <span>find</span> ~ -type f -name <span>'foo*'</span> -exec <span>ls</span> -l
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">主机管理</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
-<h2 id="hostname-命令"> hostname 命令</h2>
-<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
-<div><pre><code><span>hostname</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">硬件操作</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/hardware/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/hardware/"/>
@@ -5823,6 +5803,26 @@ $ <span>sudo</span> dmidecode -t <span>4</span>
 </code></pre>
 <div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
 <div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">主机管理</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
+<h2 id="hostname-命令"> hostname 命令</h2>
+<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
+<div><pre><code><span>hostname</span>
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
