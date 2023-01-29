@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2023-01-29T01:38:39.419Z</updated>
+  <updated>2023-01-29T01:40:23.701Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -921,28 +921,6 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
   </entry>
   <entry>
     <title type="html">Zipkin</title>
-    <id>https://list-jiang.github.io/spring/track/zipkin/</id>
-    <link href="https://list-jiang.github.io/spring/track/zipkin/"/>
-    <updated>2022-02-24T15:57:23.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
-<ul>
-<li><a href="./info.html">介绍</a></li>
-<li><a href="./quick-start.html">快速入门</a></li>
-<li><a href="./start-env.html">zipkin启动及环境配置</a></li>
-<li><a href="./demo.html">生产案例</a></li>
-</ul>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-24T06:38:19.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Zipkin</title>
     <id>https://list-jiang.github.io/spring/track/zipkin/start-env%20copy/</id>
     <link href="https://list-jiang.github.io/spring/track/zipkin/start-env%20copy/"/>
     <updated>2022-02-24T06:38:19.000Z</updated>
@@ -1614,6 +1592,28 @@ $ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 $ java -jar ./zipkin-server/target/zipkin-server-*slim.jar
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-24T06:38:19.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Zipkin</title>
+    <id>https://list-jiang.github.io/spring/track/zipkin/</id>
+    <link href="https://list-jiang.github.io/spring/track/zipkin/"/>
+    <updated>2022-02-24T15:57:23.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
+<ul>
+<li><a href="./info.html">介绍</a></li>
+<li><a href="./quick-start.html">快速入门</a></li>
+<li><a href="./start-env.html">zipkin启动及环境配置</a></li>
+<li><a href="./demo.html">生产案例</a></li>
+</ul>
+]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -2470,21 +2470,6 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">rocketmq</title>
-    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
-    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
-    <updated>2022-02-23T07:50:41.000Z</updated>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <category term="mq" scheme=""/>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-23T00:00:00.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">中间件</title>
     <id>https://list-jiang.github.io/middleware/</id>
     <link href="https://list-jiang.github.io/middleware/"/>
@@ -2505,6 +2490,21 @@ wordCounts<span>.</span><span>toStream</span><span>(</span><span>)</span><span>.
       <name>List Jiang</name>
     </contributor>
     <published>2022-02-23T07:50:41.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">rocketmq</title>
+    <id>https://list-jiang.github.io/middleware/mq/rocketmq/</id>
+    <link href="https://list-jiang.github.io/middleware/mq/rocketmq/"/>
+    <updated>2022-02-23T07:50:41.000Z</updated>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <category term="mq" scheme=""/>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-23T00:00:00.000Z</published>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
@@ -3801,15 +3801,14 @@ sys
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">cal</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cal/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cal/"/>
+    <title type="html">cat</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cat/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cat/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="cal"> cal</h1>
-<p><code>cal</code> 命令显示本月的日历。</p>
-<div><pre><code><span>cal</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
+    <content type="html"><![CDATA[<h1 id="cat"> cat</h1>
+<p><code>cat</code> 命令用于显示一个文本文件的内容。</p>
+<p><code>cat - &gt;&gt; filename</code> 用于向一个现有文件的尾部追加内容。</p>
+]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -3820,14 +3819,15 @@ sys
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">cat</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cat/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cat/"/>
+    <title type="html">cal</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cal/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cal/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="cat"> cat</h1>
-<p><code>cat</code> 命令用于显示一个文本文件的内容。</p>
-<p><code>cat - &gt;&gt; filename</code> 用于向一个现有文件的尾部追加内容。</p>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="cal"> cal</h1>
+<p><code>cal</code> 命令显示本月的日历。</p>
+<div><pre><code><span>cal</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -3876,6 +3876,25 @@ sys
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">date</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/date/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/date/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="date"> date</h1>
+<p><code>date</code> 命令显示当前的日期和时间。</p>
+<div><pre><code><span>date</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">cut</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cut/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cut/"/>
@@ -3910,25 +3929,6 @@ $ <span>cut</span> file1.txt -d, -f1,3
 $ <span>cut</span> -f <span>1</span>-2,4-5 data.txt
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">date</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/date/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/date/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="date"> date</h1>
-<p><code>date</code> 命令显示当前的日期和时间。</p>
-<div><pre><code><span>date</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4154,48 +4154,6 @@ ipsum dolor sit
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">fmt</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="fmt"> fmt</h1>
-<p><code>fmt</code> 命令用于对文本指定样式。</p>
-<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
-<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</code></pre>
-<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
-<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
-Lorem ipsum
-dolor sit amet,
-consetetur
-sadipscing elitr,
-<span>sed</span> diam nonumy
-eirmod tempor
-invidunt ut labore
-et dolore magna
-aliquyam erat, <span>sed</span>
-diam voluptua. At
-vero eos et
-accusam et justo
-duo dolores et ea
-rebum. Stet clita
-kasd gubergren,
-no sea takimata
-sanctus est Lorem
-ipsum dolor sit
-amet.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">find</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/find/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/find/"/>
@@ -4246,6 +4204,48 @@ amet.
 <div><pre><code><span>find</span> -name <span>'*.c'</span> -exec <span>vim</span> <span>{</span><span>}</span> +
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">fmt</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="fmt"> fmt</h1>
+<p><code>fmt</code> 命令用于对文本指定样式。</p>
+<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
+<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</code></pre>
+<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
+<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
+Lorem ipsum
+dolor sit amet,
+consetetur
+sadipscing elitr,
+<span>sed</span> diam nonumy
+eirmod tempor
+invidunt ut labore
+et dolore magna
+aliquyam erat, <span>sed</span>
+diam voluptua. At
+vero eos et
+accusam et justo
+duo dolores et ea
+rebum. Stet clita
+kasd gubergren,
+no sea takimata
+sanctus est Lorem
+ipsum dolor sit
+amet.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4421,6 +4421,25 @@ $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</spa
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
+    <title type="html">lpr</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/lpr/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/lpr/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="lpr"> lpr</h1>
+<p><code>lpr</code> 命令用于打印文件。</p>
+<div><pre><code><span>lpr</span> filename
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
     <title type="html">lpq</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/lpq/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/lpq/"/>
@@ -4433,25 +4452,6 @@ active  adnanad <span>59</span>      demo                            <span>39936
 1st     adnanad <span>60</span>      <span>(</span>stdin<span>)</span>                         <span>0</span> bytes
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">lpr</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/lpr/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/lpr/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="lpr"> lpr</h1>
-<p><code>lpr</code> 命令用于打印文件。</p>
-<div><pre><code><span>lpr</span> filename
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4480,6 +4480,31 @@ active  adnanad <span>59</span>      demo                            <span>39936
 </ul>
 <p>可以把结果导出给类似 vim 的进程。</p>
 <div><pre><code><span>ls</span> -XR <span>|</span> <span>vim</span> -
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">ps</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ps/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ps"> ps</h1>
+<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
+<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
+<div><pre><code><span># 找出正在运行 vim 的进程</span>
+$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
+<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
+<div><pre><code><span>ps</span> -u yourusername
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
@@ -4543,31 +4568,6 @@ amet.
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p><code>-s</code> 参数表示行号的后缀。</p>
 ]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">ps</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/ps/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="ps"> ps</h1>
-<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
-<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
-<div><pre><code><span># 找出正在运行 vim 的进程</span>
-$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
-<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
-<div><pre><code><span>ps</span> -u yourusername
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4866,16 +4866,12 @@ d
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">wc</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/wc/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/wc/"/>
+    <title type="html">w</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/w/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="wc"> wc</h1>
-<p><code>wc</code> 命令返回某个文件的行数、词数和字符数。</p>
-<div><pre><code>$ <span>wc</span> demo.txt
-<span>7459</span>   <span>15915</span>  <span>398400</span> demo.txt
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面代码中，<code>7459</code> 是行数，<code>15915</code> 是词数，<code>398400</code> 是字符数。</p>
+    <content type="html"><![CDATA[<h1 id="w"> w</h1>
+<p><code>w</code> 命令显示当期谁在线。</p>
 ]]></content>
     <author>
       <name>List Jiang</name>
@@ -4887,12 +4883,16 @@ d
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">w</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/w/"/>
+    <title type="html">wc</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/wc/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/wc/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="w"> w</h1>
-<p><code>w</code> 命令显示当期谁在线。</p>
+    <content type="html"><![CDATA[<h1 id="wc"> wc</h1>
+<p><code>wc</code> 命令返回某个文件的行数、词数和字符数。</p>
+<div><pre><code>$ <span>wc</span> demo.txt
+<span>7459</span>   <span>15915</span>  <span>398400</span> demo.txt
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面代码中，<code>7459</code> 是行数，<code>15915</code> 是词数，<code>398400</code> 是字符数。</p>
 ]]></content>
     <author>
       <name>List Jiang</name>
@@ -5590,26 +5590,6 @@ $ <span>find</span> ~ -type f -name <span>'foo*'</span> -exec <span>ls</span> -l
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">主机管理</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
-<h2 id="hostname-命令"> hostname 命令</h2>
-<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
-<div><pre><code><span>hostname</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">硬件操作</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/hardware/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/hardware/"/>
@@ -5823,6 +5803,26 @@ $ <span>sudo</span> dmidecode -t <span>4</span>
 </code></pre>
 <div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
 <div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">主机管理</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/host/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/host/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="主机管理"> 主机管理</h1>
+<h2 id="hostname-命令"> hostname 命令</h2>
+<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
+<div><pre><code><span>hostname</span>
 </code></pre>
 <div><span>1</span><br></div></div>]]></content>
     <author>
@@ -9768,85 +9768,6 @@ abc
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 教程</title>
-    <id>https://list-jiang.github.io/code/linux/bash/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
-<ul>
-<li>
-<p><a href="./intro.html">简介</a></p>
-</li>
-<li>
-<p><a href="./grammar.html">基本语法</a></p>
-</li>
-<li>
-<p><a href="./expansion.html">模式扩展</a></p>
-</li>
-<li>
-<p><a href="./quotation.html">引号和转义</a></p>
-</li>
-<li>
-<p><a href="./variable.html">变量</a></p>
-</li>
-<li>
-<p><a href="./string.html">字符串操作</a></p>
-</li>
-<li>
-<p><a href="./arithmetic.html">算术运算</a></p>
-</li>
-<li>
-<p><a href="./readline.html">行操作</a></p>
-</li>
-<li>
-<p><a href="./stack.html">目录堆栈</a></p>
-</li>
-<li>
-<p><a href="./script.html">脚本入门</a></p>
-</li>
-<li>
-<p><a href="./read.html">read 命令</a></p>
-</li>
-<li>
-<p><a href="./condition.html">条件判断</a></p>
-</li>
-<li>
-<p><a href="./loop.html">循环</a></p>
-</li>
-<li>
-<p><a href="./function.html">函数</a></p>
-</li>
-<li>
-<p><a href="./array.html">数组</a></p>
-</li>
-<li>
-<p><a href="./set.html">set 命令</a></p>
-</li>
-<li>
-<p><a href="./debug.html">脚本除错</a></p>
-</li>
-<li>
-<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
-</li>
-<li>
-<p><a href="./startup.html">启动环境</a></p>
-</li>
-<li>
-<p><a href="./prompt.html">命令提示符</a></p>
-</li>
-</ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">Bash 行操作</title>
     <id>https://list-jiang.github.io/code/linux/bash/readline/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/readline/"/>
@@ -10021,6 +9942,85 @@ $ <span>history</span>
 <span>cd</span> <span>#按下 Alt + .</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，在 <code>cd</code> 命令后按下 <code>Alt + .</code>，就会自动插入 <code>foo_bar</code>。</p>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">Bash 教程</title>
+    <id>https://list-jiang.github.io/code/linux/bash/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="目录"> 目录</h2>
+<ul>
+<li>
+<p><a href="./intro.html">简介</a></p>
+</li>
+<li>
+<p><a href="./grammar.html">基本语法</a></p>
+</li>
+<li>
+<p><a href="./expansion.html">模式扩展</a></p>
+</li>
+<li>
+<p><a href="./quotation.html">引号和转义</a></p>
+</li>
+<li>
+<p><a href="./variable.html">变量</a></p>
+</li>
+<li>
+<p><a href="./string.html">字符串操作</a></p>
+</li>
+<li>
+<p><a href="./arithmetic.html">算术运算</a></p>
+</li>
+<li>
+<p><a href="./readline.html">行操作</a></p>
+</li>
+<li>
+<p><a href="./stack.html">目录堆栈</a></p>
+</li>
+<li>
+<p><a href="./script.html">脚本入门</a></p>
+</li>
+<li>
+<p><a href="./read.html">read 命令</a></p>
+</li>
+<li>
+<p><a href="./condition.html">条件判断</a></p>
+</li>
+<li>
+<p><a href="./loop.html">循环</a></p>
+</li>
+<li>
+<p><a href="./function.html">函数</a></p>
+</li>
+<li>
+<p><a href="./array.html">数组</a></p>
+</li>
+<li>
+<p><a href="./set.html">set 命令</a></p>
+</li>
+<li>
+<p><a href="./debug.html">脚本除错</a></p>
+</li>
+<li>
+<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
+</li>
+<li>
+<p><a href="./startup.html">启动环境</a></p>
+</li>
+<li>
+<p><a href="./prompt.html">命令提示符</a></p>
+</li>
+</ul>
 ]]></content>
     <author>
       <name>阮一峰</name>
@@ -10704,94 +10704,6 @@ $ <span>popd</span> -3
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 启动环境</title>
-    <id>https://list-jiang.github.io/code/linux/bash/startup/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/startup/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="session"> Session</h2>
-<p>用户每次使用 Shell，都会开启一个与 Shell 的 Session(对话)。</p>
-<p>Session 有两种类型: 登录 Session 和非登录 Session，也可以叫做 login shell 和 non-login shell。</p>
-<h3 id="登录-session"> 登录 Session</h3>
-<p>登录 Session 是用户登录系统以后，系统为用户开启的原始 Session，通常需要用户输入用户名和密码进行登录。</p>
-<p>登录 Session 一般进行整个系统环境的初始化，启动的初始化脚本依次如下。</p>
-<ul>
-<li><code>/etc/profile</code>: 所有用户的全局配置脚本。</li>
-<li><code>/etc/profile.d</code> 目录里面所有 <code>.sh</code> 文件</li>
-<li><code>~/.bash_profile</code>: 用户的个人配置脚本。如果该脚本存在，则执行完就不再往下执行。</li>
-<li><code>~/.bash_login</code>: 如果 <code>~/.bash_profile</code> 没找到，则尝试执行这个脚本(C shell 的初始化脚本)。如果该脚本存在，则执行完就不再往下执行。</li>
-<li><code>~/.profile</code>: 如果<code>~/.bash_profile</code> 和 <code>~/.bash_login</code> 都没找到，则尝试读取这个脚本(Bourne shell 和 Korn shell 的初始化脚本)。</li>
-</ul>
-<p>Linux 发行版更新的时候，会更新 <code>/etc</code> 里面的文件，比如 <code>/etc/profile</code>，因此不要直接修改这个文件。如果想修改所有用户的登陆环境，就在 <code>/etc/profile.d</code> 目录里面新建 <code>.sh</code> 脚本。</p>
-<p>如果想修改您个人的登录环境，一般是写在 <code>~/.bash_profile</code> 里面。下面是一个典型的 <code>.bash_profile</code> 文件。</p>
-<div><pre><code><span># .bash_profile</span>
-<span><span>PATH</span></span><span>=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-<span><span>PATH</span></span><span>=</span><span>$PATH</span><span>:</span><span>$HOME</span>/bin
-
-<span><span>SHELL</span></span><span>=</span>/bin/bash
-<span>MANPATH</span><span>=</span>/usr/man:/usr/X11/man
-<span>EDITOR</span><span>=</span>/usr/bin/vi
-<span><span>PS1</span></span><span>=</span><span>'\h:\w\$ '</span>
-<span><span>PS2</span></span><span>=</span><span>'> '</span>
-
-<span>if</span> <span>[</span> -f ~/.bashrc <span>]</span><span>;</span> <span>then</span>
-<span>.</span> ~/.bashrc
-<span>fi</span>
-
-<span>export</span> <span>PATH</span>
-<span>export</span> EDITOR
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>可以看到，这个脚本定义了一些最基本的环境变量，然后执行了 <code>~/.bashrc</code>。</p>
-<p><code>bash</code> 命令的 <code>--login</code> 参数，会强制执行登录 Session 会执行的脚本。</p>
-<div><pre><code><span>bash</span> --login
-</code></pre>
-<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--noprofile</code> 参数，会跳过上面这些 Profile 脚本。</p>
-<div><pre><code><span>bash</span> --noprofile
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="非登录-session"> 非登录 Session</h3>
-<p>非登录 Session 是用户进入系统以后，手动新建的 Session，这时不会进行环境初始化。比如，在命令行执行 <code>bash</code> 命令，就会新建一个非登录 Session。</p>
-<p>非登录 Session 的初始化脚本依次如下。</p>
-<ul>
-<li><code>/etc/bash.bashrc</code>: 对全体用户有效。</li>
-<li><code>~/.bashrc</code>: 仅对当前用户有效。</li>
-</ul>
-<p>对用户来说，<code>~/.bashrc</code> 通常是最重要的脚本。非登录 Session 默认会执行它，而登陆 Session 一般也会通过调用执行它。由于每次执行 Bash 脚本，都会新建一个非登录 Session，所以 <code>~/.bashrc</code> 也是每次执行脚本都会执行的。</p>
-<p><code>bash</code> 命令的 <code>--norc</code> 参数，可以禁止在非登录 Session 执行 <code>~/.bashrc</code> 脚本。</p>
-<div><pre><code><span>bash</span> --norc
-</code></pre>
-<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--rcfile</code> 参数，指定另一个脚本代替 <code>.bashrc</code>。</p>
-<div><pre><code><span>bash</span> --rcfile testrc
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="bash-logout"> .bash_logout</h3>
-<p><code>~/.bash_logout</code> 脚本在每次退出 Session 时执行，通常用来做一些清理工作和记录工作，比如删除临时文件，记录用户在本次 Session 花费的时间。</p>
-<p>如果没有退出时要执行的命令，这个文件也可以不存在。</p>
-<h2 id="启动选项"> 启动选项</h2>
-<p>为了方便 Debug，有时在启动 Bash 的时候，可以加上启动参数。</p>
-<ul>
-<li><code>-n</code>: 不运行脚本，只检查是否有语法错误。</li>
-<li><code>-v</code>: 输出每一行语句运行结果前，会先输出该行语句。</li>
-<li><code>-x</code>: 每一个命令处理完以后，先输出该命令，再进行下一个命令的处理。</li>
-</ul>
-<div><pre><code><span>bash</span> -n scriptname
-<span>bash</span> -v scriptname
-<span>bash</span> -x scriptname
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="键盘绑定"> 键盘绑定</h2>
-<p>Bash 允许用户定义自己的快捷键。全局的键盘绑定文件默认为 <code>/etc/inputrc</code>，您可以在主目录创建自己的键盘绑定文件 <code>.inputrc</code> 文件。如果定义了这个文件，需要在其中加入下面这行，保证全局绑定不会被遗漏。</p>
-<div><pre><code><span>$include</span> /etc/inputrc
-</code></pre>
-<div><span>1</span><br></div></div><p><code>.inputrc</code> 文件里面的快捷键，可以像这样定义，<code>&quot;\C-t&quot;:&quot;pwd\n&quot;</code> 表示将 <code>Ctrl + t</code> 绑定为运行 <code>pwd</code> 命令。</p>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">字符串操作</title>
     <id>https://list-jiang.github.io/code/linux/bash/string/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/string/"/>
@@ -11011,6 +10923,94 @@ $ <span>echo</span> <span>${foo<span>,,</span>}</span>
 hello
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">Bash 启动环境</title>
+    <id>https://list-jiang.github.io/code/linux/bash/startup/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/startup/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="session"> Session</h2>
+<p>用户每次使用 Shell，都会开启一个与 Shell 的 Session(对话)。</p>
+<p>Session 有两种类型: 登录 Session 和非登录 Session，也可以叫做 login shell 和 non-login shell。</p>
+<h3 id="登录-session"> 登录 Session</h3>
+<p>登录 Session 是用户登录系统以后，系统为用户开启的原始 Session，通常需要用户输入用户名和密码进行登录。</p>
+<p>登录 Session 一般进行整个系统环境的初始化，启动的初始化脚本依次如下。</p>
+<ul>
+<li><code>/etc/profile</code>: 所有用户的全局配置脚本。</li>
+<li><code>/etc/profile.d</code> 目录里面所有 <code>.sh</code> 文件</li>
+<li><code>~/.bash_profile</code>: 用户的个人配置脚本。如果该脚本存在，则执行完就不再往下执行。</li>
+<li><code>~/.bash_login</code>: 如果 <code>~/.bash_profile</code> 没找到，则尝试执行这个脚本(C shell 的初始化脚本)。如果该脚本存在，则执行完就不再往下执行。</li>
+<li><code>~/.profile</code>: 如果<code>~/.bash_profile</code> 和 <code>~/.bash_login</code> 都没找到，则尝试读取这个脚本(Bourne shell 和 Korn shell 的初始化脚本)。</li>
+</ul>
+<p>Linux 发行版更新的时候，会更新 <code>/etc</code> 里面的文件，比如 <code>/etc/profile</code>，因此不要直接修改这个文件。如果想修改所有用户的登陆环境，就在 <code>/etc/profile.d</code> 目录里面新建 <code>.sh</code> 脚本。</p>
+<p>如果想修改您个人的登录环境，一般是写在 <code>~/.bash_profile</code> 里面。下面是一个典型的 <code>.bash_profile</code> 文件。</p>
+<div><pre><code><span># .bash_profile</span>
+<span><span>PATH</span></span><span>=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+<span><span>PATH</span></span><span>=</span><span>$PATH</span><span>:</span><span>$HOME</span>/bin
+
+<span><span>SHELL</span></span><span>=</span>/bin/bash
+<span>MANPATH</span><span>=</span>/usr/man:/usr/X11/man
+<span>EDITOR</span><span>=</span>/usr/bin/vi
+<span><span>PS1</span></span><span>=</span><span>'\h:\w\$ '</span>
+<span><span>PS2</span></span><span>=</span><span>'> '</span>
+
+<span>if</span> <span>[</span> -f ~/.bashrc <span>]</span><span>;</span> <span>then</span>
+<span>.</span> ~/.bashrc
+<span>fi</span>
+
+<span>export</span> <span>PATH</span>
+<span>export</span> EDITOR
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>可以看到，这个脚本定义了一些最基本的环境变量，然后执行了 <code>~/.bashrc</code>。</p>
+<p><code>bash</code> 命令的 <code>--login</code> 参数，会强制执行登录 Session 会执行的脚本。</p>
+<div><pre><code><span>bash</span> --login
+</code></pre>
+<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--noprofile</code> 参数，会跳过上面这些 Profile 脚本。</p>
+<div><pre><code><span>bash</span> --noprofile
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="非登录-session"> 非登录 Session</h3>
+<p>非登录 Session 是用户进入系统以后，手动新建的 Session，这时不会进行环境初始化。比如，在命令行执行 <code>bash</code> 命令，就会新建一个非登录 Session。</p>
+<p>非登录 Session 的初始化脚本依次如下。</p>
+<ul>
+<li><code>/etc/bash.bashrc</code>: 对全体用户有效。</li>
+<li><code>~/.bashrc</code>: 仅对当前用户有效。</li>
+</ul>
+<p>对用户来说，<code>~/.bashrc</code> 通常是最重要的脚本。非登录 Session 默认会执行它，而登陆 Session 一般也会通过调用执行它。由于每次执行 Bash 脚本，都会新建一个非登录 Session，所以 <code>~/.bashrc</code> 也是每次执行脚本都会执行的。</p>
+<p><code>bash</code> 命令的 <code>--norc</code> 参数，可以禁止在非登录 Session 执行 <code>~/.bashrc</code> 脚本。</p>
+<div><pre><code><span>bash</span> --norc
+</code></pre>
+<div><span>1</span><br></div></div><p><code>bash</code> 命令的 <code>--rcfile</code> 参数，指定另一个脚本代替 <code>.bashrc</code>。</p>
+<div><pre><code><span>bash</span> --rcfile testrc
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="bash-logout"> .bash_logout</h3>
+<p><code>~/.bash_logout</code> 脚本在每次退出 Session 时执行，通常用来做一些清理工作和记录工作，比如删除临时文件，记录用户在本次 Session 花费的时间。</p>
+<p>如果没有退出时要执行的命令，这个文件也可以不存在。</p>
+<h2 id="启动选项"> 启动选项</h2>
+<p>为了方便 Debug，有时在启动 Bash 的时候，可以加上启动参数。</p>
+<ul>
+<li><code>-n</code>: 不运行脚本，只检查是否有语法错误。</li>
+<li><code>-v</code>: 输出每一行语句运行结果前，会先输出该行语句。</li>
+<li><code>-x</code>: 每一个命令处理完以后，先输出该命令，再进行下一个命令的处理。</li>
+</ul>
+<div><pre><code><span>bash</span> -n scriptname
+<span>bash</span> -v scriptname
+<span>bash</span> -x scriptname
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="键盘绑定"> 键盘绑定</h2>
+<p>Bash 允许用户定义自己的快捷键。全局的键盘绑定文件默认为 <code>/etc/inputrc</code>，您可以在主目录创建自己的键盘绑定文件 <code>.inputrc</code> 文件。如果定义了这个文件，需要在其中加入下面这行，保证全局绑定不会被遗漏。</p>
+<div><pre><code><span>$include</span> /etc/inputrc
+</code></pre>
+<div><span>1</span><br></div></div><p><code>.inputrc</code> 文件里面的快捷键，可以像这样定义，<code>&quot;\C-t&quot;:&quot;pwd\n&quot;</code> 表示将 <code>Ctrl + t</code> 绑定为运行 <code>pwd</code> 命令。</p>
+]]></content>
     <author>
       <name>阮一峰</name>
     </author>
