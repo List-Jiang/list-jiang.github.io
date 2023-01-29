@@ -6,8 +6,8 @@
     <link>https://list-jiang.github.io/</link>
     <description>远方无限 砥砺前行</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Jan 2023 05:04:24 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2023 05:04:24 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2023 01:38:39 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2023 01:38:39 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2021-present List Jiang</copyright>
@@ -805,6 +805,21 @@ java -jar silky-demo-web-1.0.1.jar --spring.profiles.active<span>=</span>native
     </item>
     <item>
       <title>Zipkin 快速入门</title>
+      <link>https://list-jiang.github.io/spring/track/zipkin/info/</link>
+      <guid>https://list-jiang.github.io/spring/track/zipkin/info/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Zipkin 快速入门</source>
+      <pubDate>Thu, 24 Feb 2022 06:38:19 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
+<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
+<p><img src="./../img/web-screenshot.png" alt=""></p>
+<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
+<p><img src="./../img/dependency-graph.png" alt=""></p>
+<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Zipkin 快速入门</title>
       <link>https://list-jiang.github.io/spring/track/zipkin/quick-start/</link>
       <guid>https://list-jiang.github.io/spring/track/zipkin/quick-start/</guid>
       <source url="https://list-jiang.github.io/rss.xml">Zipkin 快速入门</source>
@@ -849,21 +864,6 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 <li><a href="./start-env.html">zipkin启动及环境配置</a></li>
 <li><a href="./demo.html">生产案例</a></li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Zipkin 快速入门</title>
-      <link>https://list-jiang.github.io/spring/track/zipkin/info/</link>
-      <guid>https://list-jiang.github.io/spring/track/zipkin/info/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Zipkin 快速入门</source>
-      <pubDate>Thu, 24 Feb 2022 06:38:19 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="介绍"> 介绍</h2>
-<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
-<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
-<p><img src="./../img/web-screenshot.png" alt=""></p>
-<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
-<p><img src="./../img/dependency-graph.png" alt=""></p>
-<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -3856,6 +3856,41 @@ ipsum dolor sit
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>fmt</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">fmt</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="fmt"> fmt</h1>
+<p><code>fmt</code> 命令用于对文本指定样式。</p>
+<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
+<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</code></pre>
+<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
+<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
+Lorem ipsum
+dolor sit amet,
+consetetur
+sadipscing elitr,
+<span>sed</span> diam nonumy
+eirmod tempor
+invidunt ut labore
+et dolore magna
+aliquyam erat, <span>sed</span>
+diam voluptua. At
+vero eos et
+accusam et justo
+duo dolores et ea
+rebum. Stet clita
+kasd gubergren,
+no sea takimata
+sanctus est Lorem
+ipsum dolor sit
+amet.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>find</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/find/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/find/</guid>
@@ -3909,51 +3944,6 @@ ipsum dolor sit
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>fmt</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/fmt/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">fmt</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="fmt"> fmt</h1>
-<p><code>fmt</code> 命令用于对文本指定样式。</p>
-<p>下面是 <code>example.txt</code> 的内容，是非常长的一行。</p>
-<div><pre><code>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</code></pre>
-<div><span>1</span><br></div></div><p><code>fmt</code> 可以将其输出为每行 80 个字符。</p>
-<div><pre><code><span>cat</span> example.txt <span>|</span> <span>fmt</span> -w <span>20</span>
-Lorem ipsum
-dolor sit amet,
-consetetur
-sadipscing elitr,
-<span>sed</span> diam nonumy
-eirmod tempor
-invidunt ut labore
-et dolore magna
-aliquyam erat, <span>sed</span>
-diam voluptua. At
-vero eos et
-accusam et justo
-duo dolores et ea
-rebum. Stet clita
-kasd gubergren,
-no sea takimata
-sanctus est Lorem
-ipsum dolor sit
-amet.
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>gunzip</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">gunzip</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="gunzip"> gunzip</h1>
-<p><code>gunzip</code> 命令用于解压 <code>gzip</code> 命令压缩的文件。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>grep</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/grep/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/grep/</guid>
@@ -3997,6 +3987,16 @@ _krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/f
 $ <span>ps</span> <span>|</span> <span>grep</span> <span>vim</span> <span>|</span> <span>grep</span> -v <span>grep</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>gunzip</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/gunzip/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">gunzip</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="gunzip"> gunzip</h1>
+<p><code>gunzip</code> 命令用于解压 <code>gzip</code> 命令压缩的文件。</p>
+]]></content:encoded>
     </item>
     <item>
       <title>gzcat</title>
@@ -4110,24 +4110,6 @@ active  adnanad <span>59</span>      demo                            <span>39936
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>ps</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">ps</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="ps"> ps</h1>
-<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
-<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
-<div><pre><code><span># 找出正在运行 vim 的进程</span>
-$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
-<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
-<div><pre><code><span>ps</span> -u yourusername
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>nl</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/nl/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/nl/</guid>
@@ -4180,6 +4162,24 @@ amet.
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><p><code>-s</code> 参数表示行号的后缀。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>ps</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/ps/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">ps</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="ps"> ps</h1>
+<p><code>ps</code> 命令列出当前正在执行的进程信息。</p>
+<p>由于进程很多，所以为了快速找到某个进程，一般与 <code>grep</code> 配合使用。</p>
+<div><pre><code><span># 找出正在运行 vim 的进程</span>
+$ <span>ps</span> <span>|</span> <span>grep</span> <span>vi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="参数"> 参数</h2>
+<p><code>-u</code> 参数列出指定用户拥有的进程。</p>
+<div><pre><code><span>ps</span> -u yourusername
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>scp</title>
@@ -4421,16 +4421,6 @@ d
 ]]></content:encoded>
     </item>
     <item>
-      <title>w</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">w</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="w"> w</h1>
-<p><code>w</code> 命令显示当期谁在线。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>wc</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/commands/wc/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/wc/</guid>
@@ -4442,6 +4432,16 @@ d
 <span>7459</span>   <span>15915</span>  <span>398400</span> demo.txt
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div><p>上面代码中，<code>7459</code> 是行数，<code>15915</code> 是词数，<code>398400</code> 是字符数。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>w</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/commands/w/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">w</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="w"> w</h1>
+<p><code>w</code> 命令显示当期谁在线。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -5089,6 +5089,19 @@ $ <span>find</span> ~ -type f -name <span>'foo*'</span> -exec <span>ls</span> -l
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>主机管理</title>
+      <link>https://list-jiang.github.io/code/linux/bash/archives/host/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/archives/host/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">主机管理</source>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="主机管理"> 主机管理</h1>
+<h2 id="hostname-命令"> hostname 命令</h2>
+<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
+<div><pre><code><span>hostname</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>硬件操作</title>
       <link>https://list-jiang.github.io/code/linux/bash/archives/hardware/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/archives/hardware/</guid>
@@ -5303,19 +5316,6 @@ $ <span>sudo</span> dmidecode -t <span>4</span>
 </code></pre>
 <div><span>1</span><br></div></div><p>查看 USB 端口的版本。</p>
 <div><pre><code>lsusb -v <span>|</span> <span>grep</span> -i bcdusb
-</code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>主机管理</title>
-      <link>https://list-jiang.github.io/code/linux/bash/archives/host/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/archives/host/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">主机管理</source>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="主机管理"> 主机管理</h1>
-<h2 id="hostname-命令"> hostname 命令</h2>
-<p><code>hostname</code> 命令返回当前服务器的主机名。</p>
-<div><pre><code><span>hostname</span>
 </code></pre>
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
@@ -9106,6 +9106,78 @@ abc
 ]]></content:encoded>
     </item>
     <item>
+      <title>Bash 教程</title>
+      <link>https://list-jiang.github.io/code/linux/bash/</link>
+      <guid>https://list-jiang.github.io/code/linux/bash/</guid>
+      <source url="https://list-jiang.github.io/rss.xml">Bash 教程</source>
+      <category>Linux</category>
+      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="目录"> 目录</h2>
+<ul>
+<li>
+<p><a href="./intro.html">简介</a></p>
+</li>
+<li>
+<p><a href="./grammar.html">基本语法</a></p>
+</li>
+<li>
+<p><a href="./expansion.html">模式扩展</a></p>
+</li>
+<li>
+<p><a href="./quotation.html">引号和转义</a></p>
+</li>
+<li>
+<p><a href="./variable.html">变量</a></p>
+</li>
+<li>
+<p><a href="./string.html">字符串操作</a></p>
+</li>
+<li>
+<p><a href="./arithmetic.html">算术运算</a></p>
+</li>
+<li>
+<p><a href="./readline.html">行操作</a></p>
+</li>
+<li>
+<p><a href="./stack.html">目录堆栈</a></p>
+</li>
+<li>
+<p><a href="./script.html">脚本入门</a></p>
+</li>
+<li>
+<p><a href="./read.html">read 命令</a></p>
+</li>
+<li>
+<p><a href="./condition.html">条件判断</a></p>
+</li>
+<li>
+<p><a href="./loop.html">循环</a></p>
+</li>
+<li>
+<p><a href="./function.html">函数</a></p>
+</li>
+<li>
+<p><a href="./array.html">数组</a></p>
+</li>
+<li>
+<p><a href="./set.html">set 命令</a></p>
+</li>
+<li>
+<p><a href="./debug.html">脚本除错</a></p>
+</li>
+<li>
+<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
+</li>
+<li>
+<p><a href="./startup.html">启动环境</a></p>
+</li>
+<li>
+<p><a href="./prompt.html">命令提示符</a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Bash 行操作</title>
       <link>https://list-jiang.github.io/code/linux/bash/readline/</link>
       <guid>https://list-jiang.github.io/code/linux/bash/readline/</guid>
@@ -9282,78 +9354,6 @@ $ <span>history</span>
 <span>cd</span> <span>#按下 Alt + .</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，在 <code>cd</code> 命令后按下 <code>Alt + .</code>，就会自动插入 <code>foo_bar</code>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Bash 教程</title>
-      <link>https://list-jiang.github.io/code/linux/bash/</link>
-      <guid>https://list-jiang.github.io/code/linux/bash/</guid>
-      <source url="https://list-jiang.github.io/rss.xml">Bash 教程</source>
-      <category>Linux</category>
-      <pubDate>Fri, 18 Feb 2022 02:39:20 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="目录"> 目录</h2>
-<ul>
-<li>
-<p><a href="./intro.html">简介</a></p>
-</li>
-<li>
-<p><a href="./grammar.html">基本语法</a></p>
-</li>
-<li>
-<p><a href="./expansion.html">模式扩展</a></p>
-</li>
-<li>
-<p><a href="./quotation.html">引号和转义</a></p>
-</li>
-<li>
-<p><a href="./variable.html">变量</a></p>
-</li>
-<li>
-<p><a href="./string.html">字符串操作</a></p>
-</li>
-<li>
-<p><a href="./arithmetic.html">算术运算</a></p>
-</li>
-<li>
-<p><a href="./readline.html">行操作</a></p>
-</li>
-<li>
-<p><a href="./stack.html">目录堆栈</a></p>
-</li>
-<li>
-<p><a href="./script.html">脚本入门</a></p>
-</li>
-<li>
-<p><a href="./read.html">read 命令</a></p>
-</li>
-<li>
-<p><a href="./condition.html">条件判断</a></p>
-</li>
-<li>
-<p><a href="./loop.html">循环</a></p>
-</li>
-<li>
-<p><a href="./function.html">函数</a></p>
-</li>
-<li>
-<p><a href="./array.html">数组</a></p>
-</li>
-<li>
-<p><a href="./set.html">set 命令</a></p>
-</li>
-<li>
-<p><a href="./debug.html">脚本除错</a></p>
-</li>
-<li>
-<p><a href="./mktemp.html">mktemp 命令，trap 命令</a></p>
-</li>
-<li>
-<p><a href="./startup.html">启动环境</a></p>
-</li>
-<li>
-<p><a href="./prompt.html">命令提示符</a></p>
-</li>
-</ul>
 ]]></content:encoded>
     </item>
     <item>
