@@ -29,7 +29,7 @@
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.9",
     "markdownlint-cli": "0.33.0",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "remark-cli": "11.0.0",
     "remark-footnotes": "4.0.1",
     "remark-frontmatter": "4.0.1",
