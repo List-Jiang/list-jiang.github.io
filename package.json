@@ -23,7 +23,7 @@
     "personal-blog"
   ],
   "dependencies": {
-    "vuepress": "1.9.8",
+    "vuepress": "1.9.9",
     "vuepress-theme-hope": "1.30.0"
   },
   "devDependencies": {
