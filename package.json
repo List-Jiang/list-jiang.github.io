@@ -24,7 +24,8 @@
   ],
   "dependencies": {
     "vuepress": "1.9.8",
-    "vuepress-theme-hope": "1.30.0"
+    "vuepress-theme-hope": "1.30.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.9",
@@ -44,7 +45,6 @@
     "textlint-rule-apostrophe": "2.0.0",
     "textlint-rule-common-misspellings": "1.0.1",
     "textlint-rule-en-capitalization": "2.0.3",
-    "textlint-rule-terminology": "2.1.5",
     "textlint-rule-terminology": "3.0.4",
     "textlint-rule-zh-half-and-full-width-bracket": "1.1.0"
   },
