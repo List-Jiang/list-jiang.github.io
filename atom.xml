@@ -6,7 +6,7 @@
   <author>
     <name>List Jiang</name>
   </author>
-  <updated>2023-08-09T14:31:14.828Z</updated>
+  <updated>2023-08-09T14:32:30.422Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://list-jiang.github.io/atom.xml"/>
   <link rel="alternate" href="https://list-jiang.github.io/"/>
@@ -859,28 +859,6 @@ java -jar silky-demo-web-1.0.1.jar --spring.profiles.active<span>=</span>native
   </entry>
   <entry>
     <title type="html">Zipkin 快速入门</title>
-    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
-    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
-    <updated>2022-02-24T06:38:19.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
-<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
-<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
-<p><img src="./../img/web-screenshot.png" alt=""></p>
-<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
-<p><img src="./../img/dependency-graph.png" alt=""></p>
-<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-24T06:38:19.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
-    <title type="html">Zipkin 快速入门</title>
     <id>https://list-jiang.github.io/spring/track/zipkin/quick-start/</id>
     <link href="https://list-jiang.github.io/spring/track/zipkin/quick-start/"/>
     <updated>2022-02-24T06:38:19.000Z</updated>
@@ -931,6 +909,28 @@ java -jar ./zipkin-server/target/zipkin-server-*exec.jar
 <li><a href="./start-env.html">zipkin启动及环境配置</a></li>
 <li><a href="./demo.html">生产案例</a></li>
 </ul>
+]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-24T06:38:19.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">Zipkin 快速入门</title>
+    <id>https://list-jiang.github.io/spring/track/zipkin/info/</id>
+    <link href="https://list-jiang.github.io/spring/track/zipkin/info/"/>
+    <updated>2022-02-24T06:38:19.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Zipkin 是一个分布式追踪系统。它有助于收集解决服务架构中的延迟问题所需的时间数据。功能包括收集和查找此数据。</p>
+<p>如果您在日志文件中有跟踪 ID，则可以直接跳转到它。否则，您可以根据服务、操作名称、标签和持续时间等属性进行查询。会为你总结一些有趣的数据，比如在服务中花费的时间百分比，以及操作是否失败。</p>
+<p><img src="./../img/web-screenshot.png" alt=""></p>
+<p>Zipkin UI 还提供了一个依赖关系图，显示有多少跟踪请求通过了每个应用程序。这有助于识别聚合行为，包括错误路径或对已弃用服务的调用。</p>
+<p><img src="./../img/dependency-graph.png" alt=""></p>
+<p>应用程序需要被“检测”以向 Zipkin 报告跟踪数据。这通常意味着配置 <a href="https://zipkin.io/pages/tracers_instrumentation" target="_blank" rel="noopener noreferrer">跟踪器或检测库<i>Content not supported</i></a> 。向 Zipkin 报告数据的最流行方式是通过 HTTP 或 Kafka，但也有许多其他选项，例如 Apache ActiveMQ、gRPC 和 RabbitMQ。提供给 UI 的数据存储在内存中，或者通过支持的后端（例如 Apache Cassandra 或 Elasticsearch）持久存储。</p>
 ]]></content>
     <author>
       <name>List Jiang</name>
@@ -3838,15 +3838,15 @@ sys
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">cp 命令</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cp/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cp/"/>
+    <title type="html">clear</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/clear/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/clear/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="cp-命令"> cp 命令</h1>
-<p><code>cp</code> 命令用于复制文件。</p>
-<h2 id="参数"> 参数</h2>
-<p><code>-u</code> 参数只复制那些目标目录里面还不存在的文件，以及那些虽然存在、但是比源目录对应文件更陈旧的文件。</p>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="clear"> clear</h1>
+<p><code>clear</code> 命令用来清除当前屏幕的显示，运行后会只留下一个提示符。</p>
+<div><pre><code><span>clear</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -3857,15 +3857,15 @@ sys
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">clear</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/clear/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/clear/"/>
+    <title type="html">cp 命令</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/cp/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/cp/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="clear"> clear</h1>
-<p><code>clear</code> 命令用来清除当前屏幕的显示，运行后会只留下一个提示符。</p>
-<div><pre><code><span>clear</span>
-</code></pre>
-<div><span>1</span><br></div></div>]]></content>
+    <content type="html"><![CDATA[<h1 id="cp-命令"> cp 命令</h1>
+<p><code>cp</code> 命令用于复制文件。</p>
+<h2 id="参数"> 参数</h2>
+<p><code>-u</code> 参数只复制那些目标目录里面还不存在的文件，以及那些虽然存在、但是比源目录对应文件更陈旧的文件。</p>
+]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -4807,23 +4807,6 @@ Baz<span>!</span>
     <rights>Copyright by List Jiang</rights>
   </entry>
   <entry>
-    <title type="html">uptime</title>
-    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="uptime"> uptime</h1>
-<p><code>uptime</code> 命令显示本次开机运行的时间。</p>
-]]></content>
-    <author>
-      <name>List Jiang</name>
-    </author>
-    <contributor>
-      <name>List Jiang</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>Copyright by List Jiang</rights>
-  </entry>
-  <entry>
     <title type="html">uniq</title>
     <id>https://list-jiang.github.io/code/linux/bash/archives/commands/uniq/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/uniq/"/>
@@ -4856,6 +4839,23 @@ d
     <span>1</span> d
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content>
+    <author>
+      <name>List Jiang</name>
+    </author>
+    <contributor>
+      <name>List Jiang</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>Copyright by List Jiang</rights>
+  </entry>
+  <entry>
+    <title type="html">uptime</title>
+    <id>https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/archives/commands/uptime/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="uptime"> uptime</h1>
+<p><code>uptime</code> 命令显示本次开机运行的时间。</p>
+]]></content>
     <author>
       <name>List Jiang</name>
     </author>
@@ -8398,172 +8398,6 @@ a.txt  sub1/b.txt  sub1/sub2/c.txt
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 的基本语法</title>
-    <id>https://list-jiang.github.io/code/linux/bash/grammar/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/grammar/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
-
-<h2 id="echo-命令"> echo 命令</h2>
-<p>由于后面的例子会大量用到 <code>echo</code> 命令，这里先介绍这个命令。</p>
-<p><code>echo</code> 命令的作用是在屏幕输出一行文本，可以将该命令的参数原样输出。</p>
-<div><pre><code>$ <span>echo</span> hello world
-hello world
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>echo</code> 的参数是 <code>hello world</code>，可以原样输出。</p>
-<p>如果想要输出的是多行文本，即包括换行符。这时需要把多行文本放在引号里面。</p>
-<div><pre><code>$ <span>echo</span> <span>"&lt;HTML>
-    &lt;HEAD>
-          &lt;TITLE>Page Title&lt;/TITLE>
-    &lt;/HEAD>
-    &lt;BODY>
-          Page body.
-    &lt;/BODY>
-&lt;/HTML>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面例子中，<code>echo</code> 可以原样输出多行文本。</p>
-<h3 id="n-参数"> <code>-n</code> 参数</h3>
-<p>默认情况下，<code>echo</code> 输出的文本末尾会有一个回车符。<code>-n</code> 参数可以取消末尾的回车符，使得下一个提示符紧跟在输出内容的后面。</p>
-<div><pre><code>$ <span>echo</span> -n hello world
-hello world$
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>world</code> 后面直接就是下一行的提示符 <code>$</code>。</p>
-<div><pre><code>$ <span>echo</span> a<span>;</span><span>echo</span> b
-a
-b
-
-$ <span>echo</span> -n a<span>;</span><span>echo</span> b
-ab
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面例子中，<code>-n</code> 参数可以让两个 <code>echo</code> 命令的输出连在一起，出现在同一行。</p>
-<h3 id="e-参数"> <code>-e</code> 参数</h3>
-<p><code>-e</code> 参数会解释引号(双引号和单引号)里面的特殊字符(比如换行符 <code>\n</code>)。如果不使用 <code>-e</code> 参数，即默认情况下，引号会让特殊字符变成普通字符，<code>echo</code> 不解释它们，原样输出。</p>
-<div><pre><code>$ <span>echo</span> <span>"Hello<span title="\n">\n</span>World"</span>
-Hello<span>\</span>nWorld
-
-<span># 双引号的情况</span>
-$ <span>echo</span> -e <span>"Hello<span title="\n">\n</span>World"</span>
-Hello
-World
-
-<span># 单引号的情况</span>
-$ <span>echo</span> -e <span>'Hello\nWorld'</span>
-Hello
-World
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>上面代码中，<code>-e</code> 参数使得 <code>\n</code> 解释为换行符，导致输出内容里面出现换行。</p>
-<h2 id="命令格式"> 命令格式</h2>
-<p>命令行环境中，主要通过使用 Shell 命令，进行各种操作。Shell 命令基本都是下面的格式。</p>
-<div><pre><code><span>command</span> <span>[</span> arg1 <span>..</span>. <span>[</span> argN <span>]</span><span>]</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面代码中，<code>command</code> 是具体的命令或者一个可执行文件，<code>arg1 ... argN</code> 是传递给命令的参数，它们是可选的。</p>
-<div><pre><code><span>ls</span> -l
-</code></pre>
-<div><span>1</span><br></div></div><p>上面这个命令中，<code>ls</code> 是命令，<code>-l</code> 是参数。</p>
-<p>有些参数是命令的配置项，这些配置项一般都以一个连词线开头，比如上面的 <code>-l</code>。同一个配置项往往有长和短两种形式，比如 <code>-l</code> 是短形式，<code>--list</code> 是长形式，它们的作用完全相同。短形式便于手动输入，长形式一般用在脚本之中，可读性更好，利于解释自身的含义。</p>
-<div><pre><code><span># 短形式</span>
-$ <span>ls</span> -r
-
-<span># 长形式</span>
-$ <span>ls</span> --reverse
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>-r</code> 是短形式，<code>--reverse</code> 是长形式，作用完全一样。前者便于输入，后者便于理解。</p>
-<p>Bash 单个命令一般都是一行，用户按下回车键，就开始执行。有些命令比较长，写成多行会有利于阅读和编辑，这时可以在每一行的结尾加上反斜杠，Bash 就会将下一行跟当前行放在一起解释。</p>
-<div><pre><code>$ <span>echo</span> foo bar
-
-<span># 等同于</span>
-$ <span>echo</span> foo <span>\</span>
-bar
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="空格"> 空格</h2>
-<p>Bash 使用空格(或 Tab 键)区分不同的参数。</p>
-<div><pre><code><span>command</span> foo bar
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令中，<code>foo</code> 和 <code>bar</code> 之间有一个空格，所以 Bash 认为它们是两个参数。</p>
-<p>如果参数之间有多个空格，Bash 会自动忽略多余的空格。</p>
-<div><pre><code>$ <span>echo</span> this is a     <span>test</span>
-this is a <span>test</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，<code>a</code> 和 <code>test</code> 之间有多个空格，Bash 会忽略多余的空格。</p>
-<h2 id="分号"> 分号</h2>
-<p>分号(<code>;</code>)是命令的结束符，使得一行可以放置多个命令，上一个命令执行结束后，再执行第二个命令。</p>
-<div><pre><code><span>clear</span><span>;</span> <span>ls</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，Bash 先执行 <code>clear</code> 命令，执行完成后，再执行 <code>ls</code> 命令。</p>
-<p>注意，使用分号时，第二个命令总是接着第一个命令执行，不管第一个命令执行成功或失败。</p>
-<h2 id="命令的组合符-和"> 命令的组合符 <code>&amp;&amp;</code> 和 <code>||</code></h2>
-<p>除了分号，Bash 还提供两个命令组合符 <code>&amp;&amp;</code> 和 <code>||</code>，允许更好地控制多个命令之间的继发关系。</p>
-<div><pre><code>Command1 <span>&amp;&amp;</span> Command2
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行成功，则继续运行 <code>Command2</code> 命令。</p>
-<div><pre><code>Command1 <span>||</span> Command2
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行失败，则继续运行 <code>Command2</code> 命令。</p>
-<p>下面是一些例子。</p>
-<div><pre><code><span>cat</span> filelist.txt <span>;</span> <span>ls</span> -l filelist.txt
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只要 <code>cat</code> 命令执行结束，不管成功或失败，都会继续执行 <code>ls</code> 命令。</p>
-<div><pre><code><span>cat</span> filelist.txt <span>&amp;&amp;</span> <span>ls</span> -l filelist.txt
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只有 <code>cat</code> 命令执行成功，才会继续执行 <code>ls</code> 命令。如果 <code>cat</code> 执行失败(比如不存在文件 <code>flielist.txt</code>)，那么 <code>ls</code> 命令就不会执行。</p>
-<div><pre><code><span>mkdir</span> foo <span>||</span> <span>mkdir</span> bar
-</code></pre>
-<div><span>1</span><br></div></div><p>上面例子中，只有 <code>mkdir foo</code> 命令执行失败(比如 <code>foo</code> 目录已经存在)，才会继续执行 <code>mkdir bar</code> 命令。如果 <code>mkdir foo</code> 命令执行成功，就不会创建 <code>bar</code> 目录了。</p>
-<h2 id="type-命令"> type 命令</h2>
-<p>Bash 本身内置了很多命令，同时也可以执行外部程序。怎么知道一个命令是内置命令，还是外部程序呢?</p>
-<p><code>type</code> 命令用来判断命令的来源。</p>
-<div><pre><code>$ <span>type</span> <span>echo</span>
-<span>echo</span> is a shell <span>builtin</span>
-$ <span>type</span> <span>ls</span>
-<span>ls</span> is hashed <span>(</span>/bin/ls<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>type</code> 命令告诉我们，<code>echo</code> 是内部命令，<code>ls</code> 是外部程序 (<code>/bin/ls</code>)。</p>
-<p><code>type</code> 命令本身也是内置命令。</p>
-<div><pre><code>$ <span>type</span> <span>type</span>
-<span>type</span> is a shell <span>builtin</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>如果要查看一个命令的所有定义，可以使用 <code>type</code> 命令的 <code>-a</code> 参数。</p>
-<div><pre><code>$ <span>type</span> -a <span>echo</span>
-<span>echo</span> is shell <span>builtin</span>
-<span>echo</span> is /usr/bin/echo
-<span>echo</span> is /bin/echo
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码表示，<code>echo</code> 命令即是内置命令，也有对应的外部程序。</p>
-<p><code>type</code> 命令的 <code>-t</code> 参数，可以返回一个命令的类型: 别名(alias)，关键词(keyword)，函数(function)，内置命令(builtin)和文件(file)。</p>
-<div><pre><code>$ <span>type</span> -t <span>bash</span>
-<span>file</span>
-$ <span>type</span> -t <span>if</span>
-keyword
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>bash</code> 是文件，<code>if</code> 是关键词。</p>
-<h2 id="快捷键"> 快捷键</h2>
-<p>Bash 提供很多快捷键，可以大大方便操作。下面是一些最常用的快捷键，完整的介绍参见 <a href="./readline.html">行操作</a> 一章。</p>
-<ul>
-<li><code>Ctrl + L</code>: 清除屏幕并将当前行移到页面顶部。</li>
-<li><code>Ctrl + C</code>: 中止当前正在执行的命令。</li>
-<li><code>Shift + PageUp</code>: 向上滚动。</li>
-<li><code>Shift + PageDown</code>: 向下滚动。</li>
-<li><code>Ctrl + U</code>: 从光标位置删除到行首。</li>
-<li><code>Ctrl + K</code>: 从光标位置删除到行尾。</li>
-<li><code>Ctrl + D</code>: 关闭 Shell 会话。</li>
-<li><code>↑</code>，<code>↓</code>: 浏览已执行命令的历史记录。</li>
-</ul>
-<p>除了上面的快捷键，Bash 还具有自动补全功能。命令输入到一半的时候，可以按下 Tab 键，Bash 会自动完成剩下的部分。比如，输入 <code>pw</code>，然后按一下 Tab 键，Bash 会自动补上 <code>d</code>。</p>
-<p>除了命令的自动补全，Bash 还支持路径的自动补全。有时，需要输入很长的路径，这时只需要输入前面的部分，然后按下 Tab 键，就会自动补全后面的部分。如果有多个可能的选择，按两次 Tab 键，Bash 会显示所有选项，让您选择。</p>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">Bash 函数</title>
     <id>https://list-jiang.github.io/code/linux/bash/function/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/function/"/>
@@ -8720,6 +8554,172 @@ global: foo <span>=</span>
 <ul>
 <li><a href="https://www.linuxtechi.com/define-use-functions-linux-shell-script/" target="_blank" rel="noopener noreferrer">How to define and use functions in Linux Shell Script<i>Content not supported</i></a>, by Pradeep Kumar</li>
 </ul>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">Bash 的基本语法</title>
+    <id>https://list-jiang.github.io/code/linux/bash/grammar/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/grammar/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <summary type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本章介绍 Bash 的最基本语法。</p>
+
+<h2 id="echo-命令"> echo 命令</h2>
+<p>由于后面的例子会大量用到 <code>echo</code> 命令，这里先介绍这个命令。</p>
+<p><code>echo</code> 命令的作用是在屏幕输出一行文本，可以将该命令的参数原样输出。</p>
+<div><pre><code>$ <span>echo</span> hello world
+hello world
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>echo</code> 的参数是 <code>hello world</code>，可以原样输出。</p>
+<p>如果想要输出的是多行文本，即包括换行符。这时需要把多行文本放在引号里面。</p>
+<div><pre><code>$ <span>echo</span> <span>"&lt;HTML>
+    &lt;HEAD>
+          &lt;TITLE>Page Title&lt;/TITLE>
+    &lt;/HEAD>
+    &lt;BODY>
+          Page body.
+    &lt;/BODY>
+&lt;/HTML>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>上面例子中，<code>echo</code> 可以原样输出多行文本。</p>
+<h3 id="n-参数"> <code>-n</code> 参数</h3>
+<p>默认情况下，<code>echo</code> 输出的文本末尾会有一个回车符。<code>-n</code> 参数可以取消末尾的回车符，使得下一个提示符紧跟在输出内容的后面。</p>
+<div><pre><code>$ <span>echo</span> -n hello world
+hello world$
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，<code>world</code> 后面直接就是下一行的提示符 <code>$</code>。</p>
+<div><pre><code>$ <span>echo</span> a<span>;</span><span>echo</span> b
+a
+b
+
+$ <span>echo</span> -n a<span>;</span><span>echo</span> b
+ab
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面例子中，<code>-n</code> 参数可以让两个 <code>echo</code> 命令的输出连在一起，出现在同一行。</p>
+<h3 id="e-参数"> <code>-e</code> 参数</h3>
+<p><code>-e</code> 参数会解释引号(双引号和单引号)里面的特殊字符(比如换行符 <code>\n</code>)。如果不使用 <code>-e</code> 参数，即默认情况下，引号会让特殊字符变成普通字符，<code>echo</code> 不解释它们，原样输出。</p>
+<div><pre><code>$ <span>echo</span> <span>"Hello<span title="\n">\n</span>World"</span>
+Hello<span>\</span>nWorld
+
+<span># 双引号的情况</span>
+$ <span>echo</span> -e <span>"Hello<span title="\n">\n</span>World"</span>
+Hello
+World
+
+<span># 单引号的情况</span>
+$ <span>echo</span> -e <span>'Hello\nWorld'</span>
+Hello
+World
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>上面代码中，<code>-e</code> 参数使得 <code>\n</code> 解释为换行符，导致输出内容里面出现换行。</p>
+<h2 id="命令格式"> 命令格式</h2>
+<p>命令行环境中，主要通过使用 Shell 命令，进行各种操作。Shell 命令基本都是下面的格式。</p>
+<div><pre><code><span>command</span> <span>[</span> arg1 <span>..</span>. <span>[</span> argN <span>]</span><span>]</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面代码中，<code>command</code> 是具体的命令或者一个可执行文件，<code>arg1 ... argN</code> 是传递给命令的参数，它们是可选的。</p>
+<div><pre><code><span>ls</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><p>上面这个命令中，<code>ls</code> 是命令，<code>-l</code> 是参数。</p>
+<p>有些参数是命令的配置项，这些配置项一般都以一个连词线开头，比如上面的 <code>-l</code>。同一个配置项往往有长和短两种形式，比如 <code>-l</code> 是短形式，<code>--list</code> 是长形式，它们的作用完全相同。短形式便于手动输入，长形式一般用在脚本之中，可读性更好，利于解释自身的含义。</p>
+<div><pre><code><span># 短形式</span>
+$ <span>ls</span> -r
+
+<span># 长形式</span>
+$ <span>ls</span> --reverse
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>-r</code> 是短形式，<code>--reverse</code> 是长形式，作用完全一样。前者便于输入，后者便于理解。</p>
+<p>Bash 单个命令一般都是一行，用户按下回车键，就开始执行。有些命令比较长，写成多行会有利于阅读和编辑，这时可以在每一行的结尾加上反斜杠，Bash 就会将下一行跟当前行放在一起解释。</p>
+<div><pre><code>$ <span>echo</span> foo bar
+
+<span># 等同于</span>
+$ <span>echo</span> foo <span>\</span>
+bar
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="空格"> 空格</h2>
+<p>Bash 使用空格(或 Tab 键)区分不同的参数。</p>
+<div><pre><code><span>command</span> foo bar
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令中，<code>foo</code> 和 <code>bar</code> 之间有一个空格，所以 Bash 认为它们是两个参数。</p>
+<p>如果参数之间有多个空格，Bash 会自动忽略多余的空格。</p>
+<div><pre><code>$ <span>echo</span> this is a     <span>test</span>
+this is a <span>test</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面命令中，<code>a</code> 和 <code>test</code> 之间有多个空格，Bash 会忽略多余的空格。</p>
+<h2 id="分号"> 分号</h2>
+<p>分号(<code>;</code>)是命令的结束符，使得一行可以放置多个命令，上一个命令执行结束后，再执行第二个命令。</p>
+<div><pre><code><span>clear</span><span>;</span> <span>ls</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，Bash 先执行 <code>clear</code> 命令，执行完成后，再执行 <code>ls</code> 命令。</p>
+<p>注意，使用分号时，第二个命令总是接着第一个命令执行，不管第一个命令执行成功或失败。</p>
+<h2 id="命令的组合符-和"> 命令的组合符 <code>&amp;&amp;</code> 和 <code>||</code></h2>
+<p>除了分号，Bash 还提供两个命令组合符 <code>&amp;&amp;</code> 和 <code>||</code>，允许更好地控制多个命令之间的继发关系。</p>
+<div><pre><code>Command1 <span>&amp;&amp;</span> Command2
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行成功，则继续运行 <code>Command2</code> 命令。</p>
+<div><pre><code>Command1 <span>||</span> Command2
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令的意思是，如果 <code>Command1</code> 命令运行失败，则继续运行 <code>Command2</code> 命令。</p>
+<p>下面是一些例子。</p>
+<div><pre><code><span>cat</span> filelist.txt <span>;</span> <span>ls</span> -l filelist.txt
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只要 <code>cat</code> 命令执行结束，不管成功或失败，都会继续执行 <code>ls</code> 命令。</p>
+<div><pre><code><span>cat</span> filelist.txt <span>&amp;&amp;</span> <span>ls</span> -l filelist.txt
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只有 <code>cat</code> 命令执行成功，才会继续执行 <code>ls</code> 命令。如果 <code>cat</code> 执行失败(比如不存在文件 <code>flielist.txt</code>)，那么 <code>ls</code> 命令就不会执行。</p>
+<div><pre><code><span>mkdir</span> foo <span>||</span> <span>mkdir</span> bar
+</code></pre>
+<div><span>1</span><br></div></div><p>上面例子中，只有 <code>mkdir foo</code> 命令执行失败(比如 <code>foo</code> 目录已经存在)，才会继续执行 <code>mkdir bar</code> 命令。如果 <code>mkdir foo</code> 命令执行成功，就不会创建 <code>bar</code> 目录了。</p>
+<h2 id="type-命令"> type 命令</h2>
+<p>Bash 本身内置了很多命令，同时也可以执行外部程序。怎么知道一个命令是内置命令，还是外部程序呢?</p>
+<p><code>type</code> 命令用来判断命令的来源。</p>
+<div><pre><code>$ <span>type</span> <span>echo</span>
+<span>echo</span> is a shell <span>builtin</span>
+$ <span>type</span> <span>ls</span>
+<span>ls</span> is hashed <span>(</span>/bin/ls<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>type</code> 命令告诉我们，<code>echo</code> 是内部命令，<code>ls</code> 是外部程序 (<code>/bin/ls</code>)。</p>
+<p><code>type</code> 命令本身也是内置命令。</p>
+<div><pre><code>$ <span>type</span> <span>type</span>
+<span>type</span> is a shell <span>builtin</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>如果要查看一个命令的所有定义，可以使用 <code>type</code> 命令的 <code>-a</code> 参数。</p>
+<div><pre><code>$ <span>type</span> -a <span>echo</span>
+<span>echo</span> is shell <span>builtin</span>
+<span>echo</span> is /usr/bin/echo
+<span>echo</span> is /bin/echo
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码表示，<code>echo</code> 命令即是内置命令，也有对应的外部程序。</p>
+<p><code>type</code> 命令的 <code>-t</code> 参数，可以返回一个命令的类型: 别名(alias)，关键词(keyword)，函数(function)，内置命令(builtin)和文件(file)。</p>
+<div><pre><code>$ <span>type</span> -t <span>bash</span>
+<span>file</span>
+$ <span>type</span> -t <span>if</span>
+keyword
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面例子中，<code>bash</code> 是文件，<code>if</code> 是关键词。</p>
+<h2 id="快捷键"> 快捷键</h2>
+<p>Bash 提供很多快捷键，可以大大方便操作。下面是一些最常用的快捷键，完整的介绍参见 <a href="./readline.html">行操作</a> 一章。</p>
+<ul>
+<li><code>Ctrl + L</code>: 清除屏幕并将当前行移到页面顶部。</li>
+<li><code>Ctrl + C</code>: 中止当前正在执行的命令。</li>
+<li><code>Shift + PageUp</code>: 向上滚动。</li>
+<li><code>Shift + PageDown</code>: 向下滚动。</li>
+<li><code>Ctrl + U</code>: 从光标位置删除到行首。</li>
+<li><code>Ctrl + K</code>: 从光标位置删除到行尾。</li>
+<li><code>Ctrl + D</code>: 关闭 Shell 会话。</li>
+<li><code>↑</code>，<code>↓</code>: 浏览已执行命令的历史记录。</li>
+</ul>
+<p>除了上面的快捷键，Bash 还具有自动补全功能。命令输入到一半的时候，可以按下 Tab 键，Bash 会自动完成剩下的部分。比如，输入 <code>pw</code>，然后按一下 Tab 键，Bash 会自动补上 <code>d</code>。</p>
+<p>除了命令的自动补全，Bash 还支持路径的自动补全。有时，需要输入很长的路径，这时只需要输入前面的部分，然后按下 Tab 键，就会自动补全后面的部分。如果有多个可能的选择，按两次 Tab 键，Bash 会显示所有选项，让您选择。</p>
 ]]></content>
     <author>
       <name>阮一峰</name>
@@ -9099,153 +9099,6 @@ Hi, <span>until</span> looping <span>..</span>.
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">mktemp 命令，trap 命令</title>
-    <id>https://list-jiang.github.io/code/linux/bash/mktemp/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/mktemp/"/>
-    <updated>2022-02-18T02:39:20.000Z</updated>
-    <summary type="html"><![CDATA[<p>Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在 <code>/tmp</code> 目录里面创建文件或目录，这样做有很多弊端，使用 <code>mktemp</code> 命令是最安全的做法。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在 <code>/tmp</code> 目录里面创建文件或目录，这样做有很多弊端，使用 <code>mktemp</code> 命令是最安全的做法。</p>
-
-<h2 id="临时文件的安全问题"> 临时文件的安全问题</h2>
-<p>直接创建临时文件，尤其在 <code>/tmp</code> 目录里面，往往会导致安全问题。</p>
-<p>首先，<code>/tmp</code> 目录是所有人可读写的，任何用户都可以往该目录里面写文件。创建的临时文件也是所有人可读的。</p>
-<div><pre><code>$ <span>touch</span> /tmp/info.txt
-$ <span>ls</span> -l /tmp/info.txt
--rw-r--r-- <span>1</span> ruanyf ruanyf <span>0</span> <span>12</span>月 <span>28</span> <span>17</span>:12 /tmp/info.txt
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面命令在 <code>/tmp</code> 目录直接创建文件，该文件默认是所有人可读的。</p>
-<p>其次，如果攻击者知道临时文件的文件名，他可以创建符号链接，链接到临时文件，可能导致系统运行异常。攻击者也可能向脚本提供一些恶意数据。因此，临时文件最好使用不可预测、每次都不一样的文件名，防止被利用。</p>
-<p>最后，临时文件使用完毕，应该删除。但是，脚本意外退出时，往往会忽略清理临时文件。</p>
-<p>生成临时文件应该遵循下面的规则。</p>
-<blockquote>
-<ul>
-<li>创建前检查文件是否已经存在。</li>
-<li>确保临时文件已成功创建。</li>
-<li>临时文件必须有权限的限制。</li>
-<li>临时文件要使用不可预测的文件名。</li>
-<li>脚本退出时，要删除临时文件(使用 <code>trap</code> 命令)。</li>
-</ul>
-</blockquote>
-<h2 id="mktemp-命令的用法"> mktemp 命令的用法</h2>
-<p><code>mktemp</code> 命令就是为安全创建临时文件而设计的。虽然在创建临时文件之前，它不会检查临时文件是否存在，但是它支持唯一文件名和清除机制，因此可以减轻安全攻击的风险。</p>
-<p>直接运行 <code>mktemp</code> 命令，就能生成一个临时文件。</p>
-<div><pre><code>$ mktemp
-/tmp/tmp.4GcsWSG4vj
-
-$ <span>ls</span> -l /tmp/tmp.4GcsWSG4vj
--rw------- <span>1</span> ruanyf ruanyf <span>0</span> <span>12</span>月 <span>28</span> <span>12</span>:49 /tmp/tmp.4GcsWSG4vj
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>mktemp</code> 命令生成的临时文件名是随机的，而且权限是只有用户本人可读写。</p>
-<p>Bash 脚本使用 <code>mktemp</code> 命令的用法如下。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span>
-<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>为了确保临时文件创建成功，<code>mktemp</code> 命令后面最好使用 OR 运算符 (<code>||</code>)，保证创建失败时退出脚本。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
-<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>为了保证脚本退出时临时文件被删除，可以使用 <code>trap</code> 命令指定退出时的清除操作。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
-
-<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
-<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="mktemp-命令的参数"> mktemp 命令的参数</h2>
-<p><code>-d</code> 参数可以创建一个临时目录。</p>
-<div><pre><code>$ mktemp -d
-/tmp/tmp.Wcau5UjmN6
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>-p</code> 参数可以指定临时文件所在的目录。默认是使用 <code>$TMPDIR</code> 环境变量指定的目录，如果这个变量没设置，那么使用 <code>/tmp</code> 目录。</p>
-<div><pre><code>$ mktemp -p /home/ruanyf/
-/home/ruanyf/tmp.FOKEtvs2H3
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p><code>-t</code> 参数可以指定临时文件的文件名模板，模板的末尾必须至少包含三个连续的 <code>X</code> 字符，表示随机字符，建议至少使用六个 <code>X</code>。默认的文件名模板是 <code>tmp.</code> 后接十个随机字符。</p>
-<div><pre><code>$ mktemp -t mytemp.XXXXXXX
-/tmp/mytemp.yZ1HgZV
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h2 id="trap-命令"> trap 命令</h2>
-<p><code>trap</code> 命令用来在 Bash 脚本中响应系统信号。</p>
-<p>最常见的系统信号就是 SIGINT(中断)，即按 <code>Ctrl + C</code> 所产生的信号。<code>trap</code> 命令的 <code>-l</code> 参数，可以列出所有的系统信号。</p>
-<div><pre><code>$ <span>trap</span> -l
- <span>1</span><span>)</span> SIGHUP  <span>2</span><span>)</span> SIGINT  <span>3</span><span>)</span> SIGQUIT  <span>4</span><span>)</span> SIGILL  <span>5</span><span>)</span> SIGTRAP
- <span>6</span><span>)</span> SIGABRT  <span>7</span><span>)</span> SIGBUS  <span>8</span><span>)</span> SIGFPE  <span>9</span><span>)</span> SIGKILL <span>10</span><span>)</span> SIGUSR1
-<span>11</span><span>)</span> SIGSEGV <span>12</span><span>)</span> SIGUSR2 <span>13</span><span>)</span> SIGPIPE <span>14</span><span>)</span> SIGALRM <span>15</span><span>)</span> SIGTERM
-<span>16</span><span>)</span> SIGSTKFLT <span>17</span><span>)</span> SIGCHLD <span>18</span><span>)</span> SIGCONT <span>19</span><span>)</span> SIGSTOP <span>20</span><span>)</span> SIGTSTP
-<span>21</span><span>)</span> SIGTTIN <span>22</span><span>)</span> SIGTTOU <span>23</span><span>)</span> SIGURG <span>24</span><span>)</span> SIGXCPU <span>25</span><span>)</span> SIGXFSZ
-<span>26</span><span>)</span> SIGVTALRM <span>27</span><span>)</span> SIGPROF <span>28</span><span>)</span> SIGWINCH <span>29</span><span>)</span> SIGIO <span>30</span><span>)</span> SIGPWR
-<span>31</span><span>)</span> SIGSYS <span>34</span><span>)</span> SIGRTMIN <span>35</span><span>)</span> SIGRTMIN+1 <span>36</span><span>)</span> SIGRTMIN+2 <span>37</span><span>)</span> SIGRTMIN+3
-<span>38</span><span>)</span> SIGRTMIN+4 <span>39</span><span>)</span> SIGRTMIN+5 <span>40</span><span>)</span> SIGRTMIN+6 <span>41</span><span>)</span> SIGRTMIN+7 <span>42</span><span>)</span> SIGRTMIN+8
-<span>43</span><span>)</span> SIGRTMIN+9 <span>44</span><span>)</span> SIGRTMIN+10 <span>45</span><span>)</span> SIGRTMIN+11 <span>46</span><span>)</span> SIGRTMIN+12 <span>47</span><span>)</span> SIGRTMIN+13
-<span>48</span><span>)</span> SIGRTMIN+14 <span>49</span><span>)</span> SIGRTMIN+15 <span>50</span><span>)</span> SIGRTMAX-14 <span>51</span><span>)</span> SIGRTMAX-13 <span>52</span><span>)</span> SIGRTMAX-12
-<span>53</span><span>)</span> SIGRTMAX-11 <span>54</span><span>)</span> SIGRTMAX-10 <span>55</span><span>)</span> SIGRTMAX-9 <span>56</span><span>)</span> SIGRTMAX-8 <span>57</span><span>)</span> SIGRTMAX-7
-<span>58</span><span>)</span> SIGRTMAX-6 <span>59</span><span>)</span> SIGRTMAX-5 <span>60</span><span>)</span> SIGRTMAX-4 <span>61</span><span>)</span> SIGRTMAX-3 <span>62</span><span>)</span> SIGRTMAX-2
-<span>63</span><span>)</span> SIGRTMAX-1 <span>64</span><span>)</span> SIGRTMAX
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p><code>trap</code> 的命令格式如下。</p>
-<div><pre><code><span>trap</span> <span>[</span>动作<span>]</span> <span>[</span>信号1<span>]</span> <span>[</span>信号2<span>]</span> <span>..</span>.
-</code></pre>
-<div><span>1</span><br></div></div><p>上面代码中，“动作”是一个 Bash 命令，“信号”常用的有以下几个。</p>
-<blockquote>
-<ul>
-<li>HUP: 编号 1，脚本与所在的终端脱离联系。</li>
-<li>INT: 编号 2，用户按下 Ctrl + C，意图让脚本中止运行。</li>
-<li>QUIT: 编号 3，用户按下 Ctrl + 斜杠，意图退出脚本。</li>
-<li>KILL: 编号 9，该信号用于杀死进程。</li>
-<li>TERM: 编号 15，这是 <code>kill</code> 命令发出的默认信号。</li>
-<li>EXIT: 编号 0，这不是系统信号，而是 Bash 脚本特有的信号，不管什么情况，只要退出脚本就会产生。</li>
-</ul>
-</blockquote>
-<p><code>trap</code> 命令响应 <code>EXIT</code> 信号的写法如下。</p>
-<div><pre><code><span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令中，脚本遇到 <code>EXIT</code> 信号时，就会执行 <code>rm -f &quot;$TMPFILE&quot;</code>。</p>
-<p>trap 命令的常见使用场景，就是在 Bash 脚本中指定退出时执行的清理命令。</p>
-<div><pre><code><span>#!/bin/bash</span>
-
-<span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
-
-<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
-<span>ls</span> /etc <span>></span> <span>$TMPFILE</span>
-<span>if</span> <span>grep</span> -qi <span>"kernel"</span> <span>$TMPFILE</span><span>;</span> <span>then</span>
-  <span>echo</span> <span>'find'</span>
-<span>fi</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面代码中，不管是脚本正常执行结束，还是用户按 <code>Ctrl + C</code> 终止，都会产生 <code>EXIT</code> 信号，从而触发删除临时文件。</p>
-<p>注意，<code>trap</code> 命令必须放在脚本的开头。否则，它上方的任何命令导致脚本退出，都不会被它捕获。</p>
-<p>如果 <code>trap</code> 需要触发多条命令，可以封装一个 Bash 函数。</p>
-<div><pre><code><span>function</span> <span>egress</span> <span>{</span>
-  command1
-  command2
-  command3
-<span>}</span>
-
-<span>trap</span> egress EXIT
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="参考链接"> 参考链接</h2>
-<ul>
-<li><a href="https://www.putorius.net/working-with-temporary-files.html" target="_blank" rel="noopener noreferrer">Working with Temporary Files and Directories in Shell Scripts<i>Content not supported</i></a>, Steven Vona</li>
-<li><a href="https://www.putorius.net/using-trap-to-exit-bash-scripts-cleanly.html" target="_blank" rel="noopener noreferrer">Using Trap to Exit Bash Scripts Cleanly<i>Content not supported</i></a></li>
-<li><a href="https://mywiki.wooledge.org/SignalTrap" target="_blank" rel="noopener noreferrer">Sending and Trapping Signals<i>Content not supported</i></a></li>
-</ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="Linux" scheme=""/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2022-02-18T02:39:20.000Z</published>
-    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
-  </entry>
-  <entry>
     <title type="html">命令提示符</title>
     <id>https://list-jiang.github.io/code/linux/bash/prompt/</id>
     <link href="https://list-jiang.github.io/code/linux/bash/prompt/"/>
@@ -9593,180 +9446,141 @@ $ <span>echo</span> <span>'ddd'</span> <span>|</span> md5sum
     <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
   </entry>
   <entry>
-    <title type="html">Bash 行操作</title>
-    <id>https://list-jiang.github.io/code/linux/bash/readline/</id>
-    <link href="https://list-jiang.github.io/code/linux/bash/readline/"/>
+    <title type="html">mktemp 命令，trap 命令</title>
+    <id>https://list-jiang.github.io/code/linux/bash/mktemp/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/mktemp/"/>
     <updated>2022-02-18T02:39:20.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="简介"> 简介</h2>
-<p>Bash 内置了 Readline 库，具有这个库提供的很多“行操作”功能，比如命令的自动补全，可以大大加快操作速度。</p>
-<p>这个库默认采用 Emacs 快捷键，也可以改成 Vi 快捷键。</p>
-<div><pre><code><span>set</span> -o <span>vi</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>下面的命令可以改回 Emacs 快捷键。</p>
-<div><pre><code><span>set</span> -o emacs
-</code></pre>
-<div><span>1</span><br></div></div><p>如果想永久性更改编辑模式(Emacs / Vi)，可以将命令写在 <code>~/.inputrc</code> 文件，这个文件是 Readline 的配置文件。</p>
-<div><pre><code><span>set</span> editing-mode <span>vi</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>本章介绍的快捷键都属于 Emacs 模式。Vi 模式的快捷键，读者可以参考 Vi 编辑器的教程。</p>
-<p>Bash 默认开启这个库，但是允许关闭。</p>
-<div><pre><code><span>bash</span> --noediting
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令中，<code>--noediting</code> 参数关闭了 Readline 库，启动的 Bash 就不带有行操作功能。</p>
-<h2 id="光标移动"> 光标移动</h2>
-<p>Readline 提供快速移动光标的快捷键。</p>
-<ul>
-<li><code>Ctrl + a</code>: 移到行首。</li>
-<li><code>Ctrl + b</code>: 向行首移动一个字符，与左箭头作用相同。</li>
-<li><code>Ctrl + e</code>: 移到行尾。</li>
-<li><code>Ctrl + f</code>: 向行尾移动一个字符，与右箭头作用相同。</li>
-<li><code>Alt + f</code>: 移动到当前单词的词尾。</li>
-<li><code>Alt + b</code>: 移动到当前单词的词首。</li>
-</ul>
-<p>上面快捷键的 Alt 键，也可以用 ESC 键代替。</p>
-<h2 id="清除屏幕"> 清除屏幕</h2>
-<p><code>Ctrl + l</code> 快捷键可以清除屏幕，即将当前行移到屏幕的第一行，与 <code>clear</code> 命令作用相同。</p>
-<h2 id="编辑操作"> 编辑操作</h2>
-<p>下面的快捷键可以编辑命令行内容。</p>
-<ul>
-<li><code>Ctrl + d</code>: 删除光标位置的字符(delete)。</li>
-<li><code>Ctrl + w</code>: 删除光标前面的单词。</li>
-<li><code>Ctrl + t</code>: 光标位置的字符与它前面一位的字符交换位置(transpose)。</li>
-<li><code>Alt + t</code>: 光标位置的词与它前面一位的词交换位置(transpose)。</li>
-<li><code>Alt + l</code>: 将光标位置至词尾转为小写(lowercase)。</li>
-<li><code>Alt + u</code>: 将光标位置至词尾转为大写(uppercase)。</li>
-</ul>
-<p>使用 <code>Ctrl + d</code> 的时候，如果当前行没有任何字符，会导致退出当前 Shell，所以要小心。</p>
-<p>剪切和粘贴快捷键如下。</p>
-<ul>
-<li><code>Ctrl + k</code>: 剪切光标位置到行尾的文本。</li>
-<li><code>Ctrl + u</code>: 剪切光标位置到行首的文本。</li>
-<li><code>Alt + d</code>: 剪切光标位置到词尾的文本。</li>
-<li><code>Alt + Backspace</code>: 剪切光标位置到词首的文本。</li>
-<li><code>Ctrl + y</code>: 在光标位置粘贴文本。</li>
-</ul>
-<p>同样地，Alt 键可以用 Esc 键代替。</p>
-<h2 id="自动补全"> 自动补全</h2>
-<p>命令输入到一半的时候，可以按一下 Tab 键，Readline 会自动补全命令或路径。比如，输入 <code>cle</code>，再按下 Tab 键，Bash 会自动将这个命令补全为 <code>clear</code>。</p>
-<p>如果符合条件的命令或路径有多个，就需要连续按两次 Tab 键，Bash 会提示所有符合条件的命令或路径。</p>
-<p>除了命令或路径，Tab 还可以补全其他值。如果一个值以 <code>$</code> 开头，则按下 Tab 键会补全变量；如果以 <code>~</code> 开头，则补全用户名；如果以 <code>@</code> 开头，则补全主机名(hostname)，主机名以列在 <code>/etc/hosts</code> 文件里面的主机为准。</p>
-<p>自动补全相关的快捷键如下。</p>
-<ul>
-<li>Tab: 完成自动补全。</li>
-<li><code>Alt + ?</code>: 列出可能的补全，与连按两次 Tab 键作用相同。</li>
-<li><code>Alt + /</code>: 尝试文件路径补全。</li>
-<li><code>Ctrl + x /</code>: 先按 <code>Ctrl + x</code>，再按 <code>/</code>，等同于 <code>Alt + ?</code>，列出可能的文件路径补全。</li>
-<li><code>Alt + !</code>: 命令补全。</li>
-<li><code>Ctrl + x !</code>: 先按 <code>Ctrl + x</code>，再按 <code>!</code>，等同于 <code>Alt + !</code>，命令补全。</li>
-<li><code>Alt + ~</code>: 用户名补全。</li>
-<li><code>Ctrl + x ~</code>: 先按 <code>Ctrl + x</code>，再按 <code>~</code>，等同于 <code>Alt + ~</code>，用户名补全。</li>
-<li><code>Alt + $</code>: 变量名补全。</li>
-<li><code>Ctrl + x $</code>: 先按 <code>Ctrl + x</code>，再按 <code>$</code>，等同于 <code>Alt + $</code>，变量名补全。</li>
-<li><code>Alt + @</code>: 主机名补全。</li>
-<li><code>Ctrl + x @</code>: 先按 <code>Ctrl + x</code>，再按 <code>@</code>，等同于 <code>Alt + @</code>，主机名补全。</li>
-<li><code>Alt + *</code>: 在命令行一次性插入所有可能的补全。</li>
-<li><code>Alt + Tab</code>: 尝试用 <code>.bash_history</code> 里面以前执行命令，进行补全。</li>
-</ul>
-<p>上面的 <code>Alt</code> 键也可以用 ESC 键代替。</p>
-<h2 id="操作历史"> 操作历史</h2>
-<h3 id="基本用法"> 基本用法</h3>
-<p>Bash 会保留用户的操作历史，即用户输入的每一条命令都会记录。退出当前 Shell 的时候，Bash 会将用户在当前 Shell 的操作历史写入 <code>~/.bash_history</code> 文件，该文件默认储存 500 个操作。</p>
-<p>环境变量 <code>HISTFILE</code> 总是指向这个文件。</p>
-<div><pre><code>$ <span>echo</span> <span>$HISTFILE</span>
-/home/me/.bash_history
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>有了操作历史以后，就可以使用方向键的 <code>↑</code> 和 <code>↓</code>，快速浏览上一条和下一条命令。</p>
-<p>下面的方法可以快速执行以前执行过的命令。</p>
-<div><pre><code>$ <span>echo</span> Hello World
-Hello World
+    <summary type="html"><![CDATA[<p>Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在 <code>/tmp</code> 目录里面创建文件或目录，这样做有很多弊端，使用 <code>mktemp</code> 命令是最安全的做法。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在 <code>/tmp</code> 目录里面创建文件或目录，这样做有很多弊端，使用 <code>mktemp</code> 命令是最安全的做法。</p>
 
-$ <span>echo</span> Goodbye
-Goodbye
-
-$ <span>!</span>e
-<span>echo</span> Goodbye
-Goodbye
+<h2 id="临时文件的安全问题"> 临时文件的安全问题</h2>
+<p>直接创建临时文件，尤其在 <code>/tmp</code> 目录里面，往往会导致安全问题。</p>
+<p>首先，<code>/tmp</code> 目录是所有人可读写的，任何用户都可以往该目录里面写文件。创建的临时文件也是所有人可读的。</p>
+<div><pre><code>$ <span>touch</span> /tmp/info.txt
+$ <span>ls</span> -l /tmp/info.txt
+-rw-r--r-- <span>1</span> ruanyf ruanyf <span>0</span> <span>12</span>月 <span>28</span> <span>17</span>:12 /tmp/info.txt
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面例子中，<code>!e</code> 表示找出操作历史之中，最近的那一条以 <code>e</code> 开头的命令并执行。Bash 会先输出那一条命令 <code>echo Goodbye</code>，然后直接执行。</p>
-<p>同理，<code>!echo</code> 也会执行最近一条以 <code>echo</code> 开头的命令。</p>
-<div><pre><code>$ <span>!</span>echo
-<span>echo</span> Goodbye
-Goodbye
-
-$ <span>!</span>echo H
-<span>echo</span> Goodbye H
-Goodbye H
-
-$ <span>!</span>echo H G
-<span>echo</span> Goodbye H G
-Goodbye H G
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>注意，<code>!string</code> 语法只会匹配命令，不会匹配参数。所以 <code>!echo H</code> 不会执行 <code>echo Hello World</code>，而是会执行 <code>echo Goodbye</code>，并把参数 <code>H</code> 附加在这条命令之后。同理，<code>!echo H G</code> 也是等同于 <code>echo Goodbye</code> 命令之后附加 <code>H G</code>。</p>
-<p>最后，按下 <code>Ctrl + r</code> 会显示操作历史，可以用方向键上下移动，选择其中要执行的命令。也可以键入命令的首字母，Shell 就会自动在历史文件中，查询并显示匹配的结果。</p>
-<h3 id="history-命令"> history 命令</h3>
-<p><code>history</code> 命令能显示操作历史，即 <code>.bash_history</code> 文件的内容。</p>
-<div><pre><code>$ <span>history</span>
-<span>..</span>.
-<span>498</span> <span>echo</span> Goodbye
-<span>499</span> <span>ls</span> ~
-<span>500</span> <span>cd</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>使用该命令，而不是直接读取 <code>.bash_history</code> 文件的好处是，它会在所有的操作前加上行号，最近的操作在最后面，行号最大。</p>
-<p>通过定制环境变量 <code>HISTTIMEFORMAT</code>，可以显示每个操作的时间。</p>
-<div><pre><code>$ <span>export</span> <span>HISTTIMEFORMAT</span><span>=</span><span>'%F %T  '</span>
-$ <span>history</span>
-<span>1</span>  <span>2013</span>-06-09 <span>10</span>:40:12   <span>cat</span> /etc/issue
-<span>2</span>  <span>2013</span>-06-09 <span>10</span>:40:12   <span>clear</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>%F</code> 相当于 <code>%Y - %m - %d</code>，<code>%T</code> 相当于 <code>%H : %M : %S</code>。</p>
-<p>只要设置 <code>HISTTIMEFORMAT</code> 这个环境变量，就会在 <code>.bash_history</code> 文件保存命令的执行时间戳。如果不设置，就不会保存时间戳。</p>
-<p>如果不希望保存本次操作的历史，可以设置环境变量 <code>HISTSIZE</code> 等于 0。</p>
-<div><pre><code><span>export</span> <span><span>HISTSIZE</span></span><span>=</span><span>0</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>如果 <code>HISTSIZE=0</code> 写入用户主目录的 <code>~/.bashrc</code> 文件，那么就不会保留该用户的操作历史。如果写入 <code>/etc/profile</code>，整个系统都不会保留操作历史。</p>
-<p>如果想搜索某个以前执行的命令，可以配合 <code>grep</code> 命令搜索操作历史。</p>
-<div><pre><code><span>history</span> <span>|</span> <span>grep</span> /usr/bin
-</code></pre>
-<div><span>1</span><br></div></div><p>上面命令返回 <code>.bash_history</code> 文件里面，那些包含 <code>/usr/bin</code> 的命令。</p>
-<p>操作历史的每一条记录都有编号。知道了命令的编号以后，可以用 <code>感叹号 + 编号</code> 执行该命令。如果想要执行 <code>.bash_history</code> 里面的第 8 条命令，可以像下面这样操作。</p>
-<div><pre><code><span>!</span><span>8</span>
-</code></pre>
-<div><span>1</span><br></div></div><p><code>history</code> 命令的 <code>-c</code> 参数可以清除操作历史。</p>
-<div><pre><code><span>history</span> -c
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="相关快捷键"> 相关快捷键</h3>
-<p>下面是一些与操作历史相关的快捷键。</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>上面命令在 <code>/tmp</code> 目录直接创建文件，该文件默认是所有人可读的。</p>
+<p>其次，如果攻击者知道临时文件的文件名，他可以创建符号链接，链接到临时文件，可能导致系统运行异常。攻击者也可能向脚本提供一些恶意数据。因此，临时文件最好使用不可预测、每次都不一样的文件名，防止被利用。</p>
+<p>最后，临时文件使用完毕，应该删除。但是，脚本意外退出时，往往会忽略清理临时文件。</p>
+<p>生成临时文件应该遵循下面的规则。</p>
+<blockquote>
 <ul>
-<li><code>Ctrl + p</code>: 显示上一个命令，与向上箭头效果相同(previous)。</li>
-<li><code>Ctrl + n</code>: 显示下一个命令，与向下箭头效果相同(next)。</li>
-<li><code>Alt + &lt;</code>: 显示第一个命令。</li>
-<li><code>Alt + &gt;</code>: 显示最后一个命令，即当前的命令。</li>
-<li><code>Ctrl + o</code>: 执行历史文件里面的当前条目，并自动显示下一条命令。这对重复执行某个序列的命令很有帮助。</li>
+<li>创建前检查文件是否已经存在。</li>
+<li>确保临时文件已成功创建。</li>
+<li>临时文件必须有权限的限制。</li>
+<li>临时文件要使用不可预测的文件名。</li>
+<li>脚本退出时，要删除临时文件(使用 <code>trap</code> 命令)。</li>
 </ul>
-<p>感叹号<code>!</code>的快捷键如下。</p>
-<ul>
-<li><code>!!</code>: 执行上一个命令。</li>
-<li><code>!n</code>: 执行历史文件里面行号为 <code>n</code> 的命令。</li>
-<li><code>!-n</code>: 执行当前命令之前 <code>n</code> 条的命令。</li>
-<li><code>!string</code>: 执行最近一个以指定字符串 <code>string</code> 开头的命令。</li>
-<li><code>!?string</code>: 执行最近一条包含字符串 <code>string</code> 的命令。</li>
-<li><code>^string1^string2</code>: 执行最近一条包含 <code>string1</code> 的命令，将其替换成 <code>string2</code>。</li>
-</ul>
-<h2 id="其他快捷键"> 其他快捷键</h2>
-<ul>
-<li><code>Ctrl + j</code>: 等同于回车键(LINEFEED)。</li>
-<li><code>Ctrl + m</code>: 等同于回车键(CARRIAGE RETURN)。</li>
-<li><code>Ctrl + o</code>: 等同于回车键，并展示操作历史的下一个命令。</li>
-<li><code>Ctrl + v</code>: 将下一个输入的特殊字符变成字面量，比如回车变成 <code>^M</code>。</li>
-<li><code>Ctrl + [</code>: 等同于 ESC。</li>
-<li><code>Alt + .</code>: 插入上一个命令的最后一个词。</li>
-<li><code>Alt + _</code>: 等同于 <code>Alt + .</code>。</li>
-</ul>
-<p>上面的 <code>Alt + .</code> 快捷键，对于很长的文件路径，有时会非常方便。因为 Unix 命令的最后一个参数通常是文件路径。</p>
-<div><pre><code><span>mkdir</span> foo_bar
-<span>cd</span> <span>#按下 Alt + .</span>
+</blockquote>
+<h2 id="mktemp-命令的用法"> mktemp 命令的用法</h2>
+<p><code>mktemp</code> 命令就是为安全创建临时文件而设计的。虽然在创建临时文件之前，它不会检查临时文件是否存在，但是它支持唯一文件名和清除机制，因此可以减轻安全攻击的风险。</p>
+<p>直接运行 <code>mktemp</code> 命令，就能生成一个临时文件。</p>
+<div><pre><code>$ mktemp
+/tmp/tmp.4GcsWSG4vj
+
+$ <span>ls</span> -l /tmp/tmp.4GcsWSG4vj
+-rw------- <span>1</span> ruanyf ruanyf <span>0</span> <span>12</span>月 <span>28</span> <span>12</span>:49 /tmp/tmp.4GcsWSG4vj
 </code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，在 <code>cd</code> 命令后按下 <code>Alt + .</code>，就会自动插入 <code>foo_bar</code>。</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>上面命令中，<code>mktemp</code> 命令生成的临时文件名是随机的，而且权限是只有用户本人可读写。</p>
+<p>Bash 脚本使用 <code>mktemp</code> 命令的用法如下。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span>
+<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>为了确保临时文件创建成功，<code>mktemp</code> 命令后面最好使用 OR 运算符 (<code>||</code>)，保证创建失败时退出脚本。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
+<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>为了保证脚本退出时临时文件被删除，可以使用 <code>trap</code> 命令指定退出时的清除操作。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
+
+<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
+<span>echo</span> <span>"Our temp file is <span>$TMPFILE</span>"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="mktemp-命令的参数"> mktemp 命令的参数</h2>
+<p><code>-d</code> 参数可以创建一个临时目录。</p>
+<div><pre><code>$ mktemp -d
+/tmp/tmp.Wcau5UjmN6
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>-p</code> 参数可以指定临时文件所在的目录。默认是使用 <code>$TMPDIR</code> 环境变量指定的目录，如果这个变量没设置，那么使用 <code>/tmp</code> 目录。</p>
+<div><pre><code>$ mktemp -p /home/ruanyf/
+/home/ruanyf/tmp.FOKEtvs2H3
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p><code>-t</code> 参数可以指定临时文件的文件名模板，模板的末尾必须至少包含三个连续的 <code>X</code> 字符，表示随机字符，建议至少使用六个 <code>X</code>。默认的文件名模板是 <code>tmp.</code> 后接十个随机字符。</p>
+<div><pre><code>$ mktemp -t mytemp.XXXXXXX
+/tmp/mytemp.yZ1HgZV
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h2 id="trap-命令"> trap 命令</h2>
+<p><code>trap</code> 命令用来在 Bash 脚本中响应系统信号。</p>
+<p>最常见的系统信号就是 SIGINT(中断)，即按 <code>Ctrl + C</code> 所产生的信号。<code>trap</code> 命令的 <code>-l</code> 参数，可以列出所有的系统信号。</p>
+<div><pre><code>$ <span>trap</span> -l
+ <span>1</span><span>)</span> SIGHUP  <span>2</span><span>)</span> SIGINT  <span>3</span><span>)</span> SIGQUIT  <span>4</span><span>)</span> SIGILL  <span>5</span><span>)</span> SIGTRAP
+ <span>6</span><span>)</span> SIGABRT  <span>7</span><span>)</span> SIGBUS  <span>8</span><span>)</span> SIGFPE  <span>9</span><span>)</span> SIGKILL <span>10</span><span>)</span> SIGUSR1
+<span>11</span><span>)</span> SIGSEGV <span>12</span><span>)</span> SIGUSR2 <span>13</span><span>)</span> SIGPIPE <span>14</span><span>)</span> SIGALRM <span>15</span><span>)</span> SIGTERM
+<span>16</span><span>)</span> SIGSTKFLT <span>17</span><span>)</span> SIGCHLD <span>18</span><span>)</span> SIGCONT <span>19</span><span>)</span> SIGSTOP <span>20</span><span>)</span> SIGTSTP
+<span>21</span><span>)</span> SIGTTIN <span>22</span><span>)</span> SIGTTOU <span>23</span><span>)</span> SIGURG <span>24</span><span>)</span> SIGXCPU <span>25</span><span>)</span> SIGXFSZ
+<span>26</span><span>)</span> SIGVTALRM <span>27</span><span>)</span> SIGPROF <span>28</span><span>)</span> SIGWINCH <span>29</span><span>)</span> SIGIO <span>30</span><span>)</span> SIGPWR
+<span>31</span><span>)</span> SIGSYS <span>34</span><span>)</span> SIGRTMIN <span>35</span><span>)</span> SIGRTMIN+1 <span>36</span><span>)</span> SIGRTMIN+2 <span>37</span><span>)</span> SIGRTMIN+3
+<span>38</span><span>)</span> SIGRTMIN+4 <span>39</span><span>)</span> SIGRTMIN+5 <span>40</span><span>)</span> SIGRTMIN+6 <span>41</span><span>)</span> SIGRTMIN+7 <span>42</span><span>)</span> SIGRTMIN+8
+<span>43</span><span>)</span> SIGRTMIN+9 <span>44</span><span>)</span> SIGRTMIN+10 <span>45</span><span>)</span> SIGRTMIN+11 <span>46</span><span>)</span> SIGRTMIN+12 <span>47</span><span>)</span> SIGRTMIN+13
+<span>48</span><span>)</span> SIGRTMIN+14 <span>49</span><span>)</span> SIGRTMIN+15 <span>50</span><span>)</span> SIGRTMAX-14 <span>51</span><span>)</span> SIGRTMAX-13 <span>52</span><span>)</span> SIGRTMAX-12
+<span>53</span><span>)</span> SIGRTMAX-11 <span>54</span><span>)</span> SIGRTMAX-10 <span>55</span><span>)</span> SIGRTMAX-9 <span>56</span><span>)</span> SIGRTMAX-8 <span>57</span><span>)</span> SIGRTMAX-7
+<span>58</span><span>)</span> SIGRTMAX-6 <span>59</span><span>)</span> SIGRTMAX-5 <span>60</span><span>)</span> SIGRTMAX-4 <span>61</span><span>)</span> SIGRTMAX-3 <span>62</span><span>)</span> SIGRTMAX-2
+<span>63</span><span>)</span> SIGRTMAX-1 <span>64</span><span>)</span> SIGRTMAX
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><p><code>trap</code> 的命令格式如下。</p>
+<div><pre><code><span>trap</span> <span>[</span>动作<span>]</span> <span>[</span>信号1<span>]</span> <span>[</span>信号2<span>]</span> <span>..</span>.
+</code></pre>
+<div><span>1</span><br></div></div><p>上面代码中，“动作”是一个 Bash 命令，“信号”常用的有以下几个。</p>
+<blockquote>
+<ul>
+<li>HUP: 编号 1，脚本与所在的终端脱离联系。</li>
+<li>INT: 编号 2，用户按下 Ctrl + C，意图让脚本中止运行。</li>
+<li>QUIT: 编号 3，用户按下 Ctrl + 斜杠，意图退出脚本。</li>
+<li>KILL: 编号 9，该信号用于杀死进程。</li>
+<li>TERM: 编号 15，这是 <code>kill</code> 命令发出的默认信号。</li>
+<li>EXIT: 编号 0，这不是系统信号，而是 Bash 脚本特有的信号，不管什么情况，只要退出脚本就会产生。</li>
+</ul>
+</blockquote>
+<p><code>trap</code> 命令响应 <code>EXIT</code> 信号的写法如下。</p>
+<div><pre><code><span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令中，脚本遇到 <code>EXIT</code> 信号时，就会执行 <code>rm -f &quot;$TMPFILE&quot;</code>。</p>
+<p>trap 命令的常见使用场景，就是在 Bash 脚本中指定退出时执行的清理命令。</p>
+<div><pre><code><span>#!/bin/bash</span>
+
+<span>trap</span> <span>'rm -f "$TMPFILE"'</span> EXIT
+
+<span>TMPFILE</span><span>=</span><span><span>$(</span>mktemp<span>)</span></span> <span>||</span> <span>exit</span> <span>1</span>
+<span>ls</span> /etc <span>></span> <span>$TMPFILE</span>
+<span>if</span> <span>grep</span> -qi <span>"kernel"</span> <span>$TMPFILE</span><span>;</span> <span>then</span>
+  <span>echo</span> <span>'find'</span>
+<span>fi</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面代码中，不管是脚本正常执行结束，还是用户按 <code>Ctrl + C</code> 终止，都会产生 <code>EXIT</code> 信号，从而触发删除临时文件。</p>
+<p>注意，<code>trap</code> 命令必须放在脚本的开头。否则，它上方的任何命令导致脚本退出，都不会被它捕获。</p>
+<p>如果 <code>trap</code> 需要触发多条命令，可以封装一个 Bash 函数。</p>
+<div><pre><code><span>function</span> <span>egress</span> <span>{</span>
+  command1
+  command2
+  command3
+<span>}</span>
+
+<span>trap</span> egress EXIT
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="参考链接"> 参考链接</h2>
+<ul>
+<li><a href="https://www.putorius.net/working-with-temporary-files.html" target="_blank" rel="noopener noreferrer">Working with Temporary Files and Directories in Shell Scripts<i>Content not supported</i></a>, Steven Vona</li>
+<li><a href="https://www.putorius.net/using-trap-to-exit-bash-scripts-cleanly.html" target="_blank" rel="noopener noreferrer">Using Trap to Exit Bash Scripts Cleanly<i>Content not supported</i></a></li>
+<li><a href="https://mywiki.wooledge.org/SignalTrap" target="_blank" rel="noopener noreferrer">Sending and Trapping Signals<i>Content not supported</i></a></li>
+</ul>
 ]]></content>
     <author>
       <name>阮一峰</name>
@@ -10021,6 +9835,192 @@ abc
 <p><a href="./prompt.html">命令提示符</a></p>
 </li>
 </ul>
+]]></content>
+    <author>
+      <name>阮一峰</name>
+    </author>
+    <category term="Linux" scheme=""/>
+    <contributor>
+      <name>阮一峰</name>
+    </contributor>
+    <published>2022-02-18T02:39:20.000Z</published>
+    <rights>本教程采用&lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0协议&lt;/a&gt;</rights>
+  </entry>
+  <entry>
+    <title type="html">Bash 行操作</title>
+    <id>https://list-jiang.github.io/code/linux/bash/readline/</id>
+    <link href="https://list-jiang.github.io/code/linux/bash/readline/"/>
+    <updated>2022-02-18T02:39:20.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="简介"> 简介</h2>
+<p>Bash 内置了 Readline 库，具有这个库提供的很多“行操作”功能，比如命令的自动补全，可以大大加快操作速度。</p>
+<p>这个库默认采用 Emacs 快捷键，也可以改成 Vi 快捷键。</p>
+<div><pre><code><span>set</span> -o <span>vi</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>下面的命令可以改回 Emacs 快捷键。</p>
+<div><pre><code><span>set</span> -o emacs
+</code></pre>
+<div><span>1</span><br></div></div><p>如果想永久性更改编辑模式(Emacs / Vi)，可以将命令写在 <code>~/.inputrc</code> 文件，这个文件是 Readline 的配置文件。</p>
+<div><pre><code><span>set</span> editing-mode <span>vi</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>本章介绍的快捷键都属于 Emacs 模式。Vi 模式的快捷键，读者可以参考 Vi 编辑器的教程。</p>
+<p>Bash 默认开启这个库，但是允许关闭。</p>
+<div><pre><code><span>bash</span> --noediting
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令中，<code>--noediting</code> 参数关闭了 Readline 库，启动的 Bash 就不带有行操作功能。</p>
+<h2 id="光标移动"> 光标移动</h2>
+<p>Readline 提供快速移动光标的快捷键。</p>
+<ul>
+<li><code>Ctrl + a</code>: 移到行首。</li>
+<li><code>Ctrl + b</code>: 向行首移动一个字符，与左箭头作用相同。</li>
+<li><code>Ctrl + e</code>: 移到行尾。</li>
+<li><code>Ctrl + f</code>: 向行尾移动一个字符，与右箭头作用相同。</li>
+<li><code>Alt + f</code>: 移动到当前单词的词尾。</li>
+<li><code>Alt + b</code>: 移动到当前单词的词首。</li>
+</ul>
+<p>上面快捷键的 Alt 键，也可以用 ESC 键代替。</p>
+<h2 id="清除屏幕"> 清除屏幕</h2>
+<p><code>Ctrl + l</code> 快捷键可以清除屏幕，即将当前行移到屏幕的第一行，与 <code>clear</code> 命令作用相同。</p>
+<h2 id="编辑操作"> 编辑操作</h2>
+<p>下面的快捷键可以编辑命令行内容。</p>
+<ul>
+<li><code>Ctrl + d</code>: 删除光标位置的字符(delete)。</li>
+<li><code>Ctrl + w</code>: 删除光标前面的单词。</li>
+<li><code>Ctrl + t</code>: 光标位置的字符与它前面一位的字符交换位置(transpose)。</li>
+<li><code>Alt + t</code>: 光标位置的词与它前面一位的词交换位置(transpose)。</li>
+<li><code>Alt + l</code>: 将光标位置至词尾转为小写(lowercase)。</li>
+<li><code>Alt + u</code>: 将光标位置至词尾转为大写(uppercase)。</li>
+</ul>
+<p>使用 <code>Ctrl + d</code> 的时候，如果当前行没有任何字符，会导致退出当前 Shell，所以要小心。</p>
+<p>剪切和粘贴快捷键如下。</p>
+<ul>
+<li><code>Ctrl + k</code>: 剪切光标位置到行尾的文本。</li>
+<li><code>Ctrl + u</code>: 剪切光标位置到行首的文本。</li>
+<li><code>Alt + d</code>: 剪切光标位置到词尾的文本。</li>
+<li><code>Alt + Backspace</code>: 剪切光标位置到词首的文本。</li>
+<li><code>Ctrl + y</code>: 在光标位置粘贴文本。</li>
+</ul>
+<p>同样地，Alt 键可以用 Esc 键代替。</p>
+<h2 id="自动补全"> 自动补全</h2>
+<p>命令输入到一半的时候，可以按一下 Tab 键，Readline 会自动补全命令或路径。比如，输入 <code>cle</code>，再按下 Tab 键，Bash 会自动将这个命令补全为 <code>clear</code>。</p>
+<p>如果符合条件的命令或路径有多个，就需要连续按两次 Tab 键，Bash 会提示所有符合条件的命令或路径。</p>
+<p>除了命令或路径，Tab 还可以补全其他值。如果一个值以 <code>$</code> 开头，则按下 Tab 键会补全变量；如果以 <code>~</code> 开头，则补全用户名；如果以 <code>@</code> 开头，则补全主机名(hostname)，主机名以列在 <code>/etc/hosts</code> 文件里面的主机为准。</p>
+<p>自动补全相关的快捷键如下。</p>
+<ul>
+<li>Tab: 完成自动补全。</li>
+<li><code>Alt + ?</code>: 列出可能的补全，与连按两次 Tab 键作用相同。</li>
+<li><code>Alt + /</code>: 尝试文件路径补全。</li>
+<li><code>Ctrl + x /</code>: 先按 <code>Ctrl + x</code>，再按 <code>/</code>，等同于 <code>Alt + ?</code>，列出可能的文件路径补全。</li>
+<li><code>Alt + !</code>: 命令补全。</li>
+<li><code>Ctrl + x !</code>: 先按 <code>Ctrl + x</code>，再按 <code>!</code>，等同于 <code>Alt + !</code>，命令补全。</li>
+<li><code>Alt + ~</code>: 用户名补全。</li>
+<li><code>Ctrl + x ~</code>: 先按 <code>Ctrl + x</code>，再按 <code>~</code>，等同于 <code>Alt + ~</code>，用户名补全。</li>
+<li><code>Alt + $</code>: 变量名补全。</li>
+<li><code>Ctrl + x $</code>: 先按 <code>Ctrl + x</code>，再按 <code>$</code>，等同于 <code>Alt + $</code>，变量名补全。</li>
+<li><code>Alt + @</code>: 主机名补全。</li>
+<li><code>Ctrl + x @</code>: 先按 <code>Ctrl + x</code>，再按 <code>@</code>，等同于 <code>Alt + @</code>，主机名补全。</li>
+<li><code>Alt + *</code>: 在命令行一次性插入所有可能的补全。</li>
+<li><code>Alt + Tab</code>: 尝试用 <code>.bash_history</code> 里面以前执行命令，进行补全。</li>
+</ul>
+<p>上面的 <code>Alt</code> 键也可以用 ESC 键代替。</p>
+<h2 id="操作历史"> 操作历史</h2>
+<h3 id="基本用法"> 基本用法</h3>
+<p>Bash 会保留用户的操作历史，即用户输入的每一条命令都会记录。退出当前 Shell 的时候，Bash 会将用户在当前 Shell 的操作历史写入 <code>~/.bash_history</code> 文件，该文件默认储存 500 个操作。</p>
+<p>环境变量 <code>HISTFILE</code> 总是指向这个文件。</p>
+<div><pre><code>$ <span>echo</span> <span>$HISTFILE</span>
+/home/me/.bash_history
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>有了操作历史以后，就可以使用方向键的 <code>↑</code> 和 <code>↓</code>，快速浏览上一条和下一条命令。</p>
+<p>下面的方法可以快速执行以前执行过的命令。</p>
+<div><pre><code>$ <span>echo</span> Hello World
+Hello World
+
+$ <span>echo</span> Goodbye
+Goodbye
+
+$ <span>!</span>e
+<span>echo</span> Goodbye
+Goodbye
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>上面例子中，<code>!e</code> 表示找出操作历史之中，最近的那一条以 <code>e</code> 开头的命令并执行。Bash 会先输出那一条命令 <code>echo Goodbye</code>，然后直接执行。</p>
+<p>同理，<code>!echo</code> 也会执行最近一条以 <code>echo</code> 开头的命令。</p>
+<div><pre><code>$ <span>!</span>echo
+<span>echo</span> Goodbye
+Goodbye
+
+$ <span>!</span>echo H
+<span>echo</span> Goodbye H
+Goodbye H
+
+$ <span>!</span>echo H G
+<span>echo</span> Goodbye H G
+Goodbye H G
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>注意，<code>!string</code> 语法只会匹配命令，不会匹配参数。所以 <code>!echo H</code> 不会执行 <code>echo Hello World</code>，而是会执行 <code>echo Goodbye</code>，并把参数 <code>H</code> 附加在这条命令之后。同理，<code>!echo H G</code> 也是等同于 <code>echo Goodbye</code> 命令之后附加 <code>H G</code>。</p>
+<p>最后，按下 <code>Ctrl + r</code> 会显示操作历史，可以用方向键上下移动，选择其中要执行的命令。也可以键入命令的首字母，Shell 就会自动在历史文件中，查询并显示匹配的结果。</p>
+<h3 id="history-命令"> history 命令</h3>
+<p><code>history</code> 命令能显示操作历史，即 <code>.bash_history</code> 文件的内容。</p>
+<div><pre><code>$ <span>history</span>
+<span>..</span>.
+<span>498</span> <span>echo</span> Goodbye
+<span>499</span> <span>ls</span> ~
+<span>500</span> <span>cd</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>使用该命令，而不是直接读取 <code>.bash_history</code> 文件的好处是，它会在所有的操作前加上行号，最近的操作在最后面，行号最大。</p>
+<p>通过定制环境变量 <code>HISTTIMEFORMAT</code>，可以显示每个操作的时间。</p>
+<div><pre><code>$ <span>export</span> <span>HISTTIMEFORMAT</span><span>=</span><span>'%F %T  '</span>
+$ <span>history</span>
+<span>1</span>  <span>2013</span>-06-09 <span>10</span>:40:12   <span>cat</span> /etc/issue
+<span>2</span>  <span>2013</span>-06-09 <span>10</span>:40:12   <span>clear</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>上面代码中，<code>%F</code> 相当于 <code>%Y - %m - %d</code>，<code>%T</code> 相当于 <code>%H : %M : %S</code>。</p>
+<p>只要设置 <code>HISTTIMEFORMAT</code> 这个环境变量，就会在 <code>.bash_history</code> 文件保存命令的执行时间戳。如果不设置，就不会保存时间戳。</p>
+<p>如果不希望保存本次操作的历史，可以设置环境变量 <code>HISTSIZE</code> 等于 0。</p>
+<div><pre><code><span>export</span> <span><span>HISTSIZE</span></span><span>=</span><span>0</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>如果 <code>HISTSIZE=0</code> 写入用户主目录的 <code>~/.bashrc</code> 文件，那么就不会保留该用户的操作历史。如果写入 <code>/etc/profile</code>，整个系统都不会保留操作历史。</p>
+<p>如果想搜索某个以前执行的命令，可以配合 <code>grep</code> 命令搜索操作历史。</p>
+<div><pre><code><span>history</span> <span>|</span> <span>grep</span> /usr/bin
+</code></pre>
+<div><span>1</span><br></div></div><p>上面命令返回 <code>.bash_history</code> 文件里面，那些包含 <code>/usr/bin</code> 的命令。</p>
+<p>操作历史的每一条记录都有编号。知道了命令的编号以后，可以用 <code>感叹号 + 编号</code> 执行该命令。如果想要执行 <code>.bash_history</code> 里面的第 8 条命令，可以像下面这样操作。</p>
+<div><pre><code><span>!</span><span>8</span>
+</code></pre>
+<div><span>1</span><br></div></div><p><code>history</code> 命令的 <code>-c</code> 参数可以清除操作历史。</p>
+<div><pre><code><span>history</span> -c
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="相关快捷键"> 相关快捷键</h3>
+<p>下面是一些与操作历史相关的快捷键。</p>
+<ul>
+<li><code>Ctrl + p</code>: 显示上一个命令，与向上箭头效果相同(previous)。</li>
+<li><code>Ctrl + n</code>: 显示下一个命令，与向下箭头效果相同(next)。</li>
+<li><code>Alt + &lt;</code>: 显示第一个命令。</li>
+<li><code>Alt + &gt;</code>: 显示最后一个命令，即当前的命令。</li>
+<li><code>Ctrl + o</code>: 执行历史文件里面的当前条目，并自动显示下一条命令。这对重复执行某个序列的命令很有帮助。</li>
+</ul>
+<p>感叹号<code>!</code>的快捷键如下。</p>
+<ul>
+<li><code>!!</code>: 执行上一个命令。</li>
+<li><code>!n</code>: 执行历史文件里面行号为 <code>n</code> 的命令。</li>
+<li><code>!-n</code>: 执行当前命令之前 <code>n</code> 条的命令。</li>
+<li><code>!string</code>: 执行最近一个以指定字符串 <code>string</code> 开头的命令。</li>
+<li><code>!?string</code>: 执行最近一条包含字符串 <code>string</code> 的命令。</li>
+<li><code>^string1^string2</code>: 执行最近一条包含 <code>string1</code> 的命令，将其替换成 <code>string2</code>。</li>
+</ul>
+<h2 id="其他快捷键"> 其他快捷键</h2>
+<ul>
+<li><code>Ctrl + j</code>: 等同于回车键(LINEFEED)。</li>
+<li><code>Ctrl + m</code>: 等同于回车键(CARRIAGE RETURN)。</li>
+<li><code>Ctrl + o</code>: 等同于回车键，并展示操作历史的下一个命令。</li>
+<li><code>Ctrl + v</code>: 将下一个输入的特殊字符变成字面量，比如回车变成 <code>^M</code>。</li>
+<li><code>Ctrl + [</code>: 等同于 ESC。</li>
+<li><code>Alt + .</code>: 插入上一个命令的最后一个词。</li>
+<li><code>Alt + _</code>: 等同于 <code>Alt + .</code>。</li>
+</ul>
+<p>上面的 <code>Alt + .</code> 快捷键，对于很长的文件路径，有时会非常方便。因为 Unix 命令的最后一个参数通常是文件路径。</p>
+<div><pre><code><span>mkdir</span> foo_bar
+<span>cd</span> <span>#按下 Alt + .</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>上面例子中，在 <code>cd</code> 命令后按下 <code>Alt + .</code>，就会自动插入 <code>foo_bar</code>。</p>
 ]]></content>
     <author>
       <name>阮一峰</name>
